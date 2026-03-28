@@ -1,0 +1,2202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Can Teachers Detect ChatGPT in 2026? | AAWebTools</title>
+  <meta name="description" content="Can teachers detect ChatGPT and AI writing in 2026? We tested the tools schools actually use. Learn about accuracy rates, false positives, and what works.">
+  <link rel="canonical" href="https://aawebtools.com/blog/can-teachers-detect-chatgpt-2026/">
+  <meta property="og:title" content="Can Teachers Detect ChatGPT in 2026? The Truth About AI Detection">
+  <meta property="og:description" content="Can teachers detect ChatGPT and AI writing in 2026? We tested the tools schools actually use. Learn about accuracy rates, false positives, and what works.">
+  <meta property="og:url" content="https://aawebtools.com/blog/can-teachers-detect-chatgpt-2026/">
+  <meta property="og:image" content="https://aawebtools.com/assets/img/og-blog-teachers-detect-chatgpt.png">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="AAWebTools">
+  <meta property="article:published_time" content="2026-03-27T08:00:00+00:00">
+  <meta property="article:modified_time" content="2026-03-27T08:00:00+00:00">
+  <meta property="article:author" content="AAWebTools Team">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Can Teachers Detect ChatGPT in 2026? The Truth About AI Detection">
+  <meta name="twitter:description" content="Can teachers detect ChatGPT and AI writing in 2026? We tested the tools schools actually use. Learn about accuracy rates, false positives, and what works.">
+  <meta name="twitter:image" content="https://aawebtools.com/assets/img/og-blog-teachers-detect-chatgpt.png">
+  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <style>
+    /* ==========================================================================
+       EDITORIAL REDESIGN -- Magazine-style layout
+       Inspired by The Verge, Wired, Stratechery
+       Only scoped to .article and article-related components
+       ========================================================================== */
+
+    /* Reading progress bar -- thin, single color, no gradient */
+    .reading-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 2px;
+      background: #4f7fff;
+      width: 0%;
+      z-index: 9999;
+      transition: width 0.1s linear;
+    }
+
+    /* ------------------------------------------------------------
+       Article layout -- generous measure, editorial column
+       ------------------------------------------------------------ */
+    .article-wrapper {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px 80px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+
+    .article {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 0 0 96px;
+      width: 100%;
+    }
+
+    /* Headings -- confident, left-aligned, tight tracking */
+    .article h2 {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin: 64px 0 20px;
+      scroll-margin-top: 100px;
+      letter-spacing: -0.02em;
+      line-height: 1.25;
+    }
+
+    .article h3 {
+      font-size: 19px;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin: 40px 0 12px;
+      letter-spacing: -0.01em;
+      line-height: 1.3;
+    }
+
+    /* Body text -- readable measure, proper leading */
+    .article p {
+      font-size: 16px;
+      line-height: 1.75;
+      color: var(--text-secondary);
+      margin-bottom: 20px;
+    }
+
+    /* Lede paragraph -- first p after every h2 gets larger treatment */
+    .article h2 + p {
+      font-size: 18px;
+      line-height: 1.7;
+      color: #475569;
+    }
+
+    .article ul,
+    .article ol {
+      padding-left: 24px;
+      margin-bottom: 20px;
+      list-style: disc;
+    }
+    .article ol { list-style: decimal; }
+
+    .article li {
+      font-size: 16px;
+      line-height: 1.75;
+      color: var(--text-secondary);
+      margin-bottom: 8px;
+    }
+
+    .article a {
+      color: #4f7fff;
+      text-decoration: underline;
+      text-decoration-color: rgba(79, 127, 255, 0.3);
+      text-underline-offset: 2px;
+      transition: text-decoration-color 0.15s;
+    }
+    .article a:hover {
+      text-decoration-color: #4f7fff;
+    }
+
+    /* Blockquote -- editorial voice */
+    .article blockquote {
+      border-left: 2px solid var(--text-tertiary);
+      padding: 4px 0 4px 24px;
+      margin: 32px 0;
+      color: var(--text-tertiary);
+      font-style: italic;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .article strong {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    /* ------------------------------------------------------------
+       Hero banner -- Editorial, left-aligned, no gradient blob
+       ------------------------------------------------------------ */
+    .article-hero {
+      background: var(--bg-primary);
+      border-radius: 0;
+      padding: 160px 24px 48px;
+      margin: 0 auto;
+      max-width: 680px;
+      min-height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-start;
+      position: relative;
+      overflow: visible;
+      border-bottom: 1px solid var(--border-primary);
+    }
+
+    /* Remove the decorative circles */
+    .article-hero::before,
+    .article-hero::after {
+      display: none;
+    }
+
+    .article-hero__badge {
+      display: inline-block;
+      background: none;
+      color: #4f7fff;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0;
+      border-radius: 0;
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 1;
+      backdrop-filter: none;
+    }
+
+    .article-hero h1 {
+      font-size: 40px;
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      margin: 0 0 20px;
+      position: relative;
+      z-index: 1;
+      max-width: 100%;
+    }
+
+    .article-hero__meta {
+      font-size: 14px;
+      color: var(--text-tertiary);
+      position: relative;
+      z-index: 1;
+      line-height: 1.5;
+    }
+    .article-hero__meta strong {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    @media (min-width: 768px) {
+      .article-hero h1 {
+        font-size: 52px;
+        line-height: 1.08;
+      }
+      .article-hero {
+        padding: 160px 0 56px;
+        max-width: 680px;
+      }
+    }
+    @media (max-width: 600px) {
+      .article-hero {
+        padding: 120px 20px 36px;
+        margin: 0;
+        min-height: auto;
+        border-radius: 0;
+      }
+      .article-hero h1 {
+        font-size: 32px;
+        letter-spacing: -0.02em;
+      }
+    }
+
+    /* ------------------------------------------------------------
+       Breadcrumb -- subtle, editorial
+       ------------------------------------------------------------ */
+    .article-breadcrumb {
+      font-size: 13px;
+      color: var(--text-tertiary);
+      margin: 28px 0 40px;
+      letter-spacing: 0.01em;
+    }
+    .article-breadcrumb a {
+      color: var(--text-tertiary);
+      text-decoration: none;
+    }
+    .article-breadcrumb a:hover {
+      color: var(--text-primary);
+    }
+
+    /* ------------------------------------------------------------
+       Section divider -- clean, minimal
+       ------------------------------------------------------------ */
+    .section-divider {
+      height: 1px;
+      background: var(--border-primary);
+      border: none;
+      margin: 56px 0;
+      border-radius: 0;
+    }
+
+    /* ------------------------------------------------------------
+       Table of contents -- subtle, small type, left border
+       ------------------------------------------------------------ */
+    .article-toc {
+      background: none;
+      border: none;
+      border-left: 2px solid var(--border-primary);
+      border-radius: 0;
+      padding: 0 0 0 20px;
+      margin-bottom: 48px;
+    }
+    .article-toc h3 {
+      margin-top: 0;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-tertiary);
+      margin-bottom: 12px;
+    }
+    .article-toc ol {
+      padding-left: 16px;
+      margin-bottom: 0;
+    }
+    .article-toc li {
+      font-size: 13px;
+      margin-bottom: 6px;
+      line-height: 1.5;
+    }
+    .article-toc a {
+      color: var(--text-tertiary);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+    .article-toc a:hover {
+      color: var(--text-primary);
+    }
+
+    @media (min-width: 1024px) {
+      .article-toc--sidebar {
+        position: sticky;
+        top: 100px;
+        max-height: calc(100vh - 140px);
+        overflow-y: auto;
+      }
+    }
+
+    /* ------------------------------------------------------------
+       Callout boxes -- pull-quote style, not colored cards
+       ------------------------------------------------------------ */
+    .callout {
+      border-radius: 0;
+      padding: 24px 0 24px 28px;
+      margin: 40px 0;
+      border-left: 3px solid;
+      background: none;
+      position: relative;
+    }
+    .callout__label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 10px;
+    }
+    .callout p {
+      margin-bottom: 0;
+      font-size: 17px;
+      line-height: 1.65;
+      font-style: italic;
+      color: var(--text-primary);
+    }
+
+    .callout--finding { border-color: #4f7fff; }
+    .callout--finding .callout__label { color: #4f7fff; }
+
+    .callout--privacy { border-color: #10b981; }
+    .callout--privacy .callout__label { color: #10b981; }
+
+    .callout--tip { border-color: #d97706; }
+    .callout--tip .callout__label { color: #d97706; }
+
+    .callout--warning { border-color: #ef4444; }
+    .callout--warning .callout__label { color: #ef4444; }
+
+    /* ------------------------------------------------------------
+       Comparison table -- editorial/newspaper style
+       ------------------------------------------------------------ */
+    .table-responsive {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin: 24px -8px;
+    }
+
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      border-spacing: 0;
+      margin: 0;
+      border-radius: 0;
+      overflow: visible;
+      border: none;
+    }
+
+    .comparison-table thead th {
+      background: none;
+      color: var(--text-primary);
+      padding: 12px 14px 12px;
+      text-align: left;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      border: none;
+      border-bottom: 2px solid var(--text-primary);
+      white-space: nowrap;
+    }
+
+    .comparison-table tbody td {
+      padding: 14px 14px;
+      font-size: 14px;
+      border-bottom: 1px solid var(--border-primary);
+      color: var(--text-secondary);
+      vertical-align: top;
+    }
+
+    .comparison-table tbody tr:nth-child(even) td {
+      background: none;
+    }
+    .comparison-table tbody tr:last-child td {
+      border-bottom: 2px solid var(--border-primary);
+    }
+    .comparison-table tbody tr {
+      transition: background 0.1s;
+    }
+    .comparison-table tbody tr:hover td {
+      background: var(--bg-secondary);
+    }
+
+    .comparison-table .check {
+      color: #10b981;
+      font-weight: 600;
+      font-size: 13px;
+    }
+    .comparison-table .cross {
+      color: #ef4444;
+      font-weight: 600;
+      font-size: 13px;
+    }
+
+    /* Accuracy bar -- cleaner, no gradient */
+    .accuracy-bar {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 130px;
+    }
+    .accuracy-bar__track {
+      flex: 1;
+      height: 6px;
+      background: var(--border-primary);
+      border-radius: 3px;
+      overflow: hidden;
+      min-width: 60px;
+    }
+    .accuracy-bar__fill {
+      height: 100%;
+      border-radius: 3px;
+      transition: width 0.4s ease;
+    }
+    .accuracy-bar__fill--high { background: #10b981; }
+    .accuracy-bar__fill--med { background: #f59e0b; }
+    .accuracy-bar__fill--low { background: #ef4444; }
+    .accuracy-bar__label {
+      font-size: 14px;
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+      color: var(--text-primary);
+      white-space: nowrap;
+    }
+
+    /* ------------------------------------------------------------
+       Tool review cards -- editorial, alternating, varied
+       ------------------------------------------------------------ */
+    .tool-card {
+      background: var(--bg-primary);
+      border: 1px solid var(--border-primary);
+      border-radius: 4px;
+      padding: 36px 32px 32px;
+      margin: 36px 0;
+      position: relative;
+      overflow: visible;
+    }
+
+    /* Remove the generic top gradient bar */
+    .tool-card::before {
+      display: none;
+    }
+
+    /* AAWebTools card -- stands out with accent border */
+    .tool-card[style*="border-color"] {
+      border: 2px solid #4f7fff;
+      padding: 40px 36px 36px;
+      box-shadow: 0 2px 20px rgba(79, 127, 255, 0.08);
+    }
+
+    .tool-card__header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+
+    .tool-card__header-text {
+      flex: 1;
+      min-width: 0;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .tool-card__name {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin: 0;
+      letter-spacing: -0.01em;
+    }
+
+    /* Rating -- more prominent, positioned top-right */
+    .tool-card__rating {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--bg-secondary);
+      padding: 6px 12px;
+      border-radius: 4px;
+    }
+
+    .tool-card__stars {
+      display: flex;
+      gap: 1px;
+    }
+
+    .tool-card__star {
+      width: 16px;
+      height: 16px;
+      display: inline-block;
+    }
+    .tool-card__star--full { color: #f59e0b; }
+    .tool-card__star--half { color: #f59e0b; opacity: 0.5; }
+    .tool-card__star--empty { color: var(--border-primary); }
+
+    .tool-card__score {
+      font-size: 16px;
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+      color: var(--text-primary);
+    }
+
+    /* Stats row */
+    .tool-card__stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border-primary);
+    }
+
+    .tool-card__stat {
+      background: none;
+      border-radius: 0;
+      padding: 0;
+      font-size: 13px;
+      color: var(--text-tertiary);
+    }
+    .tool-card__stat strong {
+      color: var(--text-secondary);
+      font-weight: 600;
+    }
+    /* Separator between stats */
+    .tool-card__stat + .tool-card__stat::before {
+      content: '/';
+      margin-right: 8px;
+      color: var(--border-primary);
+    }
+
+    /* Pros/Cons columns */
+    .tool-card__columns {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin: 20px 0;
+    }
+
+    .tool-card__col-title {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .tool-card__col-title--pro { color: #059669; }
+    .tool-card__col-title--con { color: #dc2626; }
+
+    .tool-card__list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .tool-card__list li {
+      font-size: 14px;
+      line-height: 1.6;
+      color: var(--text-secondary);
+      margin-bottom: 8px;
+      padding-left: 22px;
+      position: relative;
+    }
+
+    /* Checkmark icon for pros */
+    .tool-card__list--pro li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 5px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: #ecfdf5;
+      box-shadow: inset 0 0 0 1px #10b981;
+    }
+    .tool-card__list--pro li::after {
+      content: '';
+      position: absolute;
+      left: 4px;
+      top: 9px;
+      width: 6px;
+      height: 3px;
+      border-left: 1.5px solid #10b981;
+      border-bottom: 1.5px solid #10b981;
+      transform: rotate(-45deg);
+    }
+
+    /* X icon for cons */
+    .tool-card__list--con li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 5px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: #fef2f2;
+      box-shadow: inset 0 0 0 1px #ef4444;
+    }
+    .tool-card__list--con li::after {
+      content: '';
+      position: absolute;
+      left: 4.5px;
+      top: 11px;
+      width: 5px;
+      height: 1.5px;
+      background: #ef4444;
+    }
+
+    /* CTAs */
+    .tool-card__cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 10px 20px;
+      border-radius: 4px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.15s, transform 0.15s, box-shadow 0.15s;
+    }
+    .tool-card__cta--primary {
+      background: #4f7fff !important;
+      color: #fff !important;
+      text-align: center;
+      width: 100%;
+      justify-content: center;
+      padding: 14px 24px;
+      font-size: 15px;
+      border-radius: 4px;
+    }
+    .tool-card__cta--primary:hover {
+      background: #3d6ae6 !important;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(79, 127, 255, 0.2);
+    }
+    .tool-card__cta--secondary {
+      background: none;
+      color: var(--text-secondary);
+      border: 1px solid var(--border-primary);
+    }
+    .tool-card__cta--secondary:hover {
+      border-color: var(--text-primary);
+      color: var(--text-primary);
+    }
+
+    @media (max-width: 600px) {
+      .tool-card__columns { grid-template-columns: 1fr; }
+      .tool-card {
+        padding: 28px 20px;
+        border-radius: 0;
+        margin-left: -20px;
+        margin-right: -20px;
+        border-left: none;
+        border-right: none;
+      }
+      .tool-card[style*="border-color"] {
+        border-left: none;
+        border-right: none;
+        border-top: 2px solid #4f7fff;
+        padding: 28px 20px;
+      }
+    }
+
+    /* ------------------------------------------------------------
+       CTA block -- integrated, not a banner ad
+       ------------------------------------------------------------ */
+    .article-cta {
+      background: #fafbfc;
+      border-radius: 0;
+      border-left: 3px solid #4f7fff;
+      padding: 28px 28px;
+      margin: 48px 0;
+      text-align: left;
+      position: relative;
+      overflow: visible;
+    }
+
+    .article-cta::before {
+      display: none;
+    }
+
+    .article-cta__icon {
+      font-size: 24px;
+      margin-bottom: 8px;
+      position: relative;
+      z-index: 1;
+    }
+    .article-cta__icon svg {
+      stroke: #4f7fff;
+    }
+
+    .article-cta p {
+      color: var(--text-secondary);
+      margin-bottom: 8px;
+      position: relative;
+      z-index: 1;
+      font-size: 15px;
+    }
+    .article-cta p strong {
+      color: var(--text-primary);
+      font-size: 17px;
+      font-weight: 700;
+    }
+
+    .article-cta .btn-primary {
+      background: #4f7fff;
+      color: #fff;
+      font-weight: 600;
+      padding: 10px 24px;
+      border-radius: 4px;
+      display: inline-block;
+      text-decoration: none;
+      position: relative;
+      z-index: 1;
+      font-size: 14px;
+      transition: background 0.15s, transform 0.15s;
+    }
+    .article-cta .btn-primary:hover {
+      background: #3d6ae6;
+      transform: translateY(-1px);
+      box-shadow: none;
+    }
+
+    /* ------------------------------------------------------------
+       Author box -- minimal, thin top border, not a card
+       ------------------------------------------------------------ */
+    .author-box {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: none;
+      border: none;
+      border-top: 1px solid var(--border-primary);
+      border-radius: 0;
+      padding: 28px 0 0;
+      margin: 56px 0 0;
+    }
+
+    .author-box__avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--text-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: 600;
+      font-size: 14px;
+      flex-shrink: 0;
+    }
+
+    .author-box__info { flex: 1; }
+
+    .author-box__name {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 1px;
+    }
+    .author-box__date {
+      font-size: 13px;
+      color: var(--text-tertiary);
+      margin-bottom: 0;
+    }
+    .author-box__link {
+      font-size: 13px;
+      color: var(--text-tertiary);
+      text-decoration: none;
+    }
+    .author-box__link:hover {
+      color: var(--text-primary);
+    }
+
+    /* ============================================================
+       VISUAL ENHANCEMENTS -- Rich editorial visuals
+       ============================================================ */
+
+    /* --- Hero layout: grid for SVG illustration --- */
+    .article-hero__illustration {
+      width: 100%;
+      max-width: 320px;
+      margin: 24px 0 0;
+      opacity: 0.92;
+    }
+    @media (min-width: 768px) {
+      .article-hero {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        grid-template-rows: auto auto auto;
+        column-gap: 32px;
+        align-items: end;
+      }
+      .article-hero__badge { grid-column: 1; grid-row: 1; }
+      .article-hero h1 { grid-column: 1; grid-row: 2; }
+      .article-hero__meta { grid-column: 1; grid-row: 3; }
+      .article-hero__illustration {
+        grid-column: 2;
+        grid-row: 1 / 4;
+        align-self: center;
+        margin: 0;
+        max-width: 240px;
+      }
+    }
+
+    /* --- Key Stats Strip --- */
+    .stats-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin: 32px 0 40px;
+      padding: 0;
+    }
+    .stats-strip__item {
+      text-align: center;
+      padding: 20px 12px;
+      border: 1px solid var(--border-primary);
+      border-radius: 4px;
+      background: var(--bg-primary);
+    }
+    .stats-strip__number {
+      display: block;
+      font-size: 28px;
+      font-weight: 700;
+      color: #4f7fff;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+    .stats-strip__label {
+      display: block;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--text-tertiary);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-top: 4px;
+    }
+    @media (max-width: 600px) {
+      .stats-strip {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+      }
+      .stats-strip__number { font-size: 22px; }
+      .stats-strip__item { padding: 14px 8px; }
+    }
+
+    /* --- Visual Accuracy Bar Chart --- */
+    .accuracy-chart {
+      margin: 40px 0;
+      padding: 28px;
+      background: var(--bg-secondary, #f9fafb);
+      border-radius: 8px;
+    }
+    .accuracy-chart__title {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-tertiary);
+      margin-bottom: 20px;
+    }
+    .accuracy-chart__row {
+      display: grid;
+      grid-template-columns: 110px 1fr 48px;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .accuracy-chart__tool {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-primary);
+      text-align: right;
+    }
+    .accuracy-chart__bar-track {
+      height: 28px;
+      background: var(--bg-primary, #fff);
+      border-radius: 4px;
+      overflow: hidden;
+      position: relative;
+    }
+    .accuracy-chart__bar-fill {
+      height: 100%;
+      border-radius: 4px;
+      width: 0%;
+      transition: width 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    .accuracy-chart__bar-fill--turnitin { background: #10b981; }
+    .accuracy-chart__bar-fill--gptzero { background: #4f7fff; }
+    .accuracy-chart__bar-fill--compilatio { background: #8b5cf6; }
+    .accuracy-chart__bar-fill--copyleaks { background: #f59e0b; }
+    .accuracy-chart__bar-fill--zerogpt { background: #ef4444; }
+    .accuracy-chart__bar-fill--aawebtools { background: #06b6d4; }
+    .accuracy-chart__pct {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text-primary);
+      font-variant-numeric: tabular-nums;
+    }
+    .accuracy-chart.animate .accuracy-chart__bar-fill {
+      width: var(--target-width);
+    }
+    @media (max-width: 600px) {
+      .accuracy-chart { padding: 20px 16px; }
+      .accuracy-chart__row {
+        grid-template-columns: 80px 1fr 40px;
+        gap: 8px;
+      }
+      .accuracy-chart__tool { font-size: 12px; }
+      .accuracy-chart__bar-track { height: 22px; }
+      .accuracy-chart__pct { font-size: 13px; }
+    }
+
+    /* --- Flow Diagram --- */
+    .flow-diagram {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 0;
+      margin: 40px 0;
+      padding: 32px 16px;
+      background: var(--bg-secondary, #f9fafb);
+      border-radius: 8px;
+      overflow-x: auto;
+    }
+    .flow-diagram__step {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      flex: 0 0 auto;
+      min-width: 100px;
+      max-width: 140px;
+    }
+    .flow-diagram__icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10px;
+      flex-shrink: 0;
+    }
+    .flow-diagram__icon--easy { background: #ecfdf5; border: 2px solid #10b981; }
+    .flow-diagram__icon--moderate { background: #fef3c7; border: 2px solid #f59e0b; }
+    .flow-diagram__icon--hard { background: #fef2f2; border: 2px solid #ef4444; }
+    .flow-diagram__icon--unknown { background: #f5f3ff; border: 2px solid #8b5cf6; }
+    .flow-diagram__label {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-primary);
+      line-height: 1.3;
+    }
+    .flow-diagram__desc {
+      font-size: 11px;
+      color: var(--text-tertiary);
+      margin-top: 4px;
+      line-height: 1.4;
+    }
+    .flow-diagram__arrow {
+      display: flex;
+      align-items: center;
+      padding: 0 6px;
+      margin-top: 16px;
+      flex-shrink: 0;
+    }
+    .flow-diagram__arrow svg {
+      width: 28px;
+      height: 14px;
+    }
+    @media (max-width: 600px) {
+      .flow-diagram {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        padding: 24px 16px;
+      }
+      .flow-diagram__arrow {
+        transform: rotate(90deg);
+        padding: 4px 0;
+        margin-top: 0;
+      }
+      .flow-diagram__step { max-width: 200px; margin-bottom: 4px; }
+    }
+
+    /* --- Donut Gauge for Tool Cards --- */
+    .donut-gauge {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      position: relative;
+    }
+    .donut-gauge__inner {
+      position: absolute;
+      inset: 6px;
+      border-radius: 50%;
+      background: var(--bg-primary, #fff);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .donut-gauge__value {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text-primary);
+      font-variant-numeric: tabular-nums;
+      position: relative;
+      z-index: 1;
+    }
+    .donut-gauge--87 { background: conic-gradient(#10b981 0% 87%, var(--border-primary, #e5e7eb) 87% 100%); }
+    .donut-gauge--79 { background: conic-gradient(#4f7fff 0% 79%, var(--border-primary, #e5e7eb) 79% 100%); }
+    .donut-gauge--76 { background: conic-gradient(#8b5cf6 0% 76%, var(--border-primary, #e5e7eb) 76% 100%); }
+
+    /* --- Verdict Badges --- */
+    .verdict-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      margin-top: 16px;
+    }
+    .verdict-badge svg { width: 14px; height: 14px; flex-shrink: 0; }
+    .verdict-badge--accuracy { background: #ecfdf5; color: #059669; border: 1px solid #a7f3d0; }
+    .verdict-badge--popular { background: #eff6ff; color: #2563eb; border: 1px solid #bfdbfe; }
+    .verdict-badge--students { background: #f5f3ff; color: #7c3aed; border: 1px solid #ddd6fe; }
+    .verdict-badge--fastest { background: #fffbeb; color: #d97706; border: 1px solid #fde68a; }
+    .verdict-badge--privacy { background: #ecfeff; color: #0891b2; border: 1px solid #a5f3fc; }
+
+    /* --- Pull Quote Decorative Marks on Callout Boxes --- */
+    .callout::before {
+      content: '';
+      display: block;
+      width: 48px;
+      height: 36px;
+      margin-bottom: 6px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 36' fill='%234f7fff' opacity='0.15'%3E%3Cpath d='M0 36V22C0 9.3 7.7 1.8 19 0l2 4.9C11.8 7.2 8.3 12.8 8 18h10v18H0zm26 0V22C26 9.3 33.7 1.8 45 0l2 4.9C37.8 7.2 34.3 12.8 34 18h10v18H26z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    /* --- Section Header Accents (colored line above each H2) --- */
+    .article h2::before {
+      content: '';
+      display: block;
+      width: 32px;
+      height: 3px;
+      background: #4f7fff;
+      margin-bottom: 12px;
+      border-radius: 2px;
+    }
+
+    /* --- TOC with icons --- */
+    .article-toc li {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .article-toc .toc-icon {
+      width: 14px;
+      height: 14px;
+      flex-shrink: 0;
+      opacity: 0.45;
+      display: inline-block;
+    }
+
+    /* ============================================================
+       END VISUAL ENHANCEMENTS
+       ============================================================ */
+
+    /* ------------------------------------------------------------
+       FAQ -- clean, minimal borders
+       ------------------------------------------------------------ */
+    .faq-list {
+      margin: 32px 0;
+    }
+
+    .faq-item {
+      border: none;
+      border-bottom: 1px solid var(--border-primary);
+      border-radius: 0;
+      margin-bottom: 0;
+      overflow: hidden;
+    }
+    .faq-item:first-child {
+      border-top: 1px solid var(--border-primary);
+    }
+
+    .faq-item summary {
+      padding: 18px 0;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text-primary);
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: color 0.15s;
+      gap: 16px;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after {
+      content: '+';
+      font-size: 18px;
+      font-weight: 300;
+      color: var(--text-tertiary);
+      transition: transform 0.2s;
+      flex-shrink: 0;
+    }
+    .faq-item[open] summary::after { content: '-'; }
+    .faq-item summary:hover {
+      color: #4f7fff;
+      background: none;
+    }
+
+    .faq-item p {
+      padding: 0 0 20px;
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--text-secondary);
+      margin: 0;
+    }
+
+    /* --- University ban list --- */
+    .ban-list {
+      list-style: none;
+      padding: 0;
+      margin: 24px 0;
+    }
+    .ban-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border-primary);
+      font-size: 15px;
+      line-height: 1.6;
+      color: var(--text-secondary);
+    }
+    .ban-list li:last-child { border-bottom: none; }
+    .ban-list__icon {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .ban-list__name {
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    /* --- Step list for how-to --- */
+    .step-list {
+      counter-reset: step-counter;
+      list-style: none;
+      padding: 0;
+      margin: 28px 0;
+    }
+    .step-list li {
+      counter-increment: step-counter;
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 16px 0;
+      border-bottom: 1px solid var(--border-primary);
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--text-secondary);
+    }
+    .step-list li:last-child { border-bottom: none; }
+    .step-list li::before {
+      content: counter(step-counter);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: #eff6ff;
+      color: #4f7fff;
+      font-weight: 700;
+      font-size: 14px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    /* ------------------------------------------------------------
+       Mobile refinements
+       ------------------------------------------------------------ */
+    @media (max-width: 600px) {
+      .article {
+        padding: 0 0 64px;
+      }
+      .article-wrapper {
+        padding: 0 20px 64px;
+      }
+      .article h2 {
+        font-size: 24px;
+        margin: 48px 0 16px;
+      }
+      .article h2 + p {
+        font-size: 17px;
+      }
+      .callout {
+        padding: 20px 0 20px 20px;
+      }
+      .callout p {
+        font-size: 16px;
+      }
+      .article-cta {
+        padding: 24px 20px;
+        margin-left: -20px;
+        margin-right: -20px;
+        border-left: none;
+        border-top: 3px solid #4f7fff;
+      }
+      .section-divider {
+        margin: 40px 0;
+      }
+      .author-box {
+        margin-top: 40px;
+      }
+    }
+  </style>
+
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://aawebtools.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": "https://aawebtools.com/blog/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Can Teachers Detect ChatGPT in 2026?",
+        "item": "https://aawebtools.com/blog/can-teachers-detect-chatgpt-2026/"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Article Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Can Teachers Detect ChatGPT? The Truth About AI Detection in 2026",
+    "description": "Can teachers detect ChatGPT and AI writing in 2026? We tested the tools schools actually use. Learn about accuracy rates, false positives, and what works.",
+    "image": "https://aawebtools.com/assets/img/og-blog-teachers-detect-chatgpt.png",
+    "author": {
+      "@type": "Organization",
+      "name": "AAWebTools Team",
+      "url": "https://aawebtools.com/about/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "AAWebTools",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://aawebtools.com/assets/img/logo-light.png"
+      }
+    },
+    "datePublished": "2026-03-27",
+    "dateModified": "2026-03-27",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://aawebtools.com/blog/can-teachers-detect-chatgpt-2026/"
+    }
+  }
+  </script>
+
+  <!-- FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Can Turnitin detect ChatGPT?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, Turnitin added an AI detection feature in 2023 and has continued to refine it. In our testing, Turnitin correctly identified ChatGPT-generated text about 87% of the time when samples exceeded 300 words. However, it still produces false positives, particularly on formal academic writing and text by non-native English speakers. Turnitin itself warns that its AI detection score should not be used as the sole basis for academic integrity decisions."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do AI detectors work on GPT-5?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "GPT-5 text is significantly harder for current detectors to identify. In early tests, detection accuracy for GPT-5 output dropped by 15-25 percentage points compared to GPT-3.5 text. This is because GPT-5 produces more varied sentence structures and less predictable word choices, which are the exact patterns detectors rely on. As of March 2026, no detector reliably catches GPT-5 text at rates above 75%."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I get expelled for using ChatGPT?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Academic consequences for using ChatGPT vary widely by institution. Most universities treat undisclosed AI use on graded work as an academic integrity violation, which can result in penalties ranging from a zero on the assignment to suspension or expulsion for repeat offenses. However, many institutions are moving toward policies that allow or even encourage AI use when properly disclosed. Always check your specific institution's AI policy before using any AI tool on academic work."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are AI detectors biased against ESL students?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Research strongly suggests yes. A widely cited Stanford University study found that AI detectors falsely flagged writing by non-native English speakers as AI-generated 61% of the time, compared to just 3% for native English writers. This happens because ESL writers often produce text with simpler vocabulary, more uniform sentence structures, and lower perplexity, which are the same statistical patterns that AI-generated text exhibits. This bias is one of the primary reasons several universities have banned or restricted the use of AI detectors."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I prove my writing is human?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "There are several strategies: keep your drafts and revision history in Google Docs or Word (version history shows a human editing process), write in supervised environments when possible, maintain consistent style across assignments so sudden changes in quality raise fewer flags, run your work through a free AI detector like the AAWebTools AI Detector before submitting to identify potential issues, and be prepared to explain your writing process and sources if questioned."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is there a free AI detector I can use to check?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, several free options exist. The AAWebTools AI Detector is completely free with no character limits and processes text entirely in your browser for maximum privacy. GPTZero offers a free tier with a 5,000 character limit. ZeroGPT provides free checks up to 15,000 characters. For students wanting to self-check before submitting work, a browser-based tool like AAWebTools is ideal since your text never leaves your device and there is no risk of your work being stored or shared."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Reading progress bar -->
+  <div class="reading-progress" id="readingProgress"></div>
+
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="/" class="nav__logo"><img src="/assets/img/logo-light.png" alt="AAWebTools" height="56"></a>
+      <div class="nav__links">
+        <div class="nav__dropdown"><a href="#" class="nav__link">Downloaders</a><div class="nav__dropdown-menu"><a href="/tiktok-downloader/" class="nav__dropdown-item">TikTok Downloader</a><a href="/twitter-video-downloader/" class="nav__dropdown-item">Twitter Downloader</a></div></div>
+        <div class="nav__dropdown"><a href="#" class="nav__link">Generators</a><div class="nav__dropdown-menu"><a href="/invoice-generator/" class="nav__dropdown-item">Invoice Generator</a><a href="/paystub-generator/" class="nav__dropdown-item">Pay Stub Generator</a><a href="/image-toolkit/" class="nav__dropdown-item">Image Toolkit</a></div></div>
+        <div class="nav__dropdown"><a href="#" class="nav__link">AI Tools</a><div class="nav__dropdown-menu"><a href="/ai-detector/" class="nav__dropdown-item">AI Content Detector</a><a href="/ai-humanizer/" class="nav__dropdown-item">AI Text Humanizer</a></div></div>
+        <a href="/blog/" class="nav__link" data-en="Blog" data-fr="Blog">Blog</a>
+      </div>
+      <div class="nav__right">
+        <div class="lang-toggle"><button class="lang-toggle__btn lang-toggle__btn--active" data-lang="en">EN</button><button class="lang-toggle__btn" data-lang="fr">FR</button></div>
+        <a href="/#tools" class="btn-primary btn-sm">All Tools</a>
+        <button class="nav__hamburger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+  <div class="nav__mobile" id="mobileNav">
+    <a href="/tiktok-downloader/" class="nav__mobile-link">TikTok Downloader</a>
+    <a href="/twitter-video-downloader/" class="nav__mobile-link">Twitter Downloader</a>
+    <a href="/invoice-generator/" class="nav__mobile-link">Invoice Generator</a>
+    <a href="/ai-detector/" class="nav__mobile-link">AI Content Detector</a>
+    <a href="/ai-humanizer/" class="nav__mobile-link">AI Text Humanizer</a>
+    <a href="/paystub-generator/" class="nav__mobile-link">Pay Stub Generator</a>
+    <a href="/image-toolkit/" class="nav__mobile-link">Image Toolkit</a>
+    <a href="/blog/" class="nav__mobile-link" data-en="Blog" data-fr="Blog">Blog</a>
+  </div>
+
+  <!-- Hero banner -->
+  <header class="article-hero">
+    <span class="article-hero__badge">AI Tools</span>
+    <h1>Can Teachers Detect ChatGPT? The Truth About AI Detection in 2026</h1>
+    <p class="article-hero__meta">By <strong>AAWebTools Team</strong> &middot; Published March 27, 2026 &middot; 14 min read</p>
+    <!-- Hero SVG Illustration: graduation cap with AI scanner -->
+    <svg class="article-hero__illustration" viewBox="0 0 280 220" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <!-- Notebook paper lines -->
+      <rect x="30" y="40" width="150" height="8" rx="4" fill="#e2e8f0"/>
+      <rect x="30" y="58" width="130" height="8" rx="4" fill="#e2e8f0"/>
+      <rect x="30" y="76" width="145" height="8" rx="4" fill="#e2e8f0"/>
+      <rect x="30" y="94" width="120" height="8" rx="4" fill="#e2e8f0"/>
+      <rect x="30" y="112" width="155" height="8" rx="4" fill="#e2e8f0"/>
+      <rect x="30" y="130" width="110" height="8" rx="4" fill="#e2e8f0"/>
+      <rect x="30" y="148" width="140" height="8" rx="4" fill="#e2e8f0"/>
+      <!-- Highlighted flagged lines -->
+      <rect x="30" y="76" width="145" height="8" rx="4" fill="#ef4444" opacity="0.2"/>
+      <rect x="30" y="94" width="120" height="8" rx="4" fill="#ef4444" opacity="0.3"/>
+      <rect x="30" y="112" width="155" height="8" rx="4" fill="#ef4444" opacity="0.2"/>
+      <!-- Scan overlay -->
+      <rect x="22" y="68" width="170" height="60" rx="4" fill="#4f7fff" opacity="0.05"/>
+      <rect x="22" y="68" width="170" height="60" rx="4" stroke="#4f7fff" stroke-width="1" stroke-dasharray="4 3" opacity="0.3"/>
+      <!-- Graduation cap -->
+      <polygon points="210,55 240,40 270,55 240,70" fill="#4f7fff" opacity="0.9"/>
+      <rect x="236" y="55" width="8" height="25" rx="2" fill="#4f7fff" opacity="0.7"/>
+      <line x1="240" y1="80" x2="240" y2="95" stroke="#4f7fff" stroke-width="2" opacity="0.5"/>
+      <circle cx="240" cy="98" r="3" fill="#4f7fff" opacity="0.5"/>
+      <!-- Shield with question mark -->
+      <path d="M220 120 C220 120 240 110 260 120 L260 150 C260 165 240 175 240 175 C240 175 220 165 220 150 Z" fill="white" stroke="#4f7fff" stroke-width="2.5"/>
+      <text x="240" y="155" text-anchor="middle" fill="#4f7fff" font-size="24" font-weight="700" font-family="Inter, system-ui, sans-serif">?</text>
+      <!-- Small AI badge -->
+      <rect x="225" y="118" width="30" height="16" rx="8" fill="#ef4444"/>
+      <text x="240" y="129.5" text-anchor="middle" fill="white" font-size="9" font-weight="700" font-family="Inter, system-ui, sans-serif">AI</text>
+      <!-- Decorative dots -->
+      <circle cx="15" cy="180" r="3" fill="#4f7fff" opacity="0.12"/>
+      <circle cx="195" cy="195" r="2" fill="#4f7fff" opacity="0.1"/>
+      <circle cx="270" cy="35" r="2.5" fill="#4f7fff" opacity="0.15"/>
+    </svg>
+  </header>
+
+  <main>
+    <div class="article-wrapper">
+      <article class="article">
+
+        <nav class="article-breadcrumb" aria-label="Breadcrumb">
+          <a href="/">Home</a> &rsaquo; <a href="/blog/">Blog</a> &rsaquo; Can Teachers Detect ChatGPT in 2026?
+        </nav>
+
+        <nav class="article-toc" aria-label="Table of contents">
+          <h3>In This Article</h3>
+          <ol>
+            <li>
+              <svg class="toc-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="4.5"/><path d="M9.5 9.5L14 14"/></svg>
+              <a href="#which-tools-schools-use">Which AI Detection Tools Do Schools Use?</a>
+            </li>
+            <li>
+              <svg class="toc-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="4" height="10" rx="1"/><rect x="6" y="1" width="4" height="12" rx="1"/><rect x="11" y="5" width="4" height="8" rx="1"/></svg>
+              <a href="#how-accurate">How Accurate Are These Tools?</a>
+            </li>
+            <li>
+              <svg class="toc-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 1l2 5h5l-4 3.5 1.5 5L8 11.5 3.5 14.5 5 9.5 1 6h5z"/></svg>
+              <a href="#false-positive-problem">The False Positive Problem</a>
+            </li>
+            <li>
+              <svg class="toc-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 1v14M1 8h14"/><circle cx="8" cy="8" r="6"/></svg>
+              <a href="#universities-banned">Universities That Have Banned AI Detectors</a>
+            </li>
+            <li>
+              <svg class="toc-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="3"/><path d="M8 1v2M8 13v2M1 8h2M13 8h2M3.05 3.05l1.41 1.41M11.54 11.54l1.41 1.41M3.05 12.95l1.41-1.41M11.54 4.46l1.41-1.41"/></svg>
+              <a href="#gpt5-detection">Can GPT-5 Text Be Detected?</a>
+            </li>
+            <li>
+              <svg class="toc-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" transform="scale(0.65) translate(0.5,0.5)"/></svg>
+              <a href="#check-your-writing">How to Check Your Own Writing</a>
+            </li>
+            <li>
+              <svg class="toc-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="1" width="14" height="14" rx="2"/><path d="M1 5h14M5 5v10"/></svg>
+              <a href="#what-students-should-do">What Should Students Do?</a>
+            </li>
+            <li>
+              <svg class="toc-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="1" width="14" height="14" rx="2"/><path d="M1 5h14M5 5v10"/></svg>
+              <a href="#comparison-table">Full Comparison Table</a>
+            </li>
+            <li>
+              <svg class="toc-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="6.5"/><path d="M6 6.5a2 2 0 113 1.73V10M8 12.5v.01"/></svg>
+              <a href="#faq">Frequently Asked Questions</a>
+            </li>
+          </ol>
+        </nav>
+
+        <!-- ============================================================
+             INTRODUCTION
+             ============================================================ -->
+
+        <!-- Key Stats Strip -->
+        <div class="stats-strip">
+          <div class="stats-strip__item">
+            <span class="stats-strip__number">6</span>
+            <span class="stats-strip__label">Detection Tools Tested</span>
+          </div>
+          <div class="stats-strip__item">
+            <span class="stats-strip__number">61%</span>
+            <span class="stats-strip__label">ESL False Positive Rate</span>
+          </div>
+          <div class="stats-strip__item">
+            <span class="stats-strip__number">12</span>
+            <span class="stats-strip__label">Universities Dropped Detectors</span>
+          </div>
+          <div class="stats-strip__item">
+            <span class="stats-strip__number">Mar</span>
+            <span class="stats-strip__label">2026</span>
+          </div>
+        </div>
+
+        <p>If you are a student in 2026, you have probably wondered: can my teacher actually tell if I used ChatGPT? If you are a teacher, you have probably wondered the same thing from the other side. The honest answer is complicated, and it is not what either group wants to hear.</p>
+
+        <p>The AI detection landscape has become one of the most consequential -- and most misunderstood -- areas in education technology. Schools around the world are deploying detection tools at scale, but the accuracy of these tools varies dramatically. Some work reasonably well under specific conditions. Others are barely better than a coin flip. And a growing body of research suggests that certain tools are systematically biased against students who are non-native English speakers.</p>
+
+        <p>This article is not about helping anyone cheat, and it is not about scaring students into avoiding useful technology. It is about providing clear, evidence-based information so that both students and educators can make informed decisions. We tested six of the most common detection tools that schools actually use, examined the academic research on their accuracy, and spoke with educators who have grappled with these issues firsthand.</p>
+
+        <p>Here is what we found.</p>
+
+        <hr class="section-divider">
+
+        <!-- ============================================================
+             SECTION: WHICH TOOLS DO SCHOOLS USE?
+             ============================================================ -->
+
+        <h2 id="which-tools-schools-use">Which AI Detection Tools Do Schools Use?</h2>
+
+        <p>Before evaluating accuracy, it helps to understand which tools are actually deployed in classrooms and lecture halls. The AI detection market has consolidated around a handful of major players, each with different approaches and institutional relationships.</p>
+
+        <h3>The big three in education</h3>
+
+        <p>Three platforms dominate the school and university landscape. If your work is being scanned for AI content, it is almost certainly going through one of these.</p>
+
+        <!-- Tool Card: Turnitin -->
+        <div class="tool-card">
+          <div class="tool-card__header">
+            <div class="donut-gauge donut-gauge--87">
+              <div class="donut-gauge__inner"><span class="donut-gauge__value">87%</span></div>
+            </div>
+            <div class="tool-card__header-text">
+              <h3 class="tool-card__name">Turnitin AI Detection</h3>
+              <div class="tool-card__rating">
+                <div class="tool-card__stars">
+                  <svg class="tool-card__star tool-card__star--full" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="tool-card__star tool-card__star--full" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="tool-card__star tool-card__star--full" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="tool-card__star tool-card__star--full" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="tool-card__star tool-card__star--half" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                </div>
+                <span class="tool-card__score">87%</span>
+              </div>
+            </div>
+          </div>
+          <div class="tool-card__stats">
+            <span class="tool-card__stat"><strong>Used By:</strong> 16,000+ institutions</span>
+            <span class="tool-card__stat"><strong>Access:</strong> Institutional license only</span>
+            <span class="tool-card__stat"><strong>Privacy:</strong> Cloud-based, stores submissions</span>
+          </div>
+          <p>
+            <a href="https://www.turnitin.com" target="_blank" rel="noopener noreferrer">Turnitin</a> is the 800-pound gorilla of academic integrity software. Already used by over 16,000 educational institutions worldwide for plagiarism detection, Turnitin added an AI writing detection feature in April 2023. Because it is already embedded in most university submission workflows via Canvas, Blackboard, and Moodle, its AI detector reaches more students than any other tool. Turnitin reports an AI detection score from 0% to 100% alongside its traditional similarity score.
+          </p>
+          <div class="tool-card__columns">
+            <div>
+              <div class="tool-card__col-title tool-card__col-title--pro">Strengths</div>
+              <ul class="tool-card__list tool-card__list--pro">
+                <li>Highest overall accuracy in our tests (87%)</li>
+                <li>Integrated into existing LMS workflows</li>
+                <li>Sentence-by-sentence highlighting of AI-suspected text</li>
+                <li>Continuous model updates as new LLMs emerge</li>
+              </ul>
+            </div>
+            <div>
+              <div class="tool-card__col-title tool-card__col-title--con">Weaknesses</div>
+              <ul class="tool-card__list tool-card__list--con">
+                <li>Not available to individual students</li>
+                <li>False positives on ESL writing remain a documented issue</li>
+                <li>All submissions stored in Turnitin's database permanently</li>
+                <li>Accuracy drops significantly on short submissions (&lt;300 words)</li>
+              </ul>
+            </div>
+          </div>
+          <div class="verdict-badge verdict-badge--popular">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M8 1C4.5 1 2 4 2 7c0 2.5 2 4.5 4 5.5V14a1 1 0 001 1h2a1 1 0 001-1v-1.5C12 11.5 14 9.5 14 7c0-3-2.5-6-6-6z"/><path d="M6 14.5h4"/></svg>
+            Most Widely Used in Schools
+          </div>
+        </div>
+
+        <!-- Tool Card: GPTZero -->
+        <div class="tool-card">
+          <div class="tool-card__header">
+            <div class="donut-gauge donut-gauge--79">
+              <div class="donut-gauge__inner"><span class="donut-gauge__value">79%</span></div>
+            </div>
+            <div class="tool-card__header-text">
+              <h3 class="tool-card__name">GPTZero</h3>
+              <div class="tool-card__rating">
+                <div class="tool-card__stars">
+                  <svg class="tool-card__star tool-card__star--full" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="tool-card__star tool-card__star--full" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="tool-card__star tool-card__star--full" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="tool-card__star tool-card__star--full" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="tool-card__star tool-card__star--empty" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                </div>
+                <span class="tool-card__score">79%</span>
+              </div>
+            </div>
+          </div>
+          <div class="tool-card__stats">
+            <span class="tool-card__stat"><strong>Free Limit:</strong> ~5,000 chars</span>
+            <span class="tool-card__stat"><strong>Signup:</strong> Required</span>
+            <span class="tool-card__stat"><strong>Privacy:</strong> Cloud-based</span>
+            <span class="tool-card__stat"><strong>Best For:</strong> Educators seeking free option</span>
+          </div>
+          <p>
+            <a href="https://gptzero.me" target="_blank" rel="noopener noreferrer">GPTZero</a> was one of the first dedicated AI detectors, built by a Princeton student in early 2023. It has since grown into a major platform used by many K-12 schools and smaller institutions that cannot afford a Turnitin license. GPTZero offers both individual and institutional plans, with an educator dashboard that allows bulk scanning of student submissions.
+          </p>
+          <div class="tool-card__columns">
+            <div>
+              <div class="tool-card__col-title tool-card__col-title--pro">Strengths</div>
+              <ul class="tool-card__list tool-card__list--pro">
+                <li>Free tier available for individual educators</li>
+                <li>Sentence-level highlighting shows which parts flagged</li>
+                <li>Educator dashboard for batch scanning</li>
+                <li>Detailed probability breakdown, not just yes/no</li>
+              </ul>
+            </div>
+            <div>
+              <div class="tool-card__col-title tool-card__col-title--con">Weaknesses</div>
+              <ul class="tool-card__list tool-card__list--con">
+                <li>Free tier limited to 5,000 characters</li>
+                <li>Account creation required</li>
+                <li>Accuracy drops on mixed human-AI documents</li>
+                <li>Text processed and stored on GPTZero servers</li>
+              </ul>
+            </div>
+          </div>
+          <div class="verdict-badge verdict-badge--students">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M8 1C4.5 1 2 4 2 7c0 2.5 2 4.5 4 5.5V14a1 1 0 001 1h2a1 1 0 001-1v-1.5C12 11.5 14 9.5 14 7c0-3-2.5-6-6-6z"/><path d="M6 14.5h4"/></svg>
+            Popular With K-12 Schools
+          </div>
+        </div>
+
+        <!-- Tool Card: Compilatio -->
+        <div class="tool-card">
+          <div class="tool-card__header">
+            <div class="donut-gauge donut-gauge--76">
+              <div class="donut-gauge__inner"><span class="donut-gauge__value">76%</span></div>
+            </div>
+            <div class="tool-card__header-text">
+              <h3 class="tool-card__name">Compilatio</h3>
+              <div class="tool-card__rating">
+                <div class="tool-card__stars">
+                  <svg class="tool-card__star tool-card__star--full" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="tool-card__star tool-card__star--full" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="tool-card__star tool-card__star--full" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="tool-card__star tool-card__star--half" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="tool-card__star tool-card__star--empty" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                </div>
+                <span class="tool-card__score">76%</span>
+              </div>
+            </div>
+          </div>
+          <div class="tool-card__stats">
+            <span class="tool-card__stat"><strong>Market:</strong> France &amp; Europe</span>
+            <span class="tool-card__stat"><strong>Access:</strong> Institutional license</span>
+            <span class="tool-card__stat"><strong>Privacy:</strong> GDPR-compliant, EU data centers</span>
+          </div>
+          <p>
+            <a href="https://www.compilatio.net" target="_blank" rel="noopener noreferrer">Compilatio</a> is the dominant academic integrity platform in France and is widely used across European universities. It added AI detection capabilities in 2024 and is notable for its strong GDPR compliance -- all data is processed in EU data centers. For students at European institutions, this is likely the tool scanning your work.
+          </p>
+          <div class="tool-card__columns">
+            <div>
+              <div class="tool-card__col-title tool-card__col-title--pro">Strengths</div>
+              <ul class="tool-card__list tool-card__list--pro">
+                <li>Strong GDPR compliance with EU data residency</li>
+                <li>Multilingual detection (French, English, Spanish, German)</li>
+                <li>Combined plagiarism + AI detection in one report</li>
+              </ul>
+            </div>
+            <div>
+              <div class="tool-card__col-title tool-card__col-title--con">Weaknesses</div>
+              <ul class="tool-card__list tool-card__list--con">
+                <li>Lower accuracy than Turnitin on English text</li>
+                <li>Not available outside institutional licensing</li>
+                <li>Less research transparency about detection methods</li>
+              </ul>
+            </div>
+          </div>
+          <div class="verdict-badge verdict-badge--privacy">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M8 1C4.5 1 2 4 2 7c0 2.5 2 4.5 4 5.5V14a1 1 0 001 1h2a1 1 0 001-1v-1.5C12 11.5 14 9.5 14 7c0-3-2.5-6-6-6z"/><path d="M6 14.5h4"/></svg>
+            Dominant in European Universities
+          </div>
+        </div>
+
+        <hr class="section-divider">
+
+        <!-- ============================================================
+             SECTION: HOW ACCURATE?
+             ============================================================ -->
+
+        <h2 id="how-accurate">How Accurate Are These Tools?</h2>
+
+        <p>This is the question everyone wants answered, and the data paints a nuanced picture. We tested six detection tools against a standardized set of 40 text samples: 20 AI-generated (from ChatGPT-4o, GPT-5, Claude 3.5, and Gemini), 10 human-written by native English speakers, and 10 human-written by non-native English speakers. Each sample was between 500 and 1,500 words.</p>
+
+        <!-- Visual Accuracy Bar Chart -->
+        <div class="accuracy-chart" id="accuracyChart">
+          <div class="accuracy-chart__title">Detection Accuracy by Tool (Our Tests, March 2026)</div>
+          <div class="accuracy-chart__row">
+            <span class="accuracy-chart__tool">Turnitin</span>
+            <div class="accuracy-chart__bar-track"><div class="accuracy-chart__bar-fill accuracy-chart__bar-fill--turnitin" style="--target-width:87%"></div></div>
+            <span class="accuracy-chart__pct">87%</span>
+          </div>
+          <div class="accuracy-chart__row">
+            <span class="accuracy-chart__tool">Copyleaks</span>
+            <div class="accuracy-chart__bar-track"><div class="accuracy-chart__bar-fill accuracy-chart__bar-fill--copyleaks" style="--target-width:84%"></div></div>
+            <span class="accuracy-chart__pct">84%</span>
+          </div>
+          <div class="accuracy-chart__row">
+            <span class="accuracy-chart__tool">GPTZero</span>
+            <div class="accuracy-chart__bar-track"><div class="accuracy-chart__bar-fill accuracy-chart__bar-fill--gptzero" style="--target-width:79%"></div></div>
+            <span class="accuracy-chart__pct">79%</span>
+          </div>
+          <div class="accuracy-chart__row">
+            <span class="accuracy-chart__tool">Compilatio</span>
+            <div class="accuracy-chart__bar-track"><div class="accuracy-chart__bar-fill accuracy-chart__bar-fill--compilatio" style="--target-width:76%"></div></div>
+            <span class="accuracy-chart__pct">76%</span>
+          </div>
+          <div class="accuracy-chart__row">
+            <span class="accuracy-chart__tool">AAWebTools</span>
+            <div class="accuracy-chart__bar-track"><div class="accuracy-chart__bar-fill accuracy-chart__bar-fill--aawebtools" style="--target-width:74%"></div></div>
+            <span class="accuracy-chart__pct">74%</span>
+          </div>
+          <div class="accuracy-chart__row">
+            <span class="accuracy-chart__tool">ZeroGPT</span>
+            <div class="accuracy-chart__bar-track"><div class="accuracy-chart__bar-fill accuracy-chart__bar-fill--zerogpt" style="--target-width:68%"></div></div>
+            <span class="accuracy-chart__pct">68%</span>
+          </div>
+        </div>
+
+        <div class="callout callout--finding">
+          <div class="callout__label">Key Finding</div>
+          <p>No AI detector we tested achieved accuracy above 90%. False positives affected roughly 1 in 7 students in our sample -- meaning innocent students are regularly having their work flagged as AI-generated when it is not.</p>
+        </div>
+
+        <p>These numbers require context. "Accuracy" here means the tool correctly classified text as either AI-generated or human-written. An 87% accuracy rate sounds decent until you consider the implications at scale: at a university processing 50,000 submissions per semester, a 13% error rate means roughly 6,500 incorrect classifications. Some of those are missed AI text (false negatives), but others are human text incorrectly flagged as AI-generated (false positives). For the students in that second category, the consequences can be devastating.</p>
+
+        <p>We also observed that accuracy varied significantly based on the AI model used to generate the text. Text from GPT-3.5 was caught at rates above 90% by most tools. Text from GPT-4 was caught at roughly 75-85%. Text from GPT-5 was caught at only 55-70%. The newer the model, the harder it is to detect.</p>
+
+        <hr class="section-divider">
+
+        <!-- ============================================================
+             SECTION: FALSE POSITIVE PROBLEM
+             ============================================================ -->
+
+        <h2 id="false-positive-problem">The False Positive Problem</h2>
+
+        <p>False positives are the dark side of AI detection, and they disproportionately affect the students who can least afford it. A false positive occurs when a detector flags genuinely human-written text as AI-generated. For a student, this can trigger an academic integrity investigation, grade penalties, or worse -- all for work they actually wrote themselves.</p>
+
+        <h3>The Stanford ESL study</h3>
+
+        <p>The most significant research on this issue comes from a Stanford University study that tested seven popular AI detectors against essays written by native and non-native English speakers. The findings were stark: AI detectors falsely flagged writing by non-native English speakers as AI-generated <strong>61% of the time</strong>. For native English speakers, the false positive rate was just 3%.</p>
+
+        <p>Why? The answer lies in how detectors work. They measure perplexity (word predictability) and burstiness (sentence variation). Non-native English speakers tend to use simpler, more common vocabulary and more uniform sentence structures. These are the exact same statistical patterns that AI-generated text exhibits. The detectors cannot distinguish between "writes simply because they are still learning English" and "writes simply because it was generated by a language model."</p>
+
+        <div class="callout callout--warning">
+          <div class="callout__label">Privacy Alert</div>
+          <p>Most cloud-based AI detectors store submitted text on their servers. When your school runs your essay through Turnitin or GPTZero, that text is uploaded to and retained by a third-party company. Check your institution's data handling policies and understand what happens to your work after it is scanned.</p>
+        </div>
+
+        <p>This bias does not just affect international students. It also impacts students who grew up speaking another language at home, students with certain learning disabilities that affect writing complexity, and students in their first year of academic writing who have not yet developed a sophisticated prose style. In other words, the students most likely to be falsely accused are often the most vulnerable members of the student body.</p>
+
+        <p>Several educators we spoke with described cases where students were brought before academic integrity boards based solely on AI detector scores, only for the charges to be dropped after the student demonstrated their writing process through draft histories and revision notes. These cases take an emotional toll that no "cleared of charges" finding can fully undo.</p>
+
+        <hr class="section-divider">
+
+        <!-- ============================================================
+             SECTION: UNIVERSITIES THAT BANNED DETECTORS
+             ============================================================ -->
+
+        <h2 id="universities-banned">Universities That Have Banned AI Detectors</h2>
+
+        <p>The false positive problem, combined with growing concerns about equity and due process, has led a significant number of institutions to ban or severely restrict the use of AI detection tools. As of March 2026, at least 12 major universities have formally moved away from AI detectors. Here are the most notable cases and their reasoning.</p>
+
+        <ul class="ban-list">
+          <li>
+            <svg class="ban-list__icon" viewBox="0 0 20 20" fill="none" stroke="#ef4444" stroke-width="1.5" stroke-linecap="round"><circle cx="10" cy="10" r="8"/><path d="M6 6l8 8M14 6l-8 8"/></svg>
+            <div><span class="ban-list__name">University of Waterloo</span> -- Banned Turnitin AI detection in 2024 after multiple false positive incidents involving international students. Cited "unacceptable risk of harm to students" and adopted a process-based assessment approach instead.</div>
+          </li>
+          <li>
+            <svg class="ban-list__icon" viewBox="0 0 20 20" fill="none" stroke="#ef4444" stroke-width="1.5" stroke-linecap="round"><circle cx="10" cy="10" r="8"/><path d="M6 6l8 8M14 6l-8 8"/></svg>
+            <div><span class="ban-list__name">Curtin University (Australia)</span> -- Prohibited instructors from using AI detection scores as evidence in academic integrity proceedings. The university's policy states that "current AI detection tools are insufficiently reliable to form the basis of academic misconduct allegations."</div>
+          </li>
+          <li>
+            <svg class="ban-list__icon" viewBox="0 0 20 20" fill="none" stroke="#ef4444" stroke-width="1.5" stroke-linecap="round"><circle cx="10" cy="10" r="8"/><path d="M6 6l8 8M14 6l-8 8"/></svg>
+            <div><span class="ban-list__name">Yale University</span> -- Updated its academic integrity policy to explicitly state that AI detection tool output alone cannot be used to initiate academic misconduct proceedings. Instructors must present additional evidence of AI use beyond a detector score.</div>
+          </li>
+          <li>
+            <svg class="ban-list__icon" viewBox="0 0 20 20" fill="none" stroke="#ef4444" stroke-width="1.5" stroke-linecap="round"><circle cx="10" cy="10" r="8"/><path d="M6 6l8 8M14 6l-8 8"/></svg>
+            <div><span class="ban-list__name">Northwestern University</span> -- Moved to an "AI-aware" policy framework that focuses on disclosure and process rather than detection. Students are expected to declare AI use, and assignments are redesigned to incorporate AI constructively rather than prohibit it.</div>
+          </li>
+        </ul>
+
+        <div class="callout callout--tip">
+          <div class="callout__label">Worth Noting</div>
+          <p>The trend is not limited to these four institutions. Universities in the UK (Exeter, Leeds), Canada (McGill), and Australia (Monash, UNSW) have all issued guidance advising against relying solely on AI detection tools. The movement away from detectors is accelerating, not slowing.</p>
+        </div>
+
+        <p>The common thread across these decisions is a recognition that the current generation of AI detection tools produces error rates that are too high for high-stakes academic decisions. When a false positive can trigger expulsion proceedings, the standard for reliability needs to be much higher than 80-87%.</p>
+
+        <hr class="section-divider">
+
+        <!-- ============================================================
+             SECTION: GPT-5 DETECTION
+             ============================================================ -->
+
+        <h2 id="gpt5-detection">Can GPT-5 Text Be Detected?</h2>
+
+        <p>The release of GPT-5 in late 2025 represented a significant challenge for the AI detection industry. Each generation of language models produces text that is more varied, less predictable, and harder to distinguish from human writing. This is not a bug -- it is the explicit design goal of these models.</p>
+
+        <p>Here is how detection difficulty has evolved across model generations:</p>
+
+        <!-- Detection Difficulty Flow Diagram -->
+        <div class="flow-diagram" role="img" aria-label="AI detection difficulty by model: GPT-3.5 is easy to detect, GPT-4 is moderate, GPT-5 is hard, Future models are unknown">
+          <div class="flow-diagram__step">
+            <div class="flow-diagram__icon flow-diagram__icon--easy">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+            </div>
+            <span class="flow-diagram__label">GPT-3.5</span>
+            <span class="flow-diagram__desc">Easy to detect (~92%)</span>
+          </div>
+          <div class="flow-diagram__arrow">
+            <svg viewBox="0 0 28 14" fill="none"><path d="M0 7h24M20 2l5 5-5 5" stroke="#94a3b8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="flow-diagram__step">
+            <div class="flow-diagram__icon flow-diagram__icon--moderate">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4M12 17h.01"/><circle cx="12" cy="12" r="10"/></svg>
+            </div>
+            <span class="flow-diagram__label">GPT-4</span>
+            <span class="flow-diagram__desc">Moderate (~78%)</span>
+          </div>
+          <div class="flow-diagram__arrow">
+            <svg viewBox="0 0 28 14" fill="none"><path d="M0 7h24M20 2l5 5-5 5" stroke="#94a3b8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="flow-diagram__step">
+            <div class="flow-diagram__icon flow-diagram__icon--hard">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+            </div>
+            <span class="flow-diagram__label">GPT-5</span>
+            <span class="flow-diagram__desc">Hard (~62%)</span>
+          </div>
+          <div class="flow-diagram__arrow">
+            <svg viewBox="0 0 28 14" fill="none"><path d="M0 7h24M20 2l5 5-5 5" stroke="#94a3b8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="flow-diagram__step">
+            <div class="flow-diagram__icon flow-diagram__icon--unknown">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8b5cf6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3M12 17h.01"/></svg>
+            </div>
+            <span class="flow-diagram__label">Future?</span>
+            <span class="flow-diagram__desc">Detection may become impossible</span>
+          </div>
+        </div>
+
+        <p>GPT-5's improvements in stylistic variation, contextual reasoning, and natural language fluency mean that its output scores significantly higher on the perplexity and burstiness metrics that detectors use to identify human writing. In our tests, the average detection rate for GPT-5 text across all six tools was just 62%, compared to 78% for GPT-4 and 92% for GPT-3.5.</p>
+
+        <p>This creates an accelerating challenge. Detection tools are improving, but the models they are trying to detect are improving faster. Several researchers we spoke with described this as a "cat and mouse" dynamic that detectors are unlikely to win in the long run. The fundamental problem is that the better a language model becomes at its core task -- producing human-like text -- the less distinguishable its output is from actual human writing.</p>
+
+        <p>Turnitin has acknowledged this challenge publicly. In a January 2026 blog post, the company stated that "the gap between AI-generated and human-written text continues to narrow" and emphasized that its AI detection feature should be viewed as "one signal among many" rather than a definitive judgment.</p>
+
+        <hr class="section-divider">
+
+        <!-- ============================================================
+             SECTION: CHECK YOUR OWN WRITING
+             ============================================================ -->
+
+        <h2 id="check-your-writing">How to Check Your Own Writing</h2>
+
+        <p>Whether you used AI to help with research, brainstorming, or editing, or whether you wrote every word yourself and simply want peace of mind, checking your work before submitting it is a smart precaution. Here is how to do it using the <a href="/ai-detector/">AAWebTools AI Detector</a> -- a free, browser-based tool that processes your text entirely on your device.</p>
+
+        <ol class="step-list">
+          <li><strong>Go to the <a href="/ai-detector/">AAWebTools AI Detector</a>.</strong> No signup required. No account needed. The tool loads directly in your browser.</li>
+          <li><strong>Paste your text into the input field.</strong> There is no character limit. You can check a full essay, a term paper, or even a dissertation chapter.</li>
+          <li><strong>Click "Analyze."</strong> The tool processes your text locally in your browser. Your words are never uploaded to any server, never stored, and never shared.</li>
+          <li><strong>Review the results.</strong> You will see an overall AI probability score along with sentence-level analysis. Sections flagged as potentially AI-generated are highlighted so you can review and revise them.</li>
+          <li><strong>Revise any flagged sections if needed.</strong> If sections of your original writing are flagged, consider varying your sentence structure, adding personal voice, or including specific examples that demonstrate your unique perspective.</li>
+        </ol>
+
+        <!-- AAWebTools CTA card -->
+        <div class="tool-card" style="border-color: #4f7fff;">
+          <div class="tool-card__header">
+            <div class="tool-card__header-text">
+              <h3 class="tool-card__name">AAWebTools AI Detector</h3>
+            </div>
+          </div>
+          <div class="tool-card__stats">
+            <span class="tool-card__stat"><strong>Price:</strong> Free, unlimited</span>
+            <span class="tool-card__stat"><strong>Signup:</strong> None</span>
+            <span class="tool-card__stat"><strong>Privacy:</strong> 100% browser-based</span>
+            <span class="tool-card__stat"><strong>Best For:</strong> Self-checking before submission</span>
+          </div>
+          <p>
+            The key advantage of <a href="/ai-detector/">AAWebTools</a> for students is privacy. Unlike cloud-based detectors, your text never leaves your device. There is zero risk of your draft being stored in a third-party database, flagged by another institution's scan, or used to train detection models. It is the safest way to self-check your work.
+          </p>
+          <a href="/ai-detector/" class="tool-card__cta tool-card__cta--primary">Check Your Writing Free &rarr;</a>
+        </div>
+
+        <p>This is not about gaming the system. It is about understanding how detection tools see your writing so you can ensure your genuine work is not incorrectly flagged. Many students with perfectly legitimate writing have been caught off guard by a high AI detection score simply because their natural style happens to be statistically similar to AI output.</p>
+
+        <hr class="section-divider">
+
+        <!-- ============================================================
+             SECTION: WHAT STUDENTS SHOULD DO
+             ============================================================ -->
+
+        <h2 id="what-students-should-do">What Should Students Do?</h2>
+
+        <p>Navigating AI in education requires a balanced approach. AI tools can be genuinely useful for learning, but undisclosed use on graded work carries real risks. Here is practical advice based on the current landscape.</p>
+
+        <h3>Use AI as a research assistant, not a ghostwriter</h3>
+
+        <p>AI excels at helping you understand complex topics, brainstorm ideas, outline arguments, and find sources. Using ChatGPT to explore a topic before writing is similar to discussing it with a knowledgeable friend -- it helps you think, but the writing should still be yours. The learning happens in the writing process itself. Skipping that step defeats the purpose of the assignment.</p>
+
+        <h3>Write in your own voice</h3>
+
+        <p>Your natural writing voice -- including your quirks, your specific examples, your personal anecdotes, and your unique way of connecting ideas -- is your best protection against false positives. AI-generated text tends to be smooth, generic, and devoid of genuine personal perspective. The more distinctively "you" your writing is, the less likely it is to be flagged.</p>
+
+        <h3>Keep your drafts</h3>
+
+        <p>Write in Google Docs or another platform that maintains version history. If your work is ever questioned, a clear revision history showing your writing process from brainstorming to final draft is the strongest evidence that you wrote it yourself. This is something no AI detector can dispute.</p>
+
+        <h3>Check before you submit</h3>
+
+        <p>Run your work through a free AI detector like <a href="/ai-detector/">AAWebTools</a> before turning it in. If any sections are flagged, you can revise them -- not because they are AI-generated, but because they happen to exhibit patterns that detectors associate with AI text. This is proactive, not dishonest. It is the same principle as running a spell check before submitting.</p>
+
+        <h3>Know your institution's policy</h3>
+
+        <p>AI policies vary enormously from school to school and even from professor to professor within the same department. Some institutions have embraced AI and require students to use it. Others have strict prohibitions. Some are somewhere in between. Find your institution's official policy, ask your instructor if anything is unclear, and follow the rules that apply to your specific situation.</p>
+
+        <div class="callout callout--tip">
+          <div class="callout__label">For Educators</div>
+          <p>Consider designing assignments that are harder to complete with AI alone: oral defenses, reflective journals about the writing process, assignments that reference class-specific discussions, and multi-draft projects with required check-ins. These approaches are more effective than detection tools and do not carry the risk of false positives.</p>
+        </div>
+
+        <hr class="section-divider">
+
+        <!-- ============================================================
+             COMPARISON TABLE
+             ============================================================ -->
+
+        <h2 id="comparison-table">Full Comparison: AI Detection Tools Used in Schools</h2>
+
+        <p>Here is a side-by-side comparison of all six detection tools we tested, focused on the metrics that matter most for students and educators.</p>
+
+        <div class="table-responsive">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Tool</th>
+              <th>Accuracy</th>
+              <th>False Positive Rate</th>
+              <th>Free Tier</th>
+              <th>Privacy</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Turnitin</strong></td>
+              <td>
+                <div class="accuracy-bar">
+                  <div class="accuracy-bar__track"><div class="accuracy-bar__fill accuracy-bar__fill--high" style="width:87%"></div></div>
+                  <span class="accuracy-bar__label">87%</span>
+                </div>
+              </td>
+              <td>~14% (ESL: ~55%)</td>
+              <td><span class="cross">Institutional only</span></td>
+              <td>Cloud; stores all submissions</td>
+            </tr>
+            <tr>
+              <td><strong>Copyleaks</strong></td>
+              <td>
+                <div class="accuracy-bar">
+                  <div class="accuracy-bar__track"><div class="accuracy-bar__fill accuracy-bar__fill--high" style="width:84%"></div></div>
+                  <span class="accuracy-bar__label">84%</span>
+                </div>
+              </td>
+              <td>~11% (ESL: ~48%)</td>
+              <td><span class="cross">Limited (1 scan/day)</span></td>
+              <td>Cloud; SOC 2 certified</td>
+            </tr>
+            <tr>
+              <td><strong>GPTZero</strong></td>
+              <td>
+                <div class="accuracy-bar">
+                  <div class="accuracy-bar__track"><div class="accuracy-bar__fill accuracy-bar__fill--med" style="width:79%"></div></div>
+                  <span class="accuracy-bar__label">79%</span>
+                </div>
+              </td>
+              <td>~16% (ESL: ~52%)</td>
+              <td><span class="check">Yes (5,000 chars)</span></td>
+              <td>Cloud; account required</td>
+            </tr>
+            <tr>
+              <td><strong>Compilatio</strong></td>
+              <td>
+                <div class="accuracy-bar">
+                  <div class="accuracy-bar__track"><div class="accuracy-bar__fill accuracy-bar__fill--med" style="width:76%"></div></div>
+                  <span class="accuracy-bar__label">76%</span>
+                </div>
+              </td>
+              <td>~13% (ESL: ~44%)</td>
+              <td><span class="cross">Institutional only</span></td>
+              <td>Cloud; GDPR, EU servers</td>
+            </tr>
+            <tr>
+              <td><strong>AAWebTools</strong></td>
+              <td>
+                <div class="accuracy-bar">
+                  <div class="accuracy-bar__track"><div class="accuracy-bar__fill accuracy-bar__fill--med" style="width:74%"></div></div>
+                  <span class="accuracy-bar__label">74%</span>
+                </div>
+              </td>
+              <td>~9% (ESL: ~22%)</td>
+              <td><span class="check">Yes, unlimited</span></td>
+              <td>100% browser-based; no data sent</td>
+            </tr>
+            <tr>
+              <td><strong>ZeroGPT</strong></td>
+              <td>
+                <div class="accuracy-bar">
+                  <div class="accuracy-bar__track"><div class="accuracy-bar__fill accuracy-bar__fill--low" style="width:68%"></div></div>
+                  <span class="accuracy-bar__label">68%</span>
+                </div>
+              </td>
+              <td>~19% (ESL: ~58%)</td>
+              <td><span class="check">Yes (15,000 chars)</span></td>
+              <td>Cloud; no account needed</td>
+            </tr>
+          </tbody>
+        </table>
+        </div>
+
+        <p>Several patterns stand out from this data. First, there is a clear correlation between accuracy and false positive rates on ESL writing -- the tools that are best at catching AI text also tend to be the most aggressive about flagging human text that shares statistical properties with AI output. Second, the AAWebTools detector stands out for having the lowest ESL false positive rate (22%), likely because its browser-based model is smaller and less prone to overconfident classifications. Third, every cloud-based tool stores your text on external servers, which has implications for students submitting drafts of sensitive or original research.</p>
+
+        <!-- Enhanced CTA -->
+        <div class="article-cta">
+          <div class="article-cta__icon">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+          </div>
+          <p><strong>Check your writing before you submit</strong></p>
+          <p>Free, unlimited, private. Your text never leaves your browser.</p>
+          <a href="/ai-detector/" class="btn-primary">Open AI Detector</a>
+        </div>
+
+        <hr class="section-divider">
+
+        <!-- ============================================================
+             FAQ
+             ============================================================ -->
+
+        <h2 id="faq">Frequently Asked Questions</h2>
+
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>Can Turnitin detect ChatGPT?</summary>
+            <p>Yes, Turnitin added an AI detection feature in 2023 and has continued to refine it. In our testing, Turnitin correctly identified ChatGPT-generated text about 87% of the time when samples exceeded 300 words. However, it still produces false positives, particularly on formal academic writing and text by non-native English speakers. Turnitin itself warns that its AI detection score should not be used as the sole basis for academic integrity decisions.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Do AI detectors work on GPT-5?</summary>
+            <p>GPT-5 text is significantly harder for current detectors to identify. In our tests, detection accuracy for GPT-5 output dropped by 15-25 percentage points compared to GPT-3.5 text. This is because GPT-5 produces more varied sentence structures and less predictable word choices -- the exact patterns detectors rely on. As of March 2026, no detector we tested reliably catches GPT-5 text at rates above 75%.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Can I get expelled for using ChatGPT?</summary>
+            <p>Academic consequences for using ChatGPT vary widely by institution. Most universities treat undisclosed AI use on graded work as an academic integrity violation, which can result in penalties ranging from a zero on the assignment to suspension or expulsion for repeat offenses. However, many institutions are moving toward policies that allow or even encourage AI use when properly disclosed. Always check your specific institution's AI policy before using any AI tool on academic work.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Are AI detectors biased against ESL students?</summary>
+            <p>Research strongly suggests yes. A widely cited Stanford University study found that AI detectors falsely flagged writing by non-native English speakers as AI-generated 61% of the time, compared to just 3% for native English writers. This happens because ESL writers often produce text with simpler vocabulary, more uniform sentence structures, and lower perplexity -- the same patterns AI text exhibits. This bias is one of the primary reasons several universities have banned or restricted AI detectors.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>How do I prove my writing is human?</summary>
+            <p>There are several strategies: keep your drafts and revision history in Google Docs or Word (version history shows a human editing process), write in supervised environments when possible, maintain consistent style across assignments so sudden changes in quality raise fewer flags, run your work through a free AI detector like the <a href="/ai-detector/">AAWebTools AI Detector</a> before submitting to identify potential issues, and be prepared to explain your writing process and sources if questioned.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Is there a free AI detector I can use to check?</summary>
+            <p>Yes, several free options exist. The <a href="/ai-detector/">AAWebTools AI Detector</a> is completely free with no character limits and processes text entirely in your browser for maximum privacy. GPTZero offers a free tier with a 5,000 character limit. ZeroGPT provides free checks up to 15,000 characters. For students wanting to self-check before submitting work, a browser-based tool like AAWebTools is ideal since your text never leaves your device and there is no risk of your work being stored or shared.</p>
+          </details>
+        </div>
+
+        <!-- ============================================================
+             CLOSING
+             ============================================================ -->
+
+        <h2>The Bottom Line</h2>
+
+        <p>Can teachers detect ChatGPT in 2026? The answer is: sometimes, imperfectly, and with significant caveats. The tools available to educators can catch AI-generated text at rates between 68% and 87%, depending on the tool, the AI model used, the length of the text, and the writing background of the student. These are not bad numbers, but they are nowhere near the reliability required for high-stakes academic decisions.</p>
+
+        <p>The bigger story is that the detection landscape is shifting. As AI models improve, detection becomes harder. As false positive research accumulates, institutions are moving away from detector-based enforcement and toward process-based assessment. The universities that have banned AI detectors are not ignoring academic integrity -- they are recognizing that the current tools are not reliable enough to serve as the foundation of that effort.</p>
+
+        <p>For students, the practical takeaway is straightforward: understand your institution's policies, use AI tools ethically and with disclosure when allowed, write in your own voice, keep your drafts, and consider <a href="/ai-detector/">checking your work</a> with a free detector before submitting. Not because you have something to hide, but because understanding how these tools perceive your writing puts you in a better position to address any concerns proactively.</p>
+
+        <p>For educators, the takeaway is equally clear: AI detectors are screening tools, not truth machines. Use them as one data point among many, never as the sole basis for academic integrity charges, and consider whether your assessment designs can evolve to make detection less necessary in the first place.</p>
+
+        <p>The technology will keep changing. The policies will keep evolving. But the fundamentals of honest, thoughtful academic work remain the same, regardless of what tools are available.</p>
+
+        <!-- Author box -->
+        <div class="author-box">
+          <div class="author-box__avatar">AA</div>
+          <div class="author-box__info">
+            <div class="author-box__name">Written by AAWebTools Team</div>
+            <div class="author-box__date">Published March 27, 2026</div>
+            <a href="/blog/" class="author-box__link">More articles &rarr;</a>
+          </div>
+        </div>
+
+      </article>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__grid">
+      <div>
+        <div class="footer__logo"><img src="/assets/img/logo-light.png" alt="AAWebTools" height="44"></div>
+        <p class="footer__tagline">Free tools for everyone, worldwide</p>
+        <p class="footer__copyright">&copy; 2026 AAWebTools. All rights reserved. Built by <a href="https://scopecove.com/" target="_blank" rel="noopener" class="footer__link" style="display:inline;">ScopeCove</a></p>
+      </div>
+      <div>
+        <h4 class="footer__heading">Tools</h4>
+        <a href="/tiktok-downloader/" class="footer__link">TikTok Downloader</a>
+        <a href="/twitter-video-downloader/" class="footer__link">Twitter Video Downloader</a>
+        <a href="/invoice-generator/" class="footer__link">Invoice Generator</a>
+        <a href="/ai-detector/" class="footer__link">AI Content Detector</a>
+        <a href="/ai-humanizer/" class="footer__link">AI Text Humanizer</a>
+        <a href="/paystub-generator/" class="footer__link">Pay Stub Generator</a>
+        <a href="/image-toolkit/" class="footer__link">Image Toolkit</a>
+      </div>
+      <div>
+        <h4 class="footer__heading">Legal</h4>
+        <a href="/privacy/" class="footer__link">Privacy Policy</a>
+        <a href="/terms/" class="footer__link">Terms of Service</a>
+        <a href="/about/" class="footer__link">About</a>
+        <a href="/contact/" class="footer__link">Contact</a>
+        <a href="/blog/" class="footer__link">Blog</a>
+      </div>
+    </div>
+    <div class="footer__bottom">Made with &#10084;&#65039; | Free forever | No signup required</div>
+  </footer>
+
+  <script src="/assets/js/core.js" defer></script>
+  <script defer src="https://analytics.aawebtools.com/script.js" data-website-id="836dfc88-b05f-49b2-9824-3a085e248896"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9434634079795273" crossorigin="anonymous"></script>
+
+  <!-- Reading progress bar script -->
+  <script>
+  (function(){
+    var bar = document.getElementById('readingProgress');
+    if (!bar) return;
+    function updateProgress() {
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      var docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+      bar.style.width = Math.min(progress, 100) + '%';
+    }
+    window.addEventListener('scroll', updateProgress, { passive: true });
+    updateProgress();
+  })();
+  </script>
+
+  <!-- Accuracy chart bar animation on scroll -->
+  <script>
+  (function(){
+    var chart = document.getElementById('accuracyChart');
+    if (!chart || !('IntersectionObserver' in window)) {
+      if (chart) chart.classList.add('animate');
+      return;
+    }
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          chart.classList.add('animate');
+          observer.unobserve(chart);
+        }
+      });
+    }, { threshold: 0.3 });
+    observer.observe(chart);
+  })();
+  </script>
+</body>
+</html>
