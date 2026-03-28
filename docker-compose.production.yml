@@ -75,7 +75,7 @@ services:
 
   # Umami Analytics — privacy-first, cookie-free
   aawebtools-umami:
-    image: ghcr.io/umami-software/umami:postgresql-v2.10.2
+    image: ghcr.io/umami-software/umami:postgresql-latest
     container_name: aawebtools-umami
     environment:
       DATABASE_URL: postgresql://umami:${UMAMI_DB_PASSWORD}@aawebtools-umami-db:5432/umami
