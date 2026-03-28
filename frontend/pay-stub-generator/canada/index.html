@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Pay Stub Generator for Canada — CPP, EI, Provincial Tax | AAWebTools</title>
+  <meta name="description" content="Create Canadian pay stubs free. Auto-calculates CPP, EI, federal and provincial tax. Supports all provinces including Quebec (QPP, QPIP). Instant PDF.">
+  <link rel="canonical" href="https://aawebtools.com/pay-stub-generator/canada/">
+  <meta property="og:title" content="Free Pay Stub Generator for Canada — CPP, EI, Provincial Tax | AAWebTools">
+  <meta property="og:description" content="Create Canadian pay stubs free. Auto-calculates CPP, EI, federal and provincial tax. Supports all provinces including Quebec (QPP, QPIP). Instant PDF.">
+  <meta property="og:url" content="https://aawebtools.com/pay-stub-generator/canada/">
+  <meta property="og:image" content="https://aawebtools.com/assets/img/og-paystub-generator.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="AAWebTools">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Free Pay Stub Generator for Canada — CPP, EI, Provincial Tax | AAWebTools">
+  <meta name="twitter:description" content="Create Canadian pay stubs free. Auto-calculates CPP, EI, federal and provincial tax. Supports all provinces including Quebec (QPP, QPIP). Instant PDF.">
+  <meta name="twitter:image" content="https://aawebtools.com/assets/img/og-paystub-generator.png">
+  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <style>
+    .legal { max-width: 740px; margin: 0 auto; padding: 140px 24px 80px; }
+    .legal h1 { font-size: 32px; font-weight: 700; margin-bottom: 8px; }
+    .legal .legal-date { font-size: 13px; color: var(--text-tertiary); margin-bottom: 40px; }
+    .legal h2 { font-size: 20px; font-weight: 600; margin: 36px 0 12px; }
+    .legal h3 { font-size: 17px; font-weight: 600; margin: 24px 0 8px; }
+    .legal p, .legal li { font-size: 15px; line-height: 1.7; color: var(--text-secondary); margin-bottom: 12px; }
+    .legal ul { padding-left: 20px; margin-bottom: 16px; }
+    .legal ul li { list-style: disc; }
+    .legal a { color: var(--accent-blue); }
+    .cta-box { text-align: center; margin: 48px 0; padding: 40px 24px; background: var(--bg-secondary); border: 1px solid var(--border-primary); border-radius: var(--radius-lg); }
+    .cta-box .btn-cta { display: inline-block; padding: 16px 32px; background: var(--accent-blue); color: #fff; font-size: 16px; font-weight: 600; border-radius: var(--radius-md); transition: background var(--transition-fast); text-decoration: none; }
+    .cta-box .btn-cta:hover { background: var(--accent-blue-hover); color: #fff; }
+    .faq-item { margin-bottom: 24px; }
+    .faq-item h3 { color: var(--text-primary); }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://aawebtools.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Pay Stub Generator", "item": "https://aawebtools.com/paystub-generator/" },
+      { "@type": "ListItem", "position": 3, "name": "Canada", "item": "https://aawebtools.com/pay-stub-generator/canada/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What deductions are required on a Canadian pay stub?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Canadian employers must deduct Canada Pension Plan (CPP) contributions, Employment Insurance (EI) premiums, and federal and provincial income tax from each employee's pay. In Quebec, employers deduct QPP, QPIP, and provincial tax instead of CPP and federal EI rates. Additional voluntary deductions may include RRSP contributions, union dues, and group benefit premiums."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the 2026 CPP and EI rates in Canada?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For 2026, the CPP employee contribution rate is 5.95% on pensionable earnings between $3,500 and $73,200 (CPP1), with CPP2 applying at 4% on earnings between $73,200 and $81,200. The EI employee premium rate is 1.64% on insurable earnings up to $65,700, while Quebec employees pay 1.32% for EI with an additional QPIP premium of 0.494%."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need to show provincial tax separately on a Canadian pay stub?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "While the Canada Revenue Agency (CRA) combines federal and provincial tax into a single withholding amount on the TD1 form, best practice for Canadian pay stubs is to show the provincial tax component separately. This gives employees clarity on their total tax burden and is required in several provinces. Quebec is unique because Revenu Quebec administers its own provincial tax, so QC employees always see separate federal and provincial lines."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Create a Canadian Pay Stub",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "Enter employer and employee information",
+        "text": "Fill in the company name, address, and employee details including SIN (optional for display), pay period, and province of employment."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "Add earnings and deductions",
+        "text": "Enter gross pay, hours worked, and any overtime or bonuses. The tool auto-calculates CPP, EI, federal tax, and provincial tax based on the selected province."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "Download your PDF pay stub",
+        "text": "Review the calculated net pay and deduction breakdown, then download a professional PDF pay stub ready for your records."
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="/" class="nav__logo"><img src="/assets/img/logo-light.png" alt="AAWebTools" height="56"></a>
+      <div class="nav__links">
+        <div class="nav__dropdown"><a href="#" class="nav__link">Downloaders</a><div class="nav__dropdown-menu"><a href="/tiktok-downloader/" class="nav__dropdown-item">TikTok Downloader</a><a href="/twitter-video-downloader/" class="nav__dropdown-item">Twitter Downloader</a></div></div>
+        <div class="nav__dropdown"><a href="#" class="nav__link">Generators</a><div class="nav__dropdown-menu"><a href="/invoice-generator/" class="nav__dropdown-item">Invoice Generator</a><a href="/paystub-generator/" class="nav__dropdown-item">Pay Stub Generator</a><a href="/image-toolkit/" class="nav__dropdown-item">Image Toolkit</a></div></div>
+        <div class="nav__dropdown"><a href="#" class="nav__link">AI Tools</a><div class="nav__dropdown-menu"><a href="/ai-detector/" class="nav__dropdown-item">AI Content Detector</a><a href="/ai-humanizer/" class="nav__dropdown-item">AI Text Humanizer</a></div></div>
+      </div>
+      <div class="nav__right">
+        <a href="/#tools" class="btn-primary btn-sm">All Tools</a>
+        <button class="nav__hamburger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+  <div class="nav__mobile" id="mobileNav">
+    <a href="/tiktok-downloader/" class="nav__mobile-link">TikTok Downloader</a>
+    <a href="/twitter-video-downloader/" class="nav__mobile-link">Twitter Downloader</a>
+    <a href="/invoice-generator/" class="nav__mobile-link">Invoice Generator</a>
+    <a href="/ai-detector/" class="nav__mobile-link">AI Content Detector</a>
+    <a href="/ai-humanizer/" class="nav__mobile-link">AI Text Humanizer</a>
+    <a href="/paystub-generator/" class="nav__mobile-link">Pay Stub Generator</a>
+    <a href="/image-toolkit/" class="nav__mobile-link">Image Toolkit</a>
+  </div>
+
+  <main>
+    <article class="legal">
+      <nav aria-label="Breadcrumb" style="font-size:13px;margin-bottom:24px;color:var(--text-tertiary);">
+        <a href="/">Home</a> &rsaquo; <a href="/paystub-generator/">Pay Stub Generator</a> &rsaquo; Canada
+      </nav>
+
+      <h1>Free Pay Stub Generator for Canada</h1>
+      <p class="legal-date">Updated March 2026 &mdash; Reflects CRA rates for the 2026 tax year</p>
+
+      <p>Generating accurate pay stubs in Canada requires familiarity with a layered system of federal and provincial deductions. Whether you run a small business in Ontario, manage a crew in Alberta, or employ workers in Quebec, every paycheque must account for the Canada Pension Plan (CPP), Employment Insurance (EI), federal income tax, and the applicable provincial or territorial income tax. Our free pay stub generator handles all of these calculations so you can produce professional, CRA-compliant stubs in seconds.</p>
+
+      <h2>Understanding Canadian Payroll Deductions in 2026</h2>
+
+      <h3>Canada Pension Plan (CPP / CPP2)</h3>
+      <p>For 2026, employees contribute 5.95% of pensionable earnings between the basic exemption of $3,500 and the first earnings ceiling of $73,200. The maximum employee contribution for CPP1 is approximately $4,147. A second tier, CPP2, applies at 4% on earnings between $73,200 and the second ceiling of $81,200, adding up to a further $320 in contributions. Employers match both amounts dollar for dollar, making total CPP costs a significant payroll expense.</p>
+
+      <h3>Employment Insurance (EI)</h3>
+      <p>The 2026 EI premium rate for employees outside Quebec is 1.64% on insurable earnings up to $65,700, producing a maximum annual premium of roughly $1,077. Employers pay 1.4 times the employee rate. In Quebec, the employee EI rate is reduced to 1.32% because the province operates its own parental insurance plan (QPIP), which carries a separate premium of 0.494% for employees and 0.692% for employers.</p>
+
+      <h3>Federal Income Tax</h3>
+      <p>Canada uses a progressive federal tax system. For 2026, the brackets are approximately 15% on the first $57,375, 20.5% on income from $57,375 to $114,750, 26% up to $158,468, 29% up to $220,000, and 33% on income above $220,000. Every employee also receives a basic personal amount of approximately $16,129, which reduces tax on the first portion of earnings to zero.</p>
+
+      <h3>Provincial and Territorial Tax</h3>
+      <p>Each province sets its own income tax brackets. Alberta maintains a flat 10% rate on the first $148,269, while Ontario uses rates from 5.05% to 13.16% across five brackets. British Columbia ranges from 5.06% to 20.5%. Employers must calculate provincial tax based on the employee's province of employment, not residence, unless a specific agreement exists.</p>
+
+      <h2>Quebec: A Separate Payroll System</h2>
+      <p>Quebec operates outside several federal programs. Instead of CPP, Quebec employees contribute to the Quebec Pension Plan (QPP) at 6.40% for 2026, with employer matching. The province administers its own parental insurance plan (QPIP/RQAP) and collects provincial income tax through Revenu Quebec rather than the CRA. Employers in Quebec must remit source deductions to both the CRA (for federal tax and EI) and Revenu Quebec (for QPP, QPIP, and provincial tax). Pay stubs for Quebec employees should clearly separate these provincial items from the federal lines.</p>
+
+      <h2>What Must Appear on a Canadian Pay Stub</h2>
+      <p>While pay stub requirements vary by province, best practice across Canada includes displaying the following on every stub:</p>
+      <ul>
+        <li>Employer name and address</li>
+        <li>Employee name and job title</li>
+        <li>Pay period start and end dates, plus payment date</li>
+        <li>Hours worked (regular and overtime)</li>
+        <li>Gross earnings and itemized deductions (CPP, EI, federal tax, provincial tax)</li>
+        <li>Voluntary deductions such as RRSP contributions, union dues, or group benefits</li>
+        <li>Net pay (take-home amount)</li>
+        <li>Year-to-date totals for earnings and each deduction category</li>
+      </ul>
+      <p>Provinces like British Columbia, Ontario, and Manitoba explicitly require employers to provide written pay statements. Alberta requires them upon request. Regardless of provincial rules, issuing a detailed pay stub is a best practice that protects both employer and employee.</p>
+
+      <div class="cta-box">
+        <p style="font-size:18px;font-weight:600;color:var(--text-primary);margin-bottom:16px;">Ready to generate your Canadian pay stub?</p>
+        <p style="margin-bottom:24px;">Our free tool auto-calculates CPP, EI, federal and provincial tax for all provinces and territories.</p>
+        <a href="/paystub-generator/" class="btn-cta">Create Your Canadian Pay Stub &mdash; Free &rarr;</a>
+      </div>
+
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+        <h3>What deductions are required on a Canadian pay stub?</h3>
+        <p>Canadian employers must deduct Canada Pension Plan (CPP) contributions, Employment Insurance (EI) premiums, and federal and provincial income tax from each employee's pay. In Quebec, employers deduct QPP, QPIP, and provincial tax instead of CPP and federal EI rates. Additional voluntary deductions may include RRSP contributions, union dues, and group benefit premiums.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>What are the 2026 CPP and EI rates in Canada?</h3>
+        <p>For 2026, the CPP employee contribution rate is 5.95% on pensionable earnings between $3,500 and $73,200 (CPP1), with CPP2 applying at 4% on earnings between $73,200 and $81,200. The EI employee premium rate is 1.64% on insurable earnings up to $65,700, while Quebec employees pay 1.32% for EI with an additional QPIP premium of 0.494%.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Do I need to show provincial tax separately on a Canadian pay stub?</h3>
+        <p>While the CRA combines federal and provincial tax into a single withholding amount on the TD1 form, best practice for Canadian pay stubs is to show the provincial tax component separately. This gives employees clarity on their total tax burden and is required in several provinces. Quebec is unique because Revenu Quebec administers its own provincial tax, so QC employees always see separate federal and provincial lines.</p>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__grid">
+      <div>
+        <div class="footer__logo"><img src="/assets/img/logo-light.png" alt="AAWebTools" height="44"></div>
+        <p class="footer__tagline">Free tools for everyone, worldwide</p>
+        <p class="footer__copyright">&copy; 2026 AAWebTools. All rights reserved. Built by <a href="https://scopecove.com/" target="_blank" rel="noopener" class="footer__link" style="display:inline;">ScopeCove</a></p>
+      </div>
+      <div>
+        <h4 class="footer__heading">Tools</h4>
+        <a href="/tiktok-downloader/" class="footer__link">TikTok Downloader</a>
+        <a href="/twitter-video-downloader/" class="footer__link">Twitter Video Downloader</a>
+        <a href="/invoice-generator/" class="footer__link">Invoice Generator</a>
+        <a href="/ai-detector/" class="footer__link">AI Content Detector</a>
+        <a href="/ai-humanizer/" class="footer__link">AI Text Humanizer</a>
+        <a href="/paystub-generator/" class="footer__link">Pay Stub Generator</a>
+        <a href="/image-toolkit/" class="footer__link">Image Toolkit</a>
+      </div>
+      <div>
+        <h4 class="footer__heading">Legal</h4>
+        <a href="/privacy/" class="footer__link">Privacy Policy</a>
+        <a href="/terms/" class="footer__link">Terms of Service</a>
+        <a href="/about/" class="footer__link">About</a>
+        <a href="/contact/" class="footer__link">Contact</a>
+      </div>
+    </div>
+    <div class="footer__bottom">Made with &#10084;&#65039; | Free forever | No signup required</div>
+  </footer>
+
+  <script src="/assets/js/core.js" defer></script>
+  <script defer src="https://analytics.aawebtools.com/script.js" data-website-id="836dfc88-b05f-49b2-9824-3a085e248896"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9434634079795273" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Pay Stub Generator for USA — FICA, Federal &amp; State Tax | AAWebTools</title>
+  <meta name="description" content="Create US pay stubs free. Auto-calculates FICA (Social Security 6.2%, Medicare 1.45%), federal income tax brackets, and state withholding. W-2 and 1099 support. Instant PDF.">
+  <link rel="canonical" href="https://aawebtools.com/pay-stub-generator/usa/">
+  <meta property="og:title" content="Free Pay Stub Generator for USA — FICA, Federal &amp; State Tax | AAWebTools">
+  <meta property="og:description" content="Create US pay stubs free. Auto-calculates FICA, federal income tax, and state withholding. W-2 and 1099 support. Instant PDF.">
+  <meta property="og:url" content="https://aawebtools.com/pay-stub-generator/usa/">
+  <meta property="og:image" content="https://aawebtools.com/assets/img/og-paystub-generator.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="AAWebTools">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Free Pay Stub Generator for USA — FICA, Federal &amp; State Tax | AAWebTools">
+  <meta name="twitter:description" content="Create US pay stubs free. Auto-calculates FICA, federal income tax, and state withholding. W-2 and 1099 support. Instant PDF.">
+  <meta name="twitter:image" content="https://aawebtools.com/assets/img/og-paystub-generator.png">
+  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <style>
+    .legal { max-width: 740px; margin: 0 auto; padding: 140px 24px 80px; }
+    .legal h1 { font-size: 32px; font-weight: 700; margin-bottom: 8px; }
+    .legal .legal-date { font-size: 13px; color: var(--text-tertiary); margin-bottom: 40px; }
+    .legal h2 { font-size: 20px; font-weight: 600; margin: 36px 0 12px; }
+    .legal h3 { font-size: 17px; font-weight: 600; margin: 24px 0 8px; }
+    .legal p, .legal li { font-size: 15px; line-height: 1.7; color: var(--text-secondary); margin-bottom: 12px; }
+    .legal ul { padding-left: 20px; margin-bottom: 16px; }
+    .legal ul li { list-style: disc; }
+    .legal a { color: var(--accent-blue); }
+    .cta-box { text-align: center; margin: 48px 0; padding: 40px 24px; background: var(--bg-secondary); border: 1px solid var(--border-primary); border-radius: var(--radius-lg); }
+    .cta-box .btn-cta { display: inline-block; padding: 16px 32px; background: var(--accent-blue); color: #fff; font-size: 16px; font-weight: 600; border-radius: var(--radius-md); transition: background var(--transition-fast); text-decoration: none; }
+    .cta-box .btn-cta:hover { background: var(--accent-blue-hover); color: #fff; }
+    .faq-item { margin-bottom: 24px; }
+    .faq-item h3 { color: var(--text-primary); }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://aawebtools.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Pay Stub Generator", "item": "https://aawebtools.com/paystub-generator/" },
+      { "@type": "ListItem", "position": 3, "name": "USA", "item": "https://aawebtools.com/pay-stub-generator/usa/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is FICA and how much is deducted from a US paycheck?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "FICA stands for the Federal Insurance Contributions Act and funds Social Security and Medicare. In 2026, employees pay 6.2% for Social Security on earnings up to $176,100 and 1.45% for Medicare on all earnings. An additional 0.9% Medicare surtax applies to earnings above $200,000 for single filers. Employers match the base 6.2% and 1.45% rates, making the combined FICA rate 15.3% before the surtax."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between a W-2 pay stub and a 1099 pay stub?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A W-2 pay stub is issued to employees and shows FICA, federal, and state tax withholdings deducted by the employer. A 1099 pay stub is for independent contractors who receive gross pay without deductions — they are responsible for paying self-employment tax (15.3% FICA equivalent) and estimated quarterly income taxes themselves. Our generator supports both formats."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which US states have no income tax?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nine US states impose no personal income tax: Alaska, Florida, Nevada, New Hampshire (dividends and interest only, fully phased out by 2027), South Dakota, Tennessee, Texas, Washington, and Wyoming. Employees in these states still pay federal income tax and FICA. If you work in one of these states, your pay stub will show federal deductions only."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Create a US Pay Stub",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "Enter company and employee details",
+        "text": "Fill in the employer name, EIN (optional), employee name, filing status, and state of employment. Select W-2 (employee) or 1099 (contractor) format."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "Input earnings and withholdings",
+        "text": "Enter gross pay, hours worked, pay frequency, and any pre-tax deductions like 401(k) or health insurance. The tool auto-calculates FICA, federal tax, and state tax."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "Generate and download your pay stub",
+        "text": "Review the net pay calculation, verify the deduction breakdown, and download a professional PDF pay stub instantly."
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="/" class="nav__logo"><img src="/assets/img/logo-light.png" alt="AAWebTools" height="56"></a>
+      <div class="nav__links">
+        <div class="nav__dropdown"><a href="#" class="nav__link">Downloaders</a><div class="nav__dropdown-menu"><a href="/tiktok-downloader/" class="nav__dropdown-item">TikTok Downloader</a><a href="/twitter-video-downloader/" class="nav__dropdown-item">Twitter Downloader</a></div></div>
+        <div class="nav__dropdown"><a href="#" class="nav__link">Generators</a><div class="nav__dropdown-menu"><a href="/invoice-generator/" class="nav__dropdown-item">Invoice Generator</a><a href="/paystub-generator/" class="nav__dropdown-item">Pay Stub Generator</a><a href="/image-toolkit/" class="nav__dropdown-item">Image Toolkit</a></div></div>
+        <div class="nav__dropdown"><a href="#" class="nav__link">AI Tools</a><div class="nav__dropdown-menu"><a href="/ai-detector/" class="nav__dropdown-item">AI Content Detector</a><a href="/ai-humanizer/" class="nav__dropdown-item">AI Text Humanizer</a></div></div>
+      </div>
+      <div class="nav__right">
+        <a href="/#tools" class="btn-primary btn-sm">All Tools</a>
+        <button class="nav__hamburger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+  <div class="nav__mobile" id="mobileNav">
+    <a href="/tiktok-downloader/" class="nav__mobile-link">TikTok Downloader</a>
+    <a href="/twitter-video-downloader/" class="nav__mobile-link">Twitter Downloader</a>
+    <a href="/invoice-generator/" class="nav__mobile-link">Invoice Generator</a>
+    <a href="/ai-detector/" class="nav__mobile-link">AI Content Detector</a>
+    <a href="/ai-humanizer/" class="nav__mobile-link">AI Text Humanizer</a>
+    <a href="/paystub-generator/" class="nav__mobile-link">Pay Stub Generator</a>
+    <a href="/image-toolkit/" class="nav__mobile-link">Image Toolkit</a>
+  </div>
+
+  <main>
+    <article class="legal">
+      <nav aria-label="Breadcrumb" style="font-size:13px;margin-bottom:24px;color:var(--text-tertiary);">
+        <a href="/">Home</a> &rsaquo; <a href="/paystub-generator/">Pay Stub Generator</a> &rsaquo; USA
+      </nav>
+
+      <h1>Free Pay Stub Generator for USA</h1>
+      <p class="legal-date">Updated March 2026 &mdash; Reflects IRS rates for the 2026 tax year</p>
+
+      <p>American payroll is governed by a combination of federal mandates and state-level rules that vary dramatically from coast to coast. Every employer in the United States must withhold Federal Insurance Contributions Act (FICA) taxes and federal income tax, and most must also withhold state income tax. Our free pay stub generator calculates all of these automatically, supports both W-2 employees and 1099 contractors, and produces a professional PDF in seconds.</p>
+
+      <h2>FICA: Social Security and Medicare (2026)</h2>
+      <p>FICA is the backbone of US payroll taxation. In 2026, the Social Security tax rate remains 6.2% for employees, applied to the first $176,100 of earnings (the wage base limit). Medicare tax is 1.45% on all earnings with no cap, plus an Additional Medicare Tax of 0.9% on earnings above $200,000 for single filers ($250,000 for married filing jointly). Employers match both the 6.2% Social Security and 1.45% Medicare portions, making the combined employer-employee FICA rate 15.3% on earnings up to the wage base.</p>
+
+      <p>Self-employed individuals and 1099 contractors pay the full 15.3% as self-employment tax, though they can deduct the employer-equivalent half when filing their annual return. This distinction is critical when generating pay stubs for contractors versus employees.</p>
+
+      <h2>Federal Income Tax Brackets for 2026</h2>
+      <p>The IRS uses a progressive bracket system for federal income tax. For 2026, the brackets for single filers are approximately:</p>
+      <ul>
+        <li>10% on taxable income up to $11,925</li>
+        <li>12% on income from $11,925 to $48,475</li>
+        <li>22% on income from $48,475 to $103,350</li>
+        <li>24% on income from $103,350 to $197,300</li>
+        <li>32% on income from $197,300 to $250,525</li>
+        <li>35% on income from $250,525 to $626,350</li>
+        <li>37% on income above $626,350</li>
+      </ul>
+      <p>The standard deduction for 2026 is approximately $15,700 for single filers and $31,400 for married filing jointly. Withholding calculations use the employee's W-4 form to determine the correct amount to deduct each pay period.</p>
+
+      <h2>State Income Tax: 50 States, 50 Systems</h2>
+      <p>State income tax adds another layer of complexity. Nine states impose no personal income tax at all: Alaska, Florida, Nevada, New Hampshire, South Dakota, Tennessee, Texas, Washington, and Wyoming. California has the highest top marginal rate at 13.3%, while states like Colorado and Illinois use flat rates (4.40% and 4.95%, respectively). Some states, such as Oregon and New Jersey, also levy local or city income taxes that employers must withhold.</p>
+
+      <p>When generating a pay stub, the employee's state of employment determines which state tax tables apply. Multi-state employers or remote workers may need to navigate reciprocity agreements that allow residents of one state to be taxed only by their home state.</p>
+
+      <h2>Pre-Tax Deductions: 401(k), Health Insurance, and More</h2>
+      <p>Many US employees participate in pre-tax benefit programs that reduce taxable income before federal and state withholding is calculated. Common pre-tax deductions include 401(k) retirement contributions (up to $23,500 in 2026, plus $7,500 catch-up for employees 50 and older), health insurance premiums under a Section 125 cafeteria plan, Health Savings Account (HSA) contributions, and Flexible Spending Account (FSA) contributions. These deductions lower both the employee's tax burden and the employer's FICA liability on the reduced wages.</p>
+
+      <h2>W-2 vs. 1099: Understanding the Distinction</h2>
+      <p>A W-2 pay stub reflects an employer-employee relationship where the employer withholds FICA, federal, and state taxes. A 1099 pay stub documents payments to an independent contractor who receives gross pay without withholdings. Misclassifying workers can result in IRS penalties, back taxes, and interest. Our generator supports both formats and clearly labels the document type to help maintain proper records.</p>
+
+      <h2>What Must Appear on a US Pay Stub</h2>
+      <p>There is no single federal law mandating pay stub format, but the Fair Labor Standards Act (FLSA) requires employers to keep accurate records. Most states have their own requirements. A compliant US pay stub should include:</p>
+      <ul>
+        <li>Employer name, address, and EIN</li>
+        <li>Employee name and last four digits of SSN</li>
+        <li>Pay period dates and pay date</li>
+        <li>Gross wages, including regular and overtime hours with rates</li>
+        <li>Itemized deductions: Social Security, Medicare, federal tax, state tax, local tax</li>
+        <li>Pre-tax deductions (401k, insurance premiums)</li>
+        <li>Post-tax deductions (Roth 401k, garnishments)</li>
+        <li>Net pay</li>
+        <li>Year-to-date totals</li>
+      </ul>
+
+      <div class="cta-box">
+        <p style="font-size:18px;font-weight:600;color:var(--text-primary);margin-bottom:16px;">Ready to generate your US pay stub?</p>
+        <p style="margin-bottom:24px;">Our free tool auto-calculates FICA, federal income tax, and state withholding for all 50 states. W-2 and 1099 formats available.</p>
+        <a href="/paystub-generator/" class="btn-cta">Create Your US Pay Stub &mdash; Free &rarr;</a>
+      </div>
+
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+        <h3>What is FICA and how much is deducted from a US paycheck?</h3>
+        <p>FICA stands for the Federal Insurance Contributions Act and funds Social Security and Medicare. In 2026, employees pay 6.2% for Social Security on earnings up to $176,100 and 1.45% for Medicare on all earnings. An additional 0.9% Medicare surtax applies to earnings above $200,000 for single filers. Employers match the base 6.2% and 1.45% rates, making the combined FICA rate 15.3% before the surtax.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>What is the difference between a W-2 pay stub and a 1099 pay stub?</h3>
+        <p>A W-2 pay stub is issued to employees and shows FICA, federal, and state tax withholdings deducted by the employer. A 1099 pay stub is for independent contractors who receive gross pay without deductions — they are responsible for paying self-employment tax (15.3% FICA equivalent) and estimated quarterly income taxes themselves. Our generator supports both formats.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Which US states have no income tax?</h3>
+        <p>Nine US states impose no personal income tax: Alaska, Florida, Nevada, New Hampshire (dividends and interest only, fully phased out by 2027), South Dakota, Tennessee, Texas, Washington, and Wyoming. Employees in these states still pay federal income tax and FICA. If you work in one of these states, your pay stub will show federal deductions only.</p>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__grid">
+      <div>
+        <div class="footer__logo"><img src="/assets/img/logo-light.png" alt="AAWebTools" height="44"></div>
+        <p class="footer__tagline">Free tools for everyone, worldwide</p>
+        <p class="footer__copyright">&copy; 2026 AAWebTools. All rights reserved. Built by <a href="https://scopecove.com/" target="_blank" rel="noopener" class="footer__link" style="display:inline;">ScopeCove</a></p>
+      </div>
+      <div>
+        <h4 class="footer__heading">Tools</h4>
+        <a href="/tiktok-downloader/" class="footer__link">TikTok Downloader</a>
+        <a href="/twitter-video-downloader/" class="footer__link">Twitter Video Downloader</a>
+        <a href="/invoice-generator/" class="footer__link">Invoice Generator</a>
+        <a href="/ai-detector/" class="footer__link">AI Content Detector</a>
+        <a href="/ai-humanizer/" class="footer__link">AI Text Humanizer</a>
+        <a href="/paystub-generator/" class="footer__link">Pay Stub Generator</a>
+        <a href="/image-toolkit/" class="footer__link">Image Toolkit</a>
+      </div>
+      <div>
+        <h4 class="footer__heading">Legal</h4>
+        <a href="/privacy/" class="footer__link">Privacy Policy</a>
+        <a href="/terms/" class="footer__link">Terms of Service</a>
+        <a href="/about/" class="footer__link">About</a>
+        <a href="/contact/" class="footer__link">Contact</a>
+      </div>
+    </div>
+    <div class="footer__bottom">Made with &#10084;&#65039; | Free forever | No signup required</div>
+  </footer>
+
+  <script src="/assets/js/core.js" defer></script>
+  <script defer src="https://analytics.aawebtools.com/script.js" data-website-id="836dfc88-b05f-49b2-9824-3a085e248896"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9434634079795273" crossorigin="anonymous"></script>
+</body>
+</html>
