@@ -78,7 +78,7 @@
         if (el.tagName === 'INPUT' && el.type !== 'submit') {
           el.placeholder = val;
         } else {
-          el.textContent = val;
+          el.innerHTML = val;
         }
       }
     });
