@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design System Test | AAWebTools</title>
+  <meta name="description" content="Visual test page for the AAWebTools design system.">
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVIGATION
+       ============================================================ -->
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="/" class="nav__logo">
+        <span class="nav__logo-dot"></span>
+        AAWebTools
+      </a>
+      <div class="nav__links">
+        <div class="nav__dropdown">
+          <a href="#" class="nav__link nav__link--active">Tools</a>
+          <div class="nav__dropdown-menu">
+            <a href="#" class="nav__dropdown-item">TikTok Downloader</a>
+            <a href="#" class="nav__dropdown-item">Twitter Downloader</a>
+            <a href="#" class="nav__dropdown-item">Invoice Generator</a>
+            <a href="#" class="nav__dropdown-item">AI Detector</a>
+            <a href="#" class="nav__dropdown-item">AI Humanizer</a>
+            <a href="#" class="nav__dropdown-item">Pay Stub Generator</a>
+          </div>
+        </div>
+        <a href="#" class="nav__link">About</a>
+      </div>
+      <div class="nav__right">
+        <div class="lang-toggle">
+          <button class="lang-toggle__btn lang-toggle__btn--active">EN</button>
+          <button class="lang-toggle__btn">FR</button>
+        </div>
+        <a href="#tools" class="btn-primary btn-sm">Get Started</a>
+        <button class="nav__hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile nav overlay -->
+  <div class="nav__mobile" id="mobileNav">
+    <a href="#" class="nav__mobile-link">TikTok Downloader</a>
+    <a href="#" class="nav__mobile-link">Twitter Downloader</a>
+    <a href="#" class="nav__mobile-link">Invoice Generator</a>
+    <a href="#" class="nav__mobile-link">AI Detector</a>
+    <a href="#" class="nav__mobile-link">AI Humanizer</a>
+    <a href="#" class="nav__mobile-link">Pay Stub Generator</a>
+  </div>
+
+  <main>
+
+    <!-- ============================================================
+         HERO SECTION
+         ============================================================ -->
+    <section class="hero">
+      <div class="hero__particles">
+        <div class="hero__particle"></div>
+        <div class="hero__particle"></div>
+        <div class="hero__particle"></div>
+        <div class="hero__particle"></div>
+        <div class="hero__particle"></div>
+        <div class="hero__particle"></div>
+        <div class="hero__particle"></div>
+        <div class="hero__particle"></div>
+        <div class="hero__particle"></div>
+        <div class="hero__particle"></div>
+        <div class="hero__particle"></div>
+        <div class="hero__particle"></div>
+      </div>
+      <div class="hero__content">
+        <span class="hero__label">Free Online Tools</span>
+        <h1 class="hero__title">Web tools that just work. Free, fast, no login.</h1>
+        <p class="hero__subtitle">Download videos, generate invoices, detect AI text, and more. All tools run in your browser. No account needed.</p>
+        <div class="hero__buttons">
+          <a href="#tools" class="btn-primary">Explore Tools</a>
+          <a href="#about" class="btn-ghost">Learn More</a>
+        </div>
+        <div class="hero__trust">
+          <span>&#10003; No Login</span>
+          <span class="hero__trust-sep"></span>
+          <span>&#10003; Free Forever</span>
+          <span class="hero__trust-sep"></span>
+          <span>&#10003; Works Worldwide</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         TOOL CARDS GRID
+         ============================================================ -->
+    <section class="section" id="tools">
+      <div class="container">
+        <span class="section-label reveal">Our Tools</span>
+        <h2 class="reveal">Everything you need, in one place</h2>
+        <p class="text-secondary mb-xl reveal">Six powerful tools, completely free. No signup. No limits.</p>
+
+        <div class="tools-grid">
+          <a href="#" class="tool-card reveal">
+            <div class="tool-card__top">
+              <span class="badge">Downloader</span>
+              <span class="badge--green badge">Most Popular</span>
+            </div>
+            <div class="tool-card__icon">
+              <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2"/><path d="M16 14l12 6-12 6V14z" fill="currentColor"/></svg>
+            </div>
+            <h3 class="tool-card__title">TikTok Downloader</h3>
+            <p class="tool-card__desc">Download TikTok videos without watermark in HD quality.</p>
+            <span class="tool-card__link">Use Tool &rarr;</span>
+          </a>
+
+          <a href="#" class="tool-card reveal">
+            <div class="tool-card__top">
+              <span class="badge">Downloader</span>
+            </div>
+            <div class="tool-card__icon">
+              <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 8v16m0 0l-6-6m6 6l6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M10 28h20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </div>
+            <h3 class="tool-card__title">Twitter Video Downloader</h3>
+            <p class="tool-card__desc">Download Twitter/X videos and GIFs for free.</p>
+            <span class="tool-card__link">Use Tool &rarr;</span>
+          </a>
+
+          <a href="#" class="tool-card reveal">
+            <div class="tool-card__top">
+              <span class="badge">Generator</span>
+              <span class="badge">Free PDF</span>
+            </div>
+            <div class="tool-card__icon">
+              <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="8" y="6" width="24" height="28" rx="2" stroke="currentColor" stroke-width="2"/><path d="M14 14h12M14 20h12M14 26h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </div>
+            <h3 class="tool-card__title">Invoice Generator</h3>
+            <p class="tool-card__desc">Create professional invoices free. No sign up required.</p>
+            <span class="tool-card__link">Use Tool &rarr;</span>
+          </a>
+
+          <a href="#" class="tool-card reveal">
+            <div class="tool-card__top">
+              <span class="badge">AI</span>
+            </div>
+            <div class="tool-card__icon">
+              <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18" cy="18" r="10" stroke="currentColor" stroke-width="2"/><path d="M26 26l6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="18" cy="15" r="2" fill="currentColor"/><path d="M14 22c1-2 3-3 4-3s3 1 4 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <h3 class="tool-card__title">AI Content Detector</h3>
+            <p class="tool-card__desc">Detect AI-generated text from ChatGPT, Claude, and more.</p>
+            <span class="tool-card__link">Use Tool &rarr;</span>
+          </a>
+
+          <a href="#" class="tool-card reveal">
+            <div class="tool-card__top">
+              <span class="badge">AI</span>
+            </div>
+            <div class="tool-card__icon">
+              <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 12h2v16h-2zM20 8l2 2-2 2M24 14l2 2-2 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M28 20c0 6-4 12-8 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </div>
+            <h3 class="tool-card__title">AI Text Humanizer</h3>
+            <p class="tool-card__desc">Make AI-written text sound natural and human.</p>
+            <span class="tool-card__link">Use Tool &rarr;</span>
+          </a>
+
+          <a href="#" class="tool-card reveal">
+            <div class="tool-card__top">
+              <span class="badge">Generator</span>
+              <span class="badge">Free PDF</span>
+            </div>
+            <div class="tool-card__icon">
+              <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="8" y="6" width="24" height="28" rx="2" stroke="currentColor" stroke-width="2"/><path d="M20 16v8m-3-4.5L20 16l3 3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="20" cy="28" r="1.5" fill="currentColor"/></svg>
+            </div>
+            <h3 class="tool-card__title">Pay Stub Generator</h3>
+            <p class="tool-card__desc">Create professional pay stubs free. Instant PDF download.</p>
+            <span class="tool-card__link">Use Tool &rarr;</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         TOOL INTERFACE CARD (White on dark)
+         ============================================================ -->
+    <section class="tool-section">
+      <div class="container text-center mb-xl">
+        <span class="section-label reveal">Component Test</span>
+        <h2 class="reveal" style="color: var(--text-primary);">Tool Interface Card</h2>
+      </div>
+      <div class="tool-interface reveal">
+        <div class="tool-group">
+          <label class="tool-label" for="test-url">Video URL</label>
+          <input type="url" id="test-url" class="tool-input" placeholder="https://www.tiktok.com/@user/video/123456">
+        </div>
+        <div class="tool-group">
+          <label class="tool-label" for="test-text">Text Input</label>
+          <textarea id="test-text" class="tool-input" placeholder="Paste your text here..."></textarea>
+        </div>
+        <div class="tool-group">
+          <label class="tool-label" for="test-select">Select Option</label>
+          <select id="test-select" class="tool-input">
+            <option>HD Quality (1080p)</option>
+            <option>Standard Quality (720p)</option>
+            <option>Audio Only (MP3)</option>
+          </select>
+        </div>
+        <button class="btn-tool">Download Video</button>
+
+        <div class="tool-result mt-lg" style="display:flex;align-items:center;gap:12px;">
+          <span class="spinner"></span>
+          <span style="color:var(--tool-text-secondary);">Processing your request...</span>
+        </div>
+
+        <div class="tool-result tool-result--success mt-md">
+          <p style="color:#10b981;font-weight:600;margin-bottom:8px;">Success!</p>
+          <p style="color:var(--tool-text-secondary);">Your file is ready for download.</p>
+        </div>
+
+        <div class="tool-result tool-result--error mt-md">
+          <p style="color:#ef4444;font-weight:600;margin-bottom:8px;">Error</p>
+          <p style="color:var(--tool-text-secondary);">Invalid URL. Please check and try again.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         BUTTONS & BADGES SHOWCASE
+         ============================================================ -->
+    <section class="section">
+      <div class="container">
+        <span class="section-label reveal">Components</span>
+        <h2 class="reveal mb-xl">Buttons &amp; Badges</h2>
+
+        <div class="reveal mb-xl" style="display:flex;flex-wrap:wrap;gap:12px;align-items:center;">
+          <button class="btn-primary">Primary Button</button>
+          <button class="btn-ghost">Ghost Button</button>
+          <button class="btn-primary btn-sm">Small Primary</button>
+          <button class="btn-ghost btn-sm">Small Ghost</button>
+        </div>
+
+        <div class="reveal mb-xl" style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;">
+          <span class="badge">Downloader</span>
+          <span class="badge">AI</span>
+          <span class="badge">Generator</span>
+          <span class="badge">Free PDF</span>
+          <span class="badge--green badge">Most Popular</span>
+          <span class="badge--yellow badge">Warning</span>
+          <span class="badge--red badge">Critical</span>
+        </div>
+
+        <div class="reveal" style="display:flex;flex-wrap:wrap;gap:16px;align-items:center;">
+          <span class="section-label" style="margin:0;">Section Label</span>
+          <span class="text-caption">Caption Text (12px/500)</span>
+          <span class="spinner"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         TYPOGRAPHY SHOWCASE
+         ============================================================ -->
+    <section class="section" style="background:var(--bg-secondary);">
+      <div class="container">
+        <span class="section-label reveal">Typography</span>
+        <h1 class="reveal mb-lg">Hero H1 — Web tools that just work</h1>
+        <h2 class="reveal mb-lg">Section H2 — Everything you need</h2>
+        <h3 class="reveal mb-md">Card H3 — TikTok Downloader</h3>
+        <p class="reveal mb-md">Body text (16px/400) — Download TikTok videos without watermark in HD quality. Free online tool that works on all devices. No login required, no limits.</p>
+        <p class="text-sm text-secondary reveal mb-md">Small text (14px/400) — All tools are free forever. No signup. Works worldwide.</p>
+        <p class="text-caption text-tertiary reveal">CAPTION TEXT (12px/500) — LAST UPDATED MARCH 2026</p>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         COLOR PALETTE
+         ============================================================ -->
+    <section class="section">
+      <div class="container">
+        <span class="section-label reveal">Colors</span>
+        <h2 class="reveal mb-xl">Color System</h2>
+        <div class="reveal" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:12px;">
+          <div style="background:#ffffff;border:1px solid var(--border-primary);border-radius:8px;padding:16px;"><span class="text-caption">bg-primary</span><br><span class="text-sm text-tertiary">#ffffff</span></div>
+          <div style="background:#f8fafc;border:1px solid var(--border-primary);border-radius:8px;padding:16px;"><span class="text-caption">bg-secondary</span><br><span class="text-sm text-tertiary">#f8fafc</span></div>
+          <div style="background:#f1f5f9;border:1px solid var(--border-primary);border-radius:8px;padding:16px;"><span class="text-caption">bg-tertiary</span><br><span class="text-sm text-tertiary">#f1f5f9</span></div>
+          <div style="background:#4f7fff;border-radius:8px;padding:16px;color:#fff;"><span class="text-caption">accent-blue</span><br><span class="text-sm" style="opacity:.8">#4f7fff</span></div>
+          <div style="background:#6b94ff;border-radius:8px;padding:16px;color:#fff;"><span class="text-caption">blue-hover</span><br><span class="text-sm" style="opacity:.8">#6b94ff</span></div>
+          <div style="background:#10b981;border-radius:8px;padding:16px;color:#fff;"><span class="text-caption">accent-green</span><br><span class="text-sm" style="opacity:.8">#10b981</span></div>
+          <div style="background:#ef4444;border-radius:8px;padding:16px;color:#fff;"><span class="text-caption">accent-red</span><br><span class="text-sm" style="opacity:.8">#ef4444</span></div>
+          <div style="background:#f59e0b;border-radius:8px;padding:16px;color:#fff;"><span class="text-caption">accent-yellow</span><br><span class="text-sm" style="opacity:.8">#f59e0b</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         404 PAGE PREVIEW
+         ============================================================ -->
+    <section class="section" style="border-top:1px solid var(--border-primary);">
+      <div class="container">
+        <span class="section-label reveal">Error State</span>
+        <h2 class="reveal mb-xl">404 Page Preview</h2>
+        <div class="error-page reveal" style="padding:40px 0;">
+          <div class="error-page__code">404</div>
+          <h2 class="error-page__title">Page not found</h2>
+          <p class="error-page__text">This page doesn't exist. Try one of our free tools:</p>
+          <a href="#tools" class="btn-primary">Browse Tools</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer">
+    <div class="footer__grid">
+      <div>
+        <div class="footer__logo">
+          <span class="nav__logo-dot"></span>
+          AAWebTools
+        </div>
+        <p class="footer__tagline">Free tools for everyone, worldwide</p>
+        <p class="footer__copyright">&copy; 2026 AAWebTools. All rights reserved.</p>
+      </div>
+      <div>
+        <h4 class="footer__heading">Tools</h4>
+        <a href="#" class="footer__link">TikTok Downloader</a>
+        <a href="#" class="footer__link">Twitter Video Downloader</a>
+        <a href="#" class="footer__link">Invoice Generator</a>
+        <a href="#" class="footer__link">AI Content Detector</a>
+        <a href="#" class="footer__link">AI Text Humanizer</a>
+        <a href="#" class="footer__link">Pay Stub Generator</a>
+      </div>
+      <div>
+        <h4 class="footer__heading">Legal</h4>
+        <a href="#" class="footer__link">Privacy Policy</a>
+        <a href="#" class="footer__link">Terms of Service</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      Made with &#10084;&#65039; | Free forever | No signup required
+    </div>
+  </footer>
+
+  <script src="/assets/js/core.js" defer></script>
+  <script>
+    document.querySelector('.nav__hamburger').addEventListener('click', function() {
+      document.getElementById('mobileNav').classList.toggle('is-open');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+[
+  {
+    "id": "tiktok-downloader",
+    "title": "TikTok Downloader",
+    "title_fr": "Téléchargeur TikTok",
+    "description": "Download TikTok videos without watermark in HD",
+    "description_fr": "Téléchargez des vidéos TikTok sans filigrane en HD",
+    "icon": "tiktok",
+    "category": "downloader",
+    "path": "/tiktok-downloader/",
+    "badge": "Most Popular",
+    "monetization": "propellerads"
+  },
+  {
+    "id": "twitter-video-downloader",
+    "title": "Twitter Video Downloader",
+    "title_fr": "Téléchargeur Vidéo Twitter",
+    "description": "Download Twitter/X videos and GIFs for free",
+    "description_fr": "Téléchargez des vidéos et GIFs Twitter/X gratuitement",
+    "icon": "twitter",
+    "category": "downloader",
+    "path": "/twitter-video-downloader/",
+    "badge": null,
+    "monetization": "propellerads"
+  },
+  {
+    "id": "invoice-generator",
+    "title": "Invoice Generator",
+    "title_fr": "Générateur de Facture",
+    "description": "Create professional invoices free — no sign up required",
+    "description_fr": "Créez des factures professionnelles gratuitement — sans inscription",
+    "icon": "invoice",
+    "category": "generator",
+    "path": "/invoice-generator/",
+    "badge": "Free PDF",
+    "monetization": "adsense"
+  },
+  {
+    "id": "ai-detector",
+    "title": "AI Content Detector",
+    "title_fr": "Détecteur de Contenu IA",
+    "description": "Detect AI-generated text from ChatGPT, Claude, and more",
+    "description_fr": "Détectez le texte généré par l'IA de ChatGPT, Claude, etc.",
+    "icon": "detector",
+    "category": "ai",
+    "path": "/ai-detector/",
+    "badge": null,
+    "monetization": "adsense"
+  },
+  {
+    "id": "ai-humanizer",
+    "title": "AI Text Humanizer",
+    "title_fr": "Humanisateur de Texte IA",
+    "description": "Make AI-written text sound natural and human",
+    "description_fr": "Rendez le texte écrit par l'IA naturel et humain",
+    "icon": "humanizer",
+    "category": "ai",
+    "path": "/ai-humanizer/",
+    "badge": null,
+    "monetization": "adsense"
+  },
+  {
+    "id": "paystub-generator",
+    "title": "Pay Stub Generator",
+    "title_fr": "Générateur de Bulletin de Paie",
+    "description": "Create professional pay stubs free — instant PDF download",
+    "description_fr": "Créez des bulletins de paie professionnels — PDF instantané",
+    "icon": "paystub",
+    "category": "generator",
+    "path": "/paystub-generator/",
+    "badge": "Free PDF",
+    "monetization": "adsense"
+  }
+]

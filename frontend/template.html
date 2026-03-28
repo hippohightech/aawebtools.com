@@ -1,0 +1,175 @@
+<!--
+  template.html — aawebtools.com
+  Section 3: Reusable HTML template. Copy this structure for every page.
+  Replace all [PLACEHOLDERS] with page-specific values.
+  This file is NOT served to users — it is a build reference only.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO — unique per page -->
+  <title>[PAGE_TITLE] | AAWebTools</title>
+  <meta name="description" content="[META_DESCRIPTION]">
+  <link rel="canonical" href="https://aawebtools.com[PAGE_PATH]">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="[PAGE_TITLE] | AAWebTools">
+  <meta property="og:description" content="[META_DESCRIPTION]">
+  <meta property="og:image" content="https://aawebtools.com/assets/img/og-default.png">
+  <meta property="og:url" content="https://aawebtools.com[PAGE_PATH]">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="AAWebTools">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="[PAGE_TITLE] | AAWebTools">
+  <meta name="twitter:description" content="[META_DESCRIPTION]">
+  <meta name="twitter:image" content="https://aawebtools.com/assets/img/og-default.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+
+  <!-- Fonts — async -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+
+  <!-- CSS — only render-blocking resource -->
+  <link rel="stylesheet" href="/assets/css/main.css">
+
+  <!-- Schema Markup — unique per page -->
+  <script type="application/ld+json">
+  [SCHEMA_JSON]
+  </script>
+
+  <!-- Google Search Console verification — homepage only -->
+  <!-- <meta name="google-site-verification" content="PENDING"> -->
+
+  <!-- Umami Analytics — async, privacy-first -->
+  <script async defer src="https://analytics.aawebtools.com/script.js"
+          data-website-id="UMAMI_SITE_ID"></script>
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVIGATION — PRD 3.2
+       ============================================================ -->
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="/" class="nav__logo">
+        <span class="nav__logo-dot"></span>
+        <span>AAWebTools</span>
+      </a>
+
+      <div class="nav__links">
+        <div class="nav__dropdown">
+          <a href="#" class="nav__link" data-en="Downloaders" data-fr="Téléchargeurs">Downloaders</a>
+          <div class="nav__dropdown-menu">
+            <a href="/tiktok-downloader/" class="nav__dropdown-item" data-en="TikTok Downloader" data-fr="Téléchargeur TikTok">TikTok Downloader</a>
+            <a href="/twitter-video-downloader/" class="nav__dropdown-item" data-en="Twitter Downloader" data-fr="Téléchargeur Twitter">Twitter Downloader</a>
+          </div>
+        </div>
+        <div class="nav__dropdown">
+          <a href="#" class="nav__link" data-en="Generators" data-fr="Générateurs">Generators</a>
+          <div class="nav__dropdown-menu">
+            <a href="/invoice-generator/" class="nav__dropdown-item" data-en="Invoice Generator" data-fr="Générateur de Facture">Invoice Generator</a>
+            <a href="/paystub-generator/" class="nav__dropdown-item" data-en="Pay Stub Generator" data-fr="Générateur de Bulletin de Paie">Pay Stub Generator</a>
+          </div>
+        </div>
+        <div class="nav__dropdown">
+          <a href="#" class="nav__link" data-en="AI Tools" data-fr="Outils IA">AI Tools</a>
+          <div class="nav__dropdown-menu">
+            <a href="/ai-detector/" class="nav__dropdown-item" data-en="AI Content Detector" data-fr="Détecteur de Contenu IA">AI Content Detector</a>
+            <a href="/ai-humanizer/" class="nav__dropdown-item" data-en="AI Text Humanizer" data-fr="Humanisateur de Texte IA">AI Text Humanizer</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav__right">
+        <div class="lang-toggle">
+          <button class="lang-toggle__btn lang-toggle__btn--active" data-lang="en">EN</button>
+          <button class="lang-toggle__btn" data-lang="fr">FR</button>
+        </div>
+        <a href="/#tools" class="btn-primary btn-sm" data-en="Get Started" data-fr="Commencer">Get Started</a>
+        <button class="nav__hamburger" aria-label="Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile nav overlay -->
+  <div class="nav__mobile" id="mobileNav">
+    <a href="/tiktok-downloader/" class="nav__mobile-link" data-en="TikTok Downloader" data-fr="Téléchargeur TikTok">TikTok Downloader</a>
+    <a href="/twitter-video-downloader/" class="nav__mobile-link" data-en="Twitter Downloader" data-fr="Téléchargeur Twitter">Twitter Downloader</a>
+    <a href="/invoice-generator/" class="nav__mobile-link" data-en="Invoice Generator" data-fr="Générateur de Facture">Invoice Generator</a>
+    <a href="/ai-detector/" class="nav__mobile-link" data-en="AI Content Detector" data-fr="Détecteur de Contenu IA">AI Content Detector</a>
+    <a href="/ai-humanizer/" class="nav__mobile-link" data-en="AI Text Humanizer" data-fr="Humanisateur de Texte IA">AI Text Humanizer</a>
+    <a href="/paystub-generator/" class="nav__mobile-link" data-en="Pay Stub Generator" data-fr="Générateur de Bulletin de Paie">Pay Stub Generator</a>
+    <div style="padding:14px 24px;">
+      <div class="lang-toggle">
+        <button class="lang-toggle__btn lang-toggle__btn--active" data-lang="en">EN</button>
+        <button class="lang-toggle__btn" data-lang="fr">FR</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       MAIN CONTENT — Replace with page-specific content
+       ============================================================ -->
+  <main>
+    <!-- [PAGE CONTENT HERE] -->
+
+    <!-- ERROR STATE COMPONENT — PRD 3.5
+         Copy this block into any tool page where errors can occur.
+    <div class="error-state" style="display:none;" id="errorState">
+      <div class="error-state__icon">
+        <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><path d="M24 4L2 44h44L24 4z" stroke="#f59e0b" stroke-width="2.5" fill="none"/><path d="M24 18v12" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/><circle cx="24" cy="35" r="1.5" fill="#f59e0b"/></svg>
+      </div>
+      <h3 class="error-state__title" data-en="Something went wrong" data-fr="Une erreur est survenue">Something went wrong</h3>
+      <p class="error-state__text" data-en="We're fixing this. Check back in 2 hours." data-fr="Nous corrigeons le problème. Revenez dans 2 heures.">We're fixing this. Check back in 2 hours.</p>
+      <a href="/" class="btn-primary" data-en="Try Another Tool" data-fr="Essayer un autre outil">Try Another Tool</a>
+    </div>
+    -->
+  </main>
+
+  <!-- ============================================================
+       FOOTER — PRD 3.3
+       ============================================================ -->
+  <footer class="footer">
+    <div class="footer__grid">
+      <div>
+        <div class="footer__logo">
+          <span class="nav__logo-dot"></span>
+          AAWebTools
+        </div>
+        <p class="footer__tagline" data-en="Free tools for everyone, worldwide" data-fr="Outils gratuits pour tous, partout dans le monde">Free tools for everyone, worldwide</p>
+        <p class="footer__copyright">&copy; 2026 AAWebTools. All rights reserved.</p>
+      </div>
+      <div>
+        <h4 class="footer__heading" data-en="Tools" data-fr="Outils">Tools</h4>
+        <a href="/tiktok-downloader/" class="footer__link" data-en="TikTok Downloader" data-fr="Téléchargeur TikTok">TikTok Downloader</a>
+        <a href="/twitter-video-downloader/" class="footer__link" data-en="Twitter Video Downloader" data-fr="Téléchargeur Vidéo Twitter">Twitter Video Downloader</a>
+        <a href="/invoice-generator/" class="footer__link" data-en="Invoice Generator" data-fr="Générateur de Facture">Invoice Generator</a>
+        <a href="/ai-detector/" class="footer__link" data-en="AI Content Detector" data-fr="Détecteur de Contenu IA">AI Content Detector</a>
+        <a href="/ai-humanizer/" class="footer__link" data-en="AI Text Humanizer" data-fr="Humanisateur de Texte IA">AI Text Humanizer</a>
+        <a href="/paystub-generator/" class="footer__link" data-en="Pay Stub Generator" data-fr="Générateur de Bulletin de Paie">Pay Stub Generator</a>
+      </div>
+      <div>
+        <h4 class="footer__heading" data-en="Legal" data-fr="Juridique">Legal</h4>
+        <a href="/privacy/" class="footer__link" data-en="Privacy Policy" data-fr="Politique de confidentialité">Privacy Policy</a>
+        <a href="/terms/" class="footer__link" data-en="Terms of Service" data-fr="Conditions d'utilisation">Terms of Service</a>
+      </div>
+    </div>
+    <div class="footer__bottom" data-en="Made with ❤️ | Free forever | No signup required" data-fr="Fait avec ❤️ | Gratuit pour toujours | Aucune inscription requise">
+      Made with &#10084;&#65039; | Free forever | No signup required
+    </div>
+  </footer>
+
+  <!-- JS — deferred -->
+  <script src="/assets/js/core.js" defer></script>
+</body>
+</html>

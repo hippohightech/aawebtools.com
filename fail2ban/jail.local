@@ -1,0 +1,57 @@
+# jail.local — aawebtools.com Fail2ban Configuration
+# Section 0: Monitors Nginx access logs for abuse patterns
+# PRD Section 0.4
+#
+# DEPLOYMENT NOTE:
+# Fail2ban runs on the HOST (not in Docker).
+# It monitors the Nginx container's logs via the shared volume.
+# Log path: /var/lib/docker/volumes/aawebtools-project_nginx-logs/_data/access.log
+# Adjust the logpath below to match your Docker volume mount path.
+
+[DEFAULT]
+bantime  = 3600
+findtime = 600
+maxretry = 5
+banaction = iptables-multiport
+action = %(action_)s
+         telegram[name=%(__name__)s, telegram_bot_token=__TELEGRAM_BOT_TOKEN__, telegram_chat_id=__TELEGRAM_CHAT_ID__]
+
+# ============================================================
+# RULE 1: Rate limit abuse — 429 responses
+# 5 or more 429 responses from same IP in 10 minutes → ban 1 hour
+# ============================================================
+[nginx-429]
+enabled  = true
+port     = http,https
+filter   = nginx-429
+logpath  = /var/log/nginx/access.log
+maxretry = 5
+findtime = 600
+bantime  = 3600
+
+# ============================================================
+# RULE 2: 404 flood — scanner/bot detection
+# 10 or more 404 responses from same IP in 5 minutes → ban 30 minutes
+# ============================================================
+[nginx-404-flood]
+enabled  = true
+port     = http,https
+filter   = nginx-404
+logpath  = /var/log/nginx/access.log
+maxretry = 10
+findtime = 300
+bantime  = 1800
+
+# ============================================================
+# RULE 3: Attack path probing — immediate ban
+# Any request to common attack paths → ban 24 hours
+# wp-admin, .env, .git, cgi-bin, xmlrpc.php, phpmyadmin, etc.
+# ============================================================
+[nginx-attack-paths]
+enabled  = true
+port     = http,https
+filter   = nginx-attack
+logpath  = /var/log/nginx/access.log
+maxretry = 1
+findtime = 86400
+bantime  = 86400
