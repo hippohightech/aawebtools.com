@@ -143,6 +143,7 @@ services:
     labels:
       - traefik.enable=true
       - traefik.docker.network=shared-network
+      - traefik.docker.network=shared-network
       - traefik.http.routers.aawebtools-netdata.rule=Host(`netdata.aawebtools.com`)
       - traefik.http.routers.aawebtools-netdata.tls=true
       - traefik.http.routers.aawebtools-netdata.entrypoints=web,websecure
