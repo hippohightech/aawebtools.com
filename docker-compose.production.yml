@@ -15,6 +15,7 @@ services:
         condition: service_healthy
     labels:
       - traefik.enable=true
+      - traefik.docker.network=shared-network
       # Main domain
       - traefik.http.routers.aawebtools.rule=Host(`aawebtools.com`) || Host(`www.aawebtools.com`)
       - traefik.http.routers.aawebtools.tls=true
