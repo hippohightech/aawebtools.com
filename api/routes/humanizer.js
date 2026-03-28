@@ -58,25 +58,28 @@ router.post('/', async function (req, res) {
       });
     }
 
-    var GoogleGenerativeAI;
-    try { GoogleGenerativeAI = require('@google/generative-ai').GoogleGenerativeAI; } catch (e) {
-      return res.status(503).json(ERROR_RESPONSE);
-    }
-
     var apiKey = process.env.GEMINI_API_KEY;
     if (!apiKey) {
       return res.status(503).json(ERROR_RESPONSE);
     }
 
-    var genAI = new GoogleGenerativeAI(apiKey);
-    var model = genAI.getGenerativeModel({ model: 'gemini-2.0-flash' });
+    var fetch = require('node-fetch');
+    var apiUrl = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=' + apiKey;
 
-    var result = await model.generateContent({
-      systemInstruction: SYSTEM_PROMPT,
-      contents: [{ role: 'user', parts: [{ text: text }] }]
+    var response = await fetch(apiUrl, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        system_instruction: { parts: [{ text: SYSTEM_PROMPT }] },
+        contents: [{ parts: [{ text: text }] }]
+      })
     });
 
-    var humanized = result.response && result.response.text();
+    var data = await response.json();
+    var humanized = data.candidates && data.candidates[0] &&
+      data.candidates[0].content && data.candidates[0].content.parts &&
+      data.candidates[0].content.parts[0] && data.candidates[0].content.parts[0].text;
+
     if (!humanized) {
       return res.status(503).json(ERROR_RESPONSE);
     }
