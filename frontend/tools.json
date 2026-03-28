@@ -70,5 +70,17 @@
     "path": "/paystub-generator/",
     "badge": "Free PDF",
     "monetization": "adsense"
+  },
+  {
+    "id": "image-toolkit",
+    "title": "Image Toolkit",
+    "title_fr": "Boîte à Outils Images",
+    "description": "Compress, convert & resize images free. Your files never leave your browser.",
+    "description_fr": "Compressez, convertissez et redimensionnez vos images gratuitement.",
+    "icon": "image",
+    "category": "utility",
+    "path": "/image-toolkit/",
+    "badge": "No Upload",
+    "monetization": "adsense"
   }
 ]

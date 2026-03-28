@@ -12,6 +12,30 @@ After completing each section, GSD writes one entry here with:
 
 ## Build Log
 
+### Image Toolkit — New Tool (2026-03-28)
+
+**New tool: Free Image Toolkit at /image-toolkit/**
+
+4 tabs:
+- **Compress:** JPEG, PNG, WebP, SVG with quality slider, target file size mode, EXIF stripping
+- **Convert:** 8 format conversion pairs (JPEG/PNG/GIF→WebP, WebP→JPEG/PNG, PNG↔JPEG, Any→AVIF)
+- **Resize:** Custom dimensions with aspect ratio lock + 15 social media presets (Instagram, Twitter, Facebook, LinkedIn, YouTube, WhatsApp)
+- **Watermark:** Text overlay (font, color, opacity, position) + image overlay with live preview
+
+Features: 100% browser-side processing (no uploads), lazy-loaded libraries, bulk processing with ZIP download, EN/FR bilingual, sequential processing with progress bar, memory management
+
+**Files created:**
+- `frontend/image-toolkit/index.html` — complete tool (1584 lines)
+- `frontend/assets/img/og-image-toolkit.png` — social preview image
+
+**Files modified:**
+- `frontend/tools.json` — added Image Toolkit entry
+- `frontend/sitemap.xml` — added /image-toolkit/ URL
+
+**Schemas:** SoftwareApplication + FAQPage (5 Q&As) + HowTo (3 steps)
+
+---
+
 ### SEO Improvements — 6 Quick Wins for 2026 Best Practices (2026-03-27)
 
 **FIX 1 — FAQ Schema (FAQPage JSON-LD) on all 6 tool pages:**
