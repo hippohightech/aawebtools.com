@@ -73,6 +73,91 @@ services:
     networks:
       - aawebtools-internal
 
+  # Umami Analytics — privacy-first, cookie-free
+  aawebtools-umami:
+    image: ghcr.io/umami-software/umami:postgresql-v2.10.2
+    container_name: aawebtools-umami
+    environment:
+      DATABASE_URL: postgresql://umami:${UMAMI_DB_PASSWORD}@aawebtools-umami-db:5432/umami
+      DATABASE_TYPE: postgresql
+      APP_SECRET: ${UMAMI_APP_SECRET}
+    depends_on:
+      - aawebtools-umami-db
+    labels:
+      - traefik.enable=true
+      - traefik.docker.network=shared-network
+      - traefik.http.routers.aawebtools-analytics.rule=Host(`analytics.aawebtools.com`)
+      - traefik.http.routers.aawebtools-analytics.tls=true
+      - traefik.http.routers.aawebtools-analytics.entrypoints=web,websecure
+      - traefik.http.routers.aawebtools-analytics.tls.certresolver=mytlschallenge
+      - traefik.http.services.aawebtools-analytics.loadbalancer.server.port=3000
+    restart: always
+    networks:
+      - shared-network
+      - aawebtools-internal
+
+  # Umami PostgreSQL
+  aawebtools-umami-db:
+    image: postgres:15-alpine
+    container_name: aawebtools-umami-db
+    environment:
+      POSTGRES_DB: umami
+      POSTGRES_USER: umami
+      POSTGRES_PASSWORD: ${UMAMI_DB_PASSWORD}
+    volumes:
+      - aawebtools-umami-data:/var/lib/postgresql/data
+    restart: always
+    networks:
+      - aawebtools-internal
+
+  # Uptime Kuma — monitoring + Telegram alerts
+  aawebtools-uptime-kuma:
+    image: louislam/uptime-kuma:1
+    container_name: aawebtools-uptime-kuma
+    volumes:
+      - aawebtools-kuma-data:/app/data
+    labels:
+      - traefik.enable=true
+      - traefik.docker.network=shared-network
+      - traefik.http.routers.aawebtools-monitor.rule=Host(`monitor.aawebtools.com`)
+      - traefik.http.routers.aawebtools-monitor.tls=true
+      - traefik.http.routers.aawebtools-monitor.entrypoints=web,websecure
+      - traefik.http.routers.aawebtools-monitor.tls.certresolver=mytlschallenge
+      - traefik.http.services.aawebtools-monitor.loadbalancer.server.port=3001
+    restart: always
+    networks:
+      - shared-network
+
+  # Netdata — server metrics
+  aawebtools-netdata:
+    image: netdata/netdata:v1.44
+    container_name: aawebtools-netdata
+    cap_add:
+      - SYS_PTRACE
+    security_opt:
+      - apparmor:unconfined
+    volumes:
+      - /proc:/host/proc:ro
+      - /sys:/host/sys:ro
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    labels:
+      - traefik.enable=true
+      - traefik.docker.network=shared-network
+      - traefik.http.routers.aawebtools-netdata.rule=Host(`netdata.aawebtools.com`)
+      - traefik.http.routers.aawebtools-netdata.tls=true
+      - traefik.http.routers.aawebtools-netdata.entrypoints=web,websecure
+      - traefik.http.routers.aawebtools-netdata.tls.certresolver=mytlschallenge
+      - traefik.http.services.aawebtools-netdata.loadbalancer.server.port=19999
+    restart: always
+    networks:
+      - shared-network
+
+volumes:
+  aawebtools-umami-data:
+    driver: local
+  aawebtools-kuma-data:
+    driver: local
+
 networks:
   shared-network:
     external: true
