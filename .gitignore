@@ -37,3 +37,6 @@ nginx/dev.conf
 # Logs
 *.log
 .claude/
+tools/backlink-bot/venv/
+tools/backlink-bot/data/
+tools/backlink-bot/.env

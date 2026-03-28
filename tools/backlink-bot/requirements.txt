@@ -1,0 +1,13 @@
+fastapi
+uvicorn[standard]
+websockets
+pydantic
+browser-use
+playwright
+google-generativeai
+langchain-google-genai
+aiosqlite
+aiosmtplib
+pyyaml
+python-dotenv
+httpx

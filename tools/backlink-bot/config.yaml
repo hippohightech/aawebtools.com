@@ -1,0 +1,126 @@
+site:
+  name: "AAWebTools"
+  url: "https://aawebtools.com"
+  description: "Free online tools — TikTok downloader, invoice generator, AI detector, and more. No signup required."
+  tagline: "Free online web tools — no login required"
+  owner: "Karim Narimi"
+  company: "ScopeCove"
+  company_url: "https://scopecove.com"
+
+tools:
+  - name: "TikTok Video Downloader"
+    path: "/tiktok-downloader/"
+    keywords: ["tiktok downloader", "download tiktok without watermark", "tiktok video downloader"]
+  - name: "Twitter Video Downloader"
+    path: "/twitter-video-downloader/"
+    keywords: ["twitter video downloader", "x video downloader", "download twitter video"]
+  - name: "Free Invoice Generator"
+    path: "/invoice-generator/"
+    keywords: ["free invoice generator", "invoice maker", "invoice generator no sign up"]
+  - name: "AI Content Detector"
+    path: "/ai-detector/"
+    keywords: ["ai content detector", "free ai detector", "chatgpt detector"]
+  - name: "AI Text Humanizer"
+    path: "/ai-humanizer/"
+    keywords: ["ai humanizer", "humanize ai text", "ai content humanizer"]
+  - name: "Pay Stub Generator"
+    path: "/paystub-generator/"
+    keywords: ["pay stub generator", "payslip generator", "free paystub maker"]
+
+browser:
+  headless: false
+  profile_dir: "data/browser_profile"
+  window_size: [1280, 900]
+
+queue:
+  poll_interval: 5
+  max_retries: 2
+  delay_between_tasks: 30
+  step_timeout: 180
+
+directories:
+  - name: "Product Hunt"
+    url: "https://www.producthunt.com/posts/new"
+    domain: "producthunt.com"
+  - name: "AlternativeTo"
+    url: "https://alternativeto.net/add-app/"
+    domain: "alternativeto.com"
+  - name: "BetaList"
+    url: "https://betalist.com/submit"
+    domain: "betalist.com"
+  - name: "SaaSHub"
+    url: "https://www.saashub.com/submit"
+    domain: "saashub.com"
+  - name: "There's An AI For That"
+    url: "https://theresanaiforthat.com/submit/"
+    domain: "theresanaiforthat.com"
+  - name: "Futurepedia"
+    url: "https://www.futurepedia.io/submit-tool"
+    domain: "futurepedia.io"
+  - name: "ToolFinder"
+    url: "https://toolfinder.co/submit"
+    domain: "toolfinder.co"
+  - name: "Indie Hackers"
+    url: "https://www.indiehackers.com/products"
+    domain: "indiehackers.com"
+  - name: "MicroLaunch"
+    url: "https://microlaunch.net/submit"
+    domain: "microlaunch.net"
+  - name: "Launching Next"
+    url: "https://www.launchingnext.com/submit/"
+    domain: "launchingnext.com"
+  - name: "StartupBuffer"
+    url: "https://startupbuffer.com/submit-startup"
+    domain: "startupbuffer.com"
+  - name: "BetaPage"
+    url: "https://betapage.co/submit-startup"
+    domain: "betapage.co"
+  - name: "SideProjectors"
+    url: "https://www.sideprojectors.com/"
+    domain: "sideprojectors.com"
+  - name: "TopAI.tools"
+    url: "https://topai.tools/submit"
+    domain: "topai.tools"
+  - name: "Easy With AI"
+    url: "https://easywithai.com/submit/"
+    domain: "easywithai.com"
+
+article_platforms:
+  - name: "Medium"
+    url: "https://medium.com/new-story"
+    domain: "medium.com"
+  - name: "Dev.to"
+    url: "https://dev.to/new"
+    domain: "dev.to"
+  - name: "LinkedIn"
+    url: "https://www.linkedin.com/pulse/"
+    domain: "linkedin.com"
+  - name: "Tumblr"
+    url: "https://www.tumblr.com/new/text"
+    domain: "tumblr.com"
+  - name: "Hashnode"
+    url: "https://hashnode.com/draft"
+    domain: "hashnode.com"
+
+bookmarking:
+  - name: "Flipboard"
+    url: "https://flipboard.com"
+    domain: "flipboard.com"
+  - name: "Scoop.it"
+    url: "https://www.scoop.it"
+    domain: "scoop.it"
+  - name: "Diigo"
+    url: "https://www.diigo.com"
+    domain: "diigo.com"
+  - name: "Mix"
+    url: "https://mix.com"
+    domain: "mix.com"
+  - name: "Pearltrees"
+    url: "https://www.pearltrees.com"
+    domain: "pearltrees.com"
+  - name: "Folkd"
+    url: "https://www.folkd.com"
+    domain: "folkd.com"
+  - name: "BibSonomy"
+    url: "https://www.bibsonomy.org"
+    domain: "bibsonomy.org"
