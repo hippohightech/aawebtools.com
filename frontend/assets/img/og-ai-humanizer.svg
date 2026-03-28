@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
-  <rect width="1200" height="630" fill="#ffffff"/>
-  <rect width="1200" height="6" fill="#4f7fff"/>
-  <circle cx="80" cy="315" r="12" fill="#4f7fff"/>
-  <text x="100" y="322" font-family="sans-serif" font-size="28" font-weight="700" fill="#0f172a">AAWebTools</text>
-  <text x="600" y="280" font-family="sans-serif" font-size="48" font-weight="700" fill="#0f172a" text-anchor="middle">AI Text Humanizer</text>
-  <text x="600" y="340" font-family="sans-serif" font-size="24" fill="#64748b" text-anchor="middle">Make AI Sound Human</text>
-  <text x="600" y="560" font-family="sans-serif" font-size="18" fill="#94a3b8" text-anchor="middle">aawebtools.com — Free, No Login Required</text>
-</svg>
