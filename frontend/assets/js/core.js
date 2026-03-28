@@ -93,7 +93,14 @@
 
   function initLanguageToggle() {
     document.querySelectorAll('.lang-toggle__btn').forEach(function (btn) {
-      btn.addEventListener('click', function () {
+      btn.addEventListener('click', function (e) {
+        // If button has data-href, navigate to the other language URL
+        var href = btn.getAttribute('data-href');
+        if (href) {
+          e.preventDefault();
+          window.location.href = href;
+          return;
+        }
         setLang(btn.getAttribute('data-lang'));
       });
     });
