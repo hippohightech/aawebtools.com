@@ -794,6 +794,327 @@
       color: var(--text-primary);
     }
 
+    /* ============================================================
+       VISUAL ENHANCEMENTS -- Rich editorial visuals
+       ============================================================ */
+
+    /* --- Hero layout: grid for SVG illustration --- */
+    .article-hero__illustration {
+      width: 100%;
+      max-width: 320px;
+      margin: 24px 0 0;
+      opacity: 0.92;
+    }
+    @media (min-width: 768px) {
+      .article-hero {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        grid-template-rows: auto auto auto;
+        column-gap: 32px;
+        align-items: end;
+      }
+      .article-hero__badge { grid-column: 1; grid-row: 1; }
+      .article-hero h1 { grid-column: 1; grid-row: 2; }
+      .article-hero__meta { grid-column: 1; grid-row: 3; }
+      .article-hero__illustration {
+        grid-column: 2;
+        grid-row: 1 / 4;
+        align-self: center;
+        margin: 0;
+        max-width: 240px;
+      }
+    }
+
+    /* --- Key Stats Strip --- */
+    .stats-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin: 32px 0 40px;
+      padding: 0;
+    }
+    .stats-strip__item {
+      text-align: center;
+      padding: 20px 12px;
+      border: 1px solid var(--border-primary);
+      border-radius: 4px;
+      background: var(--bg-primary);
+    }
+    .stats-strip__number {
+      display: block;
+      font-size: 28px;
+      font-weight: 700;
+      color: #4f7fff;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+    .stats-strip__label {
+      display: block;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--text-tertiary);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-top: 4px;
+    }
+    @media (max-width: 600px) {
+      .stats-strip {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+      }
+      .stats-strip__number { font-size: 22px; }
+      .stats-strip__item { padding: 14px 8px; }
+    }
+
+    /* --- Visual Accuracy Bar Chart --- */
+    .accuracy-chart {
+      margin: 40px 0;
+      padding: 28px;
+      background: var(--bg-secondary, #f9fafb);
+      border-radius: 8px;
+    }
+    .accuracy-chart__title {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-tertiary);
+      margin-bottom: 20px;
+    }
+    .accuracy-chart__row {
+      display: grid;
+      grid-template-columns: 110px 1fr 48px;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .accuracy-chart__tool {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-primary);
+      text-align: right;
+    }
+    .accuracy-chart__bar-track {
+      height: 28px;
+      background: var(--bg-primary, #fff);
+      border-radius: 4px;
+      overflow: hidden;
+      position: relative;
+    }
+    .accuracy-chart__bar-fill {
+      height: 100%;
+      border-radius: 4px;
+      width: 0%;
+      transition: width 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    .accuracy-chart__bar-fill--copyleaks { background: #10b981; }
+    .accuracy-chart__bar-fill--gptzero { background: #4f7fff; }
+    .accuracy-chart__bar-fill--quillbot { background: #8b5cf6; }
+    .accuracy-chart__bar-fill--zerogpt { background: #f59e0b; }
+    .accuracy-chart__bar-fill--aawebtools { background: #06b6d4; }
+    .accuracy-chart__pct {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text-primary);
+      font-variant-numeric: tabular-nums;
+    }
+    .accuracy-chart.animate .accuracy-chart__bar-fill {
+      width: var(--target-width);
+    }
+    @media (max-width: 600px) {
+      .accuracy-chart { padding: 20px 16px; }
+      .accuracy-chart__row {
+        grid-template-columns: 80px 1fr 40px;
+        gap: 8px;
+      }
+      .accuracy-chart__tool { font-size: 12px; }
+      .accuracy-chart__bar-track { height: 22px; }
+      .accuracy-chart__pct { font-size: 13px; }
+    }
+
+    /* --- How AI Detection Works Flow Diagram --- */
+    .flow-diagram {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 0;
+      margin: 40px 0;
+      padding: 32px 16px;
+      background: var(--bg-secondary, #f9fafb);
+      border-radius: 8px;
+      overflow-x: auto;
+    }
+    .flow-diagram__step {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      flex: 0 0 auto;
+      min-width: 100px;
+      max-width: 140px;
+    }
+    .flow-diagram__icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10px;
+      flex-shrink: 0;
+    }
+    .flow-diagram__icon--input { background: #eff6ff; border: 2px solid #4f7fff; }
+    .flow-diagram__icon--perplexity { background: #f0fdf4; border: 2px solid #10b981; }
+    .flow-diagram__icon--burstiness { background: #fef3c7; border: 2px solid #f59e0b; }
+    .flow-diagram__icon--score { background: #ede9fe; border: 2px solid #8b5cf6; }
+    .flow-diagram__label {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-primary);
+      line-height: 1.3;
+    }
+    .flow-diagram__desc {
+      font-size: 11px;
+      color: var(--text-tertiary);
+      margin-top: 4px;
+      line-height: 1.4;
+    }
+    .flow-diagram__arrow {
+      display: flex;
+      align-items: center;
+      padding: 0 6px;
+      margin-top: 16px;
+      flex-shrink: 0;
+    }
+    .flow-diagram__arrow svg {
+      width: 28px;
+      height: 14px;
+    }
+    @media (max-width: 600px) {
+      .flow-diagram {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        padding: 24px 16px;
+      }
+      .flow-diagram__arrow {
+        transform: rotate(90deg);
+        padding: 4px 0;
+        margin-top: 0;
+      }
+      .flow-diagram__step { max-width: 200px; margin-bottom: 4px; }
+    }
+
+    /* --- Donut Gauge for Tool Cards --- */
+    .donut-gauge {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      position: relative;
+    }
+    .donut-gauge__inner {
+      position: absolute;
+      inset: 6px;
+      border-radius: 50%;
+      background: var(--bg-primary, #fff);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .donut-gauge__value {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text-primary);
+      font-variant-numeric: tabular-nums;
+      position: relative;
+      z-index: 1;
+    }
+    .donut-gauge--90 { background: conic-gradient(#10b981 0% 90%, var(--border-primary, #e5e7eb) 90% 100%); }
+    .donut-gauge--83 { background: conic-gradient(#4f7fff 0% 83%, var(--border-primary, #e5e7eb) 83% 100%); }
+    .donut-gauge--80 { background: conic-gradient(#8b5cf6 0% 80%, var(--border-primary, #e5e7eb) 80% 100%); }
+    .donut-gauge--70 { background: conic-gradient(#f59e0b 0% 70%, var(--border-primary, #e5e7eb) 70% 100%); }
+    .donut-gauge--78 { background: conic-gradient(#06b6d4 0% 78%, var(--border-primary, #e5e7eb) 78% 100%); }
+
+    /* Tool card header layout tweak for donut gauge */
+    .tool-card__header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .tool-card__header-text {
+      flex: 1;
+      min-width: 0;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    /* --- Verdict Badges --- */
+    .verdict-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      margin-top: 16px;
+    }
+    .verdict-badge svg { width: 14px; height: 14px; flex-shrink: 0; }
+    .verdict-badge--accuracy { background: #ecfdf5; color: #059669; border: 1px solid #a7f3d0; }
+    .verdict-badge--popular { background: #eff6ff; color: #2563eb; border: 1px solid #bfdbfe; }
+    .verdict-badge--students { background: #f5f3ff; color: #7c3aed; border: 1px solid #ddd6fe; }
+    .verdict-badge--fastest { background: #fffbeb; color: #d97706; border: 1px solid #fde68a; }
+    .verdict-badge--privacy { background: #ecfeff; color: #0891b2; border: 1px solid #a5f3fc; }
+
+    /* --- Pull Quote Decorative Marks on Callout Boxes --- */
+    .callout::before {
+      content: '';
+      display: block;
+      width: 48px;
+      height: 36px;
+      margin-bottom: 6px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 36' fill='%234f7fff' opacity='0.15'%3E%3Cpath d='M0 36V22C0 9.3 7.7 1.8 19 0l2 4.9C11.8 7.2 8.3 12.8 8 18h10v18H0zm26 0V22C26 9.3 33.7 1.8 45 0l2 4.9C37.8 7.2 34.3 12.8 34 18h10v18H26z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    /* --- Section Header Accents (colored line above each H2) --- */
+    .article h2::before {
+      content: '';
+      display: block;
+      width: 32px;
+      height: 3px;
+      background: #4f7fff;
+      margin-bottom: 12px;
+      border-radius: 2px;
+    }
+
+    /* --- TOC with icons --- */
+    .article-toc li {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .article-toc .toc-icon {
+      width: 14px;
+      height: 14px;
+      flex-shrink: 0;
+      opacity: 0.45;
+      display: inline-block;
+    }
+
+    /* ============================================================
+       END VISUAL ENHANCEMENTS
+       ============================================================ */
+
     /* ------------------------------------------------------------
        FAQ -- clean, minimal borders
        ------------------------------------------------------------ */
@@ -1032,6 +1353,42 @@
     <span class="article-hero__badge">AI Tools</span>
     <h1>Best Free AI Content Detectors 2026 -- Accuracy Comparison</h1>
     <p class="article-hero__meta">By <strong>AAWebTools Team</strong> &middot; Published March 28, 2026 &middot; 12 min read</p>
+    <!-- Hero SVG Illustration: magnifying glass scanning lines of text -->
+    <svg class="article-hero__illustration" viewBox="0 0 280 220" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <!-- Text lines background -->
+      <rect x="20" y="30" width="180" height="8" rx="4" fill="#e2e8f0"/>
+      <rect x="20" y="50" width="160" height="8" rx="4" fill="#e2e8f0"/>
+      <rect x="20" y="70" width="175" height="8" rx="4" fill="#e2e8f0"/>
+      <rect x="20" y="90" width="140" height="8" rx="4" fill="#e2e8f0"/>
+      <rect x="20" y="110" width="190" height="8" rx="4" fill="#e2e8f0"/>
+      <rect x="20" y="130" width="155" height="8" rx="4" fill="#e2e8f0"/>
+      <rect x="20" y="150" width="170" height="8" rx="4" fill="#e2e8f0"/>
+      <rect x="20" y="170" width="130" height="8" rx="4" fill="#e2e8f0"/>
+      <!-- Highlighted (scanned) lines -->
+      <rect x="20" y="70" width="175" height="8" rx="4" fill="#4f7fff" opacity="0.2"/>
+      <rect x="20" y="90" width="140" height="8" rx="4" fill="#4f7fff" opacity="0.35"/>
+      <rect x="20" y="110" width="190" height="8" rx="4" fill="#4f7fff" opacity="0.2"/>
+      <!-- Scan beam from magnifying glass -->
+      <rect x="72" y="62" width="120" height="68" rx="4" fill="#4f7fff" opacity="0.06"/>
+      <rect x="72" y="62" width="120" height="68" rx="4" stroke="#4f7fff" stroke-width="1" stroke-dasharray="4 3" opacity="0.3"/>
+      <!-- Magnifying glass -->
+      <circle cx="195" cy="95" r="48" stroke="#4f7fff" stroke-width="4" fill="white" fill-opacity="0.85"/>
+      <circle cx="195" cy="95" r="38" stroke="#4f7fff" stroke-width="1.5" fill="none" opacity="0.2"/>
+      <!-- Lines visible through magnifying glass (enlarged effect) -->
+      <rect x="163" y="80" width="52" height="5" rx="2.5" fill="#4f7fff" opacity="0.5"/>
+      <rect x="163" y="92" width="44" height="5" rx="2.5" fill="#4f7fff" opacity="0.7"/>
+      <rect x="163" y="104" width="56" height="5" rx="2.5" fill="#4f7fff" opacity="0.5"/>
+      <!-- Magnifying glass handle -->
+      <line x1="229" y1="129" x2="258" y2="158" stroke="#4f7fff" stroke-width="5" stroke-linecap="round"/>
+      <!-- Small AI badge on lens -->
+      <rect x="180" y="67" width="30" height="16" rx="8" fill="#4f7fff"/>
+      <text x="195" y="78.5" text-anchor="middle" fill="white" font-size="9" font-weight="700" font-family="Inter, system-ui, sans-serif">AI</text>
+      <!-- Decorative dots -->
+      <circle cx="248" cy="42" r="3" fill="#4f7fff" opacity="0.15"/>
+      <circle cx="262" cy="58" r="2" fill="#4f7fff" opacity="0.1"/>
+      <circle cx="240" cy="170" r="4" fill="#4f7fff" opacity="0.1"/>
+      <circle cx="10" y="195" r="2.5" fill="#4f7fff" opacity="0.12"/>
+    </svg>
   </header>
 
   <main>
@@ -1045,13 +1402,34 @@
         <nav class="article-toc" aria-label="Table of contents">
           <h3>In This Article</h3>
           <ol>
-            <li><a href="#why-ai-detection-matters">Why AI Detection Matters in 2026</a></li>
-            <li><a href="#what-we-tested">What We Tested: Methodology</a></li>
-            <li><a href="#tool-by-tool">Tool-by-Tool Breakdown</a></li>
-            <li><a href="#comparison-table">Full Comparison Table</a></li>
-            <li><a href="#how-ai-detectors-work">How AI Detectors Work</a></li>
-            <li><a href="#which-should-you-use">Which Should You Use?</a></li>
-            <li><a href="#faq">Frequently Asked Questions</a></li>
+            <li>
+              <svg class="toc-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 1v14M1 8h14"/><circle cx="8" cy="8" r="6"/></svg>
+              <a href="#why-ai-detection-matters">Why AI Detection Matters in 2026</a>
+            </li>
+            <li>
+              <svg class="toc-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="4.5"/><path d="M9.5 9.5L14 14"/></svg>
+              <a href="#what-we-tested">What We Tested: Methodology</a>
+            </li>
+            <li>
+              <svg class="toc-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="4" height="10" rx="1"/><rect x="6" y="1" width="4" height="12" rx="1"/><rect x="11" y="5" width="4" height="8" rx="1"/></svg>
+              <a href="#tool-by-tool">Tool-by-Tool Breakdown</a>
+            </li>
+            <li>
+              <svg class="toc-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="1" width="14" height="14" rx="2"/><path d="M1 5h14M5 5v10"/></svg>
+              <a href="#comparison-table">Full Comparison Table</a>
+            </li>
+            <li>
+              <svg class="toc-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="3"/><path d="M8 1v2M8 13v2M1 8h2M13 8h2M3.05 3.05l1.41 1.41M11.54 11.54l1.41 1.41M3.05 12.95l1.41-1.41M11.54 4.46l1.41-1.41"/></svg>
+              <a href="#how-ai-detectors-work">How AI Detectors Work</a>
+            </li>
+            <li>
+              <svg class="toc-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 1l2 5h5l-4 3.5 1.5 5L8 11.5 3.5 14.5 5 9.5 1 6h5z"/></svg>
+              <a href="#which-should-you-use">Which Should You Use?</a>
+            </li>
+            <li>
+              <svg class="toc-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="6.5"/><path d="M6 6.5a2 2 0 113 1.73V10M8 12.5v.01"/></svg>
+              <a href="#faq">Frequently Asked Questions</a>
+            </li>
           </ol>
         </nav>
 
@@ -1060,6 +1438,26 @@
              ============================================================ -->
 
         <h2 id="why-ai-detection-matters">Why AI Detection Matters in 2026</h2>
+
+        <!-- Key Stats Strip -->
+        <div class="stats-strip">
+          <div class="stats-strip__item">
+            <span class="stats-strip__number">5</span>
+            <span class="stats-strip__label">Tools Tested</span>
+          </div>
+          <div class="stats-strip__item">
+            <span class="stats-strip__number">30</span>
+            <span class="stats-strip__label">Text Samples</span>
+          </div>
+          <div class="stats-strip__item">
+            <span class="stats-strip__number">3</span>
+            <span class="stats-strip__label">AI Models</span>
+          </div>
+          <div class="stats-strip__item">
+            <span class="stats-strip__number">Mar</span>
+            <span class="stats-strip__label">2026</span>
+          </div>
+        </div>
 
         <p>The conversation around AI-generated content has matured considerably since the early days of ChatGPT. In 2026, large language models from OpenAI, Anthropic, Google, and a growing number of open-source projects can produce text that is fluent, well-structured, and often indistinguishable from human writing at a casual glance. That capability brings enormous benefits for productivity, but it also creates real challenges for the people and institutions that depend on authentic human authorship.</p>
 
@@ -1124,16 +1522,21 @@
         <!-- Tool 1: GPTZero -->
         <div class="tool-card">
           <div class="tool-card__header">
-            <h3 class="tool-card__name">1. GPTZero</h3>
-            <div class="tool-card__rating">
-              <div class="tool-card__stars">
-                <svg class="tool-card__star tool-card__star--full" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                <svg class="tool-card__star tool-card__star--full" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                <svg class="tool-card__star tool-card__star--full" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                <svg class="tool-card__star tool-card__star--full" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                <svg class="tool-card__star tool-card__star--half" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <div class="donut-gauge donut-gauge--83">
+              <div class="donut-gauge__inner"><span class="donut-gauge__value">83%</span></div>
+            </div>
+            <div class="tool-card__header-text">
+              <h3 class="tool-card__name">1. GPTZero</h3>
+              <div class="tool-card__rating">
+                <div class="tool-card__stars">
+                  <svg class="tool-card__star tool-card__star--full" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="tool-card__star tool-card__star--full" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="tool-card__star tool-card__star--full" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="tool-card__star tool-card__star--full" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="tool-card__star tool-card__star--half" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                </div>
+                <span class="tool-card__score">83%</span>
               </div>
-              <span class="tool-card__score">83%</span>
             </div>
           </div>
           <div class="tool-card__stats">
@@ -1165,22 +1568,31 @@
               </ul>
             </div>
           </div>
+          <div class="verdict-badge verdict-badge--popular">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M8 1C4.5 1 2 4 2 7c0 2.5 2 4.5 4 5.5V14a1 1 0 001 1h2a1 1 0 001-1v-1.5C12 11.5 14 9.5 14 7c0-3-2.5-6-6-6z"/><path d="M6 14.5h4"/></svg>
+            Most Popular
+          </div>
           <a href="https://gptzero.me" target="_blank" rel="noopener noreferrer" class="tool-card__cta tool-card__cta--secondary">Visit GPTZero &rarr;</a>
         </div>
 
         <!-- Tool 2: QuillBot -->
         <div class="tool-card">
           <div class="tool-card__header">
-            <h3 class="tool-card__name">2. QuillBot AI Detector</h3>
-            <div class="tool-card__rating">
-              <div class="tool-card__stars">
-                <svg class="tool-card__star tool-card__star--full" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                <svg class="tool-card__star tool-card__star--full" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                <svg class="tool-card__star tool-card__star--full" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                <svg class="tool-card__star tool-card__star--full" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                <svg class="tool-card__star tool-card__star--empty" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <div class="donut-gauge donut-gauge--80">
+              <div class="donut-gauge__inner"><span class="donut-gauge__value">80%</span></div>
+            </div>
+            <div class="tool-card__header-text">
+              <h3 class="tool-card__name">2. QuillBot AI Detector</h3>
+              <div class="tool-card__rating">
+                <div class="tool-card__stars">
+                  <svg class="tool-card__star tool-card__star--full" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="tool-card__star tool-card__star--full" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="tool-card__star tool-card__star--full" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="tool-card__star tool-card__star--full" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="tool-card__star tool-card__star--empty" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                </div>
+                <span class="tool-card__score">80%</span>
               </div>
-              <span class="tool-card__score">80%</span>
             </div>
           </div>
           <div class="tool-card__stats">
@@ -1212,22 +1624,31 @@
               </ul>
             </div>
           </div>
+          <div class="verdict-badge verdict-badge--students">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6l6-3 6 3-6 3-6-3z"/><path d="M2 6v4.5c0 1.5 2.7 3 6 3s6-1.5 6-3V6"/></svg>
+            Best for Students
+          </div>
           <a href="https://quillbot.com" target="_blank" rel="noopener noreferrer" class="tool-card__cta tool-card__cta--secondary">Visit QuillBot &rarr;</a>
         </div>
 
         <!-- Tool 3: Copyleaks -->
         <div class="tool-card">
           <div class="tool-card__header">
-            <h3 class="tool-card__name">3. Copyleaks</h3>
-            <div class="tool-card__rating">
-              <div class="tool-card__stars">
-                <svg class="tool-card__star tool-card__star--full" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                <svg class="tool-card__star tool-card__star--full" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                <svg class="tool-card__star tool-card__star--full" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                <svg class="tool-card__star tool-card__star--full" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                <svg class="tool-card__star tool-card__star--full" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <div class="donut-gauge donut-gauge--90">
+              <div class="donut-gauge__inner"><span class="donut-gauge__value">90%</span></div>
+            </div>
+            <div class="tool-card__header-text">
+              <h3 class="tool-card__name">3. Copyleaks</h3>
+              <div class="tool-card__rating">
+                <div class="tool-card__stars">
+                  <svg class="tool-card__star tool-card__star--full" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="tool-card__star tool-card__star--full" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="tool-card__star tool-card__star--full" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="tool-card__star tool-card__star--full" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="tool-card__star tool-card__star--full" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                </div>
+                <span class="tool-card__score">90%</span>
               </div>
-              <span class="tool-card__score">90%</span>
             </div>
           </div>
           <div class="tool-card__stats">
@@ -1259,6 +1680,10 @@
               </ul>
             </div>
           </div>
+          <div class="verdict-badge verdict-badge--accuracy">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2L6 13l-4-4"/></svg>
+            Best Accuracy
+          </div>
           <a href="https://copyleaks.com" target="_blank" rel="noopener noreferrer" class="tool-card__cta tool-card__cta--secondary">Visit Copyleaks &rarr;</a>
         </div>
 
@@ -1270,16 +1695,21 @@
         <!-- Tool 4: ZeroGPT -->
         <div class="tool-card">
           <div class="tool-card__header">
-            <h3 class="tool-card__name">4. ZeroGPT</h3>
-            <div class="tool-card__rating">
-              <div class="tool-card__stars">
-                <svg class="tool-card__star tool-card__star--full" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                <svg class="tool-card__star tool-card__star--full" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                <svg class="tool-card__star tool-card__star--full" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                <svg class="tool-card__star tool-card__star--half" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                <svg class="tool-card__star tool-card__star--empty" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <div class="donut-gauge donut-gauge--70">
+              <div class="donut-gauge__inner"><span class="donut-gauge__value">70%</span></div>
+            </div>
+            <div class="tool-card__header-text">
+              <h3 class="tool-card__name">4. ZeroGPT</h3>
+              <div class="tool-card__rating">
+                <div class="tool-card__stars">
+                  <svg class="tool-card__star tool-card__star--full" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="tool-card__star tool-card__star--full" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="tool-card__star tool-card__star--full" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="tool-card__star tool-card__star--half" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="tool-card__star tool-card__star--empty" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                </div>
+                <span class="tool-card__score">70%</span>
               </div>
-              <span class="tool-card__score">70%</span>
             </div>
           </div>
           <div class="tool-card__stats">
@@ -1311,22 +1741,31 @@
               </ul>
             </div>
           </div>
+          <div class="verdict-badge verdict-badge--fastest">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2.5l-5 6h4l-5 6"/></svg>
+            Fastest
+          </div>
           <a href="https://zerogpt.com" target="_blank" rel="noopener noreferrer" class="tool-card__cta tool-card__cta--secondary">Visit ZeroGPT &rarr;</a>
         </div>
 
         <!-- Tool 5: AAWebTools -->
         <div class="tool-card" style="border-color: #4f7fff;">
           <div class="tool-card__header">
-            <h3 class="tool-card__name">5. AAWebTools AI Detector</h3>
-            <div class="tool-card__rating">
-              <div class="tool-card__stars">
-                <svg class="tool-card__star tool-card__star--full" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                <svg class="tool-card__star tool-card__star--full" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                <svg class="tool-card__star tool-card__star--full" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                <svg class="tool-card__star tool-card__star--full" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                <svg class="tool-card__star tool-card__star--empty" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <div class="donut-gauge donut-gauge--78">
+              <div class="donut-gauge__inner"><span class="donut-gauge__value">78%</span></div>
+            </div>
+            <div class="tool-card__header-text">
+              <h3 class="tool-card__name">5. AAWebTools AI Detector</h3>
+              <div class="tool-card__rating">
+                <div class="tool-card__stars">
+                  <svg class="tool-card__star tool-card__star--full" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="tool-card__star tool-card__star--full" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="tool-card__star tool-card__star--full" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="tool-card__star tool-card__star--full" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                  <svg class="tool-card__star tool-card__star--empty" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                </div>
+                <span class="tool-card__score">78%</span>
               </div>
-              <span class="tool-card__score">78%</span>
             </div>
           </div>
           <div class="tool-card__stats">
@@ -1357,6 +1796,10 @@
                 <li>Speed depends on device processing power</li>
               </ul>
             </div>
+          </div>
+          <div class="verdict-badge verdict-badge--privacy">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 1L2 4v4c0 4 2.5 6.5 6 8 3.5-1.5 6-4 6-8V4L8 1z"/></svg>
+            Best Privacy
           </div>
           <a href="/ai-detector/" class="tool-card__cta tool-card__cta--primary">Try Our Detector &rarr;</a>
         </div>
@@ -1458,6 +1901,36 @@
         </table>
         </div>
 
+        <!-- Visual Accuracy Bar Chart -->
+        <div class="accuracy-chart" id="accuracyChart">
+          <div class="accuracy-chart__title">Accuracy at a Glance</div>
+          <div class="accuracy-chart__row">
+            <span class="accuracy-chart__tool">Copyleaks</span>
+            <div class="accuracy-chart__bar-track"><div class="accuracy-chart__bar-fill accuracy-chart__bar-fill--copyleaks" style="--target-width:90%"></div></div>
+            <span class="accuracy-chart__pct">90%</span>
+          </div>
+          <div class="accuracy-chart__row">
+            <span class="accuracy-chart__tool">GPTZero</span>
+            <div class="accuracy-chart__bar-track"><div class="accuracy-chart__bar-fill accuracy-chart__bar-fill--gptzero" style="--target-width:83%"></div></div>
+            <span class="accuracy-chart__pct">83%</span>
+          </div>
+          <div class="accuracy-chart__row">
+            <span class="accuracy-chart__tool">QuillBot</span>
+            <div class="accuracy-chart__bar-track"><div class="accuracy-chart__bar-fill accuracy-chart__bar-fill--quillbot" style="--target-width:80%"></div></div>
+            <span class="accuracy-chart__pct">80%</span>
+          </div>
+          <div class="accuracy-chart__row">
+            <span class="accuracy-chart__tool">AAWebTools</span>
+            <div class="accuracy-chart__bar-track"><div class="accuracy-chart__bar-fill accuracy-chart__bar-fill--aawebtools" style="--target-width:78%"></div></div>
+            <span class="accuracy-chart__pct">78%</span>
+          </div>
+          <div class="accuracy-chart__row">
+            <span class="accuracy-chart__tool">ZeroGPT</span>
+            <div class="accuracy-chart__bar-track"><div class="accuracy-chart__bar-fill accuracy-chart__bar-fill--zerogpt" style="--target-width:70%"></div></div>
+            <span class="accuracy-chart__pct">70%</span>
+          </div>
+        </div>
+
         <p>A few patterns emerge from this table. Copyleaks leads on raw accuracy but has the most restrictive free tier. GPTZero offers the best balance of accuracy and detailed feedback for paying users. ZeroGPT and AAWebTools are the most accessible options, with ZeroGPT offering a higher character limit on their cloud and AAWebTools offering true privacy with no character cap at all.</p>
 
         <hr class="section-divider">
@@ -1469,6 +1942,47 @@
         <h2 id="how-ai-detectors-work">How AI Detectors Work</h2>
 
         <p>Understanding what happens under the hood can help you interpret detector results more effectively. While each tool uses its own proprietary model, most AI content detectors rely on two fundamental measurements: <strong>perplexity</strong> and <strong>burstiness</strong>.</p>
+
+        <!-- How AI Detection Works: Flow Diagram -->
+        <div class="flow-diagram" role="img" aria-label="AI detection process: Input Text flows to Perplexity Analysis, then Burstiness Check, then AI Score">
+          <div class="flow-diagram__step">
+            <div class="flow-diagram__icon flow-diagram__icon--input">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4f7fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="13" y2="17"/></svg>
+            </div>
+            <span class="flow-diagram__label">Input Text</span>
+            <span class="flow-diagram__desc">Paste or upload content</span>
+          </div>
+          <div class="flow-diagram__arrow">
+            <svg viewBox="0 0 28 14" fill="none"><path d="M0 7h24M20 2l5 5-5 5" stroke="#94a3b8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="flow-diagram__step">
+            <div class="flow-diagram__icon flow-diagram__icon--perplexity">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <span class="flow-diagram__label">Perplexity Analysis</span>
+            <span class="flow-diagram__desc">Measure predictability</span>
+          </div>
+          <div class="flow-diagram__arrow">
+            <svg viewBox="0 0 28 14" fill="none"><path d="M0 7h24M20 2l5 5-5 5" stroke="#94a3b8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="flow-diagram__step">
+            <div class="flow-diagram__icon flow-diagram__icon--burstiness">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="12" width="4" height="8" rx="1"/><rect x="10" y="4" width="4" height="16" rx="1"/><rect x="17" y="8" width="4" height="12" rx="1"/></svg>
+            </div>
+            <span class="flow-diagram__label">Burstiness Check</span>
+            <span class="flow-diagram__desc">Analyze variation</span>
+          </div>
+          <div class="flow-diagram__arrow">
+            <svg viewBox="0 0 28 14" fill="none"><path d="M0 7h24M20 2l5 5-5 5" stroke="#94a3b8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="flow-diagram__step">
+            <div class="flow-diagram__icon flow-diagram__icon--score">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8b5cf6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+            </div>
+            <span class="flow-diagram__label">AI Score</span>
+            <span class="flow-diagram__desc">Human vs AI verdict</span>
+          </div>
+        </div>
 
         <h3>Perplexity</h3>
 
@@ -1636,6 +2150,26 @@
     }
     window.addEventListener('scroll', updateProgress, { passive: true });
     updateProgress();
+  })();
+  </script>
+
+  <!-- Accuracy chart bar animation on scroll -->
+  <script>
+  (function(){
+    var chart = document.getElementById('accuracyChart');
+    if (!chart || !('IntersectionObserver' in window)) {
+      if (chart) chart.classList.add('animate');
+      return;
+    }
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          chart.classList.add('animate');
+          observer.unobserve(chart);
+        }
+      });
+    }, { threshold: 0.3 });
+    observer.observe(chart);
   })();
   </script>
 </body>
