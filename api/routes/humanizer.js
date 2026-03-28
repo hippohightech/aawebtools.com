@@ -58,20 +58,25 @@ router.post('/', async function (req, res) {
       });
     }
 
-    var Anthropic;
-    try { Anthropic = require('@anthropic-ai/sdk'); } catch (e) {
+    var GoogleGenerativeAI;
+    try { GoogleGenerativeAI = require('@google/generative-ai').GoogleGenerativeAI; } catch (e) {
       return res.status(503).json(ERROR_RESPONSE);
     }
 
-    var client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
-    var response = await client.messages.create({
-      model: 'claude-haiku-4-5-20251001',
-      max_tokens: 1024,
-      system: SYSTEM_PROMPT,
-      messages: [{ role: 'user', content: text }]
+    var apiKey = process.env.GEMINI_API_KEY;
+    if (!apiKey) {
+      return res.status(503).json(ERROR_RESPONSE);
+    }
+
+    var genAI = new GoogleGenerativeAI(apiKey);
+    var model = genAI.getGenerativeModel({ model: 'gemini-2.0-flash' });
+
+    var result = await model.generateContent({
+      systemInstruction: SYSTEM_PROMPT,
+      contents: [{ role: 'user', parts: [{ text: text }] }]
     });
 
-    var humanized = response.content && response.content[0] && response.content[0].text;
+    var humanized = result.response && result.response.text();
     if (!humanized) {
       return res.status(503).json(ERROR_RESPONSE);
     }
