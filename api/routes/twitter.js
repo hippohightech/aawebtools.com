@@ -23,13 +23,22 @@ router.post('/video', async function (req, res) {
       });
     }
 
-    var info = await downloader.getMediaInfo(url.trim());
-    var videoUrl = await downloader.getVideoUrl(url.trim());
-    var audioUrl;
+    var trimmedUrl = url.trim();
+
+    // Fetch info and download video in parallel
+    var results = await Promise.all([
+      downloader.getMediaInfo(trimmedUrl),
+      downloader.downloadVideo(trimmedUrl)
+    ]);
+    var info = results[0];
+    var videoFile = results[1];
+
+    // Audio extraction is optional
+    var audioFile = null;
     try {
-      audioUrl = await downloader.getAudioUrl(url.trim());
+      audioFile = await downloader.downloadAudio(trimmedUrl);
     } catch (e) {
-      audioUrl = null;
+      audioFile = null;
     }
 
     res.json({
@@ -39,9 +48,9 @@ router.post('/video', async function (req, res) {
         thumbnail: info.thumbnail || null,
         duration: info.duration || 0,
         author: info.uploader || info.creator || null,
-        video_url: videoUrl,
-        audio_url: audioUrl,
-        format: info.ext || 'mp4'
+        video_url: '/api/download/file/' + videoFile,
+        audio_url: audioFile ? '/api/download/file/' + audioFile : null,
+        format: 'mp4'
       },
       message: 'Video ready for download'
     });

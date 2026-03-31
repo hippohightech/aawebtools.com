@@ -5,6 +5,7 @@ require('dotenv').config();
 const healthRoutes = require('./routes/health');
 const tiktokRoutes = require('./routes/tiktok');
 const twitterRoutes = require('./routes/twitter');
+const fileRoutes = require('./routes/file');
 const humanizerRoutes = require('./routes/humanizer');
 
 const app = express();
@@ -27,6 +28,7 @@ app.use(express.urlencoded({ extended: true, limit: '1mb' }));
 app.use('/health', healthRoutes);
 app.use('/download/tiktok', tiktokRoutes);
 app.use('/download/twitter', twitterRoutes);
+app.use('/download/file', fileRoutes);
 
 app.use('/humanizer', humanizerRoutes);
 

@@ -1,11 +1,13 @@
 // downloader.js — yt-dlp subprocess wrapper
-// Section 5: Full implementation for TikTok + Twitter
+// Downloads files to temp dir and serves via proxy (fixes CDN 403 errors)
 
 var childProcess = require('child_process');
+var crypto = require('crypto');
 var path = require('path');
 var fs = require('fs');
 
-var TIMEOUT = 30000;
+var INFO_TIMEOUT = 30000;
+var DOWNLOAD_TIMEOUT = 120000;
 var TEMP_DIR = path.join(__dirname, '..', 'tmp');
 
 // Ensure temp directory exists
@@ -24,7 +26,7 @@ function getMediaInfo(url) {
       url
     ];
 
-    childProcess.execFile('yt-dlp', args, { timeout: TIMEOUT }, function (error, stdout) {
+    childProcess.execFile('yt-dlp', args, { timeout: INFO_TIMEOUT }, function (error, stdout) {
       if (error) {
         reject(new Error('Failed to fetch media info'));
         return;
@@ -38,54 +40,59 @@ function getMediaInfo(url) {
   });
 }
 
-// Get direct download URL for video (best mp4)
-function getVideoUrl(url) {
+// Download video to temp dir, return filename
+function downloadVideo(url) {
   return new Promise(function (resolve, reject) {
+    var id = crypto.randomUUID();
+    var outPath = path.join(TEMP_DIR, id + '.mp4');
     var args = [
       '--no-warnings',
       '--no-playlist',
       '-f', 'best[ext=mp4]/best',
-      '-g',
+      '-o', outPath,
       url
     ];
 
-    childProcess.execFile('yt-dlp', args, { timeout: TIMEOUT }, function (error, stdout) {
+    childProcess.execFile('yt-dlp', args, { timeout: DOWNLOAD_TIMEOUT }, function (error) {
       if (error) {
-        reject(new Error('Failed to get video URL'));
+        reject(new Error('Failed to download video'));
         return;
       }
-      var directUrl = stdout.trim().split('\n')[0];
-      if (!directUrl) {
-        reject(new Error('No download URL returned'));
+      if (!fs.existsSync(outPath)) {
+        reject(new Error('Download file not created'));
         return;
       }
-      resolve(directUrl);
+      resolve(id + '.mp4');
     });
   });
 }
 
-// Get direct download URL for audio (best audio → mp3)
-function getAudioUrl(url) {
+// Download and convert audio to MP3, return filename
+function downloadAudio(url) {
   return new Promise(function (resolve, reject) {
+    var id = crypto.randomUUID();
+    var outTemplate = path.join(TEMP_DIR, id + '.%(ext)s');
+    var expectedPath = path.join(TEMP_DIR, id + '.mp3');
     var args = [
       '--no-warnings',
       '--no-playlist',
-      '-f', 'bestaudio',
-      '-g',
+      '-x',
+      '--audio-format', 'mp3',
+      '--audio-quality', '0',
+      '-o', outTemplate,
       url
     ];
 
-    childProcess.execFile('yt-dlp', args, { timeout: TIMEOUT }, function (error, stdout) {
+    childProcess.execFile('yt-dlp', args, { timeout: DOWNLOAD_TIMEOUT }, function (error) {
       if (error) {
-        reject(new Error('Failed to get audio URL'));
+        reject(new Error('Failed to extract audio'));
         return;
       }
-      var directUrl = stdout.trim().split('\n')[0];
-      if (!directUrl) {
-        reject(new Error('No audio URL returned'));
-        return;
+      if (fs.existsSync(expectedPath)) {
+        resolve(id + '.mp3');
+      } else {
+        reject(new Error('Audio file not created'));
       }
-      resolve(directUrl);
     });
   });
 }
@@ -125,8 +132,9 @@ setInterval(cleanupTemp, 1800000);
 
 module.exports = {
   getMediaInfo: getMediaInfo,
-  getVideoUrl: getVideoUrl,
-  getAudioUrl: getAudioUrl,
+  downloadVideo: downloadVideo,
+  downloadAudio: downloadAudio,
   checkHealth: checkHealth,
-  cleanupTemp: cleanupTemp
+  cleanupTemp: cleanupTemp,
+  TEMP_DIR: TEMP_DIR
 };
