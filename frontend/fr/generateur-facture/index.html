@@ -89,6 +89,12 @@
 
   <script async defer src="https://analytics.aawebtools.com/script.js"
           data-website-id="836dfc88-b05f-49b2-9824-3a085e248896"></script>
+  <link rel="alternate" hreflang="es" href="https://aawebtools.com/es/generador-facturas/">
+  <link rel="alternate" hreflang="de" href="https://aawebtools.com/de/rechnungsgenerator/">
+  <link rel="alternate" hreflang="pt" href="https://aawebtools.com/pt/gerador-faturas/">
+  <link rel="alternate" hreflang="ar" href="https://aawebtools.com/ar/invoice-generator/">
+  <link rel="alternate" hreflang="id" href="https://aawebtools.com/id/pembuat-faktur/">
+  <link rel="alternate" hreflang="hi" href="https://aawebtools.com/hi/invoice-generator/">
 </head>
 <body>
 
@@ -122,9 +128,18 @@
           <a href="/blog/" class="nav__link">Blog</a>
       </div>
       <div class="nav__right">
-        <div class="lang-toggle">
-          <a href="/invoice-generator/" class="lang-toggle__btn" style="text-decoration:none;">EN</a>
-          <span class="lang-toggle__btn lang-toggle__btn--active">FR</span>
+        <div class="lang-selector">
+          <button class="lang-selector__trigger" id="langToggle">🌐 FR ▾</button>
+          <div class="lang-selector__menu" id="langMenu">
+            <a href="/invoice-generator/">English</a>
+            <a href="/fr/generateur-facture/" class="active">Français</a>
+            <a href="/es/generador-facturas/">Español</a>
+            <a href="/de/rechnungsgenerator/">Deutsch</a>
+            <a href="/pt/gerador-faturas/">Português</a>
+            <a href="/ar/invoice-generator/">العربية</a>
+            <a href="/id/pembuat-faktur/">Bahasa Indonesia</a>
+            <a href="/hi/invoice-generator/">हिन्दी</a>
+          </div>
         </div>
         <a href="/fr/#outils" class="btn-primary btn-sm">Tous les outils</a>
         <button class="nav__hamburger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>

@@ -1,0 +1,1581 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gehaltsabrechnungs-Generator für Selbständige 2026 | AAWebTools</title>
+  <meta name="description" content="Erstellen Sie professionelle Gehaltsabrechnungen als Freelancer. Anleitung für Mietanträge, Kredite, Steuern und die neue IRS-1099-Schwelle von $2.000.">
+  <link rel="canonical" href="https://aawebtools.com/de/blog/gehaltsabrechnung-selbstaendige-2026/">
+  <link rel="alternate" hreflang="en" href="https://aawebtools.com/blog/pay-stub-generator-self-employed/">
+  <link rel="alternate" hreflang="fr" href="https://aawebtools.com/fr/blog/bulletin-de-paie-freelance-2026/">
+  <link rel="alternate" hreflang="de" href="https://aawebtools.com/de/blog/gehaltsabrechnung-selbstaendige-2026/">
+  <link rel="alternate" hreflang="x-default" href="https://aawebtools.com/blog/pay-stub-generator-self-employed/">
+
+  <meta property="og:title" content="Kostenloser Gehaltsabrechnungs-Generator für Selbständige -- Miet-, Kredit- und Steuer-Anleitung (2026)">
+  <meta property="og:description" content="Erstellen Sie professionelle Gehaltsabrechnungen als Freelancer. Anleitung für Mietanträge, Kredite, Steuern und die neue IRS-1099-Schwelle von $2.000.">
+  <meta property="og:url" content="https://aawebtools.com/de/blog/gehaltsabrechnung-selbstaendige-2026/">
+  <meta property="og:image" content="https://aawebtools.com/assets/img/og-blog-paystub-self-employed.png">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="AAWebTools">
+  <meta property="og:locale" content="de_DE">
+  <meta property="article:published_time" content="2026-03-27T08:00:00+00:00">
+  <meta property="article:modified_time" content="2026-03-27T08:00:00+00:00">
+  <meta property="article:author" content="AAWebTools Team">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Kostenloser Gehaltsabrechnungs-Generator für Selbständige -- Miet-, Kredit- und Steuer-Anleitung (2026)">
+  <meta name="twitter:description" content="Erstellen Sie professionelle Gehaltsabrechnungen als Freelancer. Anleitung für Mietanträge, Kredite, Steuern und die neue IRS-1099-Schwelle von $2.000.">
+  <meta name="twitter:image" content="https://aawebtools.com/assets/img/og-blog-paystub-self-employed.png">
+  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <style>
+    /* ==========================================================================
+       EDITORIAL REDESIGN -- Magazine-style layout
+       Inspired by The Verge, Wired, Stratechery
+       Only scoped to .article and article-related components
+       ========================================================================== */
+
+    /* Reading progress bar -- thin, single color, no gradient */
+    .reading-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 2px;
+      background: #4f7fff;
+      width: 0%;
+      z-index: 9999;
+      transition: width 0.1s linear;
+    }
+
+    /* ------------------------------------------------------------
+       Article layout -- generous measure, editorial column
+       ------------------------------------------------------------ */
+    .article-wrapper {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px 80px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+
+    .article {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 0 0 96px;
+      width: 100%;
+    }
+
+    /* Headings -- confident, left-aligned, tight tracking */
+    .article h2 {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin: 64px 0 20px;
+      scroll-margin-top: 100px;
+      letter-spacing: -0.02em;
+      line-height: 1.25;
+    }
+
+    .article h3 {
+      font-size: 19px;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin: 40px 0 12px;
+      letter-spacing: -0.01em;
+      line-height: 1.3;
+    }
+
+    /* Body text -- readable measure, proper leading */
+    .article p {
+      font-size: 16px;
+      line-height: 1.75;
+      color: var(--text-secondary);
+      margin-bottom: 20px;
+    }
+
+    /* Lede paragraph -- first p after every h2 gets larger treatment */
+    .article h2 + p {
+      font-size: 18px;
+      line-height: 1.7;
+      color: #475569;
+    }
+
+    .article ul,
+    .article ol {
+      padding-left: 24px;
+      margin-bottom: 20px;
+      list-style: disc;
+    }
+    .article ol { list-style: decimal; }
+
+    .article li {
+      font-size: 16px;
+      line-height: 1.75;
+      color: var(--text-secondary);
+      margin-bottom: 8px;
+    }
+
+    .article a {
+      color: #4f7fff;
+      text-decoration: underline;
+      text-decoration-color: rgba(79, 127, 255, 0.3);
+      text-underline-offset: 2px;
+      transition: text-decoration-color 0.15s;
+    }
+    .article a:hover {
+      text-decoration-color: #4f7fff;
+    }
+
+    /* Blockquote -- editorial voice */
+    .article blockquote {
+      border-left: 2px solid var(--text-tertiary);
+      padding: 4px 0 4px 24px;
+      margin: 32px 0;
+      color: var(--text-tertiary);
+      font-style: italic;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .article strong {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    /* ------------------------------------------------------------
+       Hero banner -- Editorial, left-aligned, no gradient blob
+       ------------------------------------------------------------ */
+    .article-hero {
+      background: var(--bg-primary);
+      border-radius: 0;
+      padding: 160px 24px 48px;
+      margin: 0 auto;
+      max-width: 680px;
+      min-height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-start;
+      position: relative;
+      overflow: visible;
+      border-bottom: 1px solid var(--border-primary);
+    }
+
+    /* Remove the decorative circles */
+    .article-hero::before,
+    .article-hero::after {
+      display: none;
+    }
+
+    .article-hero__badge {
+      display: inline-block;
+      background: none;
+      color: #4f7fff;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0;
+      border-radius: 0;
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 1;
+      backdrop-filter: none;
+    }
+
+    .article-hero h1 {
+      font-size: 40px;
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      margin: 0 0 20px;
+      position: relative;
+      z-index: 1;
+      max-width: 100%;
+    }
+
+    .article-hero__meta {
+      font-size: 14px;
+      color: var(--text-tertiary);
+      position: relative;
+      z-index: 1;
+      line-height: 1.5;
+    }
+    .article-hero__meta strong {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    @media (min-width: 768px) {
+      .article-hero h1 {
+        font-size: 52px;
+        line-height: 1.08;
+      }
+      .article-hero {
+        padding: 160px 0 56px;
+        max-width: 680px;
+      }
+    }
+    @media (max-width: 600px) {
+      .article-hero {
+        padding: 120px 20px 36px;
+        margin: 0;
+        min-height: auto;
+        border-radius: 0;
+      }
+      .article-hero h1 {
+        font-size: 32px;
+        letter-spacing: -0.02em;
+      }
+    }
+
+    /* ------------------------------------------------------------
+       Breadcrumb -- subtle, editorial
+       ------------------------------------------------------------ */
+    .article-breadcrumb {
+      font-size: 13px;
+      color: var(--text-tertiary);
+      margin: 28px 0 40px;
+      letter-spacing: 0.01em;
+    }
+    .article-breadcrumb a {
+      color: var(--text-tertiary);
+      text-decoration: none;
+    }
+    .article-breadcrumb a:hover {
+      color: var(--text-primary);
+    }
+
+    /* ------------------------------------------------------------
+       Section divider -- clean, minimal
+       ------------------------------------------------------------ */
+    .section-divider {
+      height: 1px;
+      background: var(--border-primary);
+      border: none;
+      margin: 56px 0;
+      border-radius: 0;
+    }
+
+    /* ------------------------------------------------------------
+       Table of contents -- subtle, small type, left border
+       ------------------------------------------------------------ */
+    .article-toc {
+      background: none;
+      border: none;
+      border-left: 2px solid var(--border-primary);
+      border-radius: 0;
+      padding: 0 0 0 20px;
+      margin-bottom: 48px;
+    }
+    .article-toc h3 {
+      margin-top: 0;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-tertiary);
+      margin-bottom: 12px;
+    }
+    .article-toc ol {
+      padding-left: 16px;
+      margin-bottom: 0;
+    }
+    .article-toc li {
+      font-size: 13px;
+      margin-bottom: 6px;
+      line-height: 1.5;
+    }
+    .article-toc a {
+      color: var(--text-tertiary);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+    .article-toc a:hover {
+      color: var(--text-primary);
+    }
+
+    @media (min-width: 1024px) {
+      .article-toc--sidebar {
+        position: sticky;
+        top: 100px;
+        max-height: calc(100vh - 140px);
+        overflow-y: auto;
+      }
+    }
+
+    /* ------------------------------------------------------------
+       Callout boxes -- pull-quote style, not colored cards
+       ------------------------------------------------------------ */
+    .callout {
+      border-radius: 0;
+      padding: 24px 0 24px 28px;
+      margin: 40px 0;
+      border-left: 3px solid;
+      background: none;
+      position: relative;
+    }
+    .callout__label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 10px;
+    }
+    .callout p {
+      margin-bottom: 0;
+      font-size: 17px;
+      line-height: 1.65;
+      font-style: italic;
+      color: var(--text-primary);
+    }
+
+    .callout--finding { border-color: #4f7fff; }
+    .callout--finding .callout__label { color: #4f7fff; }
+
+    .callout--privacy { border-color: #10b981; }
+    .callout--privacy .callout__label { color: #10b981; }
+
+    .callout--tip { border-color: #d97706; }
+    .callout--tip .callout__label { color: #d97706; }
+
+    .callout--warning { border-color: #ef4444; }
+    .callout--warning .callout__label { color: #ef4444; }
+
+    /* ------------------------------------------------------------
+       Comparison table -- editorial/newspaper style
+       ------------------------------------------------------------ */
+    .table-responsive {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin: 24px -8px;
+    }
+
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      border-spacing: 0;
+      margin: 0;
+      border-radius: 0;
+      overflow: visible;
+      border: none;
+    }
+
+    .comparison-table thead th {
+      background: none;
+      color: var(--text-primary);
+      padding: 12px 14px 12px;
+      text-align: left;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      border: none;
+      border-bottom: 2px solid var(--text-primary);
+      white-space: nowrap;
+    }
+
+    .comparison-table tbody td {
+      padding: 14px 14px;
+      font-size: 14px;
+      border-bottom: 1px solid var(--border-primary);
+      color: var(--text-secondary);
+      vertical-align: top;
+    }
+
+    .comparison-table tbody tr:nth-child(even) td {
+      background: none;
+    }
+    .comparison-table tbody tr:last-child td {
+      border-bottom: 2px solid var(--border-primary);
+    }
+    .comparison-table tbody tr {
+      transition: background 0.1s;
+    }
+    .comparison-table tbody tr:hover td {
+      background: var(--bg-secondary);
+    }
+
+    .comparison-table .check {
+      color: #10b981;
+      font-weight: 600;
+      font-size: 13px;
+    }
+    .comparison-table .cross {
+      color: #ef4444;
+      font-weight: 600;
+      font-size: 13px;
+    }
+
+    /* ------------------------------------------------------------
+       CTA block -- integrated, not a banner ad
+       ------------------------------------------------------------ */
+    .article-cta {
+      background: #fafbfc;
+      border-radius: 0;
+      border-left: 3px solid #4f7fff;
+      padding: 28px 28px;
+      margin: 48px 0;
+      text-align: left;
+      position: relative;
+      overflow: visible;
+    }
+
+    .article-cta::before {
+      display: none;
+    }
+
+    .article-cta__icon {
+      font-size: 24px;
+      margin-bottom: 8px;
+      position: relative;
+      z-index: 1;
+    }
+    .article-cta__icon svg {
+      stroke: #4f7fff;
+    }
+
+    .article-cta p {
+      color: var(--text-secondary);
+      margin-bottom: 8px;
+      position: relative;
+      z-index: 1;
+      font-size: 15px;
+    }
+    .article-cta p strong {
+      color: var(--text-primary);
+      font-size: 17px;
+      font-weight: 700;
+    }
+
+    .article-cta .btn-primary {
+      background: #4f7fff;
+      color: #fff;
+      font-weight: 600;
+      padding: 10px 24px;
+      border-radius: 4px;
+      display: inline-block;
+      text-decoration: none;
+      position: relative;
+      z-index: 1;
+      font-size: 14px;
+      transition: background 0.15s, transform 0.15s;
+    }
+    .article-cta .btn-primary:hover {
+      background: #3d6ae6;
+      transform: translateY(-1px);
+      box-shadow: none;
+    }
+
+    /* ------------------------------------------------------------
+       Author box -- minimal, thin top border, not a card
+       ------------------------------------------------------------ */
+    .author-box {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: none;
+      border: none;
+      border-top: 1px solid var(--border-primary);
+      border-radius: 0;
+      padding: 28px 0 0;
+      margin: 56px 0 0;
+    }
+
+    .author-box__avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--text-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: 600;
+      font-size: 14px;
+      flex-shrink: 0;
+    }
+
+    .author-box__info { flex: 1; }
+
+    .author-box__name {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 1px;
+    }
+    .author-box__date {
+      font-size: 13px;
+      color: var(--text-tertiary);
+      margin-bottom: 0;
+    }
+    .author-box__link {
+      font-size: 13px;
+      color: var(--text-tertiary);
+      text-decoration: none;
+    }
+    .author-box__link:hover {
+      color: var(--text-primary);
+    }
+
+    /* ============================================================
+       VISUAL ENHANCEMENTS -- Rich editorial visuals
+       ============================================================ */
+
+    /* --- Hero layout: grid for SVG illustration --- */
+    .article-hero__illustration {
+      width: 100%;
+      max-width: 320px;
+      margin: 24px 0 0;
+      opacity: 0.92;
+    }
+    @media (min-width: 768px) {
+      .article-hero {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        grid-template-rows: auto auto auto;
+        column-gap: 32px;
+        align-items: end;
+      }
+      .article-hero__badge { grid-column: 1; grid-row: 1; }
+      .article-hero h1 { grid-column: 1; grid-row: 2; }
+      .article-hero__meta { grid-column: 1; grid-row: 3; }
+      .article-hero__illustration {
+        grid-column: 2;
+        grid-row: 1 / 4;
+        align-self: center;
+        margin: 0;
+        max-width: 240px;
+      }
+    }
+
+    /* --- Key Stats Strip --- */
+    .stats-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin: 32px 0 40px;
+      padding: 0;
+    }
+    .stats-strip__item {
+      text-align: center;
+      padding: 20px 12px;
+      border: 1px solid var(--border-primary);
+      border-radius: 4px;
+      background: var(--bg-primary);
+    }
+    .stats-strip__number {
+      display: block;
+      font-size: 28px;
+      font-weight: 700;
+      color: #4f7fff;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+    .stats-strip__label {
+      display: block;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--text-tertiary);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-top: 4px;
+    }
+    @media (max-width: 600px) {
+      .stats-strip {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+      }
+      .stats-strip__number { font-size: 22px; }
+      .stats-strip__item { padding: 14px 8px; }
+    }
+
+    /* --- Section Header Accents (colored line above each H2) --- */
+    .article h2::before {
+      content: '';
+      display: block;
+      width: 32px;
+      height: 3px;
+      background: #4f7fff;
+      margin-bottom: 12px;
+      border-radius: 2px;
+    }
+
+    /* --- TOC with icons --- */
+    .article-toc li {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .article-toc .toc-icon {
+      width: 14px;
+      height: 14px;
+      flex-shrink: 0;
+      opacity: 0.45;
+      display: inline-block;
+    }
+
+    /* --- Pull Quote Decorative Marks on Callout Boxes --- */
+    .callout::before {
+      content: '';
+      display: block;
+      width: 48px;
+      height: 36px;
+      margin-bottom: 6px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 36' fill='%234f7fff' opacity='0.15'%3E%3Cpath d='M0 36V22C0 9.3 7.7 1.8 19 0l2 4.9C11.8 7.2 8.3 12.8 8 18h10v18H0zm26 0V22C26 9.3 33.7 1.8 45 0l2 4.9C37.8 7.2 34.3 12.8 34 18h10v18H26z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    /* --- Checklist styling --- */
+    .checklist {
+      list-style: none;
+      padding: 0;
+      margin: 24px 0;
+    }
+    .checklist li {
+      font-size: 16px;
+      line-height: 1.75;
+      color: var(--text-secondary);
+      margin-bottom: 10px;
+      padding-left: 30px;
+      position: relative;
+    }
+    .checklist li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 6px;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: #ecfdf5;
+      box-shadow: inset 0 0 0 1px #10b981;
+    }
+    .checklist li::after {
+      content: '';
+      position: absolute;
+      left: 5px;
+      top: 11px;
+      width: 8px;
+      height: 4px;
+      border-left: 2px solid #10b981;
+      border-bottom: 2px solid #10b981;
+      transform: rotate(-45deg);
+    }
+
+    /* --- Step cards for how-to section --- */
+    .step-card {
+      display: flex;
+      gap: 20px;
+      margin: 28px 0;
+      padding: 24px 0;
+      border-bottom: 1px solid var(--border-primary);
+    }
+    .step-card:last-child {
+      border-bottom: none;
+    }
+    .step-card__number {
+      flex-shrink: 0;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: #eff6ff;
+      border: 2px solid #4f7fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: 700;
+      color: #4f7fff;
+    }
+    .step-card__content h3 {
+      margin-top: 0;
+      margin-bottom: 8px;
+    }
+    .step-card__content p {
+      margin-bottom: 0;
+    }
+
+    /* ------------------------------------------------------------
+       FAQ -- clean, minimal borders
+       ------------------------------------------------------------ */
+    .faq-list {
+      margin: 32px 0;
+    }
+
+    .faq-item {
+      border: none;
+      border-bottom: 1px solid var(--border-primary);
+      border-radius: 0;
+      margin-bottom: 0;
+      overflow: hidden;
+    }
+    .faq-item:first-child {
+      border-top: 1px solid var(--border-primary);
+    }
+
+    .faq-item summary {
+      padding: 18px 0;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text-primary);
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: color 0.15s;
+      gap: 16px;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after {
+      content: '+';
+      font-size: 18px;
+      font-weight: 300;
+      color: var(--text-tertiary);
+      transition: transform 0.2s;
+      flex-shrink: 0;
+    }
+    .faq-item[open] summary::after { content: '-'; }
+    .faq-item summary:hover {
+      color: #4f7fff;
+      background: none;
+    }
+
+    .faq-item p {
+      padding: 0 0 20px;
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--text-secondary);
+      margin: 0;
+    }
+
+    /* ------------------------------------------------------------
+       Mobile refinements
+       ------------------------------------------------------------ */
+    @media (max-width: 600px) {
+      .article {
+        padding: 0 0 64px;
+      }
+      .article-wrapper {
+        padding: 0 20px 64px;
+      }
+      .article h2 {
+        font-size: 24px;
+        margin: 48px 0 16px;
+      }
+      .article h2 + p {
+        font-size: 17px;
+      }
+      .callout {
+        padding: 20px 0 20px 20px;
+      }
+      .callout p {
+        font-size: 16px;
+      }
+      .article-cta {
+        padding: 24px 20px;
+        margin-left: -20px;
+        margin-right: -20px;
+        border-left: none;
+        border-top: 3px solid #4f7fff;
+      }
+      .section-divider {
+        margin: 40px 0;
+      }
+      .author-box {
+        margin-top: 40px;
+      }
+      .step-card {
+        flex-direction: column;
+        gap: 12px;
+      }
+    }
+  </style>
+
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Startseite",
+        "item": "https://aawebtools.com/de/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": "https://aawebtools.com/de/blog/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Free Pay Stub Generator for Self-Employed",
+        "item": "https://aawebtools.com/blog/pay-stub-generator-self-employed/"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Article Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How to Create a Pay Stub When You're Self-Employed (2026 Guide)",
+    "description": "Self-employed and need a pay stub? Create professional proof of income for apartment applications, loans, and taxes. Free generator, no signup, supports 9 countries.",
+    "image": "https://aawebtools.com/assets/img/og-blog-paystub-self-employed.png",
+    "author": {
+      "@type": "Organization",
+      "name": "AAWebTools Team",
+      "url": "https://aawebtools.com/about/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "AAWebTools",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://aawebtools.com/assets/img/logo-light.png"
+      }
+    },
+    "datePublished": "2026-03-27",
+    "dateModified": "2026-03-27",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://aawebtools.com/blog/pay-stub-generator-self-employed/"
+    }
+  }
+  </script>
+
+  <!-- FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Can a self-employed person create their own pay stub?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Unlike traditional employees who receive pay stubs from an employer's payroll system, self-employed workers can and often must create their own pay stubs. A self-employed pay stub is a summary document that shows your gross income, self-employment taxes, estimated tax payments, and net pay for a given period. Tools like the AAWebTools Pay Stub Generator let you create professional pay stubs for free with no signup required."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do landlords accept self-employed pay stubs for apartment applications?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most landlords and property management companies accept self-generated pay stubs as part of a broader income verification package. However, they typically want to see pay stubs alongside bank statements, tax returns, or a CPA letter to cross-verify the income figures. The key is consistency: the numbers on your pay stub should match your bank deposits, 1099 forms, and tax filings exactly."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the self-employment tax rate for 2026?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The self-employment tax rate remains 15.3% for 2026, consisting of 12.4% for Social Security (on the first $168,600 of net earnings) and 2.9% for Medicare (on all net earnings). If your net self-employment income exceeds $200,000 ($250,000 for married filing jointly), you also owe an additional 0.9% Medicare surtax. You can deduct half of your self-employment tax when calculating adjusted gross income."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the new IRS 1099 threshold for 2026?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Under the One Big Beautiful Bill Act signed in 2025, the 1099-K reporting threshold was permanently set at $2,000 starting in tax year 2026. This means payment platforms like PayPal, Venmo, Stripe, and Square must issue you a 1099-K if they process $2,000 or more in payments to you during the year. The previous $600 threshold that was repeatedly delayed has been officially replaced."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is it legal to create your own pay stub as a freelancer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, creating your own pay stub as a self-employed person is entirely legal. Self-employed individuals, freelancers, and independent contractors routinely generate their own pay stubs for income verification purposes. What is illegal is falsifying the information on a pay stub, such as inflating income, fabricating an employer, or misrepresenting deductions. Your pay stub must accurately reflect your actual earnings and should be consistent with your tax returns and bank records."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I show proof of income if I just started freelancing?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "New freelancers can show proof of income through a combination of documents: client contracts or engagement letters showing agreed rates, invoices you have sent (with an invoice generator), bank statements showing deposits from clients, and self-generated pay stubs summarizing your earnings to date. If you do not yet have tax returns from self-employment, a CPA letter projecting your annual income based on current contracts can also help with apartment or loan applications."
+        }
+      }
+    ]
+  }
+  </script>
+  <link rel="alternate" hreflang="es" href="https://aawebtools.com/es/blog/generador-recibo-nomina-autonomos/">
+  <link rel="alternate" hreflang="pt" href="https://aawebtools.com/pt/blog/gerador-holerite-autonomo-2026/">
+  <link rel="alternate" hreflang="ar" href="https://aawebtools.com/ar/blog/kashf-ra8ib-lilaamal-alhur-2026/">
+  <link rel="alternate" hreflang="hi" href="https://aawebtools.com/hi/blog/pay-stub-generator-self-employed/">
+  <link rel="alternate" hreflang="id" href="https://aawebtools.com/id/blog/pembuat-slip-gaji-pekerja-mandiri/">
+</head>
+<body>
+
+  <!-- Reading progress bar -->
+  <div class="reading-progress" id="readingProgress"></div>
+
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="/de/" class="nav__logo"><img src="/assets/img/logo-light.png" alt="AAWebTools" height="56"></a>
+      <div class="nav__links">
+        <div class="nav__dropdown"><a href="#" class="nav__link">Downloader</a><div class="nav__dropdown-menu"><a href="/de/tiktok-herunterladen/" class="nav__dropdown-item">TikTok Downloader</a><a href="/de/twitter-video-herunterladen/" class="nav__dropdown-item">Twitter Downloader</a></div></div>
+        <div class="nav__dropdown"><a href="#" class="nav__link">Generatoren</a><div class="nav__dropdown-menu"><a href="/de/rechnungsgenerator/" class="nav__dropdown-item">Rechnungsgenerator</a><a href="/de/gehaltsabrechnungs-generator/" class="nav__dropdown-item">Gehaltsabrechnungs-Generator</a><a href="/de/bild-werkzeuge/" class="nav__dropdown-item">Bild-Werkzeuge</a></div></div>
+        <div class="nav__dropdown"><a href="#" class="nav__link">KI-Tools</a><div class="nav__dropdown-menu"><a href="/de/ki-detektor/" class="nav__dropdown-item">KI-Inhaltsdetektor</a><a href="/de/ki-humanisierer/" class="nav__dropdown-item">KI-Text-Humanisierer</a></div></div>
+        <a href="/de/blog/" class="nav__link">Blog</a>
+      </div>
+      <div class="nav__right">
+        <div class="lang-selector">
+          <button class="lang-selector__trigger" id="langToggle">&#127760; DE &#9662;</button>
+          <div class="lang-selector__menu" id="langMenu">
+            <a href="/blog/pay-stub-generator-self-employed/">English</a>
+            <a href="/fr/blog/bulletin-de-paie-freelance-2026/">Français</a>
+            <a href="/es/blog/">Español</a>
+            <a href="/de/blog/gehaltsabrechnung-selbstaendige-2026/" class="active">Deutsch</a>
+            <a href="/pt/blog/">Português</a>
+            <a href="/ar/blog/">العربية</a>
+            <a href="/id/blog/">Bahasa Indonesia</a>
+            <a href="/hi/blog/">हिन्दी</a>
+          </div>
+        </div>
+        <a href="/de/#tools" class="btn-primary btn-sm">Alle Tools</a>
+        <button class="nav__hamburger" aria-label="Menü" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+  <div class="nav__mobile" id="mobileNav">
+    <a href="/de/tiktok-herunterladen/" class="nav__mobile-link">TikTok Downloader</a>
+    <a href="/de/twitter-video-herunterladen/" class="nav__mobile-link">Twitter Downloader</a>
+    <a href="/de/rechnungsgenerator/" class="nav__mobile-link">Rechnungsgenerator</a>
+    <a href="/de/ki-detektor/" class="nav__mobile-link">KI-Inhaltsdetektor</a>
+    <a href="/de/ki-humanisierer/" class="nav__mobile-link">KI-Text-Humanisierer</a>
+    <a href="/de/gehaltsabrechnungs-generator/" class="nav__mobile-link">Gehaltsabrechnungs-Generator</a>
+    <a href="/de/bild-werkzeuge/" class="nav__mobile-link">Bild-Werkzeuge</a>
+    <a href="/de/blog/" class="nav__mobile-link">Blog</a>
+  </div>
+
+  <!-- Hero banner -->
+  <header class="article-hero">
+    <span class="article-hero__badge">Business-Tools</span>
+    <h1>Gehaltsabrechnung erstellen als Selbstständiger – Leitfaden 2026</h1>
+    <p class="article-hero__meta">Von <strong>AAWebTools Team</strong> &middot; Veröffentlicht am 27. März 2026 &middot; 14 Min. Lesezeit</p>
+    <!-- Hero SVG Illustration: pay stub document with dollar sign -->
+    <svg class="article-hero__illustration" viewBox="0 0 280 220" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <!-- Document background -->
+      <rect x="50" y="20" width="160" height="190" rx="6" fill="white" stroke="#e2e8f0" stroke-width="2"/>
+      <!-- Document header bar -->
+      <rect x="50" y="20" width="160" height="32" rx="6" fill="#eff6ff"/>
+      <rect x="50" y="46" width="160" height="6" fill="#eff6ff"/>
+      <text x="130" y="42" text-anchor="middle" fill="#4f7fff" font-size="11" font-weight="700" font-family="Inter, system-ui, sans-serif">PAY STUB</text>
+      <!-- Text lines -->
+      <rect x="66" y="66" width="90" height="6" rx="3" fill="#e2e8f0"/>
+      <rect x="66" y="82" width="128" height="6" rx="3" fill="#e2e8f0"/>
+      <rect x="66" y="98" width="110" height="6" rx="3" fill="#e2e8f0"/>
+      <rect x="66" y="114" width="70" height="6" rx="3" fill="#e2e8f0"/>
+      <!-- Highlighted amount line -->
+      <rect x="66" y="134" width="128" height="10" rx="4" fill="#4f7fff" opacity="0.12"/>
+      <rect x="70" y="136" width="60" height="6" rx="3" fill="#4f7fff" opacity="0.5"/>
+      <rect x="160" y="136" width="30" height="6" rx="3" fill="#4f7fff"/>
+      <!-- Divider -->
+      <line x1="66" y1="154" x2="194" y2="154" stroke="#e2e8f0" stroke-width="1"/>
+      <!-- Net pay line -->
+      <rect x="66" y="164" width="50" height="6" rx="3" fill="#475569"/>
+      <rect x="155" y="164" width="39" height="6" rx="3" fill="#10b981"/>
+      <!-- Bottom totals -->
+      <rect x="66" y="180" width="80" height="5" rx="2.5" fill="#e2e8f0"/>
+      <!-- Dollar sign circle -->
+      <circle cx="230" cy="80" r="32" fill="#eff6ff" stroke="#4f7fff" stroke-width="2.5"/>
+      <text x="230" y="90" text-anchor="middle" fill="#4f7fff" font-size="30" font-weight="700" font-family="Inter, system-ui, sans-serif">$</text>
+      <!-- Small decorative elements -->
+      <circle cx="240" cy="140" r="3" fill="#4f7fff" opacity="0.15"/>
+      <circle cx="255" cy="160" r="2" fill="#4f7fff" opacity="0.1"/>
+      <circle cx="30" cy="100" r="4" fill="#4f7fff" opacity="0.1"/>
+      <circle cx="38" cy="180" r="2.5" fill="#4f7fff" opacity="0.12"/>
+      <!-- Checkmark badge -->
+      <circle cx="230" cy="170" r="16" fill="#ecfdf5" stroke="#10b981" stroke-width="2"/>
+      <polyline points="223,170 228,175 238,165" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    </svg>
+  </header>
+
+  <main>
+    <div class="article-wrapper">
+      <article class="article">
+
+        <nav class="article-breadcrumb" aria-label="Breadcrumb">
+          <a href="/de/">Startseite</a> &rsaquo; <a href="/de/blog/">Blog</a> &rsaquo; Kostenloser Gehaltsabrechnungs-Generator für Selbstständige
+        </nav>
+
+        <nav class="article-toc" aria-label="Table of contents">
+          <h3>In diesem Artikel</h3>
+          <ol>
+            <li>
+              <svg class="toc-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 1v14M1 8h14"/><circle cx="8" cy="8" r="6"/></svg>
+              <a href="#why-self-employed-need-pay-stubs">Why Self-Employed Workers Need Pay Stubs</a>
+            </li>
+            <li>
+              <svg class="toc-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="1" width="14" height="14" rx="2"/><path d="M1 5h14M5 5v10"/></svg>
+              <a href="#when-you-need-pay-stub">When You Need a Pay Stub as Self-Employed</a>
+            </li>
+            <li>
+              <svg class="toc-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2v12M8 2v12M12 6v8"/><path d="M2 14h12"/></svg>
+              <a href="#what-to-include">What to Include on a Self-Employed Pay Stub</a>
+            </li>
+            <li>
+              <svg class="toc-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8l3 3 7-7"/></svg>
+              <a href="#match-tax-returns">The Critical Rule: Match Your Tax Returns</a>
+            </li>
+            <li>
+              <svg class="toc-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="4.5"/><path d="M9.5 9.5L14 14"/></svg>
+              <a href="#step-by-step">Step-by-Step: Create a Pay Stub with AAWebTools</a>
+            </li>
+            <li>
+              <svg class="toc-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="4" height="10" rx="1"/><rect x="6" y="1" width="4" height="12" rx="1"/><rect x="11" y="5" width="4" height="8" rx="1"/></svg>
+              <a href="#comparison">Pay Stub Generator Comparison (2026)</a>
+            </li>
+            <li>
+              <svg class="toc-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="6.5"/><path d="M8 5v3l2 2"/></svg>
+              <a href="#irs-1099-rules">New IRS 1099 Rules for 2026</a>
+            </li>
+            <li>
+              <svg class="toc-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="6.5"/><path d="M6 6.5a2 2 0 113 1.73V10M8 12.5v.01"/></svg>
+              <a href="#faq">Häufig gestellte Fragen</a>
+            </li>
+          </ol>
+        </nav>
+
+        <!-- ============================================================
+             INTRODUCTION
+             ============================================================ -->
+
+        <h2 id="why-self-employed-need-pay-stubs">Why Self-Employed Workers Need Pay Stubs</h2>
+
+        <!-- Key Stats Strip -->
+        <div class="stats-strip">
+          <div class="stats-strip__item">
+            <span class="stats-strip__number">9</span>
+            <span class="stats-strip__label">Countries Supported</span>
+          </div>
+          <div class="stats-strip__item">
+            <span class="stats-strip__number">15.3%</span>
+            <span class="stats-strip__label">FICA Self-Employment Tax</span>
+          </div>
+          <div class="stats-strip__item">
+            <span class="stats-strip__number">$2,000</span>
+            <span class="stats-strip__label">New 1099 Threshold</span>
+          </div>
+          <div class="stats-strip__item">
+            <span class="stats-strip__number">Free</span>
+            <span class="stats-strip__label">PDF Download</span>
+          </div>
+        </div>
+
+        <p>If you work for yourself -- whether as a freelancer, independent contractor, sole proprietor, or gig worker -- you have probably run into a situation where someone asks for a pay stub and you do not have one. Traditional employees receive pay stubs automatically through their employer's payroll system. Self-employed workers do not have that luxury. They pay themselves, which means they need to generate their own proof of income.</p>
+
+        <p>This is not just a paperwork inconvenience. Without a pay stub, you may struggle to <strong>rent an apartment</strong>, qualify for a <strong>mortgage or car loan</strong>, apply for <strong>government benefits</strong>, or even satisfy a <strong>client's onboarding requirements</strong>. Landlords want to see consistent income. Lenders need verifiable earnings. And increasingly, government agencies and insurance companies require pay documentation that goes beyond a simple bank statement.</p>
+
+        <p>The good news is that creating a self-employed pay stub is straightforward, legal, and -- with the right tool -- completely free. In this guide, we walk through exactly when you need a pay stub, what information it must contain, how self-employment taxes work, and how to generate a professional PDF in under five minutes using the <a href="/de/gehaltsabrechnungs-generator/">AAWebTools Pay Stub Generator</a>.</p>
+
+        <div class="callout callout--finding">
+          <div class="callout__label">Key Fact</div>
+          <p>Over 64 million Americans performed freelance work in 2025, according to Upwork's annual survey. That is more than a third of the entire U.S. workforce -- and every one of them may need a self-employed pay stub at some point for housing, credit, or tax purposes.</p>
+        </div>
+
+        <p>We also cover the <strong>new IRS 1099-K reporting threshold</strong> that takes effect in 2026, compare six popular pay stub generators head-to-head, and answer the most common questions freelancers have about proof of income. Whether you are a graphic designer applying for your first apartment or a seasoned consultant refinancing a home, this guide has you covered.</p>
+
+        <hr class="section-divider">
+
+        <!-- ============================================================
+             WHEN YOU NEED A PAY STUB
+             ============================================================ -->
+
+        <h2 id="when-you-need-pay-stub">When You Need a Pay Stub as Self-Employed</h2>
+
+        <p>Self-employed pay stubs are not just nice to have -- they are often required. Here are the five most common situations where you will need one.</p>
+
+        <h3>1. Renting an Apartment or House</h3>
+
+        <p>Landlords and property management companies almost universally require proof of income before approving a lease. The standard ask is two to three months of recent pay stubs. When you are self-employed, you do not receive these from an employer, so you need to create them yourself. Most landlords will accept self-generated pay stubs alongside bank statements and tax returns as part of a complete income verification package.</p>
+
+        <div class="callout callout--tip">
+          <div class="callout__label">Tip</div>
+          <p>When applying for an apartment, prepare a folder with your pay stubs, three months of bank statements, your most recent tax return, and a brief letter explaining your self-employment. This package answers most landlord questions before they are asked.</p>
+        </div>
+
+        <h3>2. Applying for a Mortgage</h3>
+
+        <p>Mortgage lenders scrutinize self-employed income more closely than W-2 income. Most require at least two years of tax returns, but they also want to see current pay stubs or profit-and-loss statements that demonstrate ongoing income. A well-formatted pay stub showing consistent monthly or biweekly earnings makes it easier for an underwriter to verify that your income has not dropped since your last tax filing.</p>
+
+        <h3>3. Securing a Car Loan or Personal Loan</h3>
+
+        <p>Auto dealerships and personal lenders typically require proof of income as part of the approval process. A self-employed pay stub showing your gross earnings, tax withholdings, and net pay gives the lender a clear snapshot of your financial position. Many lenders prefer a pay stub over a bank statement because it separates business income from personal spending in a standardized format.</p>
+
+        <div class="callout callout--finding">
+          <div class="callout__label">Kernergebnis</div>
+          <p>According to the National Association of Realtors, self-employed borrowers are <strong>40% more likely</strong> to be asked for additional documentation beyond what W-2 employees provide. Having pay stubs ready from the start can reduce approval delays by weeks.</p>
+        </div>
+
+        <h3>4. Government Applications and Benefits</h3>
+
+        <p>Applications for health insurance subsidies (ACA marketplace), childcare assistance, student financial aid (FAFSA), and other government programs require income verification. Many of these forms specifically ask for pay stubs. A self-generated pay stub that accurately reflects your earnings can satisfy these requirements, especially when paired with your Schedule C or Schedule SE from your tax return.</p>
+
+        <h3>5. Client and Vendor Onboarding</h3>
+
+        <p>Some corporate clients require proof of financial stability before signing a contract with an independent contractor. Insurance companies, financial services firms, and government contractors may request pay stubs as part of vendor qualification. Even if a formal pay stub is not explicitly required, having one available demonstrates professionalism and financial organization that can set you apart from other freelancers competing for the same contract.</p>
+
+        <hr class="section-divider">
+
+        <!-- ============================================================
+             WHAT TO INCLUDE
+             ============================================================ -->
+
+        <h2 id="what-to-include">What to Include on a Self-Employed Pay Stub</h2>
+
+        <p>A self-employed pay stub needs to be detailed enough to satisfy a landlord, lender, or government agency, but honest enough to match your actual financial records. Here is every field you should include, and why it matters.</p>
+
+        <h3>Personal and Business Information</h3>
+
+        <p>Start with the basics. Your pay stub should clearly identify you as both the employer and the employee -- because when you are self-employed, you are both.</p>
+
+        <ul class="checklist">
+          <li><strong>Your full legal name</strong> -- as it appears on your tax return</li>
+          <li><strong>Business name</strong> -- your DBA, LLC, or sole proprietorship name</li>
+          <li><strong>Business address</strong> -- your registered business address</li>
+          <li><strong>Pay period dates</strong> -- the start and end date for this stub (e.g., March 1-15, 2026)</li>
+          <li><strong>Pay date</strong> -- the date you are paying yourself</li>
+          <li><strong>Social Security Number or EIN</strong> -- last four digits only for security</li>
+        </ul>
+
+        <h3>Gross Income</h3>
+
+        <p>This is your total earnings before any deductions. For a self-employed person, gross income is the total revenue you received from clients during the pay period. If you invoice clients using an <a href="/de/rechnungsgenerator/">invoice generator</a>, your gross income should match the sum of paid invoices for that period.</p>
+
+        <div class="callout callout--warning">
+          <div class="callout__label">Important</div>
+          <p>Your gross income on a pay stub should reflect <strong>actual money received</strong>, not invoices sent. If you billed a client $5,000 but they have not paid yet, that amount should not appear on your pay stub until the payment clears.</p>
+        </div>
+
+        <h3>Self-Employment Tax (FICA -- 15.3%)</h3>
+
+        <p>This is the big one that trips up many self-employed workers. Traditional employees pay 7.65% of their earnings in FICA taxes (Social Security + Medicare), and their employer pays the other 7.65%. When you are self-employed, you pay both halves -- the full 15.3%.</p>
+
+        <p>Here is how the 15.3% breaks down for 2026:</p>
+
+        <ul>
+          <li><strong>Social Security:</strong> 12.4% on the first $168,600 of net earnings</li>
+          <li><strong>Medicare:</strong> 2.9% on all net earnings (no cap)</li>
+          <li><strong>Additional Medicare Surtax:</strong> 0.9% on earnings above $200,000 ($250,000 married filing jointly)</li>
+        </ul>
+
+        <p>Your pay stub should show the self-employment tax as a deduction from gross income. The IRS allows you to deduct half of your self-employment tax (the "employer" portion) when calculating your adjusted gross income, but your pay stub should show the full 15.3% as the withholding amount.</p>
+
+        <h3>Estimated Quarterly Tax Payments</h3>
+
+        <p>Unlike W-2 employees whose taxes are withheld from every paycheck, self-employed workers are required to make estimated quarterly tax payments to the IRS (Form 1040-ES). If you set aside money each pay period for quarterly payments, your pay stub should reflect this. The four quarterly deadlines for 2026 are:</p>
+
+        <ol>
+          <li>April 15, 2026 (for income earned January through March)</li>
+          <li>June 15, 2026 (for income earned April through May)</li>
+          <li>September 15, 2026 (for income earned June through August)</li>
+          <li>January 15, 2027 (for income earned September through December)</li>
+        </ol>
+
+        <h3>Other Deductions</h3>
+
+        <p>Depending on your situation, you may also want to show these deductions on your pay stub:</p>
+
+        <ul>
+          <li><strong>Federal income tax withholding</strong> -- the amount you are setting aside for federal income tax, based on your tax bracket</li>
+          <li><strong>State income tax withholding</strong> -- if your state has income tax</li>
+          <li><strong>Health insurance premiums</strong> -- self-employed individuals can deduct health insurance premiums</li>
+          <li><strong>Retirement contributions</strong> -- SEP-IRA, Solo 401(k), or SIMPLE IRA contributions</li>
+        </ul>
+
+        <h3>Net Pay</h3>
+
+        <p>After all deductions, your net pay is what you actually take home. This is the number that should approximately match the deposits in your bank account for the pay period. Lenders and landlords will focus on this figure when assessing your ability to make payments.</p>
+
+        <h3>Year-to-Date (YTD) Totals</h3>
+
+        <p>Every professional pay stub includes running year-to-date totals for gross income, each deduction category, and net pay. YTD totals are especially important for self-employed workers because they help lenders and landlords see your income trajectory over time. A pay stub showing consistent or growing YTD earnings is far more convincing than one showing a single pay period in isolation.</p>
+
+        <div class="callout callout--privacy">
+          <div class="callout__label">Best Practice</div>
+          <p>Keep a spreadsheet or accounting system that tracks every pay period throughout the year. This makes it easy to generate accurate YTD totals and ensures your pay stubs will match your annual tax return when you file.</p>
+        </div>
+
+        <hr class="section-divider">
+
+        <!-- ============================================================
+             MATCH YOUR TAX RETURNS
+             ============================================================ -->
+
+        <h2 id="match-tax-returns">The Critical Rule: Match Your Tax Returns</h2>
+
+        <p>This is the single most important principle for self-employed pay stubs, and the one that can get you into serious trouble if you ignore it: <strong>every number on your pay stub must be consistent with your tax returns, bank statements, and 1099 forms.</strong></p>
+
+        <p>Landlords, lenders, and government agencies routinely cross-reference documents. A mortgage underwriter will compare your pay stubs to your tax returns, your bank statements to your pay stubs, and your 1099s to all of the above. Any discrepancy -- even an innocent one -- can delay your application, trigger additional scrutiny, or result in a denial.</p>
+
+        <h3>How to maintain consistency</h3>
+
+        <ol>
+          <li><strong>Use the same gross income figures</strong> that appear on your Schedule C (sole proprietors) or K-1 (partnerships and S-corps). If your Schedule C shows $96,000 in annual gross receipts, your pay stubs should total approximately $96,000 over the same period.</li>
+          <li><strong>Match your bank deposits.</strong> If your pay stub says you earned $8,000 in February, your bank account should show roughly $8,000 in client deposits during that month, minus any business expenses paid from the same account.</li>
+          <li><strong>Align with your 1099 forms.</strong> Starting in 2026, the new $2,000 1099-K threshold means you will receive 1099s for smaller amounts. Your pay stubs should be consistent with these forms.</li>
+          <li><strong>Use consistent pay periods.</strong> If you pay yourself biweekly, keep that cadence. Landlords and lenders notice when pay periods are irregular or seem fabricated to match a specific application date.</li>
+        </ol>
+
+        <div class="callout callout--warning">
+          <div class="callout__label">Datenschutzhinweis</div>
+          <p>Never share your full Social Security Number on a pay stub. Use only the last four digits. If a landlord or lender needs your full SSN, they should collect it separately on a secure form. Also, never email pay stubs containing sensitive information without password protection or encryption -- use the PDF download from your <a href="/de/gehaltsabrechnungs-generator/">pay stub generator</a> and share it through a secure channel.</p>
+        </div>
+
+        <h3>What happens if your documents do not match</h3>
+
+        <p>Inconsistencies between your pay stubs and other financial documents can lead to several negative outcomes:</p>
+
+        <ul>
+          <li><strong>Apartment application denied</strong> -- landlords may suspect inflated income and reject your application outright</li>
+          <li><strong>Loan application delayed</strong> -- underwriters will request additional documentation and explanation letters</li>
+          <li><strong>Mortgage denial</strong> -- significant discrepancies can result in outright denial, especially for self-employed borrowers who already face higher scrutiny</li>
+          <li><strong>Legal consequences</strong> -- intentionally falsifying pay stub information for a loan application is federal fraud and can result in fines and imprisonment</li>
+        </ul>
+
+        <p>The solution is simple: generate your pay stubs from real numbers, keep organized records throughout the year, and never inflate or fabricate income figures for any reason.</p>
+
+        <hr class="section-divider">
+
+        <!-- ============================================================
+             STEP BY STEP
+             ============================================================ -->
+
+        <h2 id="step-by-step">Step-by-Step: Create a Pay Stub with AAWebTools</h2>
+
+        <p>The <a href="/de/gehaltsabrechnungs-generator/">AAWebTools Pay Stub Generator</a> is designed specifically for self-employed workers, freelancers, and small business owners who need professional pay stubs without paying for payroll software. Here is how to create one in under five minutes.</p>
+
+        <div class="step-card">
+          <div class="step-card__number">1</div>
+          <div class="step-card__content">
+            <h3>Enter Your Business Information</h3>
+            <p>Fill in your business name (or your full name if you operate as a sole proprietor), your business address, and your EIN or last four digits of your SSN. Select your country from the dropdown -- the generator supports the United States, Canada, United Kingdom, Australia, Germany, France, India, Brazil, and Mexico.</p>
+          </div>
+        </div>
+
+        <div class="step-card">
+          <div class="step-card__number">2</div>
+          <div class="step-card__content">
+            <h3>Enter Employee Information</h3>
+            <p>Since you are self-employed, you are the employee. Enter your full legal name, your address, and your SSN (last four digits). This section mirrors what a traditional employer would fill in for you.</p>
+          </div>
+        </div>
+
+        <div class="step-card">
+          <div class="step-card__number">3</div>
+          <div class="step-card__content">
+            <h3>Set Pay Period and Earnings</h3>
+            <p>Choose your pay frequency (weekly, biweekly, semimonthly, or monthly), enter the pay period start and end dates, and input your gross earnings for the period. If you have multiple income streams, combine them into a single gross figure that matches your bank deposits for that period.</p>
+          </div>
+        </div>
+
+        <div class="step-card">
+          <div class="step-card__number">4</div>
+          <div class="step-card__content">
+            <h3>Add Deductions</h3>
+            <p>The generator automatically calculates standard deductions based on your country. For U.S. users, this includes federal income tax, Social Security (12.4%), and Medicare (2.9%) -- totaling the 15.3% FICA self-employment tax. You can also add custom deductions for state tax, health insurance, retirement contributions, or any other recurring withholding.</p>
+          </div>
+        </div>
+
+        <div class="step-card">
+          <div class="step-card__number">5</div>
+          <div class="step-card__content">
+            <h3>Review and Download PDF</h3>
+            <p>Preview your pay stub in the live preview panel. Verify that all numbers are accurate, the math is correct, and the YTD totals reflect your actual earnings for the year. When everything looks right, click "Download PDF" to save a professional, print-ready pay stub to your device. No account creation, no watermarks, no fees.</p>
+          </div>
+        </div>
+
+        <!-- CTA Block -->
+        <div class="article-cta">
+          <div class="article-cta__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          </div>
+          <p><strong>Create your self-employed pay stub now</strong></p>
+          <p>Free, no signup, supports 9 countries. Professional PDF download in under 5 minutes.</p>
+          <a href="/de/gehaltsabrechnungs-generator/" class="btn-primary">Open Pay Stub Generator</a>
+        </div>
+
+        <p>Need to send invoices to your clients first? Use the <a href="/de/rechnungsgenerator/">AAWebTools Invoice Generator</a> to create professional invoices that match your pay stub figures. Keeping your invoices and pay stubs aligned makes income verification seamless.</p>
+
+        <hr class="section-divider">
+
+        <!-- ============================================================
+             COMPARISON TABLE
+             ============================================================ -->
+
+        <h2 id="comparison">Pay Stub Generator Comparison (2026)</h2>
+
+        <p>We evaluated six popular pay stub generators to see how they compare on the features that matter most to self-employed workers. Here is what we found.</p>
+
+        <div class="table-responsive">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Tool</th>
+                <th>Price</th>
+                <th>Signup</th>
+                <th>Countries</th>
+                <th>Self-Employment Tax</th>
+                <th>YTD Totals</th>
+                <th>PDF Download</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>AAWebTools</strong></td>
+                <td>Free</td>
+                <td><span class="check">Keine Anmeldung</span></td>
+                <td>9</td>
+                <td><span class="check">Auto-calculated</span></td>
+                <td><span class="check">Yes</span></td>
+                <td><span class="check">Free, no watermark</span></td>
+              </tr>
+              <tr>
+                <td><strong>StubCreator</strong></td>
+                <td>$8.99/stub</td>
+                <td>Email required</td>
+                <td>2 (US, CA)</td>
+                <td><span class="check">Yes</span></td>
+                <td><span class="check">Yes</span></td>
+                <td>Paid only</td>
+              </tr>
+              <tr>
+                <td><strong>Shopify Pay Stub</strong></td>
+                <td>Free</td>
+                <td><span class="check">Keine Anmeldung</span></td>
+                <td>1 (US)</td>
+                <td><span class="cross">No</span></td>
+                <td><span class="cross">No</span></td>
+                <td><span class="check">Free</span></td>
+              </tr>
+              <tr>
+                <td><strong>Wix Pay Stub</strong></td>
+                <td>Free</td>
+                <td>Account required</td>
+                <td>1 (US)</td>
+                <td><span class="cross">No</span></td>
+                <td><span class="cross">No</span></td>
+                <td><span class="check">Free</span></td>
+              </tr>
+              <tr>
+                <td><strong>123PayStubs</strong></td>
+                <td>$3.99/stub</td>
+                <td>Email required</td>
+                <td>1 (US)</td>
+                <td><span class="check">Yes</span></td>
+                <td><span class="check">Yes</span></td>
+                <td>Paid only</td>
+              </tr>
+              <tr>
+                <td><strong>PayStubDirect</strong></td>
+                <td>$7.95/stub</td>
+                <td>Email required</td>
+                <td>2 (US, CA)</td>
+                <td><span class="check">Yes</span></td>
+                <td><span class="check">Yes</span></td>
+                <td>Paid only</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Why AAWebTools stands out for self-employed users</h3>
+
+        <p>Most pay stub generators are designed for employers running payroll for W-2 employees. They charge per stub, require email signups, and often lack self-employment tax calculations. The <a href="/de/gehaltsabrechnungs-generator/">AAWebTools Pay Stub Generator</a> was built with self-employed workers as the primary user:</p>
+
+        <ul>
+          <li><strong>Genuinely free</strong> -- no per-stub fees, no freemium upsells, no watermarks on downloaded PDFs</li>
+          <li><strong>No account required</strong> -- your data stays in your browser and is never sent to a server</li>
+          <li><strong>9-country support</strong> -- handles tax calculations for the US, Canada, UK, Australia, Germany, France, India, Brazil, and Mexico</li>
+          <li><strong>Automatic self-employment tax</strong> -- calculates the full 15.3% FICA split (Social Security + Medicare) for U.S. users</li>
+          <li><strong>YTD tracking</strong> -- automatically computes year-to-date totals across pay periods</li>
+          <li><strong>Professional formatting</strong> -- clean, print-ready PDF that looks like it came from a payroll system</li>
+        </ul>
+
+        <p>The free tools from Shopify and Wix are decent for generating a basic stub quickly, but they lack self-employment tax calculations and YTD totals -- two features that landlords and lenders specifically look for. The paid tools (StubCreator, 123PayStubs, PayStubDirect) offer more complete features but charge $4 to $9 per stub, which adds up quickly if you need to generate stubs every pay period.</p>
+
+        <hr class="section-divider">
+
+        <!-- ============================================================
+             NEW IRS 1099 RULES
+             ============================================================ -->
+
+        <h2 id="irs-1099-rules">New IRS 1099 Rules for 2026</h2>
+
+        <p>If you are self-employed, there is a major tax reporting change you need to know about in 2026. The <strong>One Big Beautiful Bill Act</strong>, signed into law in 2025, permanently set the 1099-K reporting threshold at <strong>$2,000</strong> starting in tax year 2026.</p>
+
+        <h3>What changed</h3>
+
+        <p>Here is the history, because it has been a winding road:</p>
+
+        <ul>
+          <li><strong>Before 2022:</strong> Payment platforms (PayPal, Venmo, Stripe, Square, etc.) only issued 1099-K forms if you received more than $20,000 AND had more than 200 transactions in a year</li>
+          <li><strong>2022 American Rescue Plan:</strong> Congress dropped the threshold to $600, but the IRS delayed enforcement repeatedly</li>
+          <li><strong>2023-2024:</strong> The IRS announced transition years with a $5,000 threshold for 2024</li>
+          <li><strong>2025 (One Big Beautiful Bill Act):</strong> The threshold was permanently set at $2,000 with no transaction count requirement, effective for tax year 2026</li>
+        </ul>
+
+        <h3>What this means for self-employed workers</h3>
+
+        <p>Starting in 2026, if any payment platform processes <strong>$2,000 or more</strong> in payments to you during the calendar year, they must send you (and the IRS) a 1099-K form. This is a significant change from the original $20,000/200-transaction threshold, and it means far more freelancers, gig workers, and self-employed individuals will receive 1099-K forms than ever before.</p>
+
+        <div class="callout callout--finding">
+          <div class="callout__label">Key Takeaway</div>
+          <p>The new $2,000 threshold makes accurate pay stub documentation even more important. Your pay stubs should be consistent with your 1099-K forms, which the IRS will now have for a much larger share of your income. Discrepancies between your reported income and 1099-K totals will trigger automated IRS notices.</p>
+        </div>
+
+        <h3>How to prepare</h3>
+
+        <ol>
+          <li><strong>Track all payment platform income separately.</strong> Know exactly how much you receive through PayPal, Venmo, Stripe, and other platforms so you are not surprised by a 1099-K.</li>
+          <li><strong>Ensure your pay stubs align with platform totals.</strong> If Stripe reports $24,000 in payments to you, your pay stubs should account for that income.</li>
+          <li><strong>Keep records of business versus personal transactions.</strong> If you receive personal payments through the same platform you use for business, you will need to document which transactions are not taxable income.</li>
+          <li><strong>Generate invoices for every client payment.</strong> Using an <a href="/de/rechnungsgenerator/">invoice generator</a> to create a paper trail for each payment makes reconciliation with 1099-K forms straightforward.</li>
+        </ol>
+
+        <hr class="section-divider">
+
+        <!-- ============================================================
+             FAQ
+             ============================================================ -->
+
+        <h2 id="faq">Häufig gestellte Fragen</h2>
+
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>Can a self-employed person create their own pay stub?</summary>
+            <p>Yes. Unlike traditional employees who receive pay stubs from an employer's payroll system, self-employed workers can and often must create their own pay stubs. A self-employed pay stub is a summary document that shows your gross income, self-employment taxes, estimated tax payments, and net pay for a given period. Tools like the <a href="/de/gehaltsabrechnungs-generator/">AAWebTools Pay Stub Generator</a> let you create professional pay stubs for free with no signup required.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Do landlords accept self-employed pay stubs for apartment applications?</summary>
+            <p>Most landlords and property management companies accept self-generated pay stubs as part of a broader income verification package. However, they typically want to see pay stubs alongside bank statements, tax returns, or a CPA letter to cross-verify the income figures. The key is consistency: the numbers on your pay stub should match your bank deposits, 1099 forms, and tax filings exactly.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>What is the self-employment tax rate for 2026?</summary>
+            <p>The self-employment tax rate remains 15.3% for 2026, consisting of 12.4% for Social Security (on the first $168,600 of net earnings) and 2.9% for Medicare (on all net earnings). If your net self-employment income exceeds $200,000 ($250,000 for married filing jointly), you also owe an additional 0.9% Medicare surtax. You can deduct half of your self-employment tax when calculating adjusted gross income.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>What is the new IRS 1099 threshold for 2026?</summary>
+            <p>Under the One Big Beautiful Bill Act signed in 2025, the 1099-K reporting threshold was permanently set at $2,000 starting in tax year 2026. This means payment platforms like PayPal, Venmo, Stripe, and Square must issue you a 1099-K if they process $2,000 or more in payments to you during the year. The previous $600 threshold that was repeatedly delayed has been officially replaced.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Is it legal to create your own pay stub as a freelancer?</summary>
+            <p>Yes, creating your own pay stub as a self-employed person is entirely legal. Self-employed individuals, freelancers, and independent contractors routinely generate their own pay stubs for income verification purposes. What is illegal is falsifying the information on a pay stub -- such as inflating income, fabricating an employer, or misrepresenting deductions. Your pay stub must accurately reflect your actual earnings and should be consistent with your tax returns and bank records.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>How do I show proof of income if I just started freelancing?</summary>
+            <p>New freelancers can show proof of income through a combination of documents: client contracts or engagement letters showing agreed rates, invoices you have sent (with an <a href="/de/rechnungsgenerator/">invoice generator</a>), bank statements showing deposits from clients, and self-generated pay stubs summarizing your earnings to date. If you do not yet have tax returns from self-employment, a CPA letter projecting your annual income based on current contracts can also help with apartment or loan applications.</p>
+          </details>
+        </div>
+
+        <!-- ============================================================
+             CLOSING
+             ============================================================ -->
+
+        <h2>Final Thoughts</h2>
+
+        <p>Creating a pay stub when you are self-employed is not complicated, but it does require attention to detail. The numbers must be accurate, the format must be professional, and -- most importantly -- every figure on your pay stub must be consistent with your tax returns, bank statements, and 1099 forms. A well-prepared pay stub is not just a piece of paper; it is your proof of financial stability and professional legitimacy.</p>
+
+        <p>The <a href="/de/gehaltsabrechnungs-generator/">AAWebTools Pay Stub Generator</a> makes this process free and straightforward. Enter your information, let the tool calculate your self-employment taxes, review the preview, and download a clean PDF. Keine Anmeldung, no fees, no watermarks. Pair it with the <a href="/de/rechnungsgenerator/">Invoice Generator</a> to maintain a complete paper trail from client billing to personal income documentation.</p>
+
+        <p>With the new $2,000 IRS 1099-K threshold taking effect in 2026, accurate income documentation is more important than ever. Whether you are applying for an apartment, qualifying for a mortgage, or simply keeping your financial records organized, having professional pay stubs ready will save you time, reduce friction, and help you present your self-employed income with confidence.</p>
+
+        <!-- CTA Block -->
+        <div class="article-cta">
+          <div class="article-cta__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          </div>
+          <p><strong>Ready to create your self-employed pay stub?</strong></p>
+          <p>Free generator, 9 countries, automatic tax calculations. Download a professional PDF in minutes.</p>
+          <a href="/de/gehaltsabrechnungs-generator/" class="btn-primary">Create Pay Stub Now</a>
+        </div>
+
+        <!-- Author box -->
+        <div class="author-box">
+          <div class="author-box__avatar">AA</div>
+          <div class="author-box__info">
+            <div class="author-box__name">Verfasst vom AAWebTools Team</div>
+            <div class="author-box__date">Veröffentlicht am 27. März 2026</div>
+            <a href="/de/blog/" class="author-box__link">Weitere Artikel &rarr;</a>
+          </div>
+        </div>
+
+      </article>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__grid">
+      <div>
+        <div class="footer__logo"><img src="/assets/img/logo-light.png" alt="AAWebTools" height="44"></div>
+        <p class="footer__tagline">Kostenlose Tools für alle, weltweit</p>
+        <p class="footer__copyright">&copy; 2026 AAWebTools. Alle Rechte vorbehalten. Erstellt von <a href="https://scopecove.com/" target="_blank" rel="noopener" class="footer__link" style="display:inline;">ScopeCove</a></p>
+      </div>
+      <div>
+        <h4 class="footer__heading">Tools</h4>
+        <a href="/de/tiktok-herunterladen/" class="footer__link">TikTok Downloader</a>
+        <a href="/de/twitter-video-herunterladen/" class="footer__link">Twitter Video Downloader</a>
+        <a href="/de/rechnungsgenerator/" class="footer__link">Rechnungsgenerator</a>
+        <a href="/de/ki-detektor/" class="footer__link">KI-Inhaltsdetektor</a>
+        <a href="/de/ki-humanisierer/" class="footer__link">KI-Text-Humanisierer</a>
+        <a href="/de/gehaltsabrechnungs-generator/" class="footer__link">Gehaltsabrechnungs-Generator</a>
+        <a href="/de/bild-werkzeuge/" class="footer__link">Bild-Werkzeuge</a>
+      </div>
+      <div>
+        <h4 class="footer__heading">Rechtliches</h4>
+        <a href="/de/datenschutz/" class="footer__link">Datenschutzerklärung</a>
+        <a href="/de/nutzungsbedingungen/" class="footer__link">Nutzungsbedingungen</a>
+        <a href="/de/ueber-uns/" class="footer__link">Über uns</a>
+        <a href="/de/kontakt/" class="footer__link">Kontakt</a>
+        <a href="/de/blog/" class="footer__link">Blog</a>
+      </div>
+    </div>
+    <div class="footer__bottom">Mit &#10084;&#65039; gemacht | Für immer kostenlos | Ohne Anmeldung</div>
+  </footer>
+
+  <script src="/assets/js/core.js" defer></script>
+  <script defer src="https://analytics.aawebtools.com/script.js" data-website-id="836dfc88-b05f-49b2-9824-3a085e248896"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9434634079795273" crossorigin="anonymous"></script>
+
+  <!-- Reading progress bar script -->
+  <script>
+  (function(){
+    var bar = document.getElementById('readingProgress');
+    if (!bar) return;
+    function updateProgress() {
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      var docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+      bar.style.width = Math.min(progress, 100) + '%';
+    }
+    window.addEventListener('scroll', updateProgress, { passive: true });
+    updateProgress();
+  })();
+  </script>
+</body>
+</html>

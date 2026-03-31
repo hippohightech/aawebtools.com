@@ -1,5 +1,5 @@
 /* core.js — aawebtools.com
-   Section 3: Scroll reveal, mobile menu, EN/FR language toggle.
+   Scroll reveal, mobile menu, language selector, tool cards.
    No frameworks. No animation libraries. */
 
 (function () {
@@ -54,88 +54,55 @@
   }
 
   /* ===========================================================
-     EN/FR LANGUAGE TOGGLE
-     Reads data-en / data-fr attributes on elements.
-     Stores preference in localStorage key "lang".
-     Default: "en".
+     TOOL CARDS — Load from tools.json with full i18n
      =========================================================== */
-  var LANG_KEY = 'lang';
+  var TOOL_I18N = {
+    linkText: { en:'Use Tool \u2192', fr:'Utiliser \u2192', es:'Usar herramienta \u2192', de:'Tool nutzen \u2192', pt:'Usar ferramenta \u2192', ar:'\u0627\u0633\u062a\u062e\u062f\u0645 \u0627\u0644\u0623\u062f\u0627\u0629 \u2190', id:'Gunakan alat \u2192', hi:'\u091f\u0942\u0932 \u0907\u0938\u094d\u0924\u0947\u092e\u093e\u0932 \u0915\u0930\u0947\u0902 \u2192' },
+    categories: {
+      downloader: { en:'downloader', fr:'t\u00e9l\u00e9chargeur', es:'descargador', de:'Downloader', pt:'baixador', ar:'\u0623\u062f\u0627\u0629 \u062a\u062d\u0645\u064a\u0644', id:'pengunduh', hi:'\u0921\u093e\u0909\u0928\u0932\u094b\u0921\u0930' },
+      generator: { en:'generator', fr:'g\u00e9n\u00e9rateur', es:'generador', de:'Generator', pt:'gerador', ar:'\u0645\u0648\u0644\u0651\u062f', id:'pembuat', hi:'\u091c\u0928\u0930\u0947\u091f\u0930' },
+      ai: { en:'ai', fr:'IA', es:'IA', de:'KI', pt:'IA', ar:'\u0630\u0643\u0627\u0621 \u0627\u0635\u0637\u0646\u0627\u0639\u064a', id:'AI', hi:'AI' },
+      utility: { en:'utility', fr:'utilitaire', es:'utilidad', de:'Werkzeug', pt:'utilit\u00e1rio', ar:'\u0623\u062f\u0627\u0629', id:'utilitas', hi:'\u092f\u0942\u091f\u093f\u0932\u093f\u091f\u0940' }
+    },
+    badges: {
+      'Most Popular': { en:'Most Popular', fr:'Plus populaire', es:'M\u00e1s popular', de:'Beliebtestes', pt:'Mais popular', ar:'\u0627\u0644\u0623\u0643\u062b\u0631 \u0634\u0639\u0628\u064a\u0629', id:'Terpopuler', hi:'\u0938\u092c\u0938\u0947 \u0932\u094b\u0915\u092a\u094d\u0930\u093f\u092f' },
+      'Free PDF': { en:'Free PDF', fr:'PDF gratuit', es:'PDF gratis', de:'Kostenloses PDF', pt:'PDF gr\u00e1tis', ar:'PDF \u0645\u062c\u0627\u0646\u064a', id:'PDF gratis', hi:'\u092e\u0941\u092b\u093c\u094d\u0924 PDF' },
+      'No Upload': { en:'No Upload', fr:'Sans upload', es:'Sin subir', de:'Kein Upload', pt:'Sem upload', ar:'\u0628\u062f\u0648\u0646 \u0631\u0641\u0639', id:'Tanpa upload', hi:'\u0905\u092a\u0932\u094b\u0921 \u0928\u0939\u0940\u0902' }
+    }
+  };
 
-  function getLang() {
-    return localStorage.getItem(LANG_KEY) || 'en';
-  }
-
-  function setLang(lang) {
-    localStorage.setItem(LANG_KEY, lang);
-    applyLang(lang);
-  }
-
-  function applyLang(lang) {
-    var attr = 'data-' + lang;
-    document.querySelectorAll('[data-en]').forEach(function (el) {
-      var val = el.getAttribute(attr);
-      if (val !== null) {
-        if (el.tagName === 'INPUT' && el.type !== 'submit') {
-          el.placeholder = val;
-        } else {
-          el.innerHTML = val;
-        }
-      }
-    });
-
-    document.documentElement.lang = lang === 'fr' ? 'fr' : 'en';
-
-    document.querySelectorAll('.lang-toggle__btn').forEach(function (btn) {
-      var btnLang = btn.getAttribute('data-lang');
-      btn.classList.toggle('lang-toggle__btn--active', btnLang === lang);
-    });
-  }
-
-  function initLanguageToggle() {
-    document.querySelectorAll('.lang-toggle__btn').forEach(function (btn) {
-      btn.addEventListener('click', function (e) {
-        // If button has data-href, navigate to the other language URL
-        var href = btn.getAttribute('data-href');
-        if (href) {
-          e.preventDefault();
-          window.location.href = href;
-          return;
-        }
-        setLang(btn.getAttribute('data-lang'));
-      });
-    });
-
-    applyLang(getLang());
-  }
-
-  /* ===========================================================
-     404 PAGE — Load tool cards from tools.json
-     =========================================================== */
   function initToolCards() {
     var grid = document.getElementById('toolsGrid');
     if (!grid) return;
 
-    var lang = getLang();
+    var lang = document.documentElement.lang || 'en';
 
     fetch('/tools.json')
       .then(function (res) { return res.json(); })
       .then(function (tools) {
         var html = '';
         tools.forEach(function (tool) {
-          var title = lang === 'fr' && tool.title_fr ? tool.title_fr : tool.title;
-          var desc = lang === 'fr' && tool.description_fr ? tool.description_fr : tool.description;
-          var badgeHtml = tool.badge
-            ? '<span class="badge">' + tool.badge + '</span>'
-            : '';
-          html += '<a href="' + tool.path + '" class="tool-card reveal revealed">' +
+          var title = tool['title_' + lang] || tool.title;
+          var desc = tool['description_' + lang] || tool.description;
+          var path = tool['path_' + lang] || tool.path;
+          var linkText = (TOOL_I18N.linkText[lang] || TOOL_I18N.linkText.en);
+          var catObj = TOOL_I18N.categories[tool.category];
+          var catText = catObj ? (catObj[lang] || catObj.en) : tool.category;
+          var badgeHtml = '';
+          if (tool.badge) {
+            var bObj = TOOL_I18N.badges[tool.badge];
+            var bText = bObj ? (bObj[lang] || bObj.en) : tool.badge;
+            badgeHtml = '<span class="badge">' + bText + '</span>';
+          }
+          html += '<a href="' + path + '" class="tool-card reveal revealed">' +
             '<div class="tool-card__top">' +
-              '<span class="badge">' + tool.category + '</span>' +
+              '<span class="badge">' + catText + '</span>' +
               badgeHtml +
             '</div>' +
             '<div class="tool-card__icon">' + getToolIcon(tool.icon) + '</div>' +
-            '<h3 class="tool-card__title" data-en="' + tool.title + '" data-fr="' + (tool.title_fr || tool.title) + '">' + title + '</h3>' +
-            '<p class="tool-card__desc" data-en="' + tool.description + '" data-fr="' + (tool.description_fr || tool.description) + '">' + desc + '</p>' +
-            '<span class="tool-card__link" data-en="Use Tool →" data-fr="Utiliser →">' + (lang === 'fr' ? 'Utiliser →' : 'Use Tool →') + '</span>' +
+            '<h3 class="tool-card__title">' + title + '</h3>' +
+            '<p class="tool-card__desc">' + desc + '</p>' +
+            '<span class="tool-card__link">' + linkText + '</span>' +
           '</a>';
         });
         grid.innerHTML = html;
@@ -157,13 +124,33 @@
   }
 
   /* ===========================================================
+     LANGUAGE SELECTOR DROPDOWN (multilingual)
+     =========================================================== */
+  function initLangSelector() {
+    var trigger = document.getElementById('langToggle');
+    var menu = document.getElementById('langMenu');
+    if (!trigger || !menu) return;
+
+    trigger.addEventListener('click', function (e) {
+      e.stopPropagation();
+      menu.classList.toggle('show');
+    });
+
+    document.addEventListener('click', function (e) {
+      if (!menu.parentElement.contains(e.target)) {
+        menu.classList.remove('show');
+      }
+    });
+  }
+
+  /* ===========================================================
      INIT
      =========================================================== */
   function init() {
     initScrollReveal();
     initMobileMenu();
-    initLanguageToggle();
     initToolCards();
+    initLangSelector();
   }
 
   if (document.readyState === 'loading') {

@@ -73,6 +73,12 @@
 
   <script async defer src="https://analytics.aawebtools.com/script.js"
           data-website-id="836dfc88-b05f-49b2-9824-3a085e248896"></script>
+  <link rel="alternate" hreflang="es" href="https://aawebtools.com/es/">
+  <link rel="alternate" hreflang="de" href="https://aawebtools.com/de/">
+  <link rel="alternate" hreflang="pt" href="https://aawebtools.com/pt/">
+  <link rel="alternate" hreflang="ar" href="https://aawebtools.com/ar/">
+  <link rel="alternate" hreflang="id" href="https://aawebtools.com/id/">
+  <link rel="alternate" hreflang="hi" href="https://aawebtools.com/hi/">
 </head>
 <body>
 
@@ -82,35 +88,44 @@
       <a href="/" class="nav__logo"><img src="/assets/img/logo-light.png" alt="AAWebTools" height="56"></a>
       <div class="nav__links">
         <div class="nav__dropdown">
-          <a href="#" class="nav__link" data-en="Downloaders" data-fr="Téléchargeurs">Downloaders</a>
+          <a href="#" class="nav__link">Downloaders</a>
           <div class="nav__dropdown-menu">
-            <a href="/tiktok-downloader/" class="nav__dropdown-item" data-en="TikTok Downloader" data-fr="Téléchargeur TikTok">TikTok Downloader</a>
-            <a href="/twitter-video-downloader/" class="nav__dropdown-item" data-en="Twitter Downloader" data-fr="Téléchargeur Twitter">Twitter Downloader</a>
+            <a href="/tiktok-downloader/" class="nav__dropdown-item">TikTok Downloader</a>
+            <a href="/twitter-video-downloader/" class="nav__dropdown-item">Twitter Downloader</a>
           </div>
         </div>
         <div class="nav__dropdown">
-          <a href="#" class="nav__link" data-en="Generators" data-fr="Générateurs">Generators</a>
+          <a href="#" class="nav__link">Generators</a>
           <div class="nav__dropdown-menu">
-            <a href="/invoice-generator/" class="nav__dropdown-item" data-en="Invoice Generator" data-fr="Générateur de Facture">Invoice Generator</a>
-            <a href="/paystub-generator/" class="nav__dropdown-item" data-en="Pay Stub Generator" data-fr="Générateur de Bulletin de Paie">Pay Stub Generator</a>
-    <a href="/image-toolkit/" class="nav__dropdown-item" data-en="Image Toolkit" data-fr="Boîte à Outils Images">Image Toolkit</a>
+            <a href="/invoice-generator/" class="nav__dropdown-item">Invoice Generator</a>
+            <a href="/paystub-generator/" class="nav__dropdown-item">Pay Stub Generator</a>
+    <a href="/image-toolkit/" class="nav__dropdown-item">Image Toolkit</a>
           </div>
         </div>
         <div class="nav__dropdown">
-          <a href="#" class="nav__link" data-en="AI Tools" data-fr="Outils IA">AI Tools</a>
+          <a href="#" class="nav__link">AI Tools</a>
           <div class="nav__dropdown-menu">
-            <a href="/ai-detector/" class="nav__dropdown-item" data-en="AI Content Detector" data-fr="Détecteur de Contenu IA">AI Content Detector</a>
-            <a href="/ai-humanizer/" class="nav__dropdown-item" data-en="AI Text Humanizer" data-fr="Humanisateur de Texte IA">AI Text Humanizer</a>
+            <a href="/ai-detector/" class="nav__dropdown-item">AI Content Detector</a>
+            <a href="/ai-humanizer/" class="nav__dropdown-item">AI Text Humanizer</a>
           </div>
         </div>
-        <a href="/blog/" class="nav__link" data-en="Blog" data-fr="Blog">Blog</a>
+        <a href="/blog/" class="nav__link">Blog</a>
       </div>
       <div class="nav__right">
-        <div class="lang-toggle">
-          <button class="lang-toggle__btn lang-toggle__btn--active" data-lang="en">EN</button>
-          <button class="lang-toggle__btn" data-lang="fr">FR</button>
+        <div class="lang-selector">
+          <button class="lang-selector__trigger" id="langToggle">🌐 EN ▾</button>
+          <div class="lang-selector__menu" id="langMenu">
+            <a href="/" class="active">English</a>
+            <a href="/fr/">Français</a>
+            <a href="/es/">Español</a>
+            <a href="/de/">Deutsch</a>
+            <a href="/pt/">Português</a>
+            <a href="/ar/">العربية</a>
+            <a href="/id/">Bahasa Indonesia</a>
+            <a href="/hi/">हिन्दी</a>
+          </div>
         </div>
-        <a href="#tools" class="btn-primary btn-sm" data-en="Get Started" data-fr="Commencer">Get Started</a>
+        <a href="#tools" class="btn-primary btn-sm">Get Started</a>
         <button class="nav__hamburger" aria-label="Menu" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
@@ -118,13 +133,13 @@
     </div>
   </nav>
   <div class="nav__mobile" id="mobileNav">
-    <a href="/tiktok-downloader/" class="nav__mobile-link" data-en="TikTok Downloader" data-fr="Téléchargeur TikTok">TikTok Downloader</a>
-    <a href="/twitter-video-downloader/" class="nav__mobile-link" data-en="Twitter Downloader" data-fr="Téléchargeur Twitter">Twitter Downloader</a>
-    <a href="/invoice-generator/" class="nav__mobile-link" data-en="Invoice Generator" data-fr="Générateur de Facture">Invoice Generator</a>
-    <a href="/ai-detector/" class="nav__mobile-link" data-en="AI Content Detector" data-fr="Détecteur de Contenu IA">AI Content Detector</a>
-    <a href="/ai-humanizer/" class="nav__mobile-link" data-en="AI Text Humanizer" data-fr="Humanisateur de Texte IA">AI Text Humanizer</a>
-    <a href="/paystub-generator/" class="nav__mobile-link" data-en="Pay Stub Generator" data-fr="Générateur de Bulletin de Paie">Pay Stub Generator</a>
-    <a href="/image-toolkit/" class="nav__mobile-link" data-en="Image Toolkit" data-fr="Boîte à Outils Images">Image Toolkit</a>
+    <a href="/tiktok-downloader/" class="nav__mobile-link">TikTok Downloader</a>
+    <a href="/twitter-video-downloader/" class="nav__mobile-link">Twitter Downloader</a>
+    <a href="/invoice-generator/" class="nav__mobile-link">Invoice Generator</a>
+    <a href="/ai-detector/" class="nav__mobile-link">AI Content Detector</a>
+    <a href="/ai-humanizer/" class="nav__mobile-link">AI Text Humanizer</a>
+    <a href="/paystub-generator/" class="nav__mobile-link">Pay Stub Generator</a>
+    <a href="/image-toolkit/" class="nav__mobile-link">Image Toolkit</a>
     <a href="/blog/" class="nav__mobile-link">Blog</a>
   </div>
 
@@ -149,19 +164,19 @@
         <div class="hero__particle"></div>
       </div>
       <div class="hero__content">
-        <span class="hero__label" data-en="FREE ONLINE TOOLS" data-fr="OUTILS EN LIGNE GRATUITS">FREE ONLINE TOOLS</span>
-        <h1 class="hero__title" data-en="The tools you need. Free. Forever." data-fr="Les outils dont vous avez besoin. Gratuits. Pour toujours.">The tools you need. Free. Forever.</h1>
-        <p class="hero__subtitle" data-en="Download videos, generate invoices, detect AI content — no sign up required." data-fr="Téléchargez des vidéos, générez des factures, détectez le contenu IA — sans inscription.">Download videos, generate invoices, detect AI content — no sign up required.</p>
+        <span class="hero__label">FREE ONLINE TOOLS</span>
+        <h1 class="hero__title">The tools you need. Free. Forever.</h1>
+        <p class="hero__subtitle">Download videos, generate invoices, detect AI content — no sign up required.</p>
         <div class="hero__buttons">
-          <a href="#tools" class="btn-primary" data-en="Explore Tools" data-fr="Explorer les outils">Explore Tools</a>
-          <a href="/tiktok-downloader/" class="btn-ghost" data-en="TikTok Downloader →" data-fr="Téléchargeur TikTok →">TikTok Downloader →</a>
+          <a href="#tools" class="btn-primary">Explore Tools</a>
+          <a href="/tiktok-downloader/" class="btn-ghost">TikTok Downloader →</a>
         </div>
         <div class="hero__trust">
-          <span data-en="✓ No Login" data-fr="✓ Sans connexion">✓ No Login</span>
+          <span>✓ No Login</span>
           <span class="hero__trust-sep"></span>
-          <span data-en="✓ Free Forever" data-fr="✓ Gratuit pour toujours">✓ Free Forever</span>
+          <span>✓ Free Forever</span>
           <span class="hero__trust-sep"></span>
-          <span data-en="✓ Works Worldwide" data-fr="✓ Fonctionne partout">✓ Works Worldwide</span>
+          <span>✓ Works Worldwide</span>
         </div>
       </div>
     </section>
@@ -171,8 +186,8 @@
          ============================================================ -->
     <section class="section" id="tools">
       <div class="container">
-        <span class="section-label reveal" data-en="ALL TOOLS" data-fr="TOUS LES OUTILS">ALL TOOLS</span>
-        <h2 class="reveal" data-en="Everything you need, nothing you don't" data-fr="Tout ce qu'il vous faut, rien de superflu">Everything you need, nothing you don't</h2>
+        <span class="section-label reveal">ALL TOOLS</span>
+        <h2 class="reveal">Everything you need, nothing you don't</h2>
         <div class="tools-grid mt-xl" id="toolsGrid">
           <!-- Loaded from tools.json by core.js -->
         </div>
@@ -186,19 +201,19 @@
       <div class="stats-bar__grid">
         <div class="stats-bar__item reveal">
           <div class="stats-bar__number">7</div>
-          <div class="stats-bar__label" data-en="Free Tools" data-fr="Outils gratuits">Free Tools</div>
+          <div class="stats-bar__label">Free Tools</div>
         </div>
         <div class="stats-bar__item reveal">
           <div class="stats-bar__number">0</div>
-          <div class="stats-bar__label" data-en="Signup Required" data-fr="Inscription requise">Signup Required</div>
+          <div class="stats-bar__label">Signup Required</div>
         </div>
         <div class="stats-bar__item reveal">
           <div class="stats-bar__number">190+</div>
-          <div class="stats-bar__label" data-en="Countries" data-fr="Pays">Countries</div>
+          <div class="stats-bar__label">Countries</div>
         </div>
         <div class="stats-bar__item reveal">
           <div class="stats-bar__number">100%</div>
-          <div class="stats-bar__label" data-en="Free Forever" data-fr="Gratuit pour toujours">Free Forever</div>
+          <div class="stats-bar__label">Free Forever</div>
         </div>
       </div>
     </section>
@@ -212,29 +227,29 @@
         <div class="footer__logo">
           <img src="/assets/img/logo-light.png" alt="AAWebTools" height="44">
         </div>
-        <p class="footer__tagline" data-en="Free tools for everyone, worldwide" data-fr="Outils gratuits pour tous, partout dans le monde">Free tools for everyone, worldwide</p>
+        <p class="footer__tagline">Free tools for everyone, worldwide</p>
         <p class="footer__copyright">&copy; 2026 AAWebTools. All rights reserved. Built by <a href="https://scopecove.com/" target="_blank" rel="noopener" class="footer__link" style="display:inline;">ScopeCove</a></p>
       </div>
       <div>
-        <h4 class="footer__heading" data-en="Tools" data-fr="Outils">Tools</h4>
-        <a href="/tiktok-downloader/" class="footer__link" data-en="TikTok Downloader" data-fr="Téléchargeur TikTok">TikTok Downloader</a>
-        <a href="/twitter-video-downloader/" class="footer__link" data-en="Twitter Video Downloader" data-fr="Téléchargeur Vidéo Twitter">Twitter Video Downloader</a>
-        <a href="/invoice-generator/" class="footer__link" data-en="Invoice Generator" data-fr="Générateur de Facture">Invoice Generator</a>
-        <a href="/ai-detector/" class="footer__link" data-en="AI Content Detector" data-fr="Détecteur de Contenu IA">AI Content Detector</a>
-        <a href="/ai-humanizer/" class="footer__link" data-en="AI Text Humanizer" data-fr="Humanisateur de Texte IA">AI Text Humanizer</a>
-        <a href="/paystub-generator/" class="footer__link" data-en="Pay Stub Generator" data-fr="Générateur de Bulletin de Paie">Pay Stub Generator</a>
-        <a href="/image-toolkit/" class="footer__link" data-en="Image Toolkit" data-fr="Boîte à Outils Images">Image Toolkit</a>
+        <h4 class="footer__heading">Tools</h4>
+        <a href="/tiktok-downloader/" class="footer__link">TikTok Downloader</a>
+        <a href="/twitter-video-downloader/" class="footer__link">Twitter Video Downloader</a>
+        <a href="/invoice-generator/" class="footer__link">Invoice Generator</a>
+        <a href="/ai-detector/" class="footer__link">AI Content Detector</a>
+        <a href="/ai-humanizer/" class="footer__link">AI Text Humanizer</a>
+        <a href="/paystub-generator/" class="footer__link">Pay Stub Generator</a>
+        <a href="/image-toolkit/" class="footer__link">Image Toolkit</a>
       </div>
       <div>
-        <h4 class="footer__heading" data-en="Legal" data-fr="Juridique">Legal</h4>
-        <a href="/privacy/" class="footer__link" data-en="Privacy Policy" data-fr="Politique de confidentialité">Privacy Policy</a>
-        <a href="/terms/" class="footer__link" data-en="Terms of Service" data-fr="Conditions d'utilisation">Terms of Service</a>
-        <a href="/about/" class="footer__link" data-en="About" data-fr="À propos">About</a>
-        <a href="/contact/" class="footer__link" data-en="Contact" data-fr="Contact">Contact</a>
-        <a href="/blog/" class="footer__link" data-en="Blog" data-fr="Blog">Blog</a>
+        <h4 class="footer__heading">Legal</h4>
+        <a href="/privacy/" class="footer__link">Privacy Policy</a>
+        <a href="/terms/" class="footer__link">Terms of Service</a>
+        <a href="/about/" class="footer__link">About</a>
+        <a href="/contact/" class="footer__link">Contact</a>
+        <a href="/blog/" class="footer__link">Blog</a>
       </div>
     </div>
-    <div class="footer__bottom" data-en="Made with ❤️ | Free forever | No signup required" data-fr="Fait avec ❤️ | Gratuit pour toujours | Aucune inscription requise">
+    <div class="footer__bottom">
       Made with &#10084;&#65039; | Free forever | No signup required
     </div>
   </footer>

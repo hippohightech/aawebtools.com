@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generador de Recibo de Nomina para Autonomos 2026 | AAWebTools</title>
+  <meta name="description" content="Eres autonomo y necesitas un recibo de nomina? Crea comprobantes de ingresos profesionales para solicitudes de alquiler, prestamos e impuestos. Generador gratuito, sin registro, compatible con 9 paises.">
+  <link rel="canonical" href="https://aawebtools.com/es/blog/generador-recibo-nomina-autonomos/">
+  <link rel="alternate" hreflang="en" href="https://aawebtools.com/blog/pay-stub-generator-self-employed/">
+  <link rel="alternate" hreflang="fr" href="https://aawebtools.com/fr/blog/bulletin-de-paie-freelance-2026/">
+  <link rel="alternate" hreflang="es" href="https://aawebtools.com/es/blog/generador-recibo-nomina-autonomos/">
+  <link rel="alternate" hreflang="x-default" href="https://aawebtools.com/blog/pay-stub-generator-self-employed/">
+  <meta property="og:title" content="Generador Gratuito de Recibo de Nomina para Autonomos -- Guia de Alquiler, Prestamos e Impuestos (2026)">
+  <meta property="og:description" content="Eres autonomo y necesitas un recibo de nomina? Crea comprobantes de ingresos profesionales para solicitudes de alquiler, prestamos e impuestos. Generador gratuito, sin registro, compatible con 9 paises.">
+  <meta property="og:url" content="https://aawebtools.com/es/blog/generador-recibo-nomina-autonomos/">
+  <meta property="og:image" content="https://aawebtools.com/assets/img/og-blog-paystub-self-employed.png">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="AAWebTools">
+  <meta property="og:locale" content="es_ES">
+  <meta property="article:published_time" content="2026-03-27T08:00:00+00:00">
+  <meta property="article:modified_time" content="2026-03-27T08:00:00+00:00">
+  <meta property="article:author" content="AAWebTools Team">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Generador Gratuito de Recibo de Nomina para Autonomos -- Guia de Alquiler, Prestamos e Impuestos (2026)">
+  <meta name="twitter:description" content="Eres autonomo y necesitas un recibo de nomina? Crea comprobantes de ingresos profesionales para solicitudes de alquiler, prestamos e impuestos. Generador gratuito, sin registro, compatible con 9 paises.">
+  <meta name="twitter:image" content="https://aawebtools.com/assets/img/og-blog-paystub-self-employed.png">
+  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <style>
+    .reading-progress { position: fixed; top: 0; left: 0; height: 2px; background: #4f7fff; width: 0%; z-index: 9999; transition: width 0.1s linear; }
+    .article-wrapper { max-width: 1100px; margin: 0 auto; padding: 0 24px 80px; display: grid; grid-template-columns: 1fr; gap: 0; }
+    .article { max-width: 680px; margin: 0 auto; padding: 0 0 96px; width: 100%; }
+    .article h2 { font-size: 28px; font-weight: 700; color: var(--text-primary); margin: 64px 0 20px; scroll-margin-top: 100px; letter-spacing: -0.02em; line-height: 1.25; }
+    .article h3 { font-size: 19px; font-weight: 600; color: var(--text-primary); margin: 40px 0 12px; letter-spacing: -0.01em; line-height: 1.3; }
+    .article p { font-size: 16px; line-height: 1.75; color: var(--text-secondary); margin-bottom: 20px; }
+    .article h2 + p { font-size: 18px; line-height: 1.7; color: #475569; }
+    .article ul, .article ol { padding-left: 24px; margin-bottom: 20px; list-style: disc; }
+    .article ol { list-style: decimal; }
+    .article li { font-size: 16px; line-height: 1.75; color: var(--text-secondary); margin-bottom: 8px; }
+    .article a { color: #4f7fff; text-decoration: underline; text-decoration-color: rgba(79, 127, 255, 0.3); text-underline-offset: 2px; transition: text-decoration-color 0.15s; }
+    .article a:hover { text-decoration-color: #4f7fff; }
+    .article blockquote { border-left: 2px solid var(--text-tertiary); padding: 4px 0 4px 24px; margin: 32px 0; color: var(--text-tertiary); font-style: italic; font-size: 15px; line-height: 1.7; }
+    .article strong { color: var(--text-primary); font-weight: 600; }
+    .article-hero { background: var(--bg-primary); border-radius: 0; padding: 160px 24px 48px; margin: 0 auto; max-width: 680px; min-height: auto; display: flex; flex-direction: column; justify-content: flex-end; align-items: flex-start; position: relative; overflow: visible; border-bottom: 1px solid var(--border-primary); }
+    .article-hero::before, .article-hero::after { display: none; }
+    .article-hero__badge { display: inline-block; background: none; color: #4f7fff; font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 0; margin-bottom: 20px; position: relative; z-index: 1; }
+    .article-hero h1 { font-size: 40px; font-weight: 700; color: var(--text-primary); line-height: 1.15; letter-spacing: -0.03em; margin: 0 0 20px; position: relative; z-index: 1; max-width: 100%; }
+    .article-hero__meta { font-size: 14px; color: var(--text-tertiary); position: relative; z-index: 1; line-height: 1.5; }
+    .article-hero__meta strong { color: var(--text-primary); font-weight: 600; }
+    @media (min-width: 768px) { .article-hero h1 { font-size: 52px; line-height: 1.08; } .article-hero { padding: 160px 0 56px; max-width: 680px; } }
+    @media (max-width: 600px) { .article-hero { padding: 120px 20px 36px; } .article-hero h1 { font-size: 32px; letter-spacing: -0.02em; } }
+    .article-hero__illustration { width: 100%; max-width: 320px; margin: 24px 0 0; opacity: 0.92; }
+    @media (min-width: 768px) { .article-hero { display: grid; grid-template-columns: 1fr auto; grid-template-rows: auto auto auto; column-gap: 32px; align-items: end; } .article-hero__badge { grid-column: 1; grid-row: 1; } .article-hero h1 { grid-column: 1; grid-row: 2; } .article-hero__meta { grid-column: 1; grid-row: 3; } .article-hero__illustration { grid-column: 2; grid-row: 1 / 4; align-self: center; margin: 0; max-width: 240px; } }
+    .article-breadcrumb { font-size: 13px; color: var(--text-tertiary); margin: 28px 0 40px; }
+    .article-breadcrumb a { color: var(--text-tertiary); text-decoration: none; }
+    .article-breadcrumb a:hover { color: var(--text-primary); }
+    .section-divider { height: 1px; background: var(--border-primary); border: none; margin: 56px 0; }
+    .article-toc { background: none; border: none; border-left: 2px solid var(--border-primary); padding: 0 0 0 20px; margin-bottom: 48px; }
+    .article-toc h3 { margin-top: 0; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-tertiary); margin-bottom: 12px; }
+    .article-toc ol { padding-left: 16px; margin-bottom: 0; }
+    .article-toc li { font-size: 13px; margin-bottom: 6px; line-height: 1.5; display: flex; align-items: center; gap: 8px; }
+    .article-toc a { color: var(--text-tertiary); text-decoration: none; }
+    .article-toc a:hover { color: var(--text-primary); }
+    .article-toc .toc-icon { width: 14px; height: 14px; flex-shrink: 0; opacity: 0.45; }
+    .callout { border-radius: 0; padding: 24px 0 24px 28px; margin: 40px 0; border-left: 3px solid; background: none; position: relative; }
+    .callout__label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 10px; }
+    .callout p { margin-bottom: 0; font-size: 17px; line-height: 1.65; font-style: italic; color: var(--text-primary); }
+    .callout--finding { border-color: #4f7fff; } .callout--finding .callout__label { color: #4f7fff; }
+    .callout--privacy { border-color: #10b981; } .callout--privacy .callout__label { color: #10b981; }
+    .callout--tip { border-color: #d97706; } .callout--tip .callout__label { color: #d97706; }
+    .callout--warning { border-color: #ef4444; } .callout--warning .callout__label { color: #ef4444; }
+    .callout::before { content: ''; display: block; width: 48px; height: 36px; margin-bottom: 6px; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 36' fill='%234f7fff' opacity='0.15'%3E%3Cpath d='M0 36V22C0 9.3 7.7 1.8 19 0l2 4.9C11.8 7.2 8.3 12.8 8 18h10v18H0zm26 0V22C26 9.3 33.7 1.8 45 0l2 4.9C37.8 7.2 34.3 12.8 34 18h10v18H26z'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-size: contain; }
+    .article h2::before { content: ''; display: block; width: 32px; height: 3px; background: #4f7fff; margin-bottom: 12px; border-radius: 2px; }
+    .table-responsive { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 24px -8px; }
+    .comparison-table { width: 100%; border-collapse: collapse; margin: 0; border: none; }
+    .comparison-table thead th { background: none; color: var(--text-primary); padding: 12px 14px; text-align: left; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; border: none; border-bottom: 2px solid var(--text-primary); white-space: nowrap; }
+    .comparison-table tbody td { padding: 14px 14px; font-size: 14px; border-bottom: 1px solid var(--border-primary); color: var(--text-secondary); vertical-align: top; }
+    .comparison-table tbody tr:last-child td { border-bottom: 2px solid var(--border-primary); }
+    .comparison-table tbody tr:hover td { background: var(--bg-secondary); }
+    .comparison-table .check { color: #10b981; font-weight: 600; font-size: 13px; }
+    .comparison-table .cross { color: #ef4444; font-weight: 600; font-size: 13px; }
+    .stats-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 32px 0 40px; }
+    .stats-strip__item { text-align: center; padding: 20px 12px; border: 1px solid var(--border-primary); border-radius: 4px; background: var(--bg-primary); }
+    .stats-strip__number { display: block; font-size: 28px; font-weight: 700; color: #4f7fff; letter-spacing: -0.02em; line-height: 1.2; }
+    .stats-strip__label { display: block; font-size: 12px; font-weight: 500; color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 0.06em; margin-top: 4px; }
+    @media (max-width: 600px) { .stats-strip { grid-template-columns: repeat(2, 1fr); gap: 10px; } .stats-strip__number { font-size: 22px; } }
+    .step-card { display: flex; gap: 20px; margin: 24px 0; padding: 24px; border: 1px solid var(--border-primary); border-radius: 4px; }
+    .step-card__number { width: 40px; height: 40px; border-radius: 50%; background: #4f7fff; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 18px; flex-shrink: 0; }
+    .step-card__content { flex: 1; }
+    .step-card__content h3 { margin-top: 0; }
+    .checklist { list-style: none; padding-left: 0; }
+    .checklist li { padding-left: 28px; position: relative; }
+    .checklist li::before { content: ''; position: absolute; left: 0; top: 6px; width: 16px; height: 16px; border-radius: 50%; background: #ecfdf5; box-shadow: inset 0 0 0 1px #10b981; }
+    .checklist li::after { content: ''; position: absolute; left: 4px; top: 10px; width: 8px; height: 4px; border-left: 2px solid #10b981; border-bottom: 2px solid #10b981; transform: rotate(-45deg); }
+    .article-cta { background: #fafbfc; border-left: 3px solid #4f7fff; padding: 28px; margin: 48px 0; text-align: left; }
+    .article-cta::before { display: none; }
+    .article-cta p { color: var(--text-secondary); margin-bottom: 8px; font-size: 15px; }
+    .article-cta p strong { color: var(--text-primary); font-size: 17px; font-weight: 700; }
+    .article-cta .btn-primary { background: #4f7fff; color: #fff; font-weight: 600; padding: 10px 24px; border-radius: 4px; display: inline-block; text-decoration: none; font-size: 14px; transition: background 0.15s, transform 0.15s; }
+    .article-cta .btn-primary:hover { background: #3d6ae6; transform: translateY(-1px); }
+    .author-box { display: flex; align-items: center; gap: 14px; border-top: 1px solid var(--border-primary); padding: 28px 0 0; margin: 56px 0 0; }
+    .author-box__avatar { width: 40px; height: 40px; border-radius: 50%; background: var(--text-primary); display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 600; font-size: 14px; flex-shrink: 0; }
+    .author-box__info { flex: 1; }
+    .author-box__name { font-size: 14px; font-weight: 600; color: var(--text-primary); margin-bottom: 1px; }
+    .author-box__date { font-size: 13px; color: var(--text-tertiary); }
+    .author-box__link { font-size: 13px; color: var(--text-tertiary); text-decoration: none; }
+    .author-box__link:hover { color: var(--text-primary); }
+    .faq-list { margin: 32px 0; }
+    .faq-item { border-bottom: 1px solid var(--border-primary); }
+    .faq-item:first-child { border-top: 1px solid var(--border-primary); }
+    .faq-item summary { padding: 18px 0; font-size: 15px; font-weight: 600; color: var(--text-primary); cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after { content: '+'; font-size: 18px; font-weight: 300; color: var(--text-tertiary); flex-shrink: 0; }
+    .faq-item[open] summary::after { content: '-'; }
+    .faq-item summary:hover { color: #4f7fff; }
+    .faq-item p { padding: 0 0 20px; font-size: 15px; line-height: 1.7; color: var(--text-secondary); margin: 0; }
+    @media (max-width: 600px) { .article { padding: 0 0 64px; } .article-wrapper { padding: 0 20px 64px; } .article h2 { font-size: 24px; margin: 48px 0 16px; } .callout { padding: 20px 0 20px 20px; } .article-cta { padding: 24px 20px; margin-left: -20px; margin-right: -20px; border-left: none; border-top: 3px solid #4f7fff; } .step-card { flex-direction: column; gap: 12px; } }
+  </style>
+
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://aawebtools.com/es/" },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://aawebtools.com/es/blog/" },
+    { "@type": "ListItem", "position": 3, "name": "Generador de Recibo de Nomina para Autonomos", "item": "https://aawebtools.com/es/blog/generador-recibo-nomina-autonomos/" }
+  ]}
+  </script>
+
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@type": "Article",
+    "headline": "Generador Gratuito de Recibo de Nomina para Autonomos -- Guia de Alquiler, Prestamos e Impuestos (2026)",
+    "description": "Eres autonomo y necesitas un recibo de nomina? Crea comprobantes de ingresos profesionales para solicitudes de alquiler, prestamos e impuestos.",
+    "image": "https://aawebtools.com/assets/img/og-blog-paystub-self-employed.png",
+    "author": { "@type": "Organization", "name": "AAWebTools Team", "url": "https://aawebtools.com/about/" },
+    "publisher": { "@type": "Organization", "name": "AAWebTools", "logo": { "@type": "ImageObject", "url": "https://aawebtools.com/assets/img/logo-light.png" } },
+    "datePublished": "2026-03-27", "dateModified": "2026-03-27",
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://aawebtools.com/es/blog/generador-recibo-nomina-autonomos/" }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+    { "@type": "Question", "name": "Puede un autonomo crear su propio recibo de nomina?", "acceptedAnswer": { "@type": "Answer", "text": "Si. A diferencia de los empleados tradicionales que reciben recibos de nomina del sistema de nominas de su empleador, los trabajadores autonomos pueden y a menudo deben crear sus propios recibos. Un recibo de nomina de autonomo es un documento resumen que muestra tus ingresos brutos, impuestos de autoempleo, pagos de impuestos estimados y pago neto para un periodo determinado." } },
+    { "@type": "Question", "name": "Los propietarios aceptan recibos de nomina de autonomos para solicitudes de alquiler?", "acceptedAnswer": { "@type": "Answer", "text": "La mayoria de los propietarios y empresas de gestion de propiedades aceptan recibos de nomina autogenerados como parte de un paquete mas amplio de verificacion de ingresos. Sin embargo, tipicamente quieren ver recibos junto con extractos bancarios, declaraciones de impuestos o una carta de contador para verificar las cifras de ingresos." } },
+    { "@type": "Question", "name": "Cual es la tasa del impuesto de autoempleo para 2026?", "acceptedAnswer": { "@type": "Answer", "text": "La tasa del impuesto de autoempleo sigue siendo del 15.3% para 2026, compuesta por 12.4% para el Seguro Social (sobre los primeros $168,600 de ingresos netos) y 2.9% para Medicare (sobre todos los ingresos netos)." } },
+    { "@type": "Question", "name": "Cual es el nuevo umbral del IRS 1099 para 2026?", "acceptedAnswer": { "@type": "Answer", "text": "Bajo la Ley One Big Beautiful Bill firmada en 2025, el umbral de reporte 1099-K se fijo permanentemente en $2,000 a partir del ano fiscal 2026. Esto significa que plataformas de pago como PayPal, Venmo y Stripe deben emitirte un 1099-K si procesan $2,000 o mas en pagos hacia ti durante el ano." } },
+    { "@type": "Question", "name": "Es legal crear tu propio recibo de nomina como freelancer?", "acceptedAnswer": { "@type": "Answer", "text": "Si, crear tu propio recibo de nomina como trabajador autonomo es completamente legal. Lo que es ilegal es falsificar la informacion en un recibo -- como inflar ingresos, fabricar un empleador o tergiversar deducciones." } }
+  ]}
+  </script>
+  <link rel="alternate" hreflang="de" href="https://aawebtools.com/de/blog/gehaltsabrechnung-selbstaendige-2026/">
+  <link rel="alternate" hreflang="pt" href="https://aawebtools.com/pt/blog/gerador-holerite-autonomo-2026/">
+  <link rel="alternate" hreflang="ar" href="https://aawebtools.com/ar/blog/kashf-ra8ib-lilaamal-alhur-2026/">
+  <link rel="alternate" hreflang="hi" href="https://aawebtools.com/hi/blog/pay-stub-generator-self-employed/">
+  <link rel="alternate" hreflang="id" href="https://aawebtools.com/id/blog/pembuat-slip-gaji-pekerja-mandiri/">
+</head>
+<body>
+
+  <div class="reading-progress" id="readingProgress"></div>
+
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="/es/" class="nav__logo"><img src="/assets/img/logo-light.png" alt="AAWebTools" height="56"></a>
+      <div class="nav__links">
+        <div class="nav__dropdown"><a href="#" class="nav__link">Descargadores</a><div class="nav__dropdown-menu"><a href="/es/descargador-tiktok/" class="nav__dropdown-item">Descargador TikTok</a><a href="/es/descargador-twitter/" class="nav__dropdown-item">Descargador Twitter</a></div></div>
+        <div class="nav__dropdown"><a href="#" class="nav__link">Generadores</a><div class="nav__dropdown-menu"><a href="/es/generador-facturas/" class="nav__dropdown-item">Generador de Facturas</a><a href="/es/generador-recibo-nomina/" class="nav__dropdown-item">Generador de Recibo de Nomina</a><a href="/es/herramientas-imagenes/" class="nav__dropdown-item">Herramientas de Imagen</a></div></div>
+        <div class="nav__dropdown"><a href="#" class="nav__link">Herramientas IA</a><div class="nav__dropdown-menu"><a href="/es/detector-ia/" class="nav__dropdown-item">Detector de Contenido IA</a><a href="/es/humanizador-ia/" class="nav__dropdown-item">Humanizador de Texto IA</a></div></div>
+        <a href="/es/blog/" class="nav__link">Blog</a>
+      </div>
+      <div class="nav__right">
+        <div class="lang-selector">
+          <button class="lang-selector__trigger" id="langToggle">&#127760; ES &#9662;</button>
+          <div class="lang-selector__menu" id="langMenu">
+            <a href="/blog/pay-stub-generator-self-employed/">English</a>
+            <a href="/fr/blog/bulletin-de-paie-freelance-2026/">Fran&#231;ais</a>
+            <a href="/es/blog/generador-recibo-nomina-autonomos/" class="active">Espa&#241;ol</a>
+            <a href="/de/blog/">Deutsch</a>
+            <a href="/pt/blog/">Portugu&#234;s</a>
+            <a href="/ar/blog/">&#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1577;</a>
+            <a href="/id/blog/">Bahasa Indonesia</a>
+            <a href="/hi/blog/">&#2361;&#2367;&#2344;&#2381;&#2342;&#2368;</a>
+          </div>
+        </div>
+        <a href="/es/#tools" class="btn-primary btn-sm">Todas las herramientas</a>
+        <button class="nav__hamburger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+  <div class="nav__mobile" id="mobileNav">
+    <a href="/es/descargador-tiktok/" class="nav__mobile-link">Descargador TikTok</a>
+    <a href="/es/descargador-twitter/" class="nav__mobile-link">Descargador Twitter</a>
+    <a href="/es/generador-facturas/" class="nav__mobile-link">Generador de Facturas</a>
+    <a href="/es/detector-ia/" class="nav__mobile-link">Detector de Contenido IA</a>
+    <a href="/es/humanizador-ia/" class="nav__mobile-link">Humanizador de Texto IA</a>
+    <a href="/es/generador-recibo-nomina/" class="nav__mobile-link">Generador de Recibo de Nomina</a>
+    <a href="/es/herramientas-imagenes/" class="nav__mobile-link">Herramientas de Imagen</a>
+    <a href="/es/blog/" class="nav__mobile-link">Blog</a>
+  </div>
+
+  <header class="article-hero">
+    <span class="article-hero__badge">Herramientas Empresariales</span>
+    <h1>Como Crear un Recibo de Nomina Cuando Eres Autonomo (Guia 2026)</h1>
+    <p class="article-hero__meta">Por <strong>AAWebTools Team</strong> &middot; Publicado el 27 de marzo de 2026 &middot; 14 min de lectura</p>
+    <svg class="article-hero__illustration" viewBox="0 0 280 220" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <rect x="50" y="20" width="160" height="190" rx="6" fill="white" stroke="#e2e8f0" stroke-width="2"/>
+      <rect x="50" y="20" width="160" height="32" rx="6" fill="#eff6ff"/>
+      <rect x="50" y="46" width="160" height="6" fill="#eff6ff"/>
+      <text x="130" y="42" text-anchor="middle" fill="#4f7fff" font-size="11" font-weight="700" font-family="Inter, system-ui, sans-serif">PAY STUB</text>
+      <rect x="66" y="66" width="90" height="6" rx="3" fill="#e2e8f0"/>
+      <rect x="66" y="82" width="128" height="6" rx="3" fill="#e2e8f0"/>
+      <rect x="66" y="98" width="110" height="6" rx="3" fill="#e2e8f0"/>
+      <rect x="66" y="114" width="70" height="6" rx="3" fill="#e2e8f0"/>
+      <rect x="66" y="134" width="128" height="10" rx="4" fill="#4f7fff" opacity="0.12"/>
+      <rect x="70" y="136" width="60" height="6" rx="3" fill="#4f7fff" opacity="0.5"/>
+      <rect x="160" y="136" width="30" height="6" rx="3" fill="#4f7fff"/>
+      <line x1="66" y1="154" x2="194" y2="154" stroke="#e2e8f0" stroke-width="1"/>
+      <rect x="66" y="164" width="50" height="6" rx="3" fill="#475569"/>
+      <rect x="155" y="164" width="39" height="6" rx="3" fill="#10b981"/>
+      <rect x="66" y="180" width="80" height="5" rx="2.5" fill="#e2e8f0"/>
+      <circle cx="230" cy="80" r="32" fill="#eff6ff" stroke="#4f7fff" stroke-width="2.5"/>
+      <text x="230" y="90" text-anchor="middle" fill="#4f7fff" font-size="30" font-weight="700" font-family="Inter, system-ui, sans-serif">$</text>
+      <circle cx="240" cy="140" r="3" fill="#4f7fff" opacity="0.15"/>
+      <circle cx="255" cy="160" r="2" fill="#4f7fff" opacity="0.1"/>
+      <circle cx="30" cy="100" r="4" fill="#4f7fff" opacity="0.1"/>
+      <circle cx="38" cy="180" r="2.5" fill="#4f7fff" opacity="0.12"/>
+      <circle cx="230" cy="170" r="16" fill="#ecfdf5" stroke="#10b981" stroke-width="2"/>
+      <polyline points="223,170 228,175 238,165" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    </svg>
+  </header>
+
+  <main>
+    <div class="article-wrapper">
+      <article class="article">
+
+        <nav class="article-breadcrumb" aria-label="Breadcrumb">
+          <a href="/es/">Inicio</a> &rsaquo; <a href="/es/blog/">Blog</a> &rsaquo; Generador de Recibo de Nomina para Autonomos
+        </nav>
+
+        <nav class="article-toc" aria-label="Tabla de contenidos">
+          <h3>En Este Articulo</h3>
+          <ol>
+            <li><svg class="toc-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 1v14M1 8h14"/><circle cx="8" cy="8" r="6"/></svg><a href="#why-self-employed-need-pay-stubs">Por Que los Autonomos Necesitan Recibos de Nomina</a></li>
+            <li><svg class="toc-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="1" width="14" height="14" rx="2"/><path d="M1 5h14M5 5v10"/></svg><a href="#when-you-need-pay-stub">Cuando Necesitas un Recibo de Nomina como Autonomo</a></li>
+            <li><svg class="toc-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2v12M8 2v12M12 6v8"/><path d="M2 14h12"/></svg><a href="#what-to-include">Que Incluir en un Recibo de Nomina de Autonomo</a></li>
+            <li><svg class="toc-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8l3 3 7-7"/></svg><a href="#match-tax-returns">La Regla Critica: Coincidir con tus Declaraciones</a></li>
+            <li><svg class="toc-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="4.5"/><path d="M9.5 9.5L14 14"/></svg><a href="#step-by-step">Paso a Paso: Crear un Recibo con AAWebTools</a></li>
+            <li><svg class="toc-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="4" height="10" rx="1"/><rect x="6" y="1" width="4" height="12" rx="1"/><rect x="11" y="5" width="4" height="8" rx="1"/></svg><a href="#comparison">Comparacion de Generadores (2026)</a></li>
+            <li><svg class="toc-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="6.5"/><path d="M8 5v3l2 2"/></svg><a href="#irs-1099-rules">Nuevas Reglas IRS 1099 para 2026</a></li>
+            <li><svg class="toc-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="6.5"/><path d="M6 6.5a2 2 0 113 1.73V10M8 12.5v.01"/></svg><a href="#faq">Preguntas Frecuentes</a></li>
+          </ol>
+        </nav>
+
+        <h2 id="why-self-employed-need-pay-stubs">Por Que los Trabajadores Autonomos Necesitan Recibos de Nomina</h2>
+
+        <div class="stats-strip">
+          <div class="stats-strip__item"><span class="stats-strip__number">9</span><span class="stats-strip__label">Paises Soportados</span></div>
+          <div class="stats-strip__item"><span class="stats-strip__number">15.3%</span><span class="stats-strip__label">Impuesto FICA Autoempleo</span></div>
+          <div class="stats-strip__item"><span class="stats-strip__number">$2,000</span><span class="stats-strip__label">Nuevo Umbral 1099</span></div>
+          <div class="stats-strip__item"><span class="stats-strip__number">Gratis</span><span class="stats-strip__label">Descarga PDF</span></div>
+        </div>
+
+        <p>Si trabajas por tu cuenta -- ya sea como freelancer, contratista independiente, propietario unico o trabajador de plataformas -- probablemente te has encontrado en una situacion donde alguien te pide un recibo de nomina y no tienes uno. Los empleados tradicionales reciben recibos de nomina automaticamente a traves del sistema de nominas de su empleador. Los trabajadores autonomos no tienen ese lujo. Se pagan a si mismos, lo que significa que necesitan generar sus propios comprobantes de ingresos.</p>
+
+        <p>Esto no es solo un inconveniente burocratico. Sin un recibo de nomina, puedes tener dificultades para <strong>alquilar un apartamento</strong>, calificar para una <strong>hipoteca o prestamo de auto</strong>, solicitar <strong>beneficios gubernamentales</strong>, o incluso satisfacer los <strong>requisitos de incorporacion de un cliente</strong>. Los propietarios quieren ver ingresos consistentes. Los prestamistas necesitan ganancias verificables. Y cada vez mas, las agencias gubernamentales y companias de seguros requieren documentacion de pago que va mas alla de un simple extracto bancario.</p>
+
+        <p>La buena noticia es que crear un recibo de nomina de autonomo es sencillo, legal y -- con la herramienta adecuada -- completamente gratuito. En esta guia, explicamos exactamente cuando necesitas un recibo de nomina, que informacion debe contener, como funcionan los impuestos de autoempleo, y como generar un PDF profesional en menos de cinco minutos usando el <a href="/es/generador-recibo-nomina/">Generador de Recibos de Nomina de AAWebTools</a>.</p>
+
+        <div class="callout callout--finding">
+          <div class="callout__label">Dato Clave</div>
+          <p>Mas de 64 millones de estadounidenses realizaron trabajo freelance en 2025, segun la encuesta anual de Upwork. Eso es mas de un tercio de toda la fuerza laboral de EE.UU. -- y cada uno de ellos puede necesitar un recibo de nomina de autonomo en algun momento para vivienda, credito o propositos fiscales.</p>
+        </div>
+
+        <p>Tambien cubrimos el <strong>nuevo umbral de reporte IRS 1099-K</strong> que entra en vigor en 2026, comparamos seis generadores de recibos de nomina populares, y respondemos las preguntas mas comunes que los freelancers tienen sobre comprobantes de ingresos.</p>
+
+        <hr class="section-divider">
+
+        <h2 id="when-you-need-pay-stub">Cuando Necesitas un Recibo de Nomina como Autonomo</h2>
+
+        <p>Los recibos de nomina de autonomos no son solo algo agradable de tener -- a menudo son obligatorios. Aqui estan las cinco situaciones mas comunes donde necesitaras uno.</p>
+
+        <h3>1. Alquilar un Apartamento o Casa</h3>
+
+        <p>Los propietarios y empresas de gestion de propiedades casi universalmente requieren comprobante de ingresos antes de aprobar un contrato de alquiler. La solicitud estandar es de dos a tres meses de recibos de nomina recientes. Cuando eres autonomo, no los recibes de un empleador, asi que necesitas crearlos tu mismo. La mayoria de los propietarios aceptaran recibos de nomina autogenerados junto con extractos bancarios y declaraciones de impuestos como parte de un paquete completo de verificacion de ingresos.</p>
+
+        <div class="callout callout--tip">
+          <div class="callout__label">Consejo</div>
+          <p>Al solicitar un apartamento, prepara una carpeta con tus recibos de nomina, tres meses de extractos bancarios, tu declaracion de impuestos mas reciente y una breve carta explicando tu autoempleo. Este paquete responde la mayoria de las preguntas del propietario antes de que las haga.</p>
+        </div>
+
+        <h3>2. Solicitar una Hipoteca</h3>
+
+        <p>Los prestamistas hipotecarios examinan los ingresos de autonomos mas de cerca que los ingresos W-2. La mayoria requiere al menos dos anos de declaraciones de impuestos, pero tambien quieren ver recibos de nomina actuales o estados de perdidas y ganancias que demuestren ingresos continuos.</p>
+
+        <h3>3. Obtener un Prestamo de Auto o Personal</h3>
+
+        <p>Los concesionarios de autos y prestamistas personales tipicamente requieren comprobante de ingresos como parte del proceso de aprobacion. Un recibo de nomina de autonomo que muestra tus ingresos brutos, retenciones de impuestos y pago neto le da al prestamista una imagen clara de tu posicion financiera.</p>
+
+        <div class="callout callout--finding">
+          <div class="callout__label">Hallazgo Clave</div>
+          <p>Segun la Asociacion Nacional de Agentes Inmobiliarios, los prestatarios autonomos tienen un <strong>40% mas de probabilidades</strong> de que se les pida documentacion adicional mas alla de lo que proporcionan los empleados W-2. Tener recibos de nomina listos desde el principio puede reducir los retrasos de aprobacion por semanas.</p>
+        </div>
+
+        <h3>4. Solicitudes Gubernamentales y Beneficios</h3>
+
+        <p>Las solicitudes de subsidios de seguro de salud (mercado ACA), asistencia para cuidado infantil, ayuda financiera estudiantil (FAFSA) y otros programas gubernamentales requieren verificacion de ingresos. Muchos de estos formularios piden especificamente recibos de nomina.</p>
+
+        <h3>5. Incorporacion de Clientes y Proveedores</h3>
+
+        <p>Algunos clientes corporativos requieren prueba de estabilidad financiera antes de firmar un contrato con un contratista independiente. Las companias de seguros, firmas de servicios financieros y contratistas gubernamentales pueden solicitar recibos de nomina como parte de la calificacion de proveedores.</p>
+
+        <hr class="section-divider">
+
+        <h2 id="what-to-include">Que Incluir en un Recibo de Nomina de Autonomo</h2>
+
+        <p>Un recibo de nomina de autonomo necesita ser lo suficientemente detallado para satisfacer a un propietario, prestamista o agencia gubernamental, pero lo suficientemente honesto para coincidir con tus registros financieros reales.</p>
+
+        <h3>Informacion Personal y Empresarial</h3>
+
+        <ul class="checklist">
+          <li><strong>Tu nombre legal completo</strong> -- tal como aparece en tu declaracion de impuestos</li>
+          <li><strong>Nombre del negocio</strong> -- tu DBA, LLC o nombre de propietario unico</li>
+          <li><strong>Direccion del negocio</strong> -- tu direccion comercial registrada</li>
+          <li><strong>Fechas del periodo de pago</strong> -- la fecha de inicio y fin para este recibo</li>
+          <li><strong>Fecha de pago</strong> -- la fecha en que te pagas a ti mismo</li>
+          <li><strong>Numero de Seguro Social o EIN</strong> -- solo los ultimos cuatro digitos por seguridad</li>
+        </ul>
+
+        <h3>Ingresos Brutos</h3>
+
+        <p>Estos son tus ingresos totales antes de cualquier deduccion. Para un autonomo, los ingresos brutos son los ingresos totales que recibiste de clientes durante el periodo de pago. Si facturas a clientes usando un <a href="/es/generador-facturas/">generador de facturas</a>, tus ingresos brutos deben coincidir con la suma de facturas pagadas para ese periodo.</p>
+
+        <div class="callout callout--warning">
+          <div class="callout__label">Importante</div>
+          <p>Tus ingresos brutos en un recibo de nomina deben reflejar <strong>dinero realmente recibido</strong>, no facturas enviadas. Si facturaste a un cliente $5,000 pero aun no han pagado, esa cantidad no debe aparecer en tu recibo de nomina hasta que el pago se liquide.</p>
+        </div>
+
+        <h3>Impuesto de Autoempleo (FICA -- 15.3%)</h3>
+
+        <p>Este es el grande que confunde a muchos trabajadores autonomos. Los empleados tradicionales pagan el 7.65% de sus ingresos en impuestos FICA (Seguro Social + Medicare), y su empleador paga el otro 7.65%. Cuando eres autonomo, pagas ambas mitades -- el 15.3% completo.</p>
+
+        <ul>
+          <li><strong>Seguro Social:</strong> 12.4% sobre los primeros $168,600 de ingresos netos</li>
+          <li><strong>Medicare:</strong> 2.9% sobre todos los ingresos netos (sin limite)</li>
+          <li><strong>Recargo Medicare Adicional:</strong> 0.9% sobre ingresos superiores a $200,000 ($250,000 casados declarando conjuntamente)</li>
+        </ul>
+
+        <h3>Pagos Trimestrales de Impuestos Estimados</h3>
+
+        <p>A diferencia de los empleados W-2 cuyos impuestos se retienen de cada cheque, los trabajadores autonomos deben hacer pagos trimestrales de impuestos estimados al IRS (Formulario 1040-ES). Las cuatro fechas trimestrales para 2026 son:</p>
+
+        <ol>
+          <li>15 de abril de 2026 (para ingresos de enero a marzo)</li>
+          <li>15 de junio de 2026 (para ingresos de abril a mayo)</li>
+          <li>15 de septiembre de 2026 (para ingresos de junio a agosto)</li>
+          <li>15 de enero de 2027 (para ingresos de septiembre a diciembre)</li>
+        </ol>
+
+        <h3>Otras Deducciones</h3>
+
+        <ul>
+          <li><strong>Retencion de impuesto federal sobre la renta</strong></li>
+          <li><strong>Retencion de impuesto estatal sobre la renta</strong> -- si tu estado tiene impuesto sobre la renta</li>
+          <li><strong>Primas de seguro de salud</strong> -- los autonomos pueden deducir primas de seguro de salud</li>
+          <li><strong>Contribuciones de jubilacion</strong> -- SEP-IRA, Solo 401(k) o contribuciones SIMPLE IRA</li>
+        </ul>
+
+        <h3>Pago Neto</h3>
+
+        <p>Despues de todas las deducciones, tu pago neto es lo que realmente llevas a casa. Este es el numero que debe coincidir aproximadamente con los depositos en tu cuenta bancaria para el periodo de pago.</p>
+
+        <h3>Totales del Ano Hasta la Fecha (YTD)</h3>
+
+        <p>Cada recibo de nomina profesional incluye totales acumulados del ano hasta la fecha para ingresos brutos, cada categoria de deduccion y pago neto. Los totales YTD son especialmente importantes para trabajadores autonomos porque ayudan a prestamistas y propietarios a ver tu trayectoria de ingresos a lo largo del tiempo.</p>
+
+        <div class="callout callout--privacy">
+          <div class="callout__label">Buena Practica</div>
+          <p>Mantener una hoja de calculo o sistema contable que rastree cada periodo de pago a lo largo del ano. Esto facilita generar totales YTD precisos y asegura que tus recibos de nomina coincidan con tu declaracion de impuestos anual cuando la presentes.</p>
+        </div>
+
+        <hr class="section-divider">
+
+        <h2 id="match-tax-returns">La Regla Critica: Coincidir con tus Declaraciones de Impuestos</h2>
+
+        <p>Este es el principio mas importante para recibos de nomina de autonomos: <strong>cada numero en tu recibo de nomina debe ser consistente con tus declaraciones de impuestos, extractos bancarios y formularios 1099.</strong></p>
+
+        <p>Los propietarios, prestamistas y agencias gubernamentales rutinariamente cruzan referencias de documentos. Un asegurador hipotecario comparara tus recibos de nomina con tus declaraciones de impuestos, tus extractos bancarios con tus recibos, y tus 1099 con todo lo anterior. Cualquier discrepancia -- incluso una inocente -- puede retrasar tu solicitud o resultar en una denegacion.</p>
+
+        <ol>
+          <li><strong>Usa las mismas cifras de ingresos brutos</strong> que aparecen en tu Schedule C (propietarios unicos) o K-1 (sociedades y S-corps).</li>
+          <li><strong>Coincide con tus depositos bancarios.</strong> Si tu recibo dice que ganaste $8,000 en febrero, tu cuenta bancaria debe mostrar aproximadamente $8,000 en depositos de clientes durante ese mes.</li>
+          <li><strong>Alinea con tus formularios 1099.</strong> A partir de 2026, el nuevo umbral 1099-K de $2,000 significa que recibiras 1099 por montos mas pequenos.</li>
+          <li><strong>Usa periodos de pago consistentes.</strong> Si te pagas quincenalmente, mantiene esa cadencia.</li>
+        </ol>
+
+        <div class="callout callout--warning">
+          <div class="callout__label">Alerta de Privacidad</div>
+          <p>Nunca compartas tu numero completo de Seguro Social en un recibo de nomina. Usa solo los ultimos cuatro digitos. Ademas, nunca envies por email recibos de nomina con informacion sensible sin proteccion por contrasena -- usa la descarga PDF de tu <a href="/es/generador-recibo-nomina/">generador de recibos de nomina</a> y compartelo a traves de un canal seguro.</p>
+        </div>
+
+        <hr class="section-divider">
+
+        <h2 id="step-by-step">Paso a Paso: Crear un Recibo de Nomina con AAWebTools</h2>
+
+        <p>El <a href="/es/generador-recibo-nomina/">Generador de Recibos de Nomina de AAWebTools</a> esta disenado especificamente para trabajadores autonomos, freelancers y propietarios de pequenas empresas que necesitan recibos de nomina profesionales sin pagar por software de nominas.</p>
+
+        <div class="step-card">
+          <div class="step-card__number">1</div>
+          <div class="step-card__content">
+            <h3>Introduce la Informacion de tu Negocio</h3>
+            <p>Completa el nombre de tu negocio (o tu nombre completo si operas como propietario unico), tu direccion comercial y tu EIN o ultimos cuatro digitos de tu SSN. Selecciona tu pais del menu desplegable -- el generador soporta Estados Unidos, Canada, Reino Unido, Australia, Alemania, Francia, India, Brasil y Mexico.</p>
+          </div>
+        </div>
+
+        <div class="step-card">
+          <div class="step-card__number">2</div>
+          <div class="step-card__content">
+            <h3>Introduce la Informacion del Empleado</h3>
+            <p>Como eres autonomo, tu eres el empleado. Introduce tu nombre legal completo, tu direccion y tu SSN (ultimos cuatro digitos). Esta seccion refleja lo que un empleador tradicional llenaria por ti.</p>
+          </div>
+        </div>
+
+        <div class="step-card">
+          <div class="step-card__number">3</div>
+          <div class="step-card__content">
+            <h3>Establece el Periodo de Pago y Ganancias</h3>
+            <p>Elige tu frecuencia de pago (semanal, quincenal, bisemanal o mensual), introduce las fechas de inicio y fin del periodo de pago, e ingresa tus ingresos brutos para el periodo.</p>
+          </div>
+        </div>
+
+        <div class="step-card">
+          <div class="step-card__number">4</div>
+          <div class="step-card__content">
+            <h3>Agrega Deducciones</h3>
+            <p>El generador calcula automaticamente las deducciones estandar basadas en tu pais. Para usuarios de EE.UU., esto incluye impuesto federal sobre la renta, Seguro Social (12.4%) y Medicare (2.9%) -- sumando el impuesto FICA de autoempleo del 15.3%.</p>
+          </div>
+        </div>
+
+        <div class="step-card">
+          <div class="step-card__number">5</div>
+          <div class="step-card__content">
+            <h3>Revisa y Descarga PDF</h3>
+            <p>Previsualiza tu recibo en el panel de vista previa en vivo. Verifica que todos los numeros sean precisos, las matematicas correctas y los totales YTD reflejen tus ganancias reales del ano. Cuando todo se vea bien, haz clic en "Descargar PDF".</p>
+          </div>
+        </div>
+
+        <div class="article-cta">
+          <div class="article-cta__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+          </div>
+          <p><strong>Crea tu recibo de nomina de autonomo ahora</strong></p>
+          <p>Gratis, sin registro, compatible con 9 paises. Descarga PDF profesional en minutos.</p>
+          <a href="/es/generador-recibo-nomina/" class="btn-primary">Abrir Generador de Recibos</a>
+        </div>
+
+        <p>Necesitas enviar facturas a tus clientes primero? Usa el <a href="/es/generador-facturas/">Generador de Facturas de AAWebTools</a> para crear facturas profesionales que coincidan con las cifras de tus recibos de nomina.</p>
+
+        <hr class="section-divider">
+
+        <h2 id="comparison">Comparacion de Generadores de Recibos de Nomina (2026)</h2>
+
+        <p>Evaluamos seis generadores populares de recibos de nomina para ver como se comparan en las caracteristicas que mas importan a los trabajadores autonomos.</p>
+
+        <div class="table-responsive">
+          <table class="comparison-table">
+            <thead>
+              <tr><th>Herramienta</th><th>Precio</th><th>Registro</th><th>Paises</th><th>Impuesto Autoempleo</th><th>Totales YTD</th><th>Descarga PDF</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>AAWebTools</strong></td><td>Gratis</td><td><span class="check">Sin registro</span></td><td>9</td><td><span class="check">Auto-calculado</span></td><td><span class="check">Si</span></td><td><span class="check">Gratis, sin marca de agua</span></td></tr>
+              <tr><td><strong>StubCreator</strong></td><td>$8.99/recibo</td><td>Email requerido</td><td>2 (US, CA)</td><td><span class="check">Si</span></td><td><span class="check">Si</span></td><td>Solo de pago</td></tr>
+              <tr><td><strong>Shopify Pay Stub</strong></td><td>Gratis</td><td><span class="check">Sin registro</span></td><td>1 (US)</td><td><span class="cross">No</span></td><td><span class="cross">No</span></td><td><span class="check">Gratis</span></td></tr>
+              <tr><td><strong>Wix Pay Stub</strong></td><td>Gratis</td><td>Cuenta requerida</td><td>1 (US)</td><td><span class="cross">No</span></td><td><span class="cross">No</span></td><td><span class="check">Gratis</span></td></tr>
+              <tr><td><strong>123PayStubs</strong></td><td>$3.99/recibo</td><td>Email requerido</td><td>1 (US)</td><td><span class="check">Si</span></td><td><span class="check">Si</span></td><td>Solo de pago</td></tr>
+              <tr><td><strong>PayStubDirect</strong></td><td>$7.95/recibo</td><td>Email requerido</td><td>2 (US, CA)</td><td><span class="check">Si</span></td><td><span class="check">Si</span></td><td>Solo de pago</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <hr class="section-divider">
+
+        <h2 id="irs-1099-rules">Nuevas Reglas IRS 1099 para 2026</h2>
+
+        <p>Si eres autonomo, hay un cambio importante de reporte fiscal que necesitas conocer en 2026. La <strong>Ley One Big Beautiful Bill</strong>, firmada en 2025, fijo permanentemente el umbral de reporte 1099-K en <strong>$2,000</strong> a partir del ano fiscal 2026.</p>
+
+        <h3>Que cambio</h3>
+
+        <ul>
+          <li><strong>Antes de 2022:</strong> Las plataformas de pago (PayPal, Venmo, Stripe, Square, etc.) solo emitian formularios 1099-K si recibias mas de $20,000 Y tenias mas de 200 transacciones al ano</li>
+          <li><strong>2022 American Rescue Plan:</strong> El Congreso bajo el umbral a $600, pero el IRS retraso la aplicacion repetidamente</li>
+          <li><strong>2023-2024:</strong> El IRS anuncio anos de transicion con un umbral de $5,000 para 2024</li>
+          <li><strong>2025 (Ley One Big Beautiful Bill):</strong> El umbral se fijo permanentemente en $2,000 sin requisito de conteo de transacciones, efectivo para el ano fiscal 2026</li>
+        </ul>
+
+        <div class="callout callout--finding">
+          <div class="callout__label">Punto Clave</div>
+          <p>El nuevo umbral de $2,000 hace que la documentacion precisa de recibos de nomina sea aun mas importante. Tus recibos de nomina deben ser consistentes con tus formularios 1099-K, que el IRS ahora tendra para una parte mucho mayor de tus ingresos.</p>
+        </div>
+
+        <hr class="section-divider">
+
+        <h2 id="faq">Preguntas Frecuentes</h2>
+
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>Puede un autonomo crear su propio recibo de nomina?</summary>
+            <p>Si. A diferencia de los empleados tradicionales que reciben recibos de nomina del sistema de nominas de su empleador, los trabajadores autonomos pueden y a menudo deben crear sus propios recibos. Herramientas como el <a href="/es/generador-recibo-nomina/">Generador de Recibos de Nomina de AAWebTools</a> te permiten crear recibos profesionales gratis sin registro.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Los propietarios aceptan recibos de nomina de autonomos para solicitudes de alquiler?</summary>
+            <p>La mayoria de los propietarios y empresas de gestion de propiedades aceptan recibos de nomina autogenerados como parte de un paquete mas amplio de verificacion de ingresos. Sin embargo, tipicamente quieren ver recibos junto con extractos bancarios, declaraciones de impuestos o una carta de contador para verificar las cifras de ingresos. La clave es la consistencia: los numeros en tu recibo deben coincidir exactamente con tus depositos bancarios, formularios 1099 y declaraciones fiscales.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Cual es la tasa del impuesto de autoempleo para 2026?</summary>
+            <p>La tasa del impuesto de autoempleo sigue siendo del 15.3% para 2026, compuesta por 12.4% para el Seguro Social (sobre los primeros $168,600 de ingresos netos) y 2.9% para Medicare (sobre todos los ingresos netos). Si tus ingresos netos de autoempleo superan $200,000 ($250,000 para casados declarando conjuntamente), tambien debes un recargo adicional del 0.9% de Medicare.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Cual es el nuevo umbral del IRS 1099 para 2026?</summary>
+            <p>Bajo la Ley One Big Beautiful Bill firmada en 2025, el umbral de reporte 1099-K se fijo permanentemente en $2,000 a partir del ano fiscal 2026. Esto significa que plataformas de pago como PayPal, Venmo, Stripe y Square deben emitirte un 1099-K si procesan $2,000 o mas en pagos hacia ti durante el ano.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Es legal crear tu propio recibo de nomina como freelancer?</summary>
+            <p>Si, crear tu propio recibo de nomina como trabajador autonomo es completamente legal. Los trabajadores autonomos, freelancers y contratistas independientes rutinariamente generan sus propios recibos para propositos de verificacion de ingresos. Lo que es ilegal es falsificar la informacion en un recibo -- como inflar ingresos, fabricar un empleador o tergiversar deducciones.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Como demuestro ingresos si acabo de empezar como freelancer?</summary>
+            <p>Los freelancers nuevos pueden demostrar ingresos a traves de una combinacion de documentos: contratos o cartas de compromiso con clientes mostrando tarifas acordadas, facturas que hayas enviado (con un <a href="/es/generador-facturas/">generador de facturas</a>), extractos bancarios mostrando depositos de clientes, y recibos de nomina autogenerados resumiendo tus ganancias hasta la fecha.</p>
+          </details>
+        </div>
+
+        <h2>Reflexiones Finales</h2>
+
+        <p>Crear un recibo de nomina cuando eres autonomo no es complicado, pero requiere atencion al detalle. Los numeros deben ser precisos, el formato debe ser profesional y -- lo mas importante -- cada cifra en tu recibo debe ser consistente con tus declaraciones de impuestos, extractos bancarios y formularios 1099.</p>
+
+        <p>El <a href="/es/generador-recibo-nomina/">Generador de Recibos de Nomina de AAWebTools</a> hace este proceso gratuito y sencillo. Introduce tu informacion, deja que la herramienta calcule tus impuestos de autoempleo, revisa la vista previa y descarga un PDF limpio. Sin registro, sin tarifas, sin marcas de agua. Combinalo con el <a href="/es/generador-facturas/">Generador de Facturas</a> para mantener un rastro documental completo desde la facturacion al cliente hasta la documentacion de ingresos personales.</p>
+
+        <p>Con el nuevo umbral IRS 1099-K de $2,000 entrando en vigor en 2026, la documentacion precisa de ingresos es mas importante que nunca.</p>
+
+        <div class="article-cta">
+          <p><strong>Listo para crear tu recibo de nomina de autonomo?</strong></p>
+          <p>Generador gratuito, 9 paises, calculos de impuestos automaticos. Descarga un PDF profesional en minutos.</p>
+          <a href="/es/generador-recibo-nomina/" class="btn-primary">Crear Recibo de Nomina Ahora</a>
+        </div>
+
+        <div class="author-box">
+          <div class="author-box__avatar">AA</div>
+          <div class="author-box__info">
+            <div class="author-box__name">Escrito por AAWebTools Team</div>
+            <div class="author-box__date">Publicado el 27 de marzo de 2026</div>
+            <a href="/es/blog/" class="author-box__link">Mas articulos &rarr;</a>
+          </div>
+        </div>
+
+      </article>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__grid">
+      <div>
+        <div class="footer__logo"><img src="/assets/img/logo-light.png" alt="AAWebTools" height="44"></div>
+        <p class="footer__tagline">Herramientas gratuitas para todos, en todo el mundo</p>
+        <p class="footer__copyright">&copy; 2026 AAWebTools. Todos los derechos reservados. Creado por <a href="https://scopecove.com/" target="_blank" rel="noopener" class="footer__link" style="display:inline;">ScopeCove</a></p>
+      </div>
+      <div>
+        <h4 class="footer__heading">Herramientas</h4>
+        <a href="/es/descargador-tiktok/" class="footer__link">Descargador TikTok</a>
+        <a href="/es/descargador-twitter/" class="footer__link">Descargador Twitter</a>
+        <a href="/es/generador-facturas/" class="footer__link">Generador de Facturas</a>
+        <a href="/es/detector-ia/" class="footer__link">Detector de Contenido IA</a>
+        <a href="/es/humanizador-ia/" class="footer__link">Humanizador de Texto IA</a>
+        <a href="/es/generador-recibo-nomina/" class="footer__link">Generador de Recibo de Nomina</a>
+        <a href="/es/herramientas-imagenes/" class="footer__link">Herramientas de Imagen</a>
+      </div>
+      <div>
+        <h4 class="footer__heading">Legal</h4>
+        <a href="/privacy/" class="footer__link">Politica de Privacidad</a>
+        <a href="/terms/" class="footer__link">Terminos de Servicio</a>
+        <a href="/about/" class="footer__link">Acerca de</a>
+        <a href="/contact/" class="footer__link">Contacto</a>
+        <a href="/es/blog/" class="footer__link">Blog</a>
+      </div>
+    </div>
+    <div class="footer__bottom">Hecho con &#10084;&#65039; | Gratis para siempre | Sin registro requerido</div>
+  </footer>
+
+  <script src="/assets/js/core.js" defer></script>
+  <script defer src="https://analytics.aawebtools.com/script.js" data-website-id="836dfc88-b05f-49b2-9824-3a085e248896"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9434634079795273" crossorigin="anonymous"></script>
+
+  <script>
+  (function(){
+    var bar = document.getElementById('readingProgress');
+    if (!bar) return;
+    function updateProgress() {
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      var docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+      bar.style.width = Math.min(progress, 100) + '%';
+    }
+    window.addEventListener('scroll', updateProgress, { passive: true });
+    updateProgress();
+  })();
+  </script>
+</body>
+</html>

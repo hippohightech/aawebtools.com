@@ -1,0 +1,127 @@
+/**
+ * rtl.css — Right-to-left overrides for Arabic pages
+ * Loaded only on pages with dir="rtl"
+ * Kept minimal: only overrides physical properties that don't auto-flip.
+ */
+
+/* Base direction */
+[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+/* Navigation */
+[dir="rtl"] .nav__inner {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .nav__links {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .nav__right {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .nav__dropdown {
+  left: auto;
+  right: 0;
+}
+
+/* Hamburger positioning */
+[dir="rtl"] .hamburger {
+  order: -1;
+}
+
+/* Hero section */
+[dir="rtl"] .hero__content {
+  text-align: right;
+}
+
+/* Tool input area */
+[dir="rtl"] .tool-box {
+  direction: ltr; /* Keep URL input LTR */
+}
+
+[dir="rtl"] .tool-box input[type="text"],
+[dir="rtl"] .tool-box input[type="url"] {
+  direction: ltr;
+  text-align: left;
+}
+
+/* Cards grid */
+[dir="rtl"] .tool-card {
+  text-align: right;
+}
+
+[dir="rtl"] .tool-card__link::after {
+  transform: scaleX(-1); /* Flip arrow */
+}
+
+/* Blog cards */
+[dir="rtl"] .blog-card {
+  text-align: right;
+}
+
+[dir="rtl"] .blog-card__meta {
+  flex-direction: row-reverse;
+}
+
+/* FAQ section */
+[dir="rtl"] .faq-item summary {
+  text-align: right;
+}
+
+[dir="rtl"] .faq-item summary::marker {
+  float: left;
+}
+
+/* Footer */
+[dir="rtl"] .footer__grid {
+  direction: rtl;
+}
+
+[dir="rtl"] .footer__links {
+  text-align: right;
+}
+
+/* Landing content */
+[dir="rtl"] .landing-content {
+  text-align: right;
+}
+
+[dir="rtl"] .landing-content ul,
+[dir="rtl"] .landing-content ol {
+  padding-right: 1.5em;
+  padding-left: 0;
+}
+
+/* Language selector */
+[dir="rtl"] .lang-selector__menu {
+  right: auto;
+  left: 0;
+}
+
+/* Breadcrumb */
+[dir="rtl"] .breadcrumb__separator {
+  transform: scaleX(-1);
+}
+
+/* Misc fixes */
+[dir="rtl"] .badge {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+[dir="rtl"] .step-number {
+  margin-right: 0;
+  margin-left: var(--space-md);
+}
+
+/* Form elements stay LTR for email, URL inputs */
+[dir="rtl"] input[type="email"],
+[dir="rtl"] input[type="url"],
+[dir="rtl"] input[type="number"] {
+  direction: ltr;
+  text-align: left;
+}

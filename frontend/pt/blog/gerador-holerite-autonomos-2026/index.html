@@ -1,0 +1,1576 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="content-language" content="pt">
+  <title>Gerador de Holerite para Autônomos 2026 | AAWebTools</title>
+  <meta name="description" content="Autônomo e precisa de um holerite? Crie comprovantes de renda profissionais para aluguel, empréstimos e impostos. Gerador gratuito, sem cadastro, suporta 9 países.">
+  <link rel="canonical" href="https://aawebtools.com/pt/blog/gerador-holerite-autonomos-2026/">
+  <link rel="alternate" hreflang="en" href="https://aawebtools.com/blog/pay-stub-generator-self-employed/">
+  <link rel="alternate" hreflang="fr" href="https://aawebtools.com/fr/blog/bulletin-de-paie-freelance-2026/">
+  <link rel="alternate" hreflang="pt" href="https://aawebtools.com/pt/blog/gerador-holerite-autonomos-2026/">
+  <link rel="alternate" hreflang="x-default" href="https://aawebtools.com/blog/pay-stub-generator-self-employed/">
+  <meta property="og:title" content="Gerador Gratuito de Holerite para Autônomos -- Guia para Aluguel, Empréstimo e Impostos (2026)">
+  <meta property="og:description" content="Autônomo e precisa de um holerite? Crie comprovantes de renda profissionais para aluguel, empréstimos e impostos. Gerador gratuito, sem cadastro, suporta 9 países.">
+  <meta property="og:url" content="https://aawebtools.com/pt/blog/gerador-holerite-autonomos-2026/">
+  <meta property="og:image" content="https://aawebtools.com/assets/img/og-blog-paystub-self-employed.png">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="AAWebTools">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="article:published_time" content="2026-03-27T08:00:00+00:00">
+  <meta property="article:modified_time" content="2026-03-27T08:00:00+00:00">
+  <meta property="article:author" content="AAWebTools Team">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Gerador Gratuito de Holerite para Autônomos -- Guia para Aluguel, Empréstimo e Impostos (2026)">
+  <meta name="twitter:description" content="Autônomo e precisa de um holerite? Crie comprovantes de renda profissionais para aluguel, empréstimos e impostos. Gerador gratuito, sem cadastro, suporta 9 países.">
+  <meta name="twitter:image" content="https://aawebtools.com/assets/img/og-blog-paystub-self-employed.png">
+  <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <style>
+    /* ==========================================================================
+       EDITORIAL REDESIGN -- Magazine-style layout
+       Inspired by The Verge, Wired, Stratechery
+       Only scoped to .article and article-related components
+       ========================================================================== */
+
+    /* Reading progress bar -- thin, single color, no gradient */
+    .reading-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 2px;
+      background: #4f7fff;
+      width: 0%;
+      z-index: 9999;
+      transition: width 0.1s linear;
+    }
+
+    /* ------------------------------------------------------------
+       Article layout -- generous measure, editorial column
+       ------------------------------------------------------------ */
+    .article-wrapper {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px 80px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+
+    .article {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 0 0 96px;
+      width: 100%;
+    }
+
+    /* Headings -- confident, left-aligned, tight tracking */
+    .article h2 {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin: 64px 0 20px;
+      scroll-margin-top: 100px;
+      letter-spacing: -0.02em;
+      line-height: 1.25;
+    }
+
+    .article h3 {
+      font-size: 19px;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin: 40px 0 12px;
+      letter-spacing: -0.01em;
+      line-height: 1.3;
+    }
+
+    /* Body text -- readable measure, proper leading */
+    .article p {
+      font-size: 16px;
+      line-height: 1.75;
+      color: var(--text-secondary);
+      margin-bottom: 20px;
+    }
+
+    /* Lede paragraph -- first p after every h2 gets larger treatment */
+    .article h2 + p {
+      font-size: 18px;
+      line-height: 1.7;
+      color: #475569;
+    }
+
+    .article ul,
+    .article ol {
+      padding-left: 24px;
+      margin-bottom: 20px;
+      list-style: disc;
+    }
+    .article ol { list-style: decimal; }
+
+    .article li {
+      font-size: 16px;
+      line-height: 1.75;
+      color: var(--text-secondary);
+      margin-bottom: 8px;
+    }
+
+    .article a {
+      color: #4f7fff;
+      text-decoration: underline;
+      text-decoration-color: rgba(79, 127, 255, 0.3);
+      text-underline-offset: 2px;
+      transition: text-decoration-color 0.15s;
+    }
+    .article a:hover {
+      text-decoration-color: #4f7fff;
+    }
+
+    /* Blockquote -- editorial voice */
+    .article blockquote {
+      border-left: 2px solid var(--text-tertiary);
+      padding: 4px 0 4px 24px;
+      margin: 32px 0;
+      color: var(--text-tertiary);
+      font-style: italic;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .article strong {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    /* ------------------------------------------------------------
+       Hero banner -- Editorial, left-aligned, no gradient blob
+       ------------------------------------------------------------ */
+    .article-hero {
+      background: var(--bg-primary);
+      border-radius: 0;
+      padding: 160px 24px 48px;
+      margin: 0 auto;
+      max-width: 680px;
+      min-height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-start;
+      position: relative;
+      overflow: visible;
+      border-bottom: 1px solid var(--border-primary);
+    }
+
+    /* Remove the decorative circles */
+    .article-hero::before,
+    .article-hero::after {
+      display: none;
+    }
+
+    .article-hero__badge {
+      display: inline-block;
+      background: none;
+      color: #4f7fff;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0;
+      border-radius: 0;
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 1;
+      backdrop-filter: none;
+    }
+
+    .article-hero h1 {
+      font-size: 40px;
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      margin: 0 0 20px;
+      position: relative;
+      z-index: 1;
+      max-width: 100%;
+    }
+
+    .article-hero__meta {
+      font-size: 14px;
+      color: var(--text-tertiary);
+      position: relative;
+      z-index: 1;
+      line-height: 1.5;
+    }
+    .article-hero__meta strong {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    @media (min-width: 768px) {
+      .article-hero h1 {
+        font-size: 52px;
+        line-height: 1.08;
+      }
+      .article-hero {
+        padding: 160px 0 56px;
+        max-width: 680px;
+      }
+    }
+    @media (max-width: 600px) {
+      .article-hero {
+        padding: 120px 20px 36px;
+        margin: 0;
+        min-height: auto;
+        border-radius: 0;
+      }
+      .article-hero h1 {
+        font-size: 32px;
+        letter-spacing: -0.02em;
+      }
+    }
+
+    /* ------------------------------------------------------------
+       Breadcrumb -- subtle, editorial
+       ------------------------------------------------------------ */
+    .article-breadcrumb {
+      font-size: 13px;
+      color: var(--text-tertiary);
+      margin: 28px 0 40px;
+      letter-spacing: 0.01em;
+    }
+    .article-breadcrumb a {
+      color: var(--text-tertiary);
+      text-decoration: none;
+    }
+    .article-breadcrumb a:hover {
+      color: var(--text-primary);
+    }
+
+    /* ------------------------------------------------------------
+       Section divider -- clean, minimal
+       ------------------------------------------------------------ */
+    .section-divider {
+      height: 1px;
+      background: var(--border-primary);
+      border: none;
+      margin: 56px 0;
+      border-radius: 0;
+    }
+
+    /* ------------------------------------------------------------
+       Table of contents -- subtle, small type, left border
+       ------------------------------------------------------------ */
+    .article-toc {
+      background: none;
+      border: none;
+      border-left: 2px solid var(--border-primary);
+      border-radius: 0;
+      padding: 0 0 0 20px;
+      margin-bottom: 48px;
+    }
+    .article-toc h3 {
+      margin-top: 0;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-tertiary);
+      margin-bottom: 12px;
+    }
+    .article-toc ol {
+      padding-left: 16px;
+      margin-bottom: 0;
+    }
+    .article-toc li {
+      font-size: 13px;
+      margin-bottom: 6px;
+      line-height: 1.5;
+    }
+    .article-toc a {
+      color: var(--text-tertiary);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+    .article-toc a:hover {
+      color: var(--text-primary);
+    }
+
+    @media (min-width: 1024px) {
+      .article-toc--sidebar {
+        position: sticky;
+        top: 100px;
+        max-height: calc(100vh - 140px);
+        overflow-y: auto;
+      }
+    }
+
+    /* ------------------------------------------------------------
+       Callout boxes -- pull-quote style, not colored cards
+       ------------------------------------------------------------ */
+    .callout {
+      border-radius: 0;
+      padding: 24px 0 24px 28px;
+      margin: 40px 0;
+      border-left: 3px solid;
+      background: none;
+      position: relative;
+    }
+    .callout__label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 10px;
+    }
+    .callout p {
+      margin-bottom: 0;
+      font-size: 17px;
+      line-height: 1.65;
+      font-style: italic;
+      color: var(--text-primary);
+    }
+
+    .callout--finding { border-color: #4f7fff; }
+    .callout--finding .callout__label { color: #4f7fff; }
+
+    .callout--privacy { border-color: #10b981; }
+    .callout--privacy .callout__label { color: #10b981; }
+
+    .callout--tip { border-color: #d97706; }
+    .callout--tip .callout__label { color: #d97706; }
+
+    .callout--warning { border-color: #ef4444; }
+    .callout--warning .callout__label { color: #ef4444; }
+
+    /* ------------------------------------------------------------
+       Comparison table -- editorial/newspaper style
+       ------------------------------------------------------------ */
+    .table-responsive {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin: 24px -8px;
+    }
+
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      border-spacing: 0;
+      margin: 0;
+      border-radius: 0;
+      overflow: visible;
+      border: none;
+    }
+
+    .comparison-table thead th {
+      background: none;
+      color: var(--text-primary);
+      padding: 12px 14px 12px;
+      text-align: left;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      border: none;
+      border-bottom: 2px solid var(--text-primary);
+      white-space: nowrap;
+    }
+
+    .comparison-table tbody td {
+      padding: 14px 14px;
+      font-size: 14px;
+      border-bottom: 1px solid var(--border-primary);
+      color: var(--text-secondary);
+      vertical-align: top;
+    }
+
+    .comparison-table tbody tr:nth-child(even) td {
+      background: none;
+    }
+    .comparison-table tbody tr:last-child td {
+      border-bottom: 2px solid var(--border-primary);
+    }
+    .comparison-table tbody tr {
+      transition: background 0.1s;
+    }
+    .comparison-table tbody tr:hover td {
+      background: var(--bg-secondary);
+    }
+
+    .comparison-table .check {
+      color: #10b981;
+      font-weight: 600;
+      font-size: 13px;
+    }
+    .comparison-table .cross {
+      color: #ef4444;
+      font-weight: 600;
+      font-size: 13px;
+    }
+
+    /* ------------------------------------------------------------
+       CTA block -- integrated, not a banner ad
+       ------------------------------------------------------------ */
+    .article-cta {
+      background: #fafbfc;
+      border-radius: 0;
+      border-left: 3px solid #4f7fff;
+      padding: 28px 28px;
+      margin: 48px 0;
+      text-align: left;
+      position: relative;
+      overflow: visible;
+    }
+
+    .article-cta::before {
+      display: none;
+    }
+
+    .article-cta__icon {
+      font-size: 24px;
+      margin-bottom: 8px;
+      position: relative;
+      z-index: 1;
+    }
+    .article-cta__icon svg {
+      stroke: #4f7fff;
+    }
+
+    .article-cta p {
+      color: var(--text-secondary);
+      margin-bottom: 8px;
+      position: relative;
+      z-index: 1;
+      font-size: 15px;
+    }
+    .article-cta p strong {
+      color: var(--text-primary);
+      font-size: 17px;
+      font-weight: 700;
+    }
+
+    .article-cta .btn-primary {
+      background: #4f7fff;
+      color: #fff;
+      font-weight: 600;
+      padding: 10px 24px;
+      border-radius: 4px;
+      display: inline-block;
+      text-decoration: none;
+      position: relative;
+      z-index: 1;
+      font-size: 14px;
+      transition: background 0.15s, transform 0.15s;
+    }
+    .article-cta .btn-primary:hover {
+      background: #3d6ae6;
+      transform: translateY(-1px);
+      box-shadow: none;
+    }
+
+    /* ------------------------------------------------------------
+       Author box -- minimal, thin top border, not a card
+       ------------------------------------------------------------ */
+    .author-box {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: none;
+      border: none;
+      border-top: 1px solid var(--border-primary);
+      border-radius: 0;
+      padding: 28px 0 0;
+      margin: 56px 0 0;
+    }
+
+    .author-box__avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--text-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: 600;
+      font-size: 14px;
+      flex-shrink: 0;
+    }
+
+    .author-box__info { flex: 1; }
+
+    .author-box__name {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 1px;
+    }
+    .author-box__date {
+      font-size: 13px;
+      color: var(--text-tertiary);
+      margin-bottom: 0;
+    }
+    .author-box__link {
+      font-size: 13px;
+      color: var(--text-tertiary);
+      text-decoration: none;
+    }
+    .author-box__link:hover {
+      color: var(--text-primary);
+    }
+
+    /* ============================================================
+       VISUAL ENHANCEMENTS -- Rich editorial visuals
+       ============================================================ */
+
+    /* --- Hero layout: grid for SVG illustration --- */
+    .article-hero__illustration {
+      width: 100%;
+      max-width: 320px;
+      margin: 24px 0 0;
+      opacity: 0.92;
+    }
+    @media (min-width: 768px) {
+      .article-hero {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        grid-template-rows: auto auto auto;
+        column-gap: 32px;
+        align-items: end;
+      }
+      .article-hero__badge { grid-column: 1; grid-row: 1; }
+      .article-hero h1 { grid-column: 1; grid-row: 2; }
+      .article-hero__meta { grid-column: 1; grid-row: 3; }
+      .article-hero__illustration {
+        grid-column: 2;
+        grid-row: 1 / 4;
+        align-self: center;
+        margin: 0;
+        max-width: 240px;
+      }
+    }
+
+    /* --- Key Stats Strip --- */
+    .stats-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin: 32px 0 40px;
+      padding: 0;
+    }
+    .stats-strip__item {
+      text-align: center;
+      padding: 20px 12px;
+      border: 1px solid var(--border-primary);
+      border-radius: 4px;
+      background: var(--bg-primary);
+    }
+    .stats-strip__number {
+      display: block;
+      font-size: 28px;
+      font-weight: 700;
+      color: #4f7fff;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+    .stats-strip__label {
+      display: block;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--text-tertiary);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-top: 4px;
+    }
+    @media (max-width: 600px) {
+      .stats-strip {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+      }
+      .stats-strip__number { font-size: 22px; }
+      .stats-strip__item { padding: 14px 8px; }
+    }
+
+    /* --- Section Header Accents (colored line above each H2) --- */
+    .article h2::before {
+      content: '';
+      display: block;
+      width: 32px;
+      height: 3px;
+      background: #4f7fff;
+      margin-bottom: 12px;
+      border-radius: 2px;
+    }
+
+    /* --- TOC with icons --- */
+    .article-toc li {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .article-toc .toc-icon {
+      width: 14px;
+      height: 14px;
+      flex-shrink: 0;
+      opacity: 0.45;
+      display: inline-block;
+    }
+
+    /* --- Pull Quote Decorative Marks on Callout Boxes --- */
+    .callout::before {
+      content: '';
+      display: block;
+      width: 48px;
+      height: 36px;
+      margin-bottom: 6px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 36' fill='%234f7fff' opacity='0.15'%3E%3Cpath d='M0 36V22C0 9.3 7.7 1.8 19 0l2 4.9C11.8 7.2 8.3 12.8 8 18h10v18H0zm26 0V22C26 9.3 33.7 1.8 45 0l2 4.9C37.8 7.2 34.3 12.8 34 18h10v18H26z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    /* --- Checklist styling --- */
+    .checklist {
+      list-style: none;
+      padding: 0;
+      margin: 24px 0;
+    }
+    .checklist li {
+      font-size: 16px;
+      line-height: 1.75;
+      color: var(--text-secondary);
+      margin-bottom: 10px;
+      padding-left: 30px;
+      position: relative;
+    }
+    .checklist li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 6px;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: #ecfdf5;
+      box-shadow: inset 0 0 0 1px #10b981;
+    }
+    .checklist li::after {
+      content: '';
+      position: absolute;
+      left: 5px;
+      top: 11px;
+      width: 8px;
+      height: 4px;
+      border-left: 2px solid #10b981;
+      border-bottom: 2px solid #10b981;
+      transform: rotate(-45deg);
+    }
+
+    /* --- Step cards for how-to section --- */
+    .step-card {
+      display: flex;
+      gap: 20px;
+      margin: 28px 0;
+      padding: 24px 0;
+      border-bottom: 1px solid var(--border-primary);
+    }
+    .step-card:last-child {
+      border-bottom: none;
+    }
+    .step-card__number {
+      flex-shrink: 0;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: #eff6ff;
+      border: 2px solid #4f7fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: 700;
+      color: #4f7fff;
+    }
+    .step-card__content h3 {
+      margin-top: 0;
+      margin-bottom: 8px;
+    }
+    .step-card__content p {
+      margin-bottom: 0;
+    }
+
+    /* ------------------------------------------------------------
+       FAQ -- clean, minimal borders
+       ------------------------------------------------------------ */
+    .faq-list {
+      margin: 32px 0;
+    }
+
+    .faq-item {
+      border: none;
+      border-bottom: 1px solid var(--border-primary);
+      border-radius: 0;
+      margin-bottom: 0;
+      overflow: hidden;
+    }
+    .faq-item:first-child {
+      border-top: 1px solid var(--border-primary);
+    }
+
+    .faq-item summary {
+      padding: 18px 0;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text-primary);
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: color 0.15s;
+      gap: 16px;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after {
+      content: '+';
+      font-size: 18px;
+      font-weight: 300;
+      color: var(--text-tertiary);
+      transition: transform 0.2s;
+      flex-shrink: 0;
+    }
+    .faq-item[open] summary::after { content: '-'; }
+    .faq-item summary:hover {
+      color: #4f7fff;
+      background: none;
+    }
+
+    .faq-item p {
+      padding: 0 0 20px;
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--text-secondary);
+      margin: 0;
+    }
+
+    /* ------------------------------------------------------------
+       Mobile refinements
+       ------------------------------------------------------------ */
+    @media (max-width: 600px) {
+      .article {
+        padding: 0 0 64px;
+      }
+      .article-wrapper {
+        padding: 0 20px 64px;
+      }
+      .article h2 {
+        font-size: 24px;
+        margin: 48px 0 16px;
+      }
+      .article h2 + p {
+        font-size: 17px;
+      }
+      .callout {
+        padding: 20px 0 20px 20px;
+      }
+      .callout p {
+        font-size: 16px;
+      }
+      .article-cta {
+        padding: 24px 20px;
+        margin-left: -20px;
+        margin-right: -20px;
+        border-left: none;
+        border-top: 3px solid #4f7fff;
+      }
+      .section-divider {
+        margin: 40px 0;
+      }
+      .author-box {
+        margin-top: 40px;
+      }
+      .step-card {
+        flex-direction: column;
+        gap: 12px;
+      }
+    }
+  </style>
+
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://aawebtools.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": "https://aawebtools.com/blog/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Free Pay Stub Generator for Self-Employed",
+        "item": "https://aawebtools.com/blog/pay-stub-generator-self-employed/"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Article Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How to Create a Pay Stub When You're Self-Employed (2026 Guide)",
+    "description": "Self-employed and need a pay stub? Create professional proof of income for apartment applications, loans, and taxes. Free generator, no signup, supports 9 countries.",
+    "image": "https://aawebtools.com/assets/img/og-blog-paystub-self-employed.png",
+    "author": {
+      "@type": "Organization",
+      "name": "AAWebTools Team",
+      "url": "https://aawebtools.com/about/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "AAWebTools",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://aawebtools.com/assets/img/logo-light.png"
+      }
+    },
+    "datePublished": "2026-03-27",
+    "dateModified": "2026-03-27",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://aawebtools.com/blog/pay-stub-generator-self-employed/"
+    }
+  }
+  </script>
+
+  <!-- FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Can a self-employed person create their own pay stub?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Unlike traditional employees who receive pay stubs from an employer's payroll system, self-employed workers can and often must create their own pay stubs. A self-employed pay stub is a summary document that shows your gross income, self-employment taxes, estimated tax payments, and net pay for a given period. Tools like the AAWebTools Pay Stub Generator let you create professional pay stubs for free with no signup required."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do landlords accept self-employed pay stubs for apartment applications?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most landlords and property management companies accept self-generated pay stubs as part of a broader income verification package. However, they typically want to see pay stubs alongside bank statements, tax returns, or a CPA letter to cross-verify the income figures. The key is consistency: the numbers on your pay stub should match your bank deposits, 1099 forms, and tax filings exactly."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the self-employment tax rate for 2026?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The self-employment tax rate remains 15.3% for 2026, consisting of 12.4% for Social Security (on the first $168,600 of net earnings) and 2.9% for Medicare (on all net earnings). If your net self-employment income exceeds $200,000 ($250,000 for married filing jointly), you also owe an additional 0.9% Medicare surtax. You can deduct half of your self-employment tax when calculating adjusted gross income."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the new IRS 1099 threshold for 2026?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Under the One Big Beautiful Bill Act signed in 2025, the 1099-K reporting threshold was permanently set at $2,000 starting in tax year 2026. This means payment platforms like PayPal, Venmo, Stripe, and Square must issue you a 1099-K if they process $2,000 or more in payments to you during the year. The previous $600 threshold that was repeatedly delayed has been officially replaced."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is it legal to create your own pay stub as a freelancer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, creating your own pay stub as a self-employed person is entirely legal. Self-employed individuals, freelancers, and independent contractors routinely generate their own pay stubs for income verification purposes. What is illegal is falsifying the information on a pay stub, such as inflating income, fabricating an employer, or misrepresenting deductions. Your pay stub must accurately reflect your actual earnings and should be consistent with your tax returns and bank records."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I show proof of income if I just started freelancing?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "New freelancers can show proof of income through a combination of documents: client contracts or engagement letters showing agreed rates, invoices you have sent (with an invoice generator), bank statements showing deposits from clients, and self-generated pay stubs summarizing your earnings to date. If you do not yet have tax returns from self-employment, a CPA letter projecting your annual income based on current contracts can also help with apartment or loan applications."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Reading progress bar -->
+  <div class="reading-progress" id="readingProgress"></div>
+
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="/pt/" class="nav__logo"><img src="/assets/img/logo-light.png" alt="AAWebTools" height="56"></a>
+      <div class="nav__links">
+        <div class="nav__dropdown"><a href="#" class="nav__link">Baixadores</a><div class="nav__dropdown-menu"><a href="/pt/baixar-tiktok/" class="nav__dropdown-item">Baixar TikTok</a><a href="/pt/baixar-twitter/" class="nav__dropdown-item">Baixar Twitter</a></div></div>
+        <div class="nav__dropdown"><a href="#" class="nav__link">Geradores</a><div class="nav__dropdown-menu"><a href="/pt/gerador-faturas/" class="nav__dropdown-item">Gerador de Faturas</a><a href="/pt/gerador-holerite/" class="nav__dropdown-item">Gerador de Holerite</a><a href="/pt/ferramentas-imagem/" class="nav__dropdown-item">Ferramentas de Imagem</a></div></div>
+        <div class="nav__dropdown"><a href="#" class="nav__link">Ferramentas IA</a><div class="nav__dropdown-menu"><a href="/pt/detector-ia/" class="nav__dropdown-item">Detector de IA</a><a href="/pt/humanizador-ia/" class="nav__dropdown-item">Humanizador de Texto IA</a></div></div>
+        <a href="/pt/blog/" class="nav__link">Blog</a>
+      </div>
+      <div class="nav__right">
+        <div class="lang-selector">
+          <button class="lang-selector__trigger" id="langToggle">&#127760; PT &#9662;</button>
+          <div class="lang-selector__menu" id="langMenu">
+            <a href="/blog/pay-stub-generator-self-employed/">English</a>
+            <a href="/fr/blog/bulletin-de-paie-freelance-2026/">Français</a>
+            <a href="/es/blog/">Español</a>
+            <a href="/de/blog/">Deutsch</a>
+            <a href="/pt/blog/gerador-holerite-autonomos-2026/" class="active">Português</a>
+            <a href="/ar/blog/">العربية</a>
+            <a href="/id/blog/">Bahasa Indonesia</a>
+            <a href="/hi/blog/">हिन्दी</a>
+          </div>
+        </div>
+        <a href="/pt/#tools" class="btn-primary btn-sm">Todas as ferramentas</a>
+        <button class="nav__hamburger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+  <div class="nav__mobile" id="mobileNav">
+    <a href="/pt/baixar-tiktok/" class="nav__mobile-link">Baixar TikTok</a>
+    <a href="/pt/baixar-twitter/" class="nav__mobile-link">Baixar Twitter</a>
+    <a href="/pt/gerador-faturas/" class="nav__mobile-link">Gerador de Faturas</a>
+    <a href="/pt/detector-ia/" class="nav__mobile-link">Detector de IA</a>
+    <a href="/pt/humanizador-ia/" class="nav__mobile-link">Humanizador de Texto IA</a>
+    <a href="/pt/gerador-holerite/" class="nav__mobile-link">Gerador de Holerite</a>
+    <a href="/pt/ferramentas-imagem/" class="nav__mobile-link">Ferramentas de Imagem</a>
+    <a href="/pt/blog/" class="nav__mobile-link">Blog</a>
+  </div>
+
+  <!-- Hero banner -->
+  <header class="article-hero">
+    <span class="article-hero__badge">Ferramentas Empresariais</span>
+    <h1>Como Criar um Holerite Sendo Autônomo (Guia 2026)</h1>
+    <p class="article-hero__meta">Por <strong>AAWebTools Team</strong> &middot; Publicado em 27 de março de 2026 &middot; 14 min de leitura</p>
+    <!-- Hero SVG Illustration: pay stub document with dollar sign -->
+    <svg class="article-hero__illustration" viewBox="0 0 280 220" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <!-- Document background -->
+      <rect x="50" y="20" width="160" height="190" rx="6" fill="white" stroke="#e2e8f0" stroke-width="2"/>
+      <!-- Document header bar -->
+      <rect x="50" y="20" width="160" height="32" rx="6" fill="#eff6ff"/>
+      <rect x="50" y="46" width="160" height="6" fill="#eff6ff"/>
+      <text x="130" y="42" text-anchor="middle" fill="#4f7fff" font-size="11" font-weight="700" font-family="Inter, system-ui, sans-serif">PAY STUB</text>
+      <!-- Text lines -->
+      <rect x="66" y="66" width="90" height="6" rx="3" fill="#e2e8f0"/>
+      <rect x="66" y="82" width="128" height="6" rx="3" fill="#e2e8f0"/>
+      <rect x="66" y="98" width="110" height="6" rx="3" fill="#e2e8f0"/>
+      <rect x="66" y="114" width="70" height="6" rx="3" fill="#e2e8f0"/>
+      <!-- Highlighted amount line -->
+      <rect x="66" y="134" width="128" height="10" rx="4" fill="#4f7fff" opacity="0.12"/>
+      <rect x="70" y="136" width="60" height="6" rx="3" fill="#4f7fff" opacity="0.5"/>
+      <rect x="160" y="136" width="30" height="6" rx="3" fill="#4f7fff"/>
+      <!-- Divider -->
+      <line x1="66" y1="154" x2="194" y2="154" stroke="#e2e8f0" stroke-width="1"/>
+      <!-- Net pay line -->
+      <rect x="66" y="164" width="50" height="6" rx="3" fill="#475569"/>
+      <rect x="155" y="164" width="39" height="6" rx="3" fill="#10b981"/>
+      <!-- Bottom totals -->
+      <rect x="66" y="180" width="80" height="5" rx="2.5" fill="#e2e8f0"/>
+      <!-- Dollar sign circle -->
+      <circle cx="230" cy="80" r="32" fill="#eff6ff" stroke="#4f7fff" stroke-width="2.5"/>
+      <text x="230" y="90" text-anchor="middle" fill="#4f7fff" font-size="30" font-weight="700" font-family="Inter, system-ui, sans-serif">$</text>
+      <!-- Small decorative elements -->
+      <circle cx="240" cy="140" r="3" fill="#4f7fff" opacity="0.15"/>
+      <circle cx="255" cy="160" r="2" fill="#4f7fff" opacity="0.1"/>
+      <circle cx="30" cy="100" r="4" fill="#4f7fff" opacity="0.1"/>
+      <circle cx="38" cy="180" r="2.5" fill="#4f7fff" opacity="0.12"/>
+      <!-- Checkmark badge -->
+      <circle cx="230" cy="170" r="16" fill="#ecfdf5" stroke="#10b981" stroke-width="2"/>
+      <polyline points="223,170 228,175 238,165" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    </svg>
+  </header>
+
+  <main>
+    <div class="article-wrapper">
+      <article class="article">
+
+        <nav class="article-breadcrumb" aria-label="Navegação">
+          <a href="/pt/">Início</a> &rsaquo; <a href="/pt/blog/">Blog</a> &rsaquo; Gerador de Holerite para Autônomos
+        </nav>
+
+        <nav class="article-toc" aria-label="Índice">
+          <h3>Neste Artigo</h3>
+          <ol>
+            <li>
+              <svg class="toc-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 1v14M1 8h14"/><circle cx="8" cy="8" r="6"/></svg>
+              <a href="#why-self-employed-need-pay-stubs">Por Que Autônomos Precisam de Holerites</a>
+            </li>
+            <li>
+              <svg class="toc-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="1" width="14" height="14" rx="2"/><path d="M1 5h14M5 5v10"/></svg>
+              <a href="#when-you-need-pay-stub">Quando Você Precisa de um Holerite como Autônomo</a>
+            </li>
+            <li>
+              <svg class="toc-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2v12M8 2v12M12 6v8"/><path d="M2 14h12"/></svg>
+              <a href="#what-to-include">O Que Incluir em um Holerite de Autônomo</a>
+            </li>
+            <li>
+              <svg class="toc-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8l3 3 7-7"/></svg>
+              <a href="#match-tax-returns">A Regra Fundamental: Compatibilidade com a Declaração de Impostos</a>
+            </li>
+            <li>
+              <svg class="toc-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="4.5"/><path d="M9.5 9.5L14 14"/></svg>
+              <a href="#step-by-step">Passo a Passo: Crie um Holerite com o AAWebTools</a>
+            </li>
+            <li>
+              <svg class="toc-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="4" height="10" rx="1"/><rect x="6" y="1" width="4" height="12" rx="1"/><rect x="11" y="5" width="4" height="8" rx="1"/></svg>
+              <a href="#comparison">Comparação de Geradores de Holerite (2026)</a>
+            </li>
+            <li>
+              <svg class="toc-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="6.5"/><path d="M8 5v3l2 2"/></svg>
+              <a href="#irs-1099-rules">Novas Regras do IRS 1099 para 2026</a>
+            </li>
+            <li>
+              <svg class="toc-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="6.5"/><path d="M6 6.5a2 2 0 113 1.73V10M8 12.5v.01"/></svg>
+              <a href="#faq">Perguntas Frequentes</a>
+            </li>
+          </ol>
+        </nav>
+
+        <!-- ============================================================
+             INTRODUCTION
+             ============================================================ -->
+
+        <h2 id="why-self-employed-need-pay-stubs">Por Que Autônomos Precisam de Holerites</h2>
+
+        <!-- Key Stats Strip -->
+        <div class="stats-strip">
+          <div class="stats-strip__item">
+            <span class="stats-strip__number">9</span>
+            <span class="stats-strip__label">Países Suportados</span>
+          </div>
+          <div class="stats-strip__item">
+            <span class="stats-strip__number">15,3%</span>
+            <span class="stats-strip__label">Imposto FICA Autônomo</span>
+          </div>
+          <div class="stats-strip__item">
+            <span class="stats-strip__number">$2.000</span>
+            <span class="stats-strip__label">Novo Limite 1099</span>
+          </div>
+          <div class="stats-strip__item">
+            <span class="stats-strip__number">Grátis</span>
+            <span class="stats-strip__label">Download PDF</span>
+          </div>
+        </div>
+
+        <p>Se você trabalha por conta própria -- seja como freelancer, prestador de serviços autônomo, microempreendedor individual ou trabalhador de plataformas -- provavelmente já enfrentou uma situação em que alguém pede um holerite e você não tem um. Funcionários tradicionais recebem holerites automaticamente através do sistema de folha de pagamento do empregador. Trabalhadores autônomos não têm esse luxo. Eles pagam a si mesmos, o que significa que precisam gerar seu próprio comprovante de renda.</p>
+
+        <p>Isso não é apenas uma inconveniência burocrática. Sem um holerite, você pode ter dificuldades para <strong>alugar um apartamento</strong>, conseguir um <strong>financiamento imobiliário ou de veículo</strong>, solicitar <strong>benefícios governamentais</strong>, ou até mesmo atender aos <strong>requisitos de cadastro de um cliente</strong>. Proprietários querem ver renda consistente. Credores precisam de ganhos verificáveis. E cada vez mais, agências governamentais e seguradoras exigem documentação de pagamento que vai além de um simples extrato bancário.</p>
+
+        <p>A boa notícia é que criar um holerite de autônomo é simples, legal e -- com a ferramenta certa -- completamente gratuito. Neste guia, explicamos exatamente quando você precisa de um holerite, quais informações ele deve conter, como funcionam os impostos para autônomos, e como gerar um PDF profissional em menos de cinco minutos usando o <a href="/pt/gerador-holerite/">Gerador de Holerite do AAWebTools</a>.</p>
+
+        <div class="callout callout--finding">
+          <div class="callout__label">Fato Importante</div>
+          <p>Mais de 64 milhões de americanos realizaram trabalho freelance em 2025, segundo a pesquisa anual da Upwork. Isso representa mais de um terço de toda a força de trabalho dos EUA -- e cada um deles pode precisar de um holerite de autônomo em algum momento para moradia, crédito ou fins fiscais.</p>
+        </div>
+
+        <p>Também abordamos o <strong>novo limite de declaração do IRS 1099-K</strong> que entra em vigor em 2026, comparamos seis geradores de holerite populares lado a lado, e respondemos as perguntas mais comuns que freelancers têm sobre comprovação de renda. Seja você um designer gráfico se candidatando ao primeiro apartamento ou um consultor experiente refinanciando uma casa, este guia tem tudo o que você precisa.</p>
+
+        <hr class="section-divider">
+
+        <!-- ============================================================
+             WHEN YOU NEED A PAY STUB
+             ============================================================ -->
+
+        <h2 id="when-you-need-pay-stub">Quando Você Precisa de um Holerite como Autônomo</h2>
+
+        <p>Holerites de autônomo não são apenas um diferencial -- muitas vezes são obrigatórios. Aqui estão as cinco situações mais comuns em que você vai precisar de um.</p>
+
+        <h3>1. Aluguel de Apartamento ou Casa</h3>
+
+        <p>Proprietários e imobiliárias quase universalmente exigem comprovante de renda antes de aprovar um contrato de aluguel. O pedido padrão é de dois a três meses de holerites recentes. Quando você é autônomo, não recebe esses documentos de um empregador, então precisa criá-los você mesmo. A maioria dos proprietários aceita holerites autogerados junto com extratos bancários e declarações de imposto de renda como parte de um pacote completo de verificação de renda.</p>
+
+        <div class="callout callout--tip">
+          <div class="callout__label">Dica</div>
+          <p>Ao se candidatar a um apartamento, prepare uma pasta com seus holerites, três meses de extratos bancários, sua declaração de imposto de renda mais recente e uma breve carta explicando seu trabalho autônomo. Esse pacote responde à maioria das perguntas do proprietário antes mesmo de serem feitas.</p>
+        </div>
+
+        <h3>2. Solicitação de Financiamento Imobiliário</h3>
+
+        <p>Instituições de crédito imobiliário analisam a renda de autônomos com mais rigor do que a de funcionários CLT. A maioria exige pelo menos dois anos de declarações de imposto, mas também quer ver holerites atuais ou demonstrativos de lucros e perdas que comprovem renda contínua. Um holerite bem formatado mostrando ganhos mensais ou quinzenais consistentes facilita a verificação pelo analista de crédito de que sua renda não caiu desde sua última declaração fiscal.</p>
+
+        <h3>3. Obtenção de Financiamento de Veículo ou Empréstimo Pessoal</h3>
+
+        <p>Concessionárias e instituições de crédito pessoal normalmente exigem comprovante de renda como parte do processo de aprovação. Um holerite de autônomo mostrando seus ganhos brutos, retenções de impostos e salário líquido oferece ao credor uma visão clara da sua situação financeira. Muitos credores preferem um holerite a um extrato bancário porque ele separa a renda empresarial dos gastos pessoais em um formato padronizado.</p>
+
+        <div class="callout callout--finding">
+          <div class="callout__label">Descoberta Importante</div>
+          <p>De acordo com a National Association of Realtors, mutuários autônomos têm <strong>40% mais probabilidade</strong> de receber solicitações de documentação adicional além do que funcionários CLT fornecem. Ter holerites prontos desde o início pode reduzir atrasos na aprovação em semanas.</p>
+        </div>
+
+        <h3>4. Solicitações e Benefícios Governamentais</h3>
+
+        <p>Solicitações de subsídios de seguro saúde (mercado ACA), assistência para creche, auxílio financeiro estudantil (FAFSA) e outros programas governamentais exigem verificação de renda. Muitos desses formulários pedem especificamente holerites. Um holerite autogerado que reflita com precisão seus ganhos pode satisfazer esses requisitos, especialmente quando combinado com seu Schedule C ou Schedule SE da declaração de impostos.</p>
+
+        <h3>5. Cadastro de Clientes e Fornecedores</h3>
+
+        <p>Alguns clientes corporativos exigem comprovação de estabilidade financeira antes de assinar um contrato com um prestador de serviços autônomo. Seguradoras, empresas de serviços financeiros e contratantes governamentais podem solicitar holerites como parte da qualificação de fornecedores. Mesmo que um holerite formal não seja explicitamente exigido, ter um disponível demonstra profissionalismo e organização financeira que pode diferenciá-lo de outros freelancers concorrendo pelo mesmo contrato.</p>
+
+        <hr class="section-divider">
+
+        <!-- ============================================================
+             WHAT TO INCLUDE
+             ============================================================ -->
+
+        <h2 id="what-to-include">O Que Incluir em um Holerite de Autônomo</h2>
+
+        <p>Um holerite de autônomo precisa ser detalhado o suficiente para satisfazer um proprietário, credor ou agência governamental, mas honesto o suficiente para corresponder aos seus registros financeiros reais. Aqui estão todos os campos que você deve incluir, e por que cada um é importante.</p>
+
+        <h3>Informações Pessoais e Empresariais</h3>
+
+        <p>Comece pelo básico. Seu holerite deve identificar claramente você como empregador e empregado -- porque quando você é autônomo, você é ambos.</p>
+
+        <ul class="checklist">
+          <li><strong>Seu nome legal completo</strong> -- como aparece na sua declaração de impostos</li>
+          <li><strong>Nome da empresa</strong> -- seu nome fantasia, MEI, EIRELI ou empresa individual</li>
+          <li><strong>Endereço comercial</strong> -- seu endereço comercial registrado</li>
+          <li><strong>Datas do período de pagamento</strong> -- data de início e fim deste holerite (ex.: 1-15 de março de 2026)</li>
+          <li><strong>Data de pagamento</strong> -- a data em que você está se pagando</li>
+          <li><strong>CPF ou CNPJ</strong> -- apenas os últimos quatro dígitos por segurança</li>
+        </ul>
+
+        <h3>Renda Bruta</h3>
+
+        <p>Este é o total dos seus ganhos antes de quaisquer deduções. Para um autônomo, a renda bruta é a receita total que você recebeu de clientes durante o período de pagamento. Se você fatura clientes usando um <a href="/pt/gerador-faturas/">gerador de faturas</a>, sua renda bruta deve corresponder à soma das faturas pagas naquele período.</p>
+
+        <div class="callout callout--warning">
+          <div class="callout__label">Importante</div>
+          <p>Sua renda bruta no holerite deve refletir o <strong>dinheiro efetivamente recebido</strong>, não as faturas enviadas. Se você faturou US$ 5.000 para um cliente, mas ele ainda não pagou, esse valor não deve aparecer no seu holerite até que o pagamento seja compensado.</p>
+        </div>
+
+        <h3>Imposto de Trabalho Autônomo (FICA -- 15,3%)</h3>
+
+        <p>Este é o grande ponto que confunde muitos trabalhadores autônomos. Funcionários tradicionais pagam 7,65% dos seus ganhos em impostos FICA (Social Security + Medicare), e seu empregador paga os outros 7,65%. Quando você é autônomo, você paga ambas as metades -- os 15,3% completos.</p>
+
+        <p>Veja como os 15,3% se dividem para 2026:</p>
+
+        <ul>
+          <li><strong>Social Security:</strong> 12,4% sobre os primeiros US$ 168.600 de ganhos líquidos</li>
+          <li><strong>Medicare:</strong> 2,9% sobre todos os ganhos líquidos (sem teto)</li>
+          <li><strong>Sobretaxa Adicional do Medicare:</strong> 0,9% sobre ganhos acima de US$ 200.000 (US$ 250.000 para declaração conjunta)</li>
+        </ul>
+
+        <p>Seu holerite deve mostrar o imposto de trabalho autônomo como uma dedução da renda bruta. O IRS permite deduzir metade do seu imposto de autônomo (a parte do "empregador") ao calcular sua renda bruta ajustada, mas seu holerite deve mostrar os 15,3% completos como valor retido.</p>
+
+        <h3>Pagamentos Estimados Trimestrais de Impostos</h3>
+
+        <p>Diferentemente dos funcionários CLT cujos impostos são retidos em cada contracheque, trabalhadores autônomos são obrigados a fazer pagamentos estimados trimestrais de impostos ao IRS (Formulário 1040-ES). Se você reserva dinheiro a cada período de pagamento para pagamentos trimestrais, seu holerite deve refletir isso. Os quatro prazos trimestrais para 2026 são:</p>
+
+        <ol>
+          <li>15 de abril de 2026 (para renda obtida de janeiro a março)</li>
+          <li>15 de junho de 2026 (para renda obtida de abril a maio)</li>
+          <li>15 de setembro de 2026 (para renda obtida de junho a agosto)</li>
+          <li>15 de janeiro de 2027 (para renda obtida de setembro a dezembro)</li>
+        </ol>
+
+        <h3>Outras Deduções</h3>
+
+        <p>Dependendo da sua situação, você também pode querer mostrar estas deduções no seu holerite:</p>
+
+        <ul>
+          <li><strong>Retenção de imposto de renda federal</strong> -- o valor que você está reservando para imposto de renda federal, com base na sua faixa tributária</li>
+          <li><strong>Retenção de imposto de renda estadual</strong> -- se seu estado cobra imposto de renda</li>
+          <li><strong>Prêmios de seguro saúde</strong> -- autônomos podem deduzir prêmios de seguro saúde</li>
+          <li><strong>Contribuições para aposentadoria</strong> -- contribuições para SEP-IRA, Solo 401(k) ou SIMPLE IRA</li>
+        </ul>
+
+        <h3>Salário Líquido</h3>
+
+        <p>Após todas as deduções, seu salário líquido é o que você efetivamente leva para casa. Este é o número que deve corresponder aproximadamente aos depósitos na sua conta bancária para o período de pagamento. Credores e proprietários vão se concentrar neste valor ao avaliar sua capacidade de efetuar pagamentos.</p>
+
+        <h3>Totais Acumulados no Ano (YTD)</h3>
+
+        <p>Todo holerite profissional inclui totais acumulados no ano para renda bruta, cada categoria de dedução e salário líquido. Totais YTD são especialmente importantes para trabalhadores autônomos porque ajudam credores e proprietários a ver a trajetória da sua renda ao longo do tempo. Um holerite mostrando ganhos YTD consistentes ou crescentes é muito mais convincente do que um mostrando um único período de pagamento isoladamente.</p>
+
+        <div class="callout callout--privacy">
+          <div class="callout__label">Boa Prática</div>
+          <p>Mantenha uma planilha ou sistema contábil que rastreie cada período de pagamento ao longo do ano. Isso facilita a geração de totais YTD precisos e garante que seus holerites correspondam à sua declaração de impostos anual quando você a apresentar.</p>
+        </div>
+
+        <hr class="section-divider">
+
+        <!-- ============================================================
+             MATCH YOUR TAX RETURNS
+             ============================================================ -->
+
+        <h2 id="match-tax-returns">A Regra Fundamental: Compatibilidade com a Declaração de Impostos</h2>
+
+        <p>Este é o princípio mais importante para holerites de autônomos, e aquele que pode causar sérios problemas se você ignorá-lo: <strong>cada número no seu holerite deve ser consistente com suas declarações de imposto de renda, extratos bancários e formulários 1099.</strong></p>
+
+        <p>Proprietários, credores e agências governamentais rotineiramente cruzam referências entre documentos. Um analista de financiamento imobiliário vai comparar seus holerites com suas declarações de imposto, seus extratos bancários com seus holerites, e seus 1099s com todos os anteriores. Qualquer discrepância -- mesmo uma inocente -- pode atrasar sua solicitação, acionar análise adicional, ou resultar em negativa.</p>
+
+        <h3>Como manter a consistência</h3>
+
+        <ol>
+          <li><strong>Use os mesmos valores de renda bruta</strong> que aparecem no seu Schedule C (autônomos individuais) ou K-1 (sociedades e S-corps). Se seu Schedule C mostra US$ 96.000 em recebimentos brutos anuais, seus holerites devem totalizar aproximadamente US$ 96.000 no mesmo período.</li>
+          <li><strong>Corresponda aos seus depósitos bancários.</strong> Se seu holerite diz que você ganhou US$ 8.000 em fevereiro, sua conta bancária deve mostrar aproximadamente US$ 8.000 em depósitos de clientes durante aquele mês, menos quaisquer despesas comerciais pagas pela mesma conta.</li>
+          <li><strong>Alinhe com seus formulários 1099.</strong> A partir de 2026, o novo limite de US$ 2.000 para 1099-K significa que você receberá 1099s por valores menores. Seus holerites devem ser consistentes com esses formulários.</li>
+          <li><strong>Use períodos de pagamento consistentes.</strong> Se você se paga quinzenalmente, mantenha essa cadência. Proprietários e credores percebem quando os períodos de pagamento são irregulares ou parecem fabricados para corresponder a uma data específica de solicitação.</li>
+        </ol>
+
+        <div class="callout callout--warning">
+          <div class="callout__label">Alerta de Privacidade</div>
+          <p>Nunca compartilhe seu CPF completo em um holerite. Use apenas os últimos quatro dígitos. Se um proprietário ou credor precisar do seu CPF completo, eles devem coletá-lo separadamente em um formulário seguro. Além disso, nunca envie holerites contendo informações sensíveis por e-mail sem proteção por senha ou criptografia -- use o download em PDF do seu <a href="/pt/gerador-holerite/">gerador de holerite</a> e compartilhe por um canal seguro.</p>
+        </div>
+
+        <h3>O que acontece se seus documentos não corresponderem</h3>
+
+        <p>Inconsistências entre seus holerites e outros documentos financeiros podem levar a vários resultados negativos:</p>
+
+        <ul>
+          <li><strong>Solicitação de aluguel negada</strong> -- proprietários podem suspeitar de renda inflada e rejeitar sua candidatura diretamente</li>
+          <li><strong>Solicitação de empréstimo atrasada</strong> -- analistas vão solicitar documentação adicional e cartas de explicação</li>
+          <li><strong>Financiamento negado</strong> -- discrepâncias significativas podem resultar em negativa direta, especialmente para mutuários autônomos que já enfrentam maior escrutínio</li>
+          <li><strong>Consequências legais</strong> -- falsificar intencionalmente informações de holerite para uma solicitação de empréstimo é fraude federal e pode resultar em multas e prisão</li>
+        </ul>
+
+        <p>A solução é simples: gere seus holerites a partir de números reais, mantenha registros organizados ao longo do ano, e nunca inflacione ou fabrique valores de renda por qualquer motivo.</p>
+
+        <hr class="section-divider">
+
+        <!-- ============================================================
+             STEP BY STEP
+             ============================================================ -->
+
+        <h2 id="step-by-step">Passo a Passo: Crie um Holerite com o AAWebTools</h2>
+
+        <p>O <a href="/pt/gerador-holerite/">Gerador de Holerite do AAWebTools</a> foi projetado especificamente para trabalhadores autônomos, freelancers e proprietários de pequenos negócios que precisam de holerites profissionais sem pagar por software de folha de pagamento. Veja como criar um em menos de cinco minutos.</p>
+
+        <div class="step-card">
+          <div class="step-card__number">1</div>
+          <div class="step-card__content">
+            <h3>Insira as Informações da Sua Empresa</h3>
+            <p>Preencha o nome da sua empresa (ou seu nome completo se você opera como autônomo individual), seu endereço comercial e seu CNPJ ou últimos quatro dígitos do CPF. Selecione seu país no menu suspenso -- o gerador suporta Estados Unidos, Canadá, Reino Unido, Austrália, Alemanha, França, Índia, Brasil e México.</p>
+          </div>
+        </div>
+
+        <div class="step-card">
+          <div class="step-card__number">2</div>
+          <div class="step-card__content">
+            <h3>Insira as Informações do Funcionário</h3>
+            <p>Como você é autônomo, você é o funcionário. Insira seu nome legal completo, seu endereço e seu CPF (últimos quatro dígitos). Esta seção espelha o que um empregador tradicional preencheria por você.</p>
+          </div>
+        </div>
+
+        <div class="step-card">
+          <div class="step-card__number">3</div>
+          <div class="step-card__content">
+            <h3>Defina o Período de Pagamento e os Ganhos</h3>
+            <p>Escolha a frequência de pagamento (semanal, quinzenal, bimensal ou mensal), insira as datas de início e fim do período de pagamento e informe seus ganhos brutos do período. Se você tem múltiplas fontes de renda, combine-as em um único valor bruto que corresponda aos seus depósitos bancários naquele período.</p>
+          </div>
+        </div>
+
+        <div class="step-card">
+          <div class="step-card__number">4</div>
+          <div class="step-card__content">
+            <h3>Adicione as Deduções</h3>
+            <p>O gerador calcula automaticamente as deduções padrão com base no seu país. Para usuários nos EUA, isso inclui imposto de renda federal, Social Security (12,4%) e Medicare (2,9%) -- totalizando os 15,3% do imposto FICA de trabalho autônomo. Você também pode adicionar deduções personalizadas para imposto estadual, seguro saúde, contribuições para aposentadoria ou qualquer outra retenção recorrente.</p>
+          </div>
+        </div>
+
+        <div class="step-card">
+          <div class="step-card__number">5</div>
+          <div class="step-card__content">
+            <h3>Revise e Baixe o PDF</h3>
+            <p>Visualize seu holerite no painel de pré-visualização ao vivo. Verifique se todos os números estão precisos, se os cálculos estão corretos e se os totais YTD refletem seus ganhos reais do ano. Quando tudo estiver correto, clique em "Baixar PDF" para salvar um holerite profissional pronto para impressão no seu dispositivo. Sem criação de conta, sem marcas d'água, sem taxas.</p>
+          </div>
+        </div>
+
+        <!-- CTA Block -->
+        <div class="article-cta">
+          <div class="article-cta__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          </div>
+          <p><strong>Crie seu holerite de autônomo agora</strong></p>
+          <p>Gratuito, sem cadastro, suporta 9 países. Download de PDF profissional em menos de 5 minutos.</p>
+          <a href="/pt/gerador-holerite/" class="btn-primary">Abrir Gerador de Holerite</a>
+        </div>
+
+        <p>Precisa enviar faturas para seus clientes primeiro? Use o <a href="/pt/gerador-faturas/">Gerador de Faturas do AAWebTools</a> para criar faturas profissionais que correspondam aos valores do seu holerite. Manter suas faturas e holerites alinhados torna a verificação de renda perfeita.</p>
+
+        <hr class="section-divider">
+
+        <!-- ============================================================
+             COMPARISON TABLE
+             ============================================================ -->
+
+        <h2 id="comparison">Comparação de Geradores de Holerite (2026)</h2>
+
+        <p>Avaliamos seis geradores de holerite populares para ver como eles se comparam nos recursos mais importantes para trabalhadores autônomos. Veja o que encontramos.</p>
+
+        <div class="table-responsive">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Ferramenta</th>
+                <th>Preço</th>
+                <th>Cadastro</th>
+                <th>Países</th>
+                <th>Imposto Autônomo</th>
+                <th>Totais YTD</th>
+                <th>Download PDF</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>AAWebTools</strong></td>
+                <td>Free</td>
+                <td><span class="check">Sem cadastro</span></td>
+                <td>9</td>
+                <td><span class="check">Cálculo automático</span></td>
+                <td><span class="check">Sim</span></td>
+                <td><span class="check">Grátis, sem marca d'água</span></td>
+              </tr>
+              <tr>
+                <td><strong>StubCreator</strong></td>
+                <td>US$ 8,99/holerite</td>
+                <td>E-mail obrigatório</td>
+                <td>2 (US, CA)</td>
+                <td><span class="check">Sim</span></td>
+                <td><span class="check">Sim</span></td>
+                <td>Apenas pago</td>
+              </tr>
+              <tr>
+                <td><strong>Shopify Pay Stub</strong></td>
+                <td>Grátis</td>
+                <td><span class="check">Sem cadastro</span></td>
+                <td>1 (EUA)</td>
+                <td><span class="cross">Não</span></td>
+                <td><span class="cross">Não</span></td>
+                <td><span class="check">Grátis</span></td>
+              </tr>
+              <tr>
+                <td><strong>Wix Pay Stub</strong></td>
+                <td>Grátis</td>
+                <td>Conta obrigatória</td>
+                <td>1 (EUA)</td>
+                <td><span class="cross">Não</span></td>
+                <td><span class="cross">Não</span></td>
+                <td><span class="check">Grátis</span></td>
+              </tr>
+              <tr>
+                <td><strong>123PayStubs</strong></td>
+                <td>US$ 3,99/holerite</td>
+                <td>E-mail obrigatório</td>
+                <td>1 (EUA)</td>
+                <td><span class="check">Sim</span></td>
+                <td><span class="check">Sim</span></td>
+                <td>Apenas pago</td>
+              </tr>
+              <tr>
+                <td><strong>PayStubDirect</strong></td>
+                <td>US$ 7,95/holerite</td>
+                <td>E-mail obrigatório</td>
+                <td>2 (EUA, CA)</td>
+                <td><span class="check">Sim</span></td>
+                <td><span class="check">Sim</span></td>
+                <td>Apenas pago</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Por que o AAWebTools se destaca para autônomos</h3>
+
+        <p>A maioria dos geradores de holerite é projetada para empregadores que processam folha de pagamento de funcionários CLT. Eles cobram por holerite, exigem cadastro por e-mail e frequentemente não incluem cálculos de impostos para autônomos. O <a href="/pt/gerador-holerite/">Gerador de Holerite do AAWebTools</a> foi construído com trabalhadores autônomos como usuário principal:</p>
+
+        <ul>
+          <li><strong>Genuinamente gratuito</strong> -- sem taxas por holerite, sem vendas freemium, sem marcas d'água nos PDFs baixados</li>
+          <li><strong>Sem conta obrigatória</strong> -- seus dados ficam no seu navegador e nunca são enviados a um servidor</li>
+          <li><strong>Suporte para 9 países</strong> -- processa cálculos tributários para EUA, Canadá, Reino Unido, Austrália, Alemanha, França, Índia, Brasil e México</li>
+          <li><strong>Imposto de autônomo automático</strong> -- calcula a divisão completa de 15,3% do FICA (Social Security + Medicare) para usuários dos EUA</li>
+          <li><strong>Rastreamento YTD</strong> -- calcula automaticamente totais acumulados no ano em todos os períodos de pagamento</li>
+          <li><strong>Formatação profissional</strong> -- PDF limpo, pronto para impressão, com aparência de sistema de folha de pagamento</li>
+        </ul>
+
+        <p>As ferramentas gratuitas do Shopify e Wix são razoáveis para gerar um holerite básico rapidamente, mas carecem de cálculos de impostos para autônomos e totais YTD -- dois recursos que proprietários e credores procuram especificamente. As ferramentas pagas (StubCreator, 123PayStubs, PayStubDirect) oferecem recursos mais completos, mas cobram de US$ 4 a US$ 9 por holerite, o que se acumula rapidamente se você precisa gerar holerites a cada período de pagamento.</p>
+
+        <hr class="section-divider">
+
+        <!-- ============================================================
+             NEW IRS 1099 RULES
+             ============================================================ -->
+
+        <h2 id="irs-1099-rules">Novas Regras do IRS 1099 para 2026</h2>
+
+        <p>Se você é autônomo, há uma mudança importante na declaração fiscal que você precisa conhecer em 2026. O <strong>One Big Beautiful Bill Act</strong>, assinado em lei em 2025, estabeleceu permanentemente o limite de declaração 1099-K em <strong>US$ 2.000</strong> a partir do ano fiscal de 2026.</p>
+
+        <h3>O que mudou</h3>
+
+        <p>Aqui está o histórico, porque foi um caminho tortuoso:</p>
+
+        <ul>
+          <li><strong>Antes de 2022:</strong> Plataformas de pagamento (PayPal, Venmo, Stripe, Square, etc.) só emitiam formulários 1099-K se você recebesse mais de US$ 20.000 E tivesse mais de 200 transações em um ano</li>
+          <li><strong>2022 American Rescue Plan:</strong> O Congresso reduziu o limite para US$ 600, mas o IRS adiou a aplicação repetidamente</li>
+          <li><strong>2023-2024:</strong> O IRS anunciou anos de transição com limite de US$ 5.000 para 2024</li>
+          <li><strong>2025 (One Big Beautiful Bill Act):</strong> O limite foi permanentemente fixado em US$ 2.000 sem exigência de número de transações, em vigor para o ano fiscal de 2026</li>
+        </ul>
+
+        <h3>O que isso significa para trabalhadores autônomos</h3>
+
+        <p>A partir de 2026, se qualquer plataforma de pagamento processar <strong>US$ 2.000 ou mais</strong> em pagamentos para você durante o ano calendário, eles devem enviar a você (e ao IRS) um formulário 1099-K. Esta é uma mudança significativa em relação ao limite original de US$ 20.000/200 transações, e significa que muito mais freelancers, trabalhadores de plataformas e autônomos receberão formulários 1099-K do que nunca antes.</p>
+
+        <div class="callout callout--finding">
+          <div class="callout__label">Conclusão Importante</div>
+          <p>O novo limite de US$ 2.000 torna a documentação precisa de holerites ainda mais importante. Seus holerites devem ser consistentes com seus formulários 1099-K, que o IRS agora terá para uma parcela muito maior da sua renda. Discrepâncias entre sua renda declarada e os totais do 1099-K acionarão notificações automatizadas do IRS.</p>
+        </div>
+
+        <h3>Como se preparar</h3>
+
+        <ol>
+          <li><strong>Rastreie toda a renda de plataformas de pagamento separadamente.</strong> Saiba exatamente quanto você recebe pelo PayPal, Venmo, Stripe e outras plataformas para não ser surpreendido por um 1099-K.</li>
+          <li><strong>Garanta que seus holerites estejam alinhados com os totais das plataformas.</strong> Se o Stripe relata US$ 24.000 em pagamentos para você, seus holerites devem contabilizar essa renda.</li>
+          <li><strong>Mantenha registros de transações comerciais versus pessoais.</strong> Se você recebe pagamentos pessoais pela mesma plataforma que usa para negócios, precisará documentar quais transações não são renda tributável.</li>
+          <li><strong>Gere faturas para cada pagamento de cliente.</strong> Usar um <a href="/pt/gerador-faturas/">gerador de faturas</a> para criar um rastro documental para cada pagamento torna a reconciliação com formulários 1099-K simples.</li>
+        </ol>
+
+        <hr class="section-divider">
+
+        <!-- ============================================================
+             FAQ
+             ============================================================ -->
+
+        <h2 id="faq">Perguntas Frequentes</h2>
+
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>Um autônomo pode criar seu próprio holerite?</summary>
+            <p>Sim. Diferentemente dos funcionários tradicionais que recebem holerites do sistema de folha de pagamento do empregador, trabalhadores autônomos podem e frequentemente devem criar seus próprios holerites. Um holerite de autônomo é um documento resumo que mostra sua renda bruta, impostos de trabalho autônomo, pagamentos estimados de impostos e salário líquido para um determinado período. Ferramentas como o <a href="/pt/gerador-holerite/">Gerador de Holerite do AAWebTools</a> permitem criar holerites profissionais gratuitamente sem necessidade de cadastro.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Proprietários aceitam holerites de autônomos para candidaturas a apartamentos?</summary>
+            <p>A maioria dos proprietários e imobiliárias aceita holerites autogerados como parte de um pacote mais amplo de verificação de renda. No entanto, eles normalmente querem ver holerites acompanhados de extratos bancários, declarações de imposto de renda ou carta de contador para verificação cruzada dos valores de renda. O segredo é a consistência: os números no seu holerite devem corresponder exatamente aos seus depósitos bancários, formulários 1099 e declarações fiscais.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Qual é a alíquota do imposto de trabalho autônomo para 2026?</summary>
+            <p>A alíquota do imposto de trabalho autônomo permanece em 15,3% para 2026, composta por 12,4% para Social Security (sobre os primeiros US$ 168.600 de ganhos líquidos) e 2,9% para Medicare (sobre todos os ganhos líquidos). Se sua renda líquida de autônomo exceder US$ 200.000 (US$ 250.000 para declaração conjunta), você também deve uma sobretaxa adicional de 0,9% do Medicare. Você pode deduzir metade do seu imposto de trabalho autônomo ao calcular a renda bruta ajustada.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Qual é o novo limite do IRS 1099 para 2026?</summary>
+            <p>Sob o One Big Beautiful Bill Act assinado em 2025, o limite de declaração 1099-K foi permanentemente fixado em US$ 2.000 a partir do ano fiscal de 2026. Isso significa que plataformas de pagamento como PayPal, Venmo, Stripe e Square devem emitir um 1099-K se processarem US$ 2.000 ou mais em pagamentos para você durante o ano. O limite anterior de US$ 600, que foi repetidamente adiado, foi oficialmente substituído.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>É legal criar seu próprio holerite como freelancer?</summary>
+            <p>Sim, criar seu próprio holerite como autônomo é totalmente legal. Autônomos, freelancers e prestadores de serviços independentes rotineiramente geram seus próprios holerites para fins de verificação de renda. O que é ilegal é falsificar as informações em um holerite -- como inflar a renda, fabricar um empregador ou deturpar deduções. Seu holerite deve refletir com precisão seus ganhos reais e deve ser consistente com suas declarações de imposto e registros bancários.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Como mostrar comprovante de renda se acabei de começar como freelancer?</summary>
+            <p>Novos freelancers podem mostrar comprovante de renda através de uma combinação de documentos: contratos com clientes ou cartas de compromisso mostrando taxas acordadas, faturas que você enviou (com um <a href="/pt/gerador-faturas/">gerador de faturas</a>), extratos bancários mostrando depósitos de clientes e holerites autogerados resumindo seus ganhos até a data. Se você ainda não tem declarações de imposto de renda de trabalho autônomo, uma carta de contador projetando sua renda anual com base nos contratos atuais também pode ajudar em candidaturas a apartamentos ou empréstimos.</p>
+          </details>
+        </div>
+
+        <!-- ============================================================
+             CLOSING
+             ============================================================ -->
+
+        <h2>Considerações Finais</h2>
+
+        <p>Criar um holerite quando você é autônomo não é complicado, mas exige atenção aos detalhes. Os números devem ser precisos, o formato deve ser profissional, e -- mais importante -- cada valor no seu holerite deve ser consistente com suas declarações de imposto de renda, extratos bancários e formulários 1099. Um holerite bem preparado não é apenas um pedaço de papel; é sua prova de estabilidade financeira e legitimidade profissional.</p>
+
+        <p>O <a href="/pt/gerador-holerite/">Gerador de Holerite do AAWebTools</a> torna esse processo gratuito e direto. Insira suas informações, deixe a ferramenta calcular seus impostos de autônomo, revise a pré-visualização e baixe um PDF limpo. Sem cadastro, sem taxas, sem marcas d'água. Combine-o com o <a href="/pt/gerador-faturas/">Gerador de Faturas</a> para manter um rastro documental completo desde o faturamento de clientes até a documentação de renda pessoal.</p>
+
+        <p>Com o novo limite de US$ 2.000 do IRS 1099-K entrando em vigor em 2026, a documentação precisa de renda é mais importante do que nunca. Seja para se candidatar a um apartamento, qualificar-se para um financiamento, ou simplesmente manter seus registros financeiros organizados, ter holerites profissionais prontos vai economizar seu tempo, reduzir atritos e ajudá-lo a apresentar sua renda de autônomo com confiança.</p>
+
+        <!-- CTA Block -->
+        <div class="article-cta">
+          <div class="article-cta__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          </div>
+          <p><strong>Pronto para criar seu holerite de autônomo?</strong></p>
+          <p>Gerador gratuito, 9 países, cálculos tributários automáticos. Baixe um PDF profissional em minutos.</p>
+          <a href="/pt/gerador-holerite/" class="btn-primary">Criar Holerite Agora</a>
+        </div>
+
+        <!-- Author box -->
+        <div class="author-box">
+          <div class="author-box__avatar">AA</div>
+          <div class="author-box__info">
+            <div class="author-box__name">Escrito por AAWebTools Team</div>
+            <div class="author-box__date">Publicado em 27 de março de 2026</div>
+            <a href="/pt/blog/" class="author-box__link">Mais artigos &rarr;</a>
+          </div>
+        </div>
+
+      </article>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__grid">
+      <div>
+        <div class="footer__logo"><img src="/assets/img/logo-light.png" alt="AAWebTools" height="44"></div>
+        <p class="footer__tagline">Free tools for everyone, worldwide</p>
+        <p class="footer__copyright">&copy; 2026 AAWebTools. All rights reserved. Built by <a href="https://scopecove.com/" target="_blank" rel="noopener" class="footer__link" style="display:inline;">ScopeCove</a></p>
+      </div>
+      <div>
+        <h4 class="footer__heading">Tools</h4>
+        <a href="/tiktok-downloader/" class="footer__link">TikTok Downloader</a>
+        <a href="/twitter-video-downloader/" class="footer__link">Twitter Video Downloader</a>
+        <a href="/invoice-generator/" class="footer__link">Invoice Generator</a>
+        <a href="/ai-detector/" class="footer__link">AI Content Detector</a>
+        <a href="/ai-humanizer/" class="footer__link">AI Text Humanizer</a>
+        <a href="/paystub-generator/" class="footer__link">Pay Stub Generator</a>
+        <a href="/image-toolkit/" class="footer__link">Image Toolkit</a>
+      </div>
+      <div>
+        <h4 class="footer__heading">Legal</h4>
+        <a href="/privacy/" class="footer__link">Privacy Policy</a>
+        <a href="/terms/" class="footer__link">Terms of Service</a>
+        <a href="/about/" class="footer__link">About</a>
+        <a href="/contact/" class="footer__link">Contact</a>
+        <a href="/blog/" class="footer__link">Blog</a>
+      </div>
+    </div>
+    <div class="footer__bottom">Made with &#10084;&#65039; | Free forever | No signup required</div>
+  </footer>
+
+  <script src="/assets/js/core.js" defer></script>
+  <script defer src="https://analytics.aawebtools.com/script.js" data-website-id="836dfc88-b05f-49b2-9824-3a085e248896"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9434634079795273" crossorigin="anonymous"></script>
+
+  <!-- Reading progress bar script -->
+  <script>
+  (function(){
+    var bar = document.getElementById('readingProgress');
+    if (!bar) return;
+    function updateProgress() {
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      var docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+      bar.style.width = Math.min(progress, 100) + '%';
+    }
+    window.addEventListener('scroll', updateProgress, { passive: true });
+    updateProgress();
+  })();
+  </script>
+</body>
+</html>
