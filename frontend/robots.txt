@@ -4,6 +4,9 @@ Disallow: /api/
 Disallow: /analytics/
 Disallow: /monitor/
 Disallow: /netdata/
+Disallow: /test.html
+Disallow: /template.html
+Disallow: /template-blog.html
 
 # Block AI training scrapers
 User-agent: GPTBot
