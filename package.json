@@ -1,0 +1,22 @@
+{
+  "name": "aawebtools",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "AAWebTools — Free online tools, multilingual static site",
+  "scripts": {
+    "build": "node tools/translate/build.js",
+    "translate": "node tools/translate/cli.js translate",
+    "translate:dry": "node tools/translate/cli.js translate --dry-run",
+    "translate:diff": "node tools/translate/cli.js diff",
+    "translate:validate": "node tools/translate/cli.js validate",
+    "dev": "node tools/translate/build.js --watch"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0",
+    "commander": "^12.1.0"
+  },
+  "devDependencies": {
+    "svgo": "^3.2.0"
+  }
+}

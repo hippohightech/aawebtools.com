@@ -1,0 +1,77 @@
+{
+  "default": "en",
+  "languages": [
+    {
+      "code": "en",
+      "name": "English",
+      "native": "English",
+      "locale": "en_US",
+      "dir": "ltr",
+      "prefix": "",
+      "contentLanguage": "en"
+    },
+    {
+      "code": "fr",
+      "name": "French",
+      "native": "Français",
+      "locale": "fr_FR",
+      "dir": "ltr",
+      "prefix": "fr",
+      "contentLanguage": "fr"
+    },
+    {
+      "code": "es",
+      "name": "Spanish",
+      "native": "Español",
+      "locale": "es_ES",
+      "dir": "ltr",
+      "prefix": "es",
+      "contentLanguage": "es"
+    },
+    {
+      "code": "de",
+      "name": "German",
+      "native": "Deutsch",
+      "locale": "de_DE",
+      "dir": "ltr",
+      "prefix": "de",
+      "contentLanguage": "de"
+    },
+    {
+      "code": "pt",
+      "name": "Portuguese",
+      "native": "Português",
+      "locale": "pt_BR",
+      "dir": "ltr",
+      "prefix": "pt",
+      "contentLanguage": "pt"
+    },
+    {
+      "code": "ar",
+      "name": "Arabic",
+      "native": "العربية",
+      "locale": "ar_SA",
+      "dir": "rtl",
+      "prefix": "ar",
+      "contentLanguage": "ar"
+    },
+    {
+      "code": "id",
+      "name": "Indonesian",
+      "native": "Bahasa Indonesia",
+      "locale": "id_ID",
+      "dir": "ltr",
+      "prefix": "id",
+      "contentLanguage": "id"
+    },
+    {
+      "code": "hi",
+      "name": "Hindi",
+      "native": "हिन्दी",
+      "locale": "hi_IN",
+      "dir": "ltr",
+      "prefix": "hi",
+      "contentLanguage": "hi"
+    }
+  ]
+}
