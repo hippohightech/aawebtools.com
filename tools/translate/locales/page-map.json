@@ -1,0 +1,207 @@
+{
+  "_comment": "Source of truth for all page URLs across languages. Generates hreflang, sitemaps, and internal links.",
+  "pages": {
+    "homepage": {
+      "en": "/",
+      "fr": "/fr/",
+      "es": "/es/",
+      "de": "/de/",
+      "pt": "/pt/",
+      "ar": "/ar/",
+      "id": "/id/",
+      "hi": "/hi/"
+    },
+    "tiktok-downloader": {
+      "en": "/tiktok-downloader/",
+      "fr": "/fr/telechargeur-tiktok/",
+      "es": "/es/descargador-tiktok/",
+      "de": "/de/tiktok-herunterladen/",
+      "pt": "/pt/baixar-tiktok/",
+      "ar": "/ar/tiktok-downloader/",
+      "id": "/id/unduh-tiktok/",
+      "hi": "/hi/tiktok-downloader/"
+    },
+    "twitter-video-downloader": {
+      "en": "/twitter-video-downloader/",
+      "fr": "/fr/telechargeur-twitter/",
+      "es": "/es/descargador-twitter/",
+      "de": "/de/twitter-video-herunterladen/",
+      "pt": "/pt/baixar-twitter/",
+      "ar": "/ar/twitter-video-downloader/",
+      "id": "/id/unduh-twitter/",
+      "hi": "/hi/twitter-video-downloader/"
+    },
+    "invoice-generator": {
+      "en": "/invoice-generator/",
+      "fr": "/fr/generateur-facture/",
+      "es": "/es/generador-facturas/",
+      "de": "/de/rechnungsgenerator/",
+      "pt": "/pt/gerador-faturas/",
+      "ar": "/ar/invoice-generator/",
+      "id": "/id/pembuat-faktur/",
+      "hi": "/hi/invoice-generator/"
+    },
+    "ai-detector": {
+      "en": "/ai-detector/",
+      "fr": "/fr/detecteur-ia/",
+      "es": "/es/detector-ia/",
+      "de": "/de/ki-detektor/",
+      "pt": "/pt/detector-ia/",
+      "ar": "/ar/ai-detector/",
+      "id": "/id/pendeteksi-ai/",
+      "hi": "/hi/ai-detector/"
+    },
+    "ai-humanizer": {
+      "en": "/ai-humanizer/",
+      "fr": "/fr/humanisateur-ia/",
+      "es": "/es/humanizador-ia/",
+      "de": "/de/ki-humanisierer/",
+      "pt": "/pt/humanizador-ia/",
+      "ar": "/ar/ai-humanizer/",
+      "id": "/id/humanizer-ai/",
+      "hi": "/hi/ai-humanizer/"
+    },
+    "paystub-generator": {
+      "en": "/paystub-generator/",
+      "fr": "/fr/generateur-bulletin-de-paie/",
+      "es": "/es/generador-recibo-nomina/",
+      "de": "/de/gehaltsabrechnungs-generator/",
+      "pt": "/pt/gerador-holerite/",
+      "ar": "/ar/paystub-generator/",
+      "id": "/id/pembuat-slip-gaji/",
+      "hi": "/hi/paystub-generator/"
+    },
+    "image-toolkit": {
+      "en": "/image-toolkit/",
+      "fr": "/fr/boite-a-outils-images/",
+      "es": "/es/herramientas-imagenes/",
+      "de": "/de/bild-werkzeuge/",
+      "pt": "/pt/ferramentas-imagem/",
+      "ar": "/ar/image-toolkit/",
+      "id": "/id/peralatan-gambar/",
+      "hi": "/hi/image-toolkit/"
+    },
+    "about": {
+      "en": "/about/",
+      "fr": "/fr/a-propos/",
+      "es": "/es/acerca-de/",
+      "de": "/de/ueber-uns/",
+      "pt": "/pt/sobre/",
+      "ar": "/ar/about/",
+      "id": "/id/tentang/",
+      "hi": "/hi/about/"
+    },
+    "contact": {
+      "en": "/contact/",
+      "fr": "/fr/contact/",
+      "es": "/es/contacto/",
+      "de": "/de/kontakt/",
+      "pt": "/pt/contato/",
+      "ar": "/ar/contact/",
+      "id": "/id/kontak/",
+      "hi": "/hi/contact/"
+    },
+    "privacy": {
+      "en": "/privacy/",
+      "fr": "/fr/confidentialite/",
+      "es": "/es/privacidad/",
+      "de": "/de/datenschutz/",
+      "pt": "/pt/privacidade/",
+      "ar": "/ar/privacy/",
+      "id": "/id/privasi/",
+      "hi": "/hi/privacy/"
+    },
+    "terms": {
+      "en": "/terms/",
+      "fr": "/fr/conditions/",
+      "es": "/es/terminos/",
+      "de": "/de/nutzungsbedingungen/",
+      "pt": "/pt/termos/",
+      "ar": "/ar/terms/",
+      "id": "/id/syarat/",
+      "hi": "/hi/terms/"
+    },
+    "blog-index": {
+      "en": "/blog/",
+      "fr": "/fr/blog/",
+      "es": "/es/blog/",
+      "de": "/de/blog/",
+      "pt": "/pt/blog/",
+      "ar": "/ar/blog/",
+      "id": "/id/blog/",
+      "hi": "/hi/blog/"
+    },
+    "blog/best-free-ai-content-detectors-2026": {
+      "en": "/blog/best-free-ai-content-detectors-2026/",
+      "es": "/es/blog/mejores-detectores-ia-gratis-2026/",
+      "de": "/de/blog/beste-kostenlose-ki-detektoren-2026/",
+      "pt": "/pt/blog/melhores-detectores-ia-gratis-2026/",
+      "ar": "/ar/blog/best-free-ai-detectors-2026/",
+      "id": "/id/blog/detektor-ai-gratis-terbaik-2026/"
+    },
+    "blog/compress-image-to-100kb-free": {
+      "en": "/blog/compress-image-to-100kb-free/",
+      "fr": "/fr/blog/compresser-image-100ko-gratuit/",
+      "es": "/es/blog/comprimir-imagen-100kb-gratis/",
+      "de": "/de/blog/bild-auf-100kb-komprimieren-kostenlos/",
+      "pt": "/pt/blog/comprimir-imagem-100kb-gratis/",
+      "ar": "/ar/blog/compress-image-100kb-free/",
+      "id": "/id/blog/kompres-gambar-100kb-gratis/"
+    },
+    "blog/ai-humanizers-vs-turnitin-2026": {
+      "en": "/blog/ai-humanizers-vs-turnitin-2026/",
+      "fr": "/fr/blog/humanisateur-ia-vs-turnitin-2026/",
+      "es": "/es/blog/humanizadores-ia-vs-turnitin-2026/",
+      "de": "/de/blog/ki-humanisierer-vs-turnitin-2026/",
+      "pt": "/pt/blog/humanizadores-ia-vs-turnitin-2026/",
+      "ar": "/ar/blog/humanizers-ia-vs-turnitin-2026/",
+      "hi": "/hi/blog/ai-humanizers-vs-turnitin-2026/",
+      "id": "/id/blog/ai-humanizer-vs-turnitin-2026/"
+    },
+    "blog/can-teachers-detect-chatgpt-2026": {
+      "en": "/blog/can-teachers-detect-chatgpt-2026/",
+      "es": "/es/blog/pueden-profesores-detectar-chatgpt-2026/",
+      "de": "/de/blog/koennen-lehrer-chatgpt-erkennen-2026/",
+      "ar": "/ar/blog/can-teachers-detect-chatgpt-2026/",
+      "hi": "/hi/blog/can-teachers-detect-chatgpt-2026/",
+      "id": "/id/blog/bisakah-guru-deteksi-chatgpt-2026/"
+    },
+    "blog/download-tiktok-slideshows-2026": {
+      "en": "/blog/download-tiktok-slideshows-2026/",
+      "es": "/es/blog/descargar-presentaciones-tiktok-2026/",
+      "de": "/de/blog/tiktok-slideshows-herunterladen-2026/",
+      "pt": "/pt/blog/baixar-slideshows-tiktok-2026/",
+      "ar": "/ar/blog/download-tiktok-slideshows-2026/",
+      "hi": "/hi/blog/download-tiktok-slideshows-2026/",
+      "id": "/id/blog/unduh-slideshow-tiktok-2026/"
+    },
+    "blog/pay-stub-generator-self-employed": {
+      "en": "/blog/pay-stub-generator-self-employed/",
+      "fr": "/fr/blog/bulletin-de-paie-freelance-2026/",
+      "es": "/es/blog/generador-recibo-nomina-autonomos/",
+      "de": "/de/blog/gehaltsabrechnung-selbstaendige-2026/",
+      "ar": "/ar/blog/pay-stub-generator-self-employed/",
+      "hi": "/hi/blog/pay-stub-generator-self-employed/",
+      "id": "/id/blog/pembuat-slip-gaji-pekerja-mandiri/"
+    },
+    "blog/facturation-electronique-obligatoire-2026": {
+      "fr": "/fr/blog/facturation-electronique-obligatoire-2026/"
+    },
+    "pay-stub-generator/canada": {
+      "en": "/pay-stub-generator/canada/"
+    },
+    "pay-stub-generator/usa": {
+      "en": "/pay-stub-generator/usa/"
+    },
+    "pay-stub-generator/uk": {
+      "en": "/pay-stub-generator/uk/"
+    },
+    "pay-stub-generator/australia": {
+      "en": "/pay-stub-generator/australia/"
+    },
+    "pay-stub-generator/france": {
+      "en": "/pay-stub-generator/france/",
+      "fr": "/pay-stub-generator/france/"
+    }
+  }
+}
