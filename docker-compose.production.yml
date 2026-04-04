@@ -130,6 +130,7 @@ services:
     restart: always
     networks:
       - shared-network
+      - aawebtools-internal
 
   # Netdata — server metrics
   aawebtools-netdata:
