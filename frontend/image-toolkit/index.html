@@ -38,7 +38,12 @@
       {"@type": "Question", "name": "How many images can I compress at once?", "acceptedAnswer": {"@type": "Answer", "text": "There is no hard limit. You can drop as many images as you like and they will be processed one at a time. Each individual file can be up to 15 MB. For very large batches, processing time depends on your device speed."}},
       {"@type": "Question", "name": "How do I compress an image to a specific size like 100 KB?", "acceptedAnswer": {"@type": "Answer", "text": "Switch on the Target Size toggle in the Compress tab, then enter your desired file size in kilobytes (e.g. 100). The tool will iteratively adjust quality until the output is at or below your target."}},
       {"@type": "Question", "name": "What is the best format for web images in 2026?", "acceptedAnswer": {"@type": "Answer", "text": "WebP offers the best balance of quality, compression and browser support. AVIF delivers even smaller files but encoding is slower and support is still catching up. For maximum compatibility, use WebP with a JPEG fallback."}},
-      {"@type": "Question", "name": "Comment compresser une image gratuitement ?", "acceptedAnswer": {"@type": "Answer", "text": "Ouvrez l'outil Image Toolkit, glissez-deposez vos images dans la zone, choisissez un niveau de qualite et cliquez sur Telecharger. Tout le traitement se fait dans votre navigateur, sans inscription ni envoi de fichier."}}
+      {"@type": "Question", "name": "Comment compresser une image gratuitement ?", "acceptedAnswer": {"@type": "Answer", "text": "Ouvrez l'outil Image Toolkit, glissez-deposez vos images dans la zone, choisissez un niveau de qualite et cliquez sur Telecharger. Tout le traitement se fait dans votre navigateur, sans inscription ni envoi de fichier."}},
+      {"@type": "Question", "name": "How do I compress an image to under 100KB?", "acceptedAnswer": {"@type": "Answer", "text": "Open the Compress tab, enable the Target Size toggle, and type 100 in the kilobyte field. Drop your image into the tool and click Process All. The compressor will iteratively lower the quality until the output is at or below 100 KB. This works for JPEG, PNG and WebP files and is ideal for passport, visa and government form uploads that enforce strict file-size limits."}},
+      {"@type": "Question", "name": "What image formats are supported?", "acceptedAnswer": {"@type": "Answer", "text": "You can upload JPEG, PNG, WebP, SVG and GIF files up to 15 MB each. The toolkit can output JPEG, PNG, WebP and AVIF (where your browser supports it). SVG and GIF inputs are rasterized during processing, so the output will be a bitmap format."}},
+      {"@type": "Question", "name": "Can I resize multiple images at once?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Drop as many images as you need into the tool, choose your target dimensions or select a social-media preset, and click Process All. Every image in the queue will be resized to the same specifications. You can then download them individually or grab everything as a single ZIP file."}},
+      {"@type": "Question", "name": "Is my image data stored on your servers?", "acceptedAnswer": {"@type": "Answer", "text": "No. Every operation — compression, conversion, resizing and watermarking — runs entirely inside your browser using the Canvas API and Web Workers. Your files never leave your device, nothing is sent to any server, and no image data is logged or stored. You can verify this by disconnecting from the internet after loading the page; the tool will continue to work."}},
+      {"@type": "Question", "name": "What's the maximum file size I can upload?", "acceptedAnswer": {"@type": "Answer", "text": "Each individual file can be up to 15 MB. There is no limit on how many files you can process in a single session. For very large batches, processing time will depend on your device's speed and available memory. If you need to compress files larger than 15 MB, consider resizing them first to reduce pixel dimensions before compressing."}}
     ]
   }
   </script>
@@ -604,8 +609,79 @@
       </div>
     </section>
 
-    <!-- RELATED TOOLS -->
+    <!-- SEO CONTENT -->
     <section class="section">
+      <div class="container">
+        <h2 class="reveal mb-lg">Free Image Compression &mdash; Reduce File Size Without Losing Quality</h2>
+        <div class="reveal">
+          <p>Image compression is the process of reducing a file's size while preserving as much visual quality as possible. There are two main approaches: <strong>lossy</strong> and <strong>lossless</strong> compression. Lossy compression discards data the human eye is unlikely to notice, producing dramatically smaller files at the cost of a slight reduction in detail. JPEG and WebP both support lossy encoding, and in most cases you can drop quality to 70&ndash;80&percnt; on the slider without any visible difference on screen. Lossless compression, on the other hand, rearranges and encodes data more efficiently without removing anything. PNG is the most common lossless format, making it ideal for graphics, screenshots and images that require pixel-perfect accuracy.</p>
+          <p>Our Image Toolkit lets you drag in JPEG, PNG and WebP files and adjust a quality slider from 1 to 100. Lower values yield smaller files; higher values preserve more detail. You can also enable the <strong>Target Size</strong> toggle and enter a specific kilobyte limit&mdash;for example, 100&nbsp;KB. The tool will iteratively compress the image until it meets your target, which is especially useful for <strong>passport and visa photo requirements</strong> that cap uploads at 100&nbsp;KB or 200&nbsp;KB. Government portals in India, Canada, France and the United States commonly enforce strict file-size limits for ID photo submissions.</p>
+          <p>Because all processing runs inside your browser using the Canvas API, your images are never uploaded to a server. That means faster results, complete privacy, and no daily usage caps. Whether you are optimizing a batch of product photos for an e-commerce store or shrinking a single passport image for an online visa application, the compressor handles it in seconds. For a detailed walkthrough on hitting exact file-size targets, read our guide on <a href="/blog/compress-image-to-100kb-free/">how to compress an image to 100&nbsp;KB for free</a>.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background:var(--bg-secondary);">
+      <div class="container">
+        <h2 class="reveal mb-lg">Image Format Conversion &mdash; JPEG, PNG, WebP &amp; More</h2>
+        <div class="reveal">
+          <p>Choosing the right image format can cut load times in half and improve your search rankings. <strong>JPEG</strong> is best for photographs and complex scenes with millions of colors; it compresses well but does not support transparency. <strong>PNG</strong> is the go-to choice when you need a transparent background&mdash;logos, icons, UI elements and product cutouts all benefit from PNG's lossless encoding. <strong>WebP</strong>, developed by Google, combines the best of both worlds: it supports transparency like PNG, compresses as efficiently as JPEG, and produces files that are 25&ndash;35&percnt; smaller on average. For cutting-edge performance, <strong>AVIF</strong> pushes compression even further, though browser support is still expanding.</p>
+          <p>The Convert tab in our toolkit lets you switch between these formats in a single click. Select a conversion card&mdash;such as PNG to WebP or WebP to JPEG&mdash;adjust the quality slider, drop your files, and download the results. Batch conversion is fully supported, so you can process an entire folder of images at once. Every conversion happens locally in your browser, keeping your files private and your workflow fast.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="reveal mb-lg">Resize Images for Social Media &amp; Web</h2>
+        <div class="reveal">
+          <p>Every social platform enforces its own image dimensions, and uploading the wrong size leads to awkward cropping or blurry previews. Here are the most common sizes you need to know: <strong>Instagram posts</strong> use 1080&times;1080 pixels (square), <strong>Instagram Stories and Reels</strong> require 1080&times;1920 (vertical), <strong>Facebook cover photos</strong> are 820&times;312, <strong>Twitter/X headers</strong> are 1500&times;500, and <strong>YouTube thumbnails</strong> are 1280&times;720. For official documents, passport photos follow the 2&times;2 inch (600&times;600 pixel) standard in the United States and 35&times;45&nbsp;mm in most European and Asian countries.</p>
+          <p>Our Resize tab offers two modes. <strong>Social Presets</strong> gives you one-click sizing for 15 popular platforms&mdash;just pick the card that matches your needs. <strong>Custom Size</strong> lets you enter exact pixel dimensions. The aspect-ratio lock is enabled by default, so when you change the width the height adjusts automatically to prevent distortion. You can also choose between Crop and Pad fit modes: Crop fills the entire canvas by trimming edges, while Pad adds letterboxing so nothing is cut off. Output format is selectable too&mdash;keep the original, or convert to JPEG, PNG or WebP on the fly.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background:var(--bg-secondary);">
+      <div class="container">
+        <h2 class="reveal mb-lg">Add Watermarks to Protect Your Images</h2>
+        <div class="reveal">
+          <p>Watermarking is the simplest way to claim ownership of your visual work before sharing it online. Our Watermark tab supports two modes: <strong>text watermarks</strong> and <strong>image watermarks</strong>. With text mode you type your brand name, adjust the font size from 8 to 120 pixels, pick a color, and set opacity anywhere from 5&percnt; to 100&percnt;. Image mode lets you upload a logo or badge as the watermark, then scale it relative to the host image. Both modes use a nine-point position grid so you can place the mark in any corner, along any edge, or dead center.</p>
+          <p>Photographers use watermarks to deter unauthorized reuse of portfolio images. Graphic designers add them to client proofs so final files are only delivered after payment. Content creators watermark thumbnails and infographics before posting to social media, ensuring credit travels with the image even when it is reshared without attribution. Like every other feature in this toolkit, watermarking runs entirely in the browser&mdash;your images stay on your device from start to finish.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <span class="section-label reveal">FAQ</span>
+        <h2 class="reveal mb-xl">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <details class="faq-item reveal">
+            <summary>How do I compress an image to under 100KB?</summary>
+            <p>Open the Compress tab, enable the <strong>Target Size</strong> toggle, and type <strong>100</strong> in the kilobyte field. Drop your image into the tool and click <em>Process All</em>. The compressor will iteratively lower the quality until the output is at or below 100&nbsp;KB. This works for JPEG, PNG and WebP files and is ideal for passport, visa and government form uploads that enforce strict file-size limits.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>What image formats are supported?</summary>
+            <p>You can upload <strong>JPEG, PNG, WebP, SVG and GIF</strong> files up to 15&nbsp;MB each. The toolkit can output JPEG, PNG, WebP and AVIF (where your browser supports it). SVG and GIF inputs are rasterized during processing, so the output will be a bitmap format.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Can I resize multiple images at once?</summary>
+            <p>Yes. Drop as many images as you need into the tool, choose your target dimensions or select a social-media preset, and click <em>Process All</em>. Every image in the queue will be resized to the same specifications. You can then download them individually or grab everything as a single ZIP file.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Is my image data stored on your servers?</summary>
+            <p>No. Every operation&mdash;compression, conversion, resizing and watermarking&mdash;runs entirely inside your browser using the Canvas API and Web Workers. Your files never leave your device, nothing is sent to any server, and no image data is logged or stored. You can verify this by disconnecting from the internet after loading the page; the tool will continue to work.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>What is the maximum file size I can upload?</summary>
+            <p>Each individual file can be up to <strong>15&nbsp;MB</strong>. There is no limit on how many files you can process in a single session. For very large batches, processing time will depend on your device's speed and available memory. If you need to compress files larger than 15&nbsp;MB, consider resizing them first to reduce pixel dimensions before compressing.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- RELATED TOOLS -->
+    <section class="section" style="background:var(--bg-secondary);">
       <div class="container text-center">
         <span class="section-label reveal">MORE TOOLS</span>
         <h2 class="reveal mb-lg">You might also need</h2>
