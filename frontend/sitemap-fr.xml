@@ -8,6 +8,12 @@
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://aawebtools.com/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://aawebtools.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://aawebtools.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://aawebtools.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://aawebtools.com/pt/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://aawebtools.com/ar/"/>
+    <xhtml:link rel="alternate" hreflang="id" href="https://aawebtools.com/id/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://aawebtools.com/hi/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://aawebtools.com/"/>
   </url>
   <url>
