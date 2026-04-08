@@ -4,7 +4,7 @@
  */
 
 import { readFileSync, writeFileSync, existsSync } from 'fs';
-import { join, dirname } from 'path';
+import { join, dirname, resolve } from 'path';
 import { fileURLToPath } from 'url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -12,6 +12,30 @@ const pageMap = JSON.parse(readFileSync(join(__dirname, '..', 'locales', 'page-m
 const languages = JSON.parse(readFileSync(join(__dirname, '..', 'locales', 'languages.json'), 'utf8'));
 
 const SITE_URL = 'https://aawebtools.com';
+const FRONTEND_DIR = resolve(__dirname, '..', '..', '..', 'frontend');
+
+// Regex for detecting <meta name="robots" content="noindex..."> in HTML.
+// Pages with noindex MUST NOT be in the sitemap — Google treats that as
+// a conflicting signal ("you told us to index via sitemap but not via meta")
+// and degrades trust in both signals. See
+// https://developers.google.com/search/docs/crawling-indexing/sitemaps/overview
+const NOINDEX_REGEX = /<meta\s+name=["']robots["']\s+content=["'][^"']*noindex/i;
+
+function urlToIndexPath(urlPath) {
+  const clean = (urlPath || '').replace(/^\//, '').replace(/\/$/, '');
+  return clean ? join(FRONTEND_DIR, clean, 'index.html') : join(FRONTEND_DIR, 'index.html');
+}
+
+/**
+ * Returns true if the HTML file for a given URL has a noindex meta tag,
+ * OR if the file does not exist. In either case we omit it from sitemaps.
+ */
+function isIndexable(urlPath) {
+  const filePath = urlToIndexPath(urlPath);
+  if (!existsSync(filePath)) return false;
+  const html = readFileSync(filePath, 'utf8');
+  return !NOINDEX_REGEX.test(html);
+}
 
 /**
  * Generate a sitemap index that references per-language sitemaps
@@ -47,6 +71,12 @@ export function generateLanguageSitemap(langCode) {
     if (!urls[langCode]) continue;
 
     const url = urls[langCode];
+
+    // Skip pages that are noindex'd or missing on disk. Keeping them in
+    // the sitemap while they're noindex'd sends Google conflicting
+    // signals and wastes crawl budget.
+    if (!isIndexable(url)) continue;
+
     const priority = getPriority(pageKey);
     const changefreq = getChangefreq(pageKey);
 
@@ -56,13 +86,19 @@ export function generateLanguageSitemap(langCode) {
     xml += `    <changefreq>${changefreq}</changefreq>\n`;
     xml += `    <priority>${priority}</priority>\n`;
 
-    // Add hreflang for ALL available languages of this page
+    // Add hreflang for ALL available indexable languages of this page.
+    // Google treats noindex'd hreflang targets as valid cluster members
+    // short-term, but listing only indexable alternates is cleaner and
+    // avoids crawl budget waste on URLs the sitemap itself excludes.
     for (const [altLang, altUrl] of Object.entries(urls)) {
+      if (!isIndexable(altUrl)) continue;
       xml += `    <xhtml:link rel="alternate" hreflang="${altLang}" href="${SITE_URL}${altUrl}"/>\n`;
     }
-    // x-default
-    const defaultUrl = urls.en || Object.values(urls)[0];
-    xml += `    <xhtml:link rel="alternate" hreflang="x-default" href="${SITE_URL}${defaultUrl}"/>\n`;
+    // x-default — default to EN if available and indexable, otherwise skip
+    const defaultUrl = urls.en && isIndexable(urls.en) ? urls.en : null;
+    if (defaultUrl) {
+      xml += `    <xhtml:link rel="alternate" hreflang="x-default" href="${SITE_URL}${defaultUrl}"/>\n`;
+    }
 
     xml += `  </url>\n`;
   }

@@ -2,138 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://aawebtools.com/id/</loc>
-    <lastmod>2026-04-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aawebtools.com/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://aawebtools.com/fr/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://aawebtools.com/es/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://aawebtools.com/de/"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://aawebtools.com/pt/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://aawebtools.com/ar/"/>
-    <xhtml:link rel="alternate" hreflang="id" href="https://aawebtools.com/id/"/>
-    <xhtml:link rel="alternate" hreflang="hi" href="https://aawebtools.com/hi/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://aawebtools.com/"/>
-  </url>
-  <url>
-    <loc>https://aawebtools.com/id/unduh-tiktok/</loc>
-    <lastmod>2026-04-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aawebtools.com/tiktok-downloader/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://aawebtools.com/fr/telechargeur-tiktok/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://aawebtools.com/es/descargador-tiktok/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://aawebtools.com/de/tiktok-herunterladen/"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://aawebtools.com/pt/baixar-tiktok/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://aawebtools.com/ar/tiktok-downloader/"/>
-    <xhtml:link rel="alternate" hreflang="id" href="https://aawebtools.com/id/unduh-tiktok/"/>
-    <xhtml:link rel="alternate" hreflang="hi" href="https://aawebtools.com/hi/tiktok-downloader/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://aawebtools.com/tiktok-downloader/"/>
-  </url>
-  <url>
-    <loc>https://aawebtools.com/id/unduh-twitter/</loc>
-    <lastmod>2026-04-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aawebtools.com/twitter-video-downloader/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://aawebtools.com/fr/telechargeur-twitter/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://aawebtools.com/es/descargador-twitter/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://aawebtools.com/de/twitter-video-herunterladen/"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://aawebtools.com/pt/baixar-twitter/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://aawebtools.com/ar/twitter-video-downloader/"/>
-    <xhtml:link rel="alternate" hreflang="id" href="https://aawebtools.com/id/unduh-twitter/"/>
-    <xhtml:link rel="alternate" hreflang="hi" href="https://aawebtools.com/hi/twitter-video-downloader/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://aawebtools.com/twitter-video-downloader/"/>
-  </url>
-  <url>
-    <loc>https://aawebtools.com/id/pembuat-faktur/</loc>
-    <lastmod>2026-04-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aawebtools.com/invoice-generator/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://aawebtools.com/fr/generateur-facture/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://aawebtools.com/es/generador-facturas/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://aawebtools.com/de/rechnungsgenerator/"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://aawebtools.com/pt/gerador-faturas/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://aawebtools.com/ar/invoice-generator/"/>
-    <xhtml:link rel="alternate" hreflang="id" href="https://aawebtools.com/id/pembuat-faktur/"/>
-    <xhtml:link rel="alternate" hreflang="hi" href="https://aawebtools.com/hi/invoice-generator/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://aawebtools.com/invoice-generator/"/>
-  </url>
-  <url>
-    <loc>https://aawebtools.com/id/pendeteksi-ai/</loc>
-    <lastmod>2026-04-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aawebtools.com/ai-detector/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://aawebtools.com/fr/detecteur-ia/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://aawebtools.com/es/detector-ia/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://aawebtools.com/de/ki-detektor/"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://aawebtools.com/pt/detector-ia/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://aawebtools.com/ar/ai-detector/"/>
-    <xhtml:link rel="alternate" hreflang="id" href="https://aawebtools.com/id/pendeteksi-ai/"/>
-    <xhtml:link rel="alternate" hreflang="hi" href="https://aawebtools.com/hi/ai-detector/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://aawebtools.com/ai-detector/"/>
-  </url>
-  <url>
-    <loc>https://aawebtools.com/id/humanizer-ai/</loc>
-    <lastmod>2026-04-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aawebtools.com/ai-humanizer/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://aawebtools.com/fr/humanisateur-ia/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://aawebtools.com/es/humanizador-ia/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://aawebtools.com/de/ki-humanisierer/"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://aawebtools.com/pt/humanizador-ia/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://aawebtools.com/ar/ai-humanizer/"/>
-    <xhtml:link rel="alternate" hreflang="id" href="https://aawebtools.com/id/humanizer-ai/"/>
-    <xhtml:link rel="alternate" hreflang="hi" href="https://aawebtools.com/hi/ai-humanizer/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://aawebtools.com/ai-humanizer/"/>
-  </url>
-  <url>
-    <loc>https://aawebtools.com/id/pembuat-slip-gaji/</loc>
-    <lastmod>2026-04-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aawebtools.com/paystub-generator/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://aawebtools.com/fr/generateur-bulletin-de-paie/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://aawebtools.com/es/generador-recibo-nomina/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://aawebtools.com/de/gehaltsabrechnungs-generator/"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://aawebtools.com/pt/gerador-holerite/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://aawebtools.com/ar/paystub-generator/"/>
-    <xhtml:link rel="alternate" hreflang="id" href="https://aawebtools.com/id/pembuat-slip-gaji/"/>
-    <xhtml:link rel="alternate" hreflang="hi" href="https://aawebtools.com/hi/paystub-generator/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://aawebtools.com/paystub-generator/"/>
-  </url>
-  <url>
-    <loc>https://aawebtools.com/id/peralatan-gambar/</loc>
-    <lastmod>2026-04-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aawebtools.com/image-toolkit/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://aawebtools.com/fr/boite-a-outils-images/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://aawebtools.com/es/herramientas-imagenes/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://aawebtools.com/de/bild-werkzeuge/"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://aawebtools.com/pt/ferramentas-imagem/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://aawebtools.com/ar/image-toolkit/"/>
-    <xhtml:link rel="alternate" hreflang="id" href="https://aawebtools.com/id/peralatan-gambar/"/>
-    <xhtml:link rel="alternate" hreflang="hi" href="https://aawebtools.com/hi/image-toolkit/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://aawebtools.com/image-toolkit/"/>
-  </url>
-  <url>
     <loc>https://aawebtools.com/id/tentang/</loc>
     <lastmod>2026-04-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://aawebtools.com/about/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://aawebtools.com/fr/a-propos/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://aawebtools.com/es/acerca-de/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://aawebtools.com/de/ueber-uns/"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://aawebtools.com/pt/sobre/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://aawebtools.com/ar/about/"/>
     <xhtml:link rel="alternate" hreflang="id" href="https://aawebtools.com/id/tentang/"/>
-    <xhtml:link rel="alternate" hreflang="hi" href="https://aawebtools.com/hi/about/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://aawebtools.com/about/"/>
   </url>
   <url>
@@ -143,12 +19,8 @@
     <priority>0.4</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://aawebtools.com/contact/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://aawebtools.com/fr/contact/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://aawebtools.com/es/contacto/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://aawebtools.com/de/kontakt/"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://aawebtools.com/pt/contato/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://aawebtools.com/ar/contact/"/>
     <xhtml:link rel="alternate" hreflang="id" href="https://aawebtools.com/id/kontak/"/>
-    <xhtml:link rel="alternate" hreflang="hi" href="https://aawebtools.com/hi/contact/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://aawebtools.com/contact/"/>
   </url>
   <url>
@@ -158,12 +30,8 @@
     <priority>0.4</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://aawebtools.com/privacy/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://aawebtools.com/fr/confidentialite/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://aawebtools.com/es/privacidad/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://aawebtools.com/de/datenschutz/"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://aawebtools.com/pt/privacidade/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://aawebtools.com/ar/privacy/"/>
     <xhtml:link rel="alternate" hreflang="id" href="https://aawebtools.com/id/privasi/"/>
-    <xhtml:link rel="alternate" hreflang="hi" href="https://aawebtools.com/hi/privacy/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://aawebtools.com/privacy/"/>
   </url>
   <url>
@@ -173,12 +41,8 @@
     <priority>0.4</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://aawebtools.com/terms/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://aawebtools.com/fr/conditions/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://aawebtools.com/es/terminos/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://aawebtools.com/de/nutzungsbedingungen/"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://aawebtools.com/pt/termos/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://aawebtools.com/ar/terms/"/>
     <xhtml:link rel="alternate" hreflang="id" href="https://aawebtools.com/id/syarat/"/>
-    <xhtml:link rel="alternate" hreflang="hi" href="https://aawebtools.com/hi/terms/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://aawebtools.com/terms/"/>
   </url>
   <url>
@@ -188,95 +52,11 @@
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://aawebtools.com/blog/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://aawebtools.com/fr/blog/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://aawebtools.com/es/blog/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://aawebtools.com/de/blog/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://aawebtools.com/pt/blog/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://aawebtools.com/ar/blog/"/>
     <xhtml:link rel="alternate" hreflang="id" href="https://aawebtools.com/id/blog/"/>
     <xhtml:link rel="alternate" hreflang="hi" href="https://aawebtools.com/hi/blog/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://aawebtools.com/blog/"/>
-  </url>
-  <url>
-    <loc>https://aawebtools.com/id/blog/detektor-ai-gratis-terbaik-2026/</loc>
-    <lastmod>2026-04-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aawebtools.com/blog/best-free-ai-content-detectors-2026/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://aawebtools.com/es/blog/mejores-detectores-ia-gratis-2026/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://aawebtools.com/de/blog/beste-kostenlose-ki-detektoren-2026/"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://aawebtools.com/pt/blog/melhores-detectores-ia-gratis-2026/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://aawebtools.com/ar/blog/best-free-ai-detectors-2026/"/>
-    <xhtml:link rel="alternate" hreflang="id" href="https://aawebtools.com/id/blog/detektor-ai-gratis-terbaik-2026/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://aawebtools.com/blog/best-free-ai-content-detectors-2026/"/>
-  </url>
-  <url>
-    <loc>https://aawebtools.com/id/blog/kompres-gambar-100kb-gratis/</loc>
-    <lastmod>2026-04-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aawebtools.com/blog/compress-image-to-100kb-free/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://aawebtools.com/fr/blog/compresser-image-100ko-gratuit/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://aawebtools.com/es/blog/comprimir-imagen-100kb-gratis/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://aawebtools.com/de/blog/bild-auf-100kb-komprimieren-kostenlos/"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://aawebtools.com/pt/blog/comprimir-imagem-100kb-gratis/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://aawebtools.com/ar/blog/compress-image-100kb-free/"/>
-    <xhtml:link rel="alternate" hreflang="id" href="https://aawebtools.com/id/blog/kompres-gambar-100kb-gratis/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://aawebtools.com/blog/compress-image-to-100kb-free/"/>
-  </url>
-  <url>
-    <loc>https://aawebtools.com/id/blog/ai-humanizer-vs-turnitin-2026/</loc>
-    <lastmod>2026-04-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aawebtools.com/blog/ai-humanizers-vs-turnitin-2026/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://aawebtools.com/fr/blog/humanisateur-ia-vs-turnitin-2026/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://aawebtools.com/es/blog/humanizadores-ia-vs-turnitin-2026/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://aawebtools.com/de/blog/ki-humanisierer-vs-turnitin-2026/"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://aawebtools.com/pt/blog/humanizadores-ia-vs-turnitin-2026/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://aawebtools.com/ar/blog/humanizers-ia-vs-turnitin-2026/"/>
-    <xhtml:link rel="alternate" hreflang="hi" href="https://aawebtools.com/hi/blog/ai-humanizers-vs-turnitin-2026/"/>
-    <xhtml:link rel="alternate" hreflang="id" href="https://aawebtools.com/id/blog/ai-humanizer-vs-turnitin-2026/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://aawebtools.com/blog/ai-humanizers-vs-turnitin-2026/"/>
-  </url>
-  <url>
-    <loc>https://aawebtools.com/id/blog/bisakah-guru-deteksi-chatgpt-2026/</loc>
-    <lastmod>2026-04-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aawebtools.com/blog/can-teachers-detect-chatgpt-2026/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://aawebtools.com/es/blog/pueden-profesores-detectar-chatgpt-2026/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://aawebtools.com/de/blog/koennen-lehrer-chatgpt-erkennen-2026/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://aawebtools.com/ar/blog/can-teachers-detect-chatgpt-2026/"/>
-    <xhtml:link rel="alternate" hreflang="hi" href="https://aawebtools.com/hi/blog/can-teachers-detect-chatgpt-2026/"/>
-    <xhtml:link rel="alternate" hreflang="id" href="https://aawebtools.com/id/blog/bisakah-guru-deteksi-chatgpt-2026/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://aawebtools.com/blog/can-teachers-detect-chatgpt-2026/"/>
-  </url>
-  <url>
-    <loc>https://aawebtools.com/id/blog/unduh-slideshow-tiktok-2026/</loc>
-    <lastmod>2026-04-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aawebtools.com/blog/download-tiktok-slideshows-2026/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://aawebtools.com/es/blog/descargar-presentaciones-tiktok-2026/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://aawebtools.com/de/blog/tiktok-slideshows-herunterladen-2026/"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://aawebtools.com/pt/blog/baixar-slideshows-tiktok-2026/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://aawebtools.com/ar/blog/download-tiktok-slideshows-2026/"/>
-    <xhtml:link rel="alternate" hreflang="hi" href="https://aawebtools.com/hi/blog/download-tiktok-slideshows-2026/"/>
-    <xhtml:link rel="alternate" hreflang="id" href="https://aawebtools.com/id/blog/unduh-slideshow-tiktok-2026/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://aawebtools.com/blog/download-tiktok-slideshows-2026/"/>
-  </url>
-  <url>
-    <loc>https://aawebtools.com/id/blog/pembuat-slip-gaji-pekerja-mandiri/</loc>
-    <lastmod>2026-04-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aawebtools.com/blog/pay-stub-generator-self-employed/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://aawebtools.com/fr/blog/bulletin-de-paie-freelance-2026/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://aawebtools.com/es/blog/generador-recibo-nomina-autonomos/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://aawebtools.com/de/blog/gehaltsabrechnung-selbstaendige-2026/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://aawebtools.com/ar/blog/pay-stub-generator-self-employed/"/>
-    <xhtml:link rel="alternate" hreflang="hi" href="https://aawebtools.com/hi/blog/pay-stub-generator-self-employed/"/>
-    <xhtml:link rel="alternate" hreflang="id" href="https://aawebtools.com/id/blog/pembuat-slip-gaji-pekerja-mandiri/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://aawebtools.com/blog/pay-stub-generator-self-employed/"/>
   </url>
 </urlset>
