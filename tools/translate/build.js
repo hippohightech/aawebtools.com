@@ -13,6 +13,7 @@ import { fileURLToPath } from 'url';
 import { generateAllSitemaps } from './lib/seo.js';
 import { validateTranslatedPage } from './lib/validator.js';
 import { validatePageMap } from './lib/pagemap-validator.js';
+import { validateLinkGraph } from './lib/link-graph.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, '../..');
@@ -91,6 +92,26 @@ function runBuild() {
   }
 
   console.log(`\n[translate:build] Summary: ${passed} passed, ${failed} failed, ${quarantined} quarantined, ${missing} missing`);
+
+  // ── Phase 3: Link graph validation ─────────────────────────────────────
+  // Catches architectural bugs that per-page validation cannot see:
+  // orphans, broken internal links, zombie links to removed pages,
+  // cross-language CTA leaks, and unreachable pages. This would have
+  // prevented the /pay-stub-generator/{country}/ zombie bug that 7 prior
+  // expert audits missed because no single file was "wrong" — the
+  // problem only existed in the graph structure.
+  console.log('\n[translate:build] Validating internal link graph...');
+  const graphResult = validateLinkGraph(PAGE_MAP);
+  if (graphResult.warnings.length) {
+    graphResult.warnings.forEach(w => console.warn(`  ⚠ ${w}`));
+  }
+  if (graphResult.valid) {
+    console.log(`  ✓ ${graphResult.stats.nodes} nodes, avg in-degree ${graphResult.stats.averageInDegree}, 0 orphans, 0 broken, 0 zombies`);
+  } else {
+    console.error('\n[translate:build] LINK GRAPH FAILURES:');
+    graphResult.errors.forEach(e => console.error(`  ✗ ${e}`));
+    process.exitCode = 3;
+  }
 
   if (failed > 0) {
     process.exitCode = 1;
