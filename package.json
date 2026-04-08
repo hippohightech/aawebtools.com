@@ -10,7 +10,9 @@
     "translate:dry": "node tools/translate/cli.js translate --dry-run",
     "translate:diff": "node tools/translate/cli.js diff",
     "translate:validate": "node tools/translate/cli.js validate",
-    "dev": "node tools/translate/build.js --watch"
+    "dev": "node tools/translate/build.js --watch",
+    "indexnow": "node tools/indexnow.js",
+    "validate": "node tools/translate/build.js"
   },
   "dependencies": {
     "cheerio": "^1.0.0",

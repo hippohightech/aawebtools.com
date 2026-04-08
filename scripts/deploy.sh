@@ -35,6 +35,20 @@ else
     echo "WARNING: API health check failed (may need more time to start)"
 fi
 
+# IndexNow ping — notify Bing/Yandex/Seznam/Naver of new content.
+# Google ignores IndexNow but the others do not, and for a brand-new
+# domain the time-to-index difference matters. Failures here are
+# logged but do not abort the deploy.
+if command -v node >/dev/null 2>&1; then
+    echo ""
+    echo "=== IndexNow submission ==="
+    if [ -f tools/indexnow.js ]; then
+        node tools/indexnow.js || echo "WARNING: IndexNow submission failed (deploy continues)"
+    else
+        echo "SKIP: tools/indexnow.js not found"
+    fi
+fi
+
 echo ""
 echo "=== Deployment complete ==="
 echo ""
