@@ -87,36 +87,34 @@ export function extractZones(html) {
     }
   });
 
-  // Extract each <section> inside <main> or top-level sections
-  const mainSections = $('main > section, main > .section, body > main > section');
-  if (mainSections.length === 0) {
-    // Fallback: get all sections
-    $('section').each((i, el) => {
-      const html = $.html(el);
-      const text = $(el).text().replace(/\s+/g, ' ').trim();
-      if (text.length > 10) {
-        zones.bodySections.push({
-          index: i,
-          html: html,
-          textContent: text,
-          hash: hashText(text),
-        });
-      }
-    });
-  } else {
-    mainSections.each((i, el) => {
-      const html = $.html(el);
-      const text = $(el).text().replace(/\s+/g, ' ').trim();
-      if (text.length > 10) {
-        zones.bodySections.push({
-          index: i,
-          html: html,
-          textContent: text,
-          hash: hashText(text),
-        });
-      }
-    });
+  // Extract each <section> inside <main> (or top-level if no <main>).
+  //
+  // INVARIANT: every <section> in the source MUST be captured as a body
+  // section. The previous implementation silently dropped sections with
+  // text < 10 chars, which masked a parser bug that produced translated
+  // pages with HALF the section count of the source. The fix: capture
+  // every <section> regardless of length, and surface the count so the
+  // assembler can throw if it doesn't match.
+  //
+  // We also no longer use a fallback to `$('section')` because that
+  // catches sections inside <nav>, <aside>, and <footer>, which is a
+  // different selection set than `main > section` and produces
+  // inconsistent counts between source and translated pages.
+  let mainScope = $('main');
+  if (mainScope.length === 0) {
+    // No <main> tag — fall back to <body> as the scope
+    mainScope = $('body');
   }
+  mainScope.find('> section, > .section').each((i, el) => {
+    const html = $.html(el);
+    const text = $(el).text().replace(/\s+/g, ' ').trim();
+    zones.bodySections.push({
+      index: i,
+      html: html,
+      textContent: text,
+      hash: hashText(text),
+    });
+  });
 
   // Extract data-en/data-fr attributes (for migration tracking)
   $('[data-en]').each((i, el) => {

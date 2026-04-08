@@ -113,12 +113,11 @@ export function assembleTranslatedPage(sourceHtml, translated, targetLang, pageK
     if (translated.meta.keywords) $('meta[name="keywords"]').attr('content', translated.meta.keywords);
   }
 
-  // 3. Add content-language meta (for Bing)
-  if ($('meta[http-equiv="content-language"]').length === 0) {
-    $('head').append(`  <meta http-equiv="content-language" content="${targetLang}">\n`);
-  } else {
-    $('meta[http-equiv="content-language"]').attr('content', targetLang);
-  }
+  // 3. Remove deprecated content-language meta tag.
+  // It has been deprecated since 2010, Google ignores it, Bing partially
+  // honors it but the canonical/hreflang/html-lang chain is sufficient.
+  // Keeping it caused noise in validators and false-positive lints.
+  $('meta[http-equiv="content-language"]').remove();
 
   // 4. Update canonical URL
   const targetUrl = pageMap.pages[pageKey]?.[targetLang];
@@ -165,22 +164,28 @@ export function assembleTranslatedPage(sourceHtml, translated, targetLang, pageK
   }
 
   // 10. Replace body sections
+  //
+  // INVARIANT: the number of translated sections MUST equal the number
+  // of source sections. The previous implementation used positional
+  // matching with `if (translated.bodySections[i])` which silently
+  // skipped any unmatched section, producing pages with half the
+  // expected content. We now throw to make the bug loud.
   if (translated.bodySections && translated.bodySections.length > 0) {
-    const sections = $('main > section, main > .section, body > main > section');
-    if (sections.length === 0) {
-      // Fallback: match all sections
-      $('section').each((i, el) => {
-        if (translated.bodySections[i]) {
-          $(el).replaceWith(translated.bodySections[i]);
-        }
-      });
-    } else {
-      sections.each((i, el) => {
-        if (translated.bodySections[i]) {
-          $(el).replaceWith(translated.bodySections[i]);
-        }
-      });
+    let sourceScope = $('main');
+    if (sourceScope.length === 0) sourceScope = $('body');
+    const sections = sourceScope.find('> section, > .section');
+
+    if (sections.length !== translated.bodySections.length) {
+      throw new Error(
+        `assembler: section count mismatch for ${pageKey}/${targetLang} — ` +
+        `source has ${sections.length} sections, translated provides ${translated.bodySections.length}. ` +
+        `Refusing to assemble a page that would silently drop content.`
+      );
     }
+
+    sections.each((i, el) => {
+      $(el).replaceWith(translated.bodySections[i]);
+    });
   }
 
   // 11. Update image alt texts

@@ -12,6 +12,7 @@ import { join, dirname, resolve } from 'path';
 import { fileURLToPath } from 'url';
 import { generateAllSitemaps } from './lib/seo.js';
 import { validateTranslatedPage } from './lib/validator.js';
+import { validatePageMap } from './lib/pagemap-validator.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, '../..');
@@ -25,6 +26,23 @@ function urlToIndexPath(urlPath) {
 }
 
 function runBuild() {
+  // ── Phase 1: Validate the source of truth before doing anything ────────
+  // The page-map is the input to every other artifact (HTML, sitemaps,
+  // hreflang, internal links). If it has duplicate URLs, prefix collisions
+  // or schema violations, every downstream output is wrong. Fail fast.
+  console.log('\n[translate:build] Validating page-map.json...');
+  const pageMapResult = validatePageMap(PAGE_MAP);
+  if (pageMapResult.warnings.length) {
+    pageMapResult.warnings.forEach(w => console.warn(`  ⚠ ${w}`));
+  }
+  if (!pageMapResult.valid) {
+    console.error('\n[translate:build] page-map.json is INVALID:');
+    pageMapResult.errors.forEach(e => console.error(`  ✗ ${e}`));
+    console.error('\nRefusing to build with broken source of truth.\n');
+    process.exit(2);
+  }
+  console.log(`  ✓ ${pageMapResult.stats.totalPages} pages, ${pageMapResult.stats.totalUrls} URLs, all unique`);
+
   console.log('\n[translate:build] Generating sitemaps...');
   generateAllSitemaps(FRONTEND_DIR);
 

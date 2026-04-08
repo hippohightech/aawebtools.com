@@ -186,22 +186,6 @@
     },
     "blog/facturation-electronique-obligatoire-2026": {
       "fr": "/fr/blog/facturation-electronique-obligatoire-2026/"
-    },
-    "pay-stub-generator/canada": {
-      "en": "/pay-stub-generator/canada/"
-    },
-    "pay-stub-generator/usa": {
-      "en": "/pay-stub-generator/usa/"
-    },
-    "pay-stub-generator/uk": {
-      "en": "/pay-stub-generator/uk/"
-    },
-    "pay-stub-generator/australia": {
-      "en": "/pay-stub-generator/australia/"
-    },
-    "pay-stub-generator/france": {
-      "en": "/pay-stub-generator/france/",
-      "fr": "/pay-stub-generator/france/"
     }
   }
 }
