@@ -167,3 +167,54 @@
 - [ ] Submit to GitHub awesome-selfhosted list
 - [ ] Apply for PropellerAds (tools 1 and 2 live)
 - [ ] Apply for AdSense (after 2 weeks with tool 3 live)
+
+---
+
+## SEO Recovery — Stage 2 Decision Gate (Day 7: 2026-04-14)
+
+**Plan:** Soak-Plus-Two — adopted from 7-expert SEO panel, picked by tech-lead-orchestrator 2026-04-08
+
+**Status as of 2026-04-08:**
+- Stage 1 complete: 7 language homepages regenerated (fr/es/de/pt/ar/id/hi), all live, all in their language sitemaps, all returning HTTP 200, all without noindex
+- Validator: 30 passed, 0 failed, 97 quarantined
+- IndexNow pinged successfully for all 7 homepages on deploy
+- Cloudflare DNS migration in progress (was on dns-parking.com)
+- 49 tool pages remain quarantined (broken from prior bulk-translation pipeline)
+
+**Owner action required NOW (5 minutes):**
+- [ ] In Google Search Console, run URL Inspection → Request Indexing on each of: `/fr/`, `/es/`, `/de/`, `/pt/`, `/ar/`, `/id/`, `/hi/`. This forces priority crawl on a sandbox domain.
+- [ ] In Google Search Console → Sitemaps, confirm all 9 sitemaps are submitted: `sitemap.xml`, `sitemap-en.xml`, `sitemap-fr.xml`, `sitemap-es.xml`, `sitemap-de.xml`, `sitemap-pt.xml`, `sitemap-ar.xml`, `sitemap-id.xml`, `sitemap-hi.xml`. Add any missing ones.
+
+**Day 7 Decision Gate (2026-04-14):**
+
+Check Google Search Console → Pages → Indexed. Count how many of the 7 homepages are indexed.
+
+- **PASS condition (4 of 7 indexed):** Sandbox is lifting. Execute Stage 2 — translate AI Detector + Invoice Generator into FR/ES/DE/PT only = 8 pages, in ONE Claude Max session, with locked glossary. Order:
+  1. `frontend/fr/detecteur-ia/index.html`
+  2. `frontend/fr/generateur-facture/index.html`
+  3. `frontend/es/detector-ia/index.html`
+  4. `frontend/es/generador-facturas/index.html`
+  5. `frontend/de/ki-detektor/index.html`
+  6. `frontend/de/rechnungsgenerator/index.html`
+  7. `frontend/pt/detector-ia/index.html`
+  8. `frontend/pt/gerador-faturas/index.html`
+
+- **FAIL condition (<4 indexed):** Do NOT translate more pages. Debug homepages instead. Likely causes to investigate: still in sandbox, content quality not strong enough, no backlinks, NS records not yet propagated. Read `docs/SEO_RECOVERY.md` for troubleshooting.
+
+**Permanently dropped from Stage 2 (per Product Manager + Content SEO experts):**
+- TikTok Downloader translations — link-toxic, AdSense account-level demonetization risk for `ca-pub-9434634079795273`
+- Twitter Video Downloader translations — same as above
+- AI Humanizer translations — low international ROI
+- Image Toolkit translations — commodity category, crushed by competitors in every language
+- Paystub Generator translations — US-payroll-specific, weak outside EN
+- AR/HI/ID tool page translations — high effort, weak ROI, Hindi-Latinization risk
+
+**Why this plan beats the alternatives:** Translating 49 pages tonight would burn the owner out and trigger Google's content-explosion pattern detection on a 12-day-old sandbox domain. Translating 0 pages forever would waste the strict validator + brief generator infrastructure already built. 8 pages across 4 highest-value Romance markets, after a 7-day soak that proves homepages are indexable, is the minimum viable winning move.
+
+**Verification commands (run before/after Stage 2):**
+```bash
+node tools/translate/build.js                  # validator status
+node tools/translate/quarantine.js             # dry-run quarantine status
+node tools/indexnow.js --dry-run               # what would be submitted
+dig +short NS aawebtools.com                   # confirm Cloudflare not dns-parking
+```
