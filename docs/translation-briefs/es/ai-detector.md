@@ -1,0 +1,469 @@
+# Translation Brief — ai-detector → Spanish (es)
+
+> **Status**: Currently quarantined (`<meta robots noindex>`) on the live site.
+> **Goal**: Produce a high-quality Spanish translation that passes the strict validator.
+> **After completion**: Save to `frontend/es/detector-ia/index.html`, then run verify.
+
+## Target page identity
+
+| Field | Value |
+|---|---|
+| Page key | `ai-detector` |
+| Source language | English |
+| Source file | `frontend/ai-detector/index.html` |
+| Target language | Spanish (Español) — `es` |
+| Target file | `frontend/es/detector-ia/index.html` |
+| Target canonical | `https://aawebtools.com/es/detector-ia/` |
+| Direction | LTR (left-to-right) |
+| English title | "Free AI Content Detector — Check ChatGPT, Claude & More | AAWebTools" |
+| English word count | 1701 |
+| English section count | 10 |
+
+## Hard constraints (the validator will reject anything that violates these)
+
+The validator runs 14 strict checks in [tools/translate/lib/validator.js](../../tools/translate/lib/validator.js). Pay attention to these:
+
+1. **`<html lang="es">`** — must be set on the root element.
+2. **`<title>`** — must exist, ≤65 characters.
+3. **`<meta name="description">`** — must exist, 100–170 characters.
+4. **`<link rel="canonical" href="https://aawebtools.com/es/detector-ia/">`** — must exactly match.
+5. **Hreflang block** — must contain EXACTLY these alternates:
+  - hreflang="en" → https://aawebtools.com/ai-detector/
+  - hreflang="fr" → https://aawebtools.com/fr/detecteur-ia/
+  - hreflang="es" → https://aawebtools.com/es/detector-ia/
+  - hreflang="de" → https://aawebtools.com/de/ki-detektor/
+  - hreflang="pt" → https://aawebtools.com/pt/detector-ia/
+  - hreflang="ar" → https://aawebtools.com/ar/ai-detector/
+  - hreflang="id" → https://aawebtools.com/id/pendeteksi-ai/
+  - hreflang="hi" → https://aawebtools.com/hi/ai-detector/
+  - hreflang="x-default" → https://aawebtools.com/ai-detector/
+6. **No phantom Japanese references** — no `ja_JP`, no `hreflang="ja"`, no `/ja/` URLs.
+7. **JSON-LD blocks must be valid JSON** — translate the textual fields, keep the structure.
+8. **`AAWebTools` brand name must appear in the body** (do not translate).
+9. **`<meta property="og:locale" content="es_ES">`** — must be set.
+10. **No phantom `ja_JP` in og:locale:alternate** — only languages from the hreflang list above.
+11. **Romance-language diacritics**: at least 5 accented characters per 1000 body characters. ASCII-stripped translations FAIL automatically. Use proper accents: á é í ó ú ñ ç ã õ etc.
+12. **Word count**: target body must be ≥1191 words (≥70% of the 1701-word English source). Anything thinner is rejected.
+13. **Section count**: target must have ≥10 `<section>` tags inside `<main>`. Do not collapse, drop, or merge sections from the source.
+
+## Soft guidance (improves quality, not enforced by validator)
+
+- Translate naturally — do not literal-translate idioms.
+- Localize examples where appropriate (currencies, country references).
+- Keep technical terms in their commonly-used form for that language (e.g., German often keeps "Download" as a loanword).
+- For tool pages, the goal is "a native speaker would find this useful" not "this is a literal English translation."
+- Maintain the EXACT same JSON-LD schema structure — translate "name", "description", "headline" but never change "@type", "@context", or property keys.
+- For RTL languages (Arabic): the HTML automatically flips with `dir="rtl"`, you do not need to reorder content manually.
+
+## English source HTML (paste into your AI of choice)
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free AI Content Detector — Check ChatGPT, Claude &amp; More | AAWebTools</title>
+  <meta name="description" content="Detect AI-generated text instantly. Works with ChatGPT, Claude, Gemini and all AI writers. Free, no login, paste your text below.">
+  <meta name="keywords" content="ai content detector, free ai detector, chatgpt detector, ai text detector, detect ai writing">
+  <link rel="canonical" href="https://aawebtools.com/ai-detector/">
+  <link rel="alternate" hreflang="en" href="https://aawebtools.com/ai-detector/">
+  <link rel="alternate" hreflang="fr" href="https://aawebtools.com/fr/detecteur-ia/">
+  <link rel="alternate" hreflang="x-default" href="https://aawebtools.com/ai-detector/">
+  <meta property="og:title" content="Free AI Content Detector | AAWebTools">
+  <meta property="og:description" content="Detect AI-generated text from ChatGPT, Claude, and more. Free, instant results.">
+  <meta property="og:image" content="https://aawebtools.com/assets/img/og-ai-detector.png">
+  <meta property="og:url" content="https://aawebtools.com/ai-detector/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="AAWebTools">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Free AI Content Detector | AAWebTools">
+  <meta name="twitter:description" content="Detect AI-generated text instantly. Free, no login.">
+  <meta name="twitter:image" content="https://aawebtools.com/assets/img/og-ai-detector.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/assets/css/fonts.css">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Free AI Content Detector","applicationCategory":"UtilitiesApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Detect AI-generated text from ChatGPT, Claude, and more. Free, no login required.","url":"https://aawebtools.com/ai-detector/","dateModified":"2026-03-27"}
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type": "Question", "name": "Can AI detectors detect ChatGPT?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, AI detectors can identify text generated by ChatGPT (including GPT-4 and GPT-4o) with reasonable accuracy, especially for longer passages of 200 words or more. ChatGPT-generated text exhibits characteristic patterns — low perplexity, uniform sentence lengths, and a preference for common transitional phrases. However, detection becomes less reliable when the text has been heavily edited, paraphrased, or mixed with human-written content."}},
+      {"@type": "Question", "name": "Are AI content detectors accurate?", "acceptedAnswer": {"@type": "Answer", "text": "AI content detectors in 2026 achieve accuracy rates between 70% and 95%, depending on the tool, the length of the text, and the writing style of the original author. Longer passages are easier to classify accurately. False positives remain a known issue, particularly for non-native English speakers and writers with very formal or technical styles. For the most reliable results, use multiple detection tools and treat scores as indicators rather than proof."}},
+      {"@type": "Question", "name": "Is AAWebTools AI Detector free?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, the AAWebTools AI Content Detector is completely free to use. There is no account registration, no login requirement, no daily usage limits, and no premium tier. You can analyze as many texts as you want, up to 5,000 characters per analysis. The tool runs entirely in your browser, meaning your text is never sent to any server or stored anywhere."}},
+      {"@type": "Question", "name": "Can AI detectors detect paraphrased text?", "acceptedAnswer": {"@type": "Answer", "text": "Paraphrased AI text is significantly harder to detect. When AI-generated content is manually reworded or run through a paraphrasing tool, the statistical patterns that detectors rely on become disrupted. Light paraphrasing may still be detectable, but thorough rewriting that introduces personal voice, varied sentence lengths, and unique vocabulary choices can reduce detection scores substantially."}},
+      {"@type": "Question", "name": "Do AI detectors store my text?", "acceptedAnswer": {"@type": "Answer", "text": "This varies by tool. Many popular AI detectors process your text on their servers, meaning your content is transmitted over the internet and may be stored. AAWebTools takes a different approach: our AI Content Detector runs entirely client-side in your browser. Your text is never sent to any server, never stored in any database, and never used for training purposes."}}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How AI Detection Works",
+    "step": [
+      {"@type": "HowToStep", "position": 1, "name": "Paste your text", "text": "Copy and paste any text up to 5,000 characters."},
+      {"@type": "HowToStep", "position": 2, "name": "Analyze patterns", "text": "Our algorithm checks predictability and sentence variation."},
+      {"@type": "HowToStep", "position": 3, "name": "Get your score", "text": "See your AI probability score with a detailed breakdown."}
+    ]
+  }
+  </script>
+  <script async defer src="https://analytics.aawebtools.com/script.js" data-website-id="836dfc88-b05f-49b2-9824-3a085e248896"></script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://aawebtools.com/"},{"@type":"ListItem","position":2,"name":"AI Content Detector","item":"https://aawebtools.com/ai-detector/"}]}
+  </script>
+  <link rel="alternate" hreflang="es" href="https://aawebtools.com/es/detector-ia/">
+  <link rel="alternate" hreflang="de" href="https://aawebtools.com/de/ki-detektor/">
+  <link rel="alternate" hreflang="pt" href="https://aawebtools.com/pt/detector-ia/">
+  <link rel="alternate" hreflang="ar" href="https://aawebtools.com/ar/ai-detector/">
+  <link rel="alternate" hreflang="id" href="https://aawebtools.com/id/pendeteksi-ai/">
+  <link rel="alternate" hreflang="hi" href="https://aawebtools.com/hi/ai-detector/">
+</head>
+<body>
+  <nav class="nav"><div class="nav__inner"><a href="/" class="nav__logo"><img src="/assets/img/logo-light.png" alt="AAWebTools" height="56"></a><div class="nav__links"><div class="nav__dropdown"><a href="#" class="nav__link">Downloaders</a><div class="nav__dropdown-menu"><a href="/tiktok-downloader/" class="nav__dropdown-item">TikTok Downloader</a><a href="/twitter-video-downloader/" class="nav__dropdown-item">Twitter Downloader</a></div></div><div class="nav__dropdown"><a href="#" class="nav__link">Generators</a><div class="nav__dropdown-menu"><a href="/invoice-generator/" class="nav__dropdown-item">Invoice Generator</a><a href="/paystub-generator/" class="nav__dropdown-item">Pay Stub Generator</a><a href="/image-toolkit/" class="nav__dropdown-item">Image Toolkit</a></div></div><div class="nav__dropdown"><a href="#" class="nav__link nav__link--active">AI Tools</a><div class="nav__dropdown-menu"><a href="/ai-detector/" class="nav__dropdown-item">AI Content Detector</a><a href="/ai-humanizer/" class="nav__dropdown-item">AI Text Humanizer</a></div></div><a href="/blog/" class="nav__link">Blog</a></div><div class="nav__right"><div class="lang-selector">
+          <button class="lang-selector__trigger" id="langToggle">🌐 EN ▾</button>
+          <div class="lang-selector__menu" id="langMenu">
+            <a href="/ai-detector/" class="active">English</a>
+            <a href="/fr/detecteur-ia/">Français</a>
+            <a href="/es/detector-ia/">Español</a>
+            <a href="/de/ki-detektor/">Deutsch</a>
+            <a href="/pt/detector-ia/">Português</a>
+            <a href="/ar/ai-detector/">العربية</a>
+            <a href="/id/pendeteksi-ai/">Bahasa Indonesia</a>
+            <a href="/hi/ai-detector/">हिन्दी</a>
+          </div>
+        </div><a href="/#tools" class="btn-primary btn-sm">All Tools</a><button class="nav__hamburger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button></div></div></nav>
+  <div class="nav__mobile" id="mobileNav">
+    <a href="/tiktok-downloader/" class="nav__mobile-link">TikTok Downloader</a>
+    <a href="/twitter-video-downloader/" class="nav__mobile-link">Twitter Downloader</a>
+    <a href="/invoice-generator/" class="nav__mobile-link">Invoice Generator</a>
+    <a href="/ai-detector/" class="nav__mobile-link">AI Content Detector</a>
+    <a href="/ai-humanizer/" class="nav__mobile-link">AI Text Humanizer</a>
+    <a href="/paystub-generator/" class="nav__mobile-link">Pay Stub Generator</a>
+    <a href="/image-toolkit/" class="nav__mobile-link">Image Toolkit</a>
+    <a href="/blog/" class="nav__mobile-link">Blog</a>
+  </div>
+
+  <main>
+    <section class="hero" style="min-height:auto;padding:140px 24px 60px;">
+      <div class="hero__content">
+        <span class="hero__label">AI CONTENT DETECTOR</span>
+        <h1 class="hero__title">Free AI Content Detector</h1>
+        <p class="hero__subtitle">Paste your text below to check if it was written by AI. Works with ChatGPT, Claude, Gemini and all AI writers.</p>
+        <p class="tool-updated">Last updated: March 2026</p>
+      </div>
+    </section>
+
+    <div class="ad-unit ad-adsense-leaderboard" style="max-width:800px;margin:0 auto 24px;min-height:90px;">
+      <ins class="adsbygoogle" style="display:block;min-height:90px;max-height:250px;overflow:hidden" data-ad-client="ca-pub-9434634079795273" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    </div>
+
+    <section class="tool-section" style="padding-top:0;">
+      <div class="tool-interface">
+        <div class="tool-group">
+          <label class="tool-label">Paste your text here</label>
+          <textarea id="detectInput" class="tool-input" style="min-height:180px;" maxlength="5000" placeholder="Paste the text you want to analyze for AI content..."></textarea>
+          <div class="char-counter" id="charCounter">5,000 / 5,000</div>
+        </div>
+        <button class="btn-tool" id="detectBtn">Detect AI Content</button>
+
+        <div id="loadingState" style="display:none;text-align:center;padding:24px 0;">
+          <span class="spinner"></span>
+          <p class="mt-md" style="color:var(--tool-text-secondary);">Analyzing your text...</p>
+        </div>
+
+        <div class="score-result" id="resultArea" style="display:none;">
+          <div class="score-circle" id="scoreCircle" style="--score:0;--score-color:var(--accent-green);">
+            <div class="score-circle__inner">
+              <div class="score-circle__pct" id="scorePct">0%</div>
+              <div class="score-circle__label" id="scoreLabel">AI</div>
+            </div>
+          </div>
+          <h3 id="scoreVerdict" style="font-size:var(--text-lg);margin-bottom:var(--space-sm);">Analyzing...</h3>
+          <p id="scoreExplanation"></p>
+          <p style="margin-top:var(--space-md);font-size:var(--text-xs);color:var(--tool-text-secondary);">This tool provides a statistical estimate. For high-stakes decisions, use multiple tools.</p>
+          <a href="/ai-humanizer/" class="btn-primary" style="margin-top:var(--space-lg);">Make this text sound human →</a>
+        </div>
+      </div>
+      <div class="ad-unit ad-adsense-leaderboard" style="max-width:800px;margin:24px auto 0;min-height:90px;">
+      <ins class="adsbygoogle" style="display:block;min-height:90px;max-height:250px;overflow:hidden" data-ad-client="ca-pub-9434634079795273" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <span class="section-label reveal">HOW IT WORKS</span>
+        <h2 class="reveal mb-xl">How AI Detection Works</h2>
+        <div class="steps">
+          <div class="step reveal"><div class="step__number">1</div><div class="step__text"><h3>Paste your text</h3><p>Copy and paste any text up to 5,000 characters.</p></div></div>
+          <div class="step reveal"><div class="step__number">2</div><div class="step__text"><h3>Analyze patterns</h3><p>Our algorithm checks predictability and sentence variation.</p></div></div>
+          <div class="step reveal"><div class="step__number">3</div><div class="step__text"><h3>Get your score</h3><p>See your AI probability score with a detailed breakdown.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background:var(--bg-secondary);">
+      <div class="container">
+        <span class="section-label reveal">UNDERSTANDING AI DETECTION</span>
+        <h2 class="reveal mb-xl">How AI Content Detection Works</h2>
+        <div class="reveal" style="max-width:800px;margin:0 auto;line-height:1.8;">
+          <p style="margin-bottom:var(--space-lg);">AI content detection relies on statistical analysis of language patterns. When large language models like ChatGPT, Claude, or Gemini generate text, they produce output by predicting the most probable next word in a sequence. This process creates measurable patterns that differ from how humans naturally write. Modern AI detectors exploit these differences using two primary metrics.</p>
+          <p style="margin-bottom:var(--space-lg);"><strong>Perplexity scoring</strong> measures how predictable the word choices in a passage are. AI-generated text tends to favor common, statistically likely words and phrases, resulting in low perplexity. Human writers, by contrast, make more idiosyncratic word choices, use slang, employ unexpected metaphors, and occasionally make grammatical detours that raise perplexity. A passage with unusually low perplexity across its entirety is a strong signal of AI authorship.</p>
+          <p style="margin-bottom:var(--space-lg);"><strong>Burstiness analysis</strong> examines the variation in sentence length and structure throughout a text. Human writing is naturally "bursty" — we mix short, punchy sentences with longer, more complex ones. AI-generated content tends toward uniform sentence lengths and consistent paragraph structures. By measuring the coefficient of variation in sentence lengths, detectors can distinguish the rhythmic uniformity of AI text from the natural irregularity of human prose.</p>
+          <p style="margin-bottom:var(--space-lg);">AAWebTools uses a <strong>dual-metric approach</strong> that combines both perplexity and burstiness scores, weighting perplexity at 60% and burstiness at 40%. This blended analysis provides more reliable results than either metric alone. The entire analysis runs locally in your browser using our optimized word-frequency dictionary, meaning your text is never transmitted to any external server. For a deeper look at how these tools compare, see our guide on the <a href="/blog/best-free-ai-content-detectors-2026/">best free AI content detectors in 2026</a>.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <span class="section-label reveal">ACCURACY &amp; LIMITATIONS</span>
+        <h2 class="reveal mb-xl">AI Detector Accuracy in 2026</h2>
+        <div class="reveal" style="max-width:800px;margin:0 auto;line-height:1.8;">
+          <p style="margin-bottom:var(--space-lg);">No AI content detector achieves 100% accuracy, and anyone who claims otherwise is misleading you. In 2026, the best detectors — including paid platforms like GPTZero, Copyleaks, and Turnitin — report accuracy rates between 70% and 95%, depending on the length and nature of the text being analyzed. Short passages under 100 words are particularly difficult to classify reliably.</p>
+          <p style="margin-bottom:var(--space-lg);">False positives remain a significant concern. Research has shown that text written by non-native English speakers, ESL students, and writers with highly formal or technical styles is frequently misclassified as AI-generated. This happens because non-native writers sometimes produce text with lower perplexity — they rely on common vocabulary and simpler sentence structures, which mirrors the statistical profile of AI output. Educators and publishers should never use a single detector result as definitive proof of AI authorship.</p>
+          <p style="margin-bottom:var(--space-lg);">For high-stakes decisions — academic integrity reviews, hiring evaluations, or content audits — we strongly recommend using multiple detection tools and combining automated analysis with human judgment. Our detector is designed to provide a useful signal, not a verdict. If you need to understand how teachers and professors are navigating these challenges, read our analysis on <a href="/blog/can-teachers-detect-chatgpt-2026/">whether teachers can detect ChatGPT in 2026</a>.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background:var(--bg-secondary);">
+      <div class="container">
+        <span class="section-label reveal">COMPARISON</span>
+        <h2 class="reveal mb-xl">Free vs Paid AI Detectors — Comparison</h2>
+        <div class="reveal" style="max-width:800px;margin:0 auto;line-height:1.8;">
+          <p style="margin-bottom:var(--space-lg);">Choosing the right AI detector depends on your use case, budget, and privacy requirements. Below is a comparison of the major AI content detection tools available in 2026. While paid tools offer additional features like batch processing and API access, free alternatives like AAWebTools can deliver strong results for individual use.</p>
+          <div style="overflow-x:auto;margin-bottom:var(--space-lg);">
+            <table style="width:100%;border-collapse:collapse;font-size:var(--text-sm);background:var(--bg-primary);border-radius:var(--radius-md);overflow:hidden;">
+              <thead>
+                <tr style="background:var(--accent-blue);color:#fff;">
+                  <th style="padding:12px 16px;text-align:left;font-weight:600;">Feature</th>
+                  <th style="padding:12px 16px;text-align:left;font-weight:600;">AAWebTools</th>
+                  <th style="padding:12px 16px;text-align:left;font-weight:600;">GPTZero</th>
+                  <th style="padding:12px 16px;text-align:left;font-weight:600;">Copyleaks</th>
+                  <th style="padding:12px 16px;text-align:left;font-weight:600;">ZeroGPT</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="border-bottom:1px solid var(--border-primary);">
+                  <td style="padding:12px 16px;font-weight:500;">Price</td>
+                  <td style="padding:12px 16px;color:var(--accent-green);font-weight:600;">Free</td>
+                  <td style="padding:12px 16px;">Free tier / $10+/mo</td>
+                  <td style="padding:12px 16px;">$9.99+/mo</td>
+                  <td style="padding:12px 16px;">Free tier / $9.99/mo</td>
+                </tr>
+                <tr style="border-bottom:1px solid var(--border-primary);background:var(--bg-secondary);">
+                  <td style="padding:12px 16px;font-weight:500;">Word Limit</td>
+                  <td style="padding:12px 16px;">Unlimited</td>
+                  <td style="padding:12px 16px;">5,000 chars (free)</td>
+                  <td style="padding:12px 16px;">Varies by plan</td>
+                  <td style="padding:12px 16px;">15,000 chars (free)</td>
+                </tr>
+                <tr style="border-bottom:1px solid var(--border-primary);">
+                  <td style="padding:12px 16px;font-weight:500;">Accuracy</td>
+                  <td style="padding:12px 16px;">High (dual-metric)</td>
+                  <td style="padding:12px 16px;">High</td>
+                  <td style="padding:12px 16px;">High</td>
+                  <td style="padding:12px 16px;">Moderate</td>
+                </tr>
+                <tr style="border-bottom:1px solid var(--border-primary);background:var(--bg-secondary);">
+                  <td style="padding:12px 16px;font-weight:500;">API Access</td>
+                  <td style="padding:12px 16px;">No</td>
+                  <td style="padding:12px 16px;">Yes (paid)</td>
+                  <td style="padding:12px 16px;">Yes (paid)</td>
+                  <td style="padding:12px 16px;">Yes (paid)</td>
+                </tr>
+                <tr>
+                  <td style="padding:12px 16px;font-weight:500;">Privacy</td>
+                  <td style="padding:12px 16px;color:var(--accent-green);font-weight:600;">No data stored</td>
+                  <td style="padding:12px 16px;">Data processed on server</td>
+                  <td style="padding:12px 16px;">Data processed on server</td>
+                  <td style="padding:12px 16px;">Data processed on server</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>AAWebTools stands out for privacy-conscious users because all analysis happens client-side in your browser. Your text never leaves your device. For users who need API integration or batch processing for large content operations, paid tools like GPTZero or Copyleaks may be more appropriate. For a detailed breakdown, read our <a href="/blog/best-free-ai-content-detectors-2026/">full comparison of AI detectors</a>.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <span class="section-label reveal">USE CASES</span>
+        <h2 class="reveal mb-xl">Who Uses AI Content Detectors?</h2>
+        <div class="reveal" style="max-width:800px;margin:0 auto;line-height:1.8;">
+          <p style="margin-bottom:var(--space-lg);">AI content detectors serve a wide range of professionals and institutions. <strong>Educators and academic institutions</strong> use them to review student submissions for potential AI-generated content, helping maintain academic integrity while acknowledging the limitations of automated detection. <strong>Publishers and editorial teams</strong> screen freelance submissions to ensure content originality and authentic voice before publication.</p>
+          <p style="margin-bottom:var(--space-lg);"><strong>HR departments and recruiters</strong> occasionally use AI detectors to evaluate cover letters and written assessments, looking for candidates who demonstrate genuine communication skills. <strong>Content marketing agencies</strong> run their own AI-assisted drafts through detectors to ensure the final output reads naturally and passes quality standards before delivering to clients.</p>
+          <p><strong>Students and individual writers</strong> also use AI detectors proactively — running their own work through detection tools before submission to identify passages that might be falsely flagged, giving them a chance to rephrase and strengthen their writing. This self-checking approach is one of the most practical and responsible uses of AI detection technology.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background:var(--bg-secondary);">
+      <div class="container">
+        <span class="section-label reveal">FAQ</span>
+        <h2 class="reveal mb-xl">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <details class="faq-item reveal">
+            <summary>Can AI detectors detect ChatGPT?</summary>
+            <p>Yes, AI detectors can identify text generated by ChatGPT (including GPT-4 and GPT-4o) with reasonable accuracy, especially for longer passages of 200 words or more. ChatGPT-generated text exhibits characteristic patterns — low perplexity, uniform sentence lengths, and a preference for common transitional phrases. However, detection becomes less reliable when the text has been heavily edited, paraphrased, or mixed with human-written content. No detector can guarantee 100% accuracy for any AI model, and results should always be interpreted as probabilities rather than definitive conclusions.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Are AI content detectors accurate?</summary>
+            <p>AI content detectors in 2026 achieve accuracy rates between 70% and 95%, depending on the tool, the length of the text, and the writing style of the original author. Longer passages are easier to classify accurately because they provide more statistical data points for analysis. False positives — where human-written text is incorrectly flagged as AI — remain a known issue, particularly for non-native English speakers and writers with very formal or technical styles. For the most reliable results, use multiple detection tools and treat scores as indicators rather than proof.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Is AAWebTools AI Detector free?</summary>
+            <p>Yes, the AAWebTools AI Content Detector is completely free to use. There is no account registration, no login requirement, no daily usage limits, and no premium tier. You can analyze as many texts as you want, up to 5,000 characters per analysis. The tool runs entirely in your browser, which means your text is never sent to any server or stored anywhere. We support the tool through non-intrusive advertising on the page.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Can AI detectors detect paraphrased text?</summary>
+            <p>Paraphrased AI text is significantly harder to detect. When AI-generated content is manually reworded or run through a paraphrasing tool, the statistical patterns that detectors rely on — such as low perplexity and uniform sentence structure — become disrupted. Light paraphrasing may still be detectable, but thorough rewriting that introduces personal voice, varied sentence lengths, and unique vocabulary choices can reduce detection scores substantially. This is one reason why no AI detector should be treated as infallible. For more on this topic, see our analysis of <a href="/blog/can-teachers-detect-chatgpt-2026/">AI detection in educational settings</a>.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Do AI detectors store my text?</summary>
+            <p>This varies by tool. Many popular AI detectors — including GPTZero and Copyleaks — process your text on their servers, which means your content is transmitted over the internet and may be temporarily or permanently stored according to their privacy policies. AAWebTools takes a different approach: our AI Content Detector runs entirely client-side in your browser. Your text is never sent to any server, never stored in any database, and never used for training purposes. If privacy is a priority for you, client-side detection is the safest option available.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background:var(--bg-secondary)">
+      <div class="container">
+        <h2>Related Articles</h2>
+        <ul style="list-style:none;padding:0;display:grid;gap:12px;">
+          <li><a href="/blog/best-free-ai-content-detectors-2026/" style="color:var(--accent-blue)">Best Free AI Content Detectors 2026 — Full Comparison</a></li>
+          <li><a href="/blog/can-teachers-detect-chatgpt-2026/" style="color:var(--accent-blue)">Can Teachers Detect ChatGPT in 2026?</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container text-center">
+        <span class="section-label reveal">MORE TOOLS</span>
+        <h2 class="reveal mb-lg">You might also need</h2>
+        <div class="related-tools">
+          <a href="/ai-humanizer/" class="related-tool reveal"><div class="related-tool__icon"><svg viewBox="0 0 40 40" fill="none"><path d="M12 12h2v16h-2zM20 8l2 2-2 2M24 14l2 2-2 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M28 20c0 6-4 12-8 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div><div><div class="related-tool__name">AI Text Humanizer</div><div class="related-tool__desc">Make AI text sound natural</div></div></a>
+          <a href="/invoice-generator/" class="related-tool reveal"><div class="related-tool__icon"><svg viewBox="0 0 40 40" fill="none"><rect x="8" y="6" width="24" height="28" rx="2" stroke="currentColor" stroke-width="2"/><path d="M14 14h12M14 20h12M14 26h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div><div><div class="related-tool__name">Invoice Generator</div><div class="related-tool__desc">Create professional invoices — free PDF</div></div></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="footer__grid"><div><div class="footer__logo"><img src="/assets/img/logo-light.png" alt="AAWebTools" height="44"></div><p class="footer__tagline">Free tools for everyone, worldwide</p><p class="footer__copyright">&copy; 2026 AAWebTools. All rights reserved. Built by <a href="https://scopecove.com/" target="_blank" rel="noopener" class="footer__link" style="display:inline;">ScopeCove</a></p></div><div><h4 class="footer__heading">Tools</h4><a href="/tiktok-downloader/" class="footer__link">TikTok Downloader</a><a href="/twitter-video-downloader/" class="footer__link">Twitter Video Downloader</a><a href="/invoice-generator/" class="footer__link">Invoice Generator</a><a href="/ai-detector/" class="footer__link">AI Content Detector</a><a href="/ai-humanizer/" class="footer__link">AI Text Humanizer</a><a href="/paystub-generator/" class="footer__link">Pay Stub Generator</a><a href="/image-toolkit/" class="footer__link">Image Toolkit</a></div><div><h4 class="footer__heading">Legal</h4><a href="/privacy/" class="footer__link">Privacy Policy</a><a href="/terms/" class="footer__link">Terms of Service</a><a href="/about/" class="footer__link">About</a><a href="/contact/" class="footer__link">Contact</a><a href="/blog/" class="footer__link">Blog</a></div></div><div class="footer__bottom">Made with &#10084;&#65039; | Free forever | No signup required</div></footer>
+
+  <script src="/assets/js/core.js" defer></script>
+  <script src="/assets/js/wordfreq.js" defer></script>
+  <script>
+  (function(){
+    'use strict';
+    var MAX=5000,input=document.getElementById('detectInput'),counter=document.getElementById('charCounter');
+    var loadEl=document.getElementById('loadingState'),resultEl=document.getElementById('resultArea');
+
+    // Char counter
+    function updateCounter(){
+      var rem=MAX-input.value.length;
+      counter.textContent=rem.toLocaleString()+' / '+MAX.toLocaleString();
+      counter.className='char-counter'+(rem<500?' char-counter--warn':'')+(rem<=0?' char-counter--max':'');
+    }
+    input.addEventListener('input',updateCounter);
+    updateCounter();
+
+    // Perplexity scoring
+    function perplexityScore(text){
+      var words=text.toLowerCase().replace(/[^a-z\s]/g,'').split(/\s+/).filter(function(w){return w.length>1;});
+      if(words.length<10)return 50;
+      var total=0,count=0;
+      words.forEach(function(w){
+        var rank=window.WORD_FREQ&&window.WORD_FREQ[w];
+        if(rank){total+=Math.min(rank/800,1);count++;}
+        else{total+=1;count++;}
+      });
+      var avg=total/count;
+      // Low avg = common words = more AI-like → higher AI score
+      // High avg = rare words = more human → lower AI score
+      var score=(1-avg)*100;
+      return Math.max(0,Math.min(100,score));
+    }
+
+    // Burstiness scoring
+    function burstinessScore(text){
+      var sentences=text.split(/[.!?]+/).map(function(s){return s.trim();}).filter(function(s){return s.length>5;});
+      if(sentences.length<3)return 50;
+      var lengths=sentences.map(function(s){return s.split(/\s+/).length;});
+      var mean=lengths.reduce(function(a,b){return a+b;},0)/lengths.length;
+      var variance=lengths.reduce(function(a,b){return a+Math.pow(b-mean,2);},0)/lengths.length;
+      var cv=Math.sqrt(variance)/mean; // coefficient of variation
+      // Low cv = uniform = AI → high score; High cv = varied = human → low score
+      var score=(1-Math.min(cv/0.8,1))*100;
+      return Math.max(0,Math.min(100,score));
+    }
+
+    function analyze(text){
+      var p=perplexityScore(text);
+      var b=burstinessScore(text);
+      return Math.round(p*0.6+b*0.4);
+    }
+
+    document.getElementById('detectBtn').addEventListener('click',function(){
+      var text=input.value.trim();
+      if(text.length<50){input.focus();return;}
+      loadEl.style.display='block';resultEl.style.display='none';
+      setTimeout(function(){
+        var score=analyze(text);
+        loadEl.style.display='none';
+        var color=score>70?'var(--accent-red)':score>30?'var(--accent-yellow)':'var(--accent-green)';
+        var circle=document.getElementById('scoreCircle');
+        circle.style.setProperty('--score',score);
+        circle.style.setProperty('--score-color',color);
+        document.getElementById('scorePct').textContent=score+'%';
+        document.getElementById('scorePct').style.color=color;
+        document.getElementById('scoreLabel').textContent='AI';
+        var verdict,explain;
+        if(score>70){verdict='Likely AI Generated';explain='This text shows patterns consistent with AI-generated content: predictable word choices and uniform sentence structure.';}
+        else if(score>30){verdict='Possibly Mixed Content';explain='This text shows some AI-like patterns but also human characteristics. It may be AI-assisted or lightly edited AI content.';}
+        else{verdict='Likely Human Written';explain='This text shows natural variation in word choice and sentence structure consistent with human writing.';}
+        document.getElementById('scoreVerdict').textContent=verdict;
+        document.getElementById('scoreVerdict').style.color=color;
+        document.getElementById('scoreExplanation').textContent=explain;
+        resultEl.style.display='block';
+      },800);
+    });
+  })();
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9434634079795273" crossorigin="anonymous"></script>
+  <script>try{(adsbygoogle=window.adsbygoogle||[]).push({});(adsbygoogle=window.adsbygoogle||[]).push({});}catch(e){}</script>
+</body>
+</html>
+
+```
+
+## Verification command
+
+After pasting the translated HTML into `frontend/es/detector-ia/index.html`, run:
+
+```bash
+node tools/translate/build.js 2>&1 | grep -A 6 "FAIL es/ai-detector$" || echo "PASS — page validates"
+```
+
+If it says PASS, run the lift-noindex command to mark this page as ready:
+
+```bash
+node tools/translate/quarantine.js --lift  # idempotent, only lifts pages that pass
+```
+
+Then commit:
+
+```bash
+git add frontend/es/detector-ia/index.html
+git commit -m "Regenerate es/ai-detector (passes validator)"
+```
+
+The pre-commit hook will re-run the validator before allowing the commit.

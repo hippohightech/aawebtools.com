@@ -1,0 +1,461 @@
+# Translation Brief — homepage → French (fr)
+
+> **Status**: Currently quarantined (`<meta robots noindex>`) on the live site.
+> **Goal**: Produce a high-quality French translation that passes the strict validator.
+> **After completion**: Save to `frontend/fr/index.html`, then run verify.
+
+## Target page identity
+
+| Field | Value |
+|---|---|
+| Page key | `homepage` |
+| Source language | English |
+| Source file | `frontend/index.html` |
+| Target language | French (Français) — `fr` |
+| Target file | `frontend/fr/index.html` |
+| Target canonical | `https://aawebtools.com/fr/` |
+| Direction | LTR (left-to-right) |
+| English title | "Free Online Tools — No Signup Required | AAWebTools" |
+| English word count | 678 |
+| English section count | 4 |
+
+## Hard constraints (the validator will reject anything that violates these)
+
+The validator runs 14 strict checks in [tools/translate/lib/validator.js](../../tools/translate/lib/validator.js). Pay attention to these:
+
+1. **`<html lang="fr">`** — must be set on the root element.
+2. **`<title>`** — must exist, ≤65 characters.
+3. **`<meta name="description">`** — must exist, 100–170 characters.
+4. **`<link rel="canonical" href="https://aawebtools.com/fr/">`** — must exactly match.
+5. **Hreflang block** — must contain EXACTLY these alternates:
+  - hreflang="en" → https://aawebtools.com/
+  - hreflang="fr" → https://aawebtools.com/fr/
+  - hreflang="es" → https://aawebtools.com/es/
+  - hreflang="de" → https://aawebtools.com/de/
+  - hreflang="pt" → https://aawebtools.com/pt/
+  - hreflang="ar" → https://aawebtools.com/ar/
+  - hreflang="id" → https://aawebtools.com/id/
+  - hreflang="hi" → https://aawebtools.com/hi/
+  - hreflang="x-default" → https://aawebtools.com/
+6. **No phantom Japanese references** — no `ja_JP`, no `hreflang="ja"`, no `/ja/` URLs.
+7. **JSON-LD blocks must be valid JSON** — translate the textual fields, keep the structure.
+8. **`AAWebTools` brand name must appear in the body** (do not translate).
+9. **`<meta property="og:locale" content="fr_FR">`** — must be set.
+10. **No phantom `ja_JP` in og:locale:alternate** — only languages from the hreflang list above.
+11. **Romance-language diacritics**: at least 5 accented characters per 1000 body characters. ASCII-stripped translations FAIL automatically. Use proper accents: á é í ó ú ñ ç ã õ etc.
+12. **Word count**: target body must be ≥475 words (≥70% of the 678-word English source). Anything thinner is rejected.
+13. **Section count**: target must have ≥4 `<section>` tags inside `<main>`. Do not collapse, drop, or merge sections from the source.
+
+## Soft guidance (improves quality, not enforced by validator)
+
+- Translate naturally — do not literal-translate idioms.
+- Localize examples where appropriate (currencies, country references).
+- Keep technical terms in their commonly-used form for that language (e.g., German often keeps "Download" as a loanword).
+- For tool pages, the goal is "a native speaker would find this useful" not "this is a literal English translation."
+- Maintain the EXACT same JSON-LD schema structure — translate "name", "description", "headline" but never change "@type", "@context", or property keys.
+- For RTL languages (Arabic): the HTML automatically flips with `dir="rtl"`, you do not need to reorder content manually.
+
+## English source HTML (paste into your AI of choice)
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Free Online Tools — No Signup Required | AAWebTools</title>
+  <meta name="description" content="Free web tools for everyone. TikTok downloader, invoice generator, AI detector and more. No login, no limits, instant results.">
+  <link rel="canonical" href="https://aawebtools.com/">
+  <link rel="alternate" hreflang="en" href="https://aawebtools.com/">
+  <link rel="alternate" hreflang="fr" href="https://aawebtools.com/fr/">
+  <link rel="alternate" hreflang="x-default" href="https://aawebtools.com/">
+
+  <meta property="og:title" content="Free Online Tools — No Signup Required | AAWebTools">
+  <meta property="og:description" content="Free web tools for everyone. TikTok downloader, invoice generator, AI detector and more.">
+  <meta property="og:image" content="https://aawebtools.com/assets/img/og-default.png">
+  <meta property="og:url" content="https://aawebtools.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="AAWebTools">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Free Online Tools — No Signup Required | AAWebTools">
+  <meta name="twitter:description" content="Free web tools for everyone. TikTok downloader, invoice generator, AI detector and more.">
+  <meta name="twitter:image" content="https://aawebtools.com/assets/img/og-default.png">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <!-- Fonts — self-hosted for performance -->
+  <link rel="stylesheet" href="/assets/css/fonts.css">
+  <link rel="stylesheet" href="/assets/css/main.css">
+
+  <!-- Google Search Console verification -->
+  <meta name="google-site-verification" content="xlEjwFrM0LirS3j_62dzYw7d190A8zGHeC2-YIdqr0M">
+
+  <!-- Schema Markup — PRD 4.5 -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "AAWebTools",
+    "url": "https://aawebtools.com",
+    "description": "Free online tools for everyone — no signup required",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://aawebtools.com/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "AAWebTools",
+    "url": "https://aawebtools.com",
+    "logo": "https://aawebtools.com/assets/img/logo-light.png",
+    "description": "Free online tools for everyone — no signup required",
+    "founder": {
+      "@type": "Person",
+      "name": "Karim Narimi"
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "ScopeCove",
+      "url": "https://scopecove.com"
+    }
+  }
+  </script>
+
+  <script async defer src="https://analytics.aawebtools.com/script.js"
+          data-website-id="836dfc88-b05f-49b2-9824-3a085e248896"></script>
+  <link rel="alternate" hreflang="es" href="https://aawebtools.com/es/">
+  <link rel="alternate" hreflang="de" href="https://aawebtools.com/de/">
+  <link rel="alternate" hreflang="pt" href="https://aawebtools.com/pt/">
+  <link rel="alternate" hreflang="ar" href="https://aawebtools.com/ar/">
+  <link rel="alternate" hreflang="id" href="https://aawebtools.com/id/">
+  <link rel="alternate" hreflang="hi" href="https://aawebtools.com/hi/">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="/" class="nav__logo"><img src="/assets/img/logo-light.png" alt="AAWebTools" height="56"></a>
+      <div class="nav__links">
+        <div class="nav__dropdown">
+          <a href="#" class="nav__link">Downloaders</a>
+          <div class="nav__dropdown-menu">
+            <a href="/tiktok-downloader/" class="nav__dropdown-item">TikTok Downloader</a>
+            <a href="/twitter-video-downloader/" class="nav__dropdown-item">Twitter Downloader</a>
+          </div>
+        </div>
+        <div class="nav__dropdown">
+          <a href="#" class="nav__link">Generators</a>
+          <div class="nav__dropdown-menu">
+            <a href="/invoice-generator/" class="nav__dropdown-item">Invoice Generator</a>
+            <a href="/paystub-generator/" class="nav__dropdown-item">Pay Stub Generator</a>
+    <a href="/image-toolkit/" class="nav__dropdown-item">Image Toolkit</a>
+          </div>
+        </div>
+        <div class="nav__dropdown">
+          <a href="#" class="nav__link">AI Tools</a>
+          <div class="nav__dropdown-menu">
+            <a href="/ai-detector/" class="nav__dropdown-item">AI Content Detector</a>
+            <a href="/ai-humanizer/" class="nav__dropdown-item">AI Text Humanizer</a>
+          </div>
+        </div>
+        <a href="/blog/" class="nav__link">Blog</a>
+      </div>
+      <div class="nav__right">
+        <div class="lang-selector">
+          <button class="lang-selector__trigger" id="langToggle">🌐 EN ▾</button>
+          <div class="lang-selector__menu" id="langMenu">
+            <a href="/" class="active">English</a>
+            <a href="/fr/">Français</a>
+            <a href="/es/">Español</a>
+            <a href="/de/">Deutsch</a>
+            <a href="/pt/">Português</a>
+            <a href="/ar/">العربية</a>
+            <a href="/id/">Bahasa Indonesia</a>
+            <a href="/hi/">हिन्दी</a>
+          </div>
+        </div>
+        <a href="#tools" class="btn-primary btn-sm">Get Started</a>
+        <button class="nav__hamburger" aria-label="Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <div class="nav__mobile" id="mobileNav">
+    <a href="/tiktok-downloader/" class="nav__mobile-link">TikTok Downloader</a>
+    <a href="/twitter-video-downloader/" class="nav__mobile-link">Twitter Downloader</a>
+    <a href="/invoice-generator/" class="nav__mobile-link">Invoice Generator</a>
+    <a href="/ai-detector/" class="nav__mobile-link">AI Content Detector</a>
+    <a href="/ai-humanizer/" class="nav__mobile-link">AI Text Humanizer</a>
+    <a href="/paystub-generator/" class="nav__mobile-link">Pay Stub Generator</a>
+    <a href="/image-toolkit/" class="nav__mobile-link">Image Toolkit</a>
+    <a href="/blog/" class="nav__mobile-link">Blog</a>
+    <div class="nav__mobile-lang">
+      <span class="nav__mobile-lang-label">🌐 Language</span>
+      <a href="/fr/" class="nav__mobile-link">Français</a>
+      <a href="/es/" class="nav__mobile-link">Español</a>
+      <a href="/de/" class="nav__mobile-link">Deutsch</a>
+      <a href="/pt/" class="nav__mobile-link">Português</a>
+      <a href="/ar/" class="nav__mobile-link">العربية</a>
+      <a href="/id/" class="nav__mobile-link">Bahasa Indonesia</a>
+      <a href="/hi/" class="nav__mobile-link">हिन्दी</a>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- ============================================================
+         HERO SECTION — PRD 4.2
+         ============================================================ -->
+    <section class="hero">
+      <div class="hero__particles">
+        <div class="hero__particle"></div>
+        <div class="hero__particle"></div>
+        <div class="hero__particle"></div>
+        <div class="hero__particle"></div>
+        <div class="hero__particle"></div>
+        <div class="hero__particle"></div>
+        <div class="hero__particle"></div>
+        <div class="hero__particle"></div>
+        <div class="hero__particle"></div>
+        <div class="hero__particle"></div>
+        <div class="hero__particle"></div>
+        <div class="hero__particle"></div>
+      </div>
+      <div class="hero__content">
+        <span class="hero__label">FREE ONLINE TOOLS</span>
+        <h1 class="hero__title">Free Online Tools — Download, Convert, Detect &amp; Generate</h1>
+        <p class="hero__subtitle">Download videos, generate invoices, detect AI content — no sign up required.</p>
+        <div class="hero__buttons">
+          <a href="#tools" class="btn-primary">Explore Tools</a>
+          <a href="/tiktok-downloader/" class="btn-ghost">TikTok Downloader →</a>
+        </div>
+        <div class="hero__trust">
+          <span>✓ No Login</span>
+          <span class="hero__trust-sep"></span>
+          <span>✓ Free Forever</span>
+          <span class="hero__trust-sep"></span>
+          <span>✓ Works Worldwide</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         TOOLS GRID — PRD 4.3
+         ============================================================ -->
+    <section class="section" id="tools">
+      <div class="container">
+        <span class="section-label reveal">ALL TOOLS</span>
+        <h2 class="reveal">Everything you need, nothing you don't</h2>
+        <div class="tools-grid mt-xl" id="toolsGrid">
+          <!-- Loaded from tools.json by core.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         STATIC TOOLS FALLBACK — SEO: visible to Googlebot without JS
+         ============================================================ -->
+    <noscript>
+    <section class="section" style="padding-top:0;">
+      <div class="container">
+        <div class="tools-grid">
+          <a href="/tiktok-downloader/" class="tool-card">
+            <div class="tool-card__top"><span class="badge">Most Popular</span></div>
+            <h3 class="tool-card__title">TikTok Downloader</h3>
+            <p class="tool-card__desc">Download TikTok videos without watermark in HD</p>
+            <span class="tool-card__link">Use Tool →</span>
+          </a>
+          <a href="/twitter-video-downloader/" class="tool-card">
+            <div class="tool-card__top"></div>
+            <h3 class="tool-card__title">Twitter Video Downloader</h3>
+            <p class="tool-card__desc">Download Twitter/X videos and GIFs for free</p>
+            <span class="tool-card__link">Use Tool →</span>
+          </a>
+          <a href="/invoice-generator/" class="tool-card">
+            <div class="tool-card__top"><span class="badge">Free PDF</span></div>
+            <h3 class="tool-card__title">Invoice Generator</h3>
+            <p class="tool-card__desc">Create professional invoices free — no sign up required</p>
+            <span class="tool-card__link">Use Tool →</span>
+          </a>
+          <a href="/ai-detector/" class="tool-card">
+            <div class="tool-card__top"></div>
+            <h3 class="tool-card__title">AI Content Detector</h3>
+            <p class="tool-card__desc">Detect AI-generated text from ChatGPT, Claude, and more</p>
+            <span class="tool-card__link">Use Tool →</span>
+          </a>
+          <a href="/ai-humanizer/" class="tool-card">
+            <div class="tool-card__top"></div>
+            <h3 class="tool-card__title">AI Text Humanizer</h3>
+            <p class="tool-card__desc">Make AI-written text sound natural and human</p>
+            <span class="tool-card__link">Use Tool →</span>
+          </a>
+          <a href="/paystub-generator/" class="tool-card">
+            <div class="tool-card__top"><span class="badge">Free PDF</span></div>
+            <h3 class="tool-card__title">Pay Stub Generator</h3>
+            <p class="tool-card__desc">Create professional pay stubs free — instant PDF download</p>
+            <span class="tool-card__link">Use Tool →</span>
+          </a>
+          <a href="/image-toolkit/" class="tool-card">
+            <div class="tool-card__top"><span class="badge">No Upload</span></div>
+            <h3 class="tool-card__title">Image Toolkit</h3>
+            <p class="tool-card__desc">Compress, convert & resize images free. Your files never leave your browser.</p>
+            <span class="tool-card__link">Use Tool →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+    </noscript>
+
+    <!-- ============================================================
+         SEO CONTENT SECTION — crawlable tool descriptions + trust signals
+         ============================================================ -->
+    <section class="section" style="background: var(--bg-secondary);">
+      <div class="container" style="max-width: 820px;">
+        <h2 class="reveal">Free Online Tools — No Signup Required</h2>
+        <p style="margin-top: var(--space-md); color: var(--text-secondary); line-height: 1.7;">
+          AAWebTools is a free collection of web-based utilities designed for creators, freelancers, students, and professionals worldwide. Every tool works instantly in your browser — no account needed, no data stored on our servers, and no hidden fees. Whether you need to download social media videos, generate business documents, or check text for AI content, we have you covered.
+        </p>
+
+        <h3 style="margin-top: var(--space-xl); margin-bottom: var(--space-md);">Our Tools</h3>
+        <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: var(--space-md);">
+          <li style="line-height: 1.7;">
+            <a href="/tiktok-downloader/" style="font-weight: 600;">TikTok Downloader</a> —
+            Save TikTok videos without watermark in HD quality. Just paste the URL and download MP4 files instantly, no login needed.
+          </li>
+          <li style="line-height: 1.7;">
+            <a href="/twitter-video-downloader/" style="font-weight: 600;">Twitter Video Downloader</a> —
+            Download videos and GIFs from Twitter/X posts in seconds. Supports all public tweets with multiple quality options.
+          </li>
+          <li style="line-height: 1.7;">
+            <a href="/invoice-generator/" style="font-weight: 600;">Invoice Generator</a> —
+            Create polished, professional invoices and export them as PDF. Ideal for freelancers and small businesses who need quick billing.
+          </li>
+          <li style="line-height: 1.7;">
+            <a href="/ai-detector/" style="font-weight: 600;">AI Content Detector</a> —
+            Analyze any text to determine if it was written by AI models like ChatGPT, Claude, or Gemini. Useful for educators, editors, and content teams.
+          </li>
+          <li style="line-height: 1.7;">
+            <a href="/ai-humanizer/" style="font-weight: 600;">AI Text Humanizer</a> —
+            Transform AI-generated text into natural, human-sounding writing. Keeps the meaning intact while improving readability and tone.
+          </li>
+          <li style="line-height: 1.7;">
+            <a href="/paystub-generator/" style="font-weight: 600;">Pay Stub Generator</a> —
+            Generate professional pay stubs with automatic calculations. Download your completed stub as a PDF in one click.
+          </li>
+          <li style="line-height: 1.7;">
+            <a href="/image-toolkit/" style="font-weight: 600;">Image Toolkit</a> —
+            Compress, convert, and resize images entirely in your browser. Your files are processed locally and never uploaded to any server.
+          </li>
+        </ul>
+
+        <h2 style="margin-top: var(--space-xl);" class="reveal">Why Choose AAWebTools?</h2>
+        <ul style="list-style: disc; padding-left: 20px; margin-top: var(--space-md); display: flex; flex-direction: column; gap: var(--space-sm); color: var(--text-secondary); line-height: 1.7;">
+          <li><strong style="color: var(--text-primary);">100% Free</strong> — Every tool is completely free to use with no usage limits or premium tiers.</li>
+          <li><strong style="color: var(--text-primary);">No Signup</strong> — Start using any tool instantly. We never ask for an email or account.</li>
+          <li><strong style="color: var(--text-primary);">No Data Stored</strong> — Your files, text, and videos are processed in real time and never saved on our servers.</li>
+          <li><strong style="color: var(--text-primary);">Works on All Devices</strong> — Fully responsive design that works on desktop, tablet, and mobile browsers.</li>
+          <li><strong style="color: var(--text-primary);">Multilingual</strong> — Available in 8 languages: English, French, Spanish, German, Portuguese, Arabic, Indonesian, and Hindi.</li>
+          <li><strong style="color: var(--text-primary);">Fast &amp; Lightweight</strong> — No bloated frameworks. Tools load quickly even on slow connections.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         STATS BAR — PRD 4.4
+         ============================================================ -->
+    <section class="stats-bar">
+      <div class="stats-bar__grid">
+        <div class="stats-bar__item reveal">
+          <div class="stats-bar__number">7</div>
+          <div class="stats-bar__label">Free Tools</div>
+        </div>
+        <div class="stats-bar__item reveal">
+          <div class="stats-bar__number">0</div>
+          <div class="stats-bar__label">Signup Required</div>
+        </div>
+        <div class="stats-bar__item reveal">
+          <div class="stats-bar__number">190+</div>
+          <div class="stats-bar__label">Countries</div>
+        </div>
+        <div class="stats-bar__item reveal">
+          <div class="stats-bar__number">100%</div>
+          <div class="stats-bar__label">Free Forever</div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__grid">
+      <div>
+        <div class="footer__logo">
+          <img src="/assets/img/logo-light.png" alt="AAWebTools" height="44">
+        </div>
+        <p class="footer__tagline">Free tools for everyone, worldwide</p>
+        <p class="footer__copyright">&copy; 2026 AAWebTools. All rights reserved. Built by <a href="https://scopecove.com/" target="_blank" rel="noopener" class="footer__link" style="display:inline;">ScopeCove</a></p>
+      </div>
+      <div>
+        <h4 class="footer__heading">Tools</h4>
+        <a href="/tiktok-downloader/" class="footer__link">TikTok Downloader</a>
+        <a href="/twitter-video-downloader/" class="footer__link">Twitter Video Downloader</a>
+        <a href="/invoice-generator/" class="footer__link">Invoice Generator</a>
+        <a href="/ai-detector/" class="footer__link">AI Content Detector</a>
+        <a href="/ai-humanizer/" class="footer__link">AI Text Humanizer</a>
+        <a href="/paystub-generator/" class="footer__link">Pay Stub Generator</a>
+        <a href="/image-toolkit/" class="footer__link">Image Toolkit</a>
+      </div>
+      <div>
+        <h4 class="footer__heading">Legal</h4>
+        <a href="/privacy/" class="footer__link">Privacy Policy</a>
+        <a href="/terms/" class="footer__link">Terms of Service</a>
+        <a href="/about/" class="footer__link">About</a>
+        <a href="/contact/" class="footer__link">Contact</a>
+        <a href="/blog/" class="footer__link">Blog</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      Made with &#10084;&#65039; | Free forever | No signup required
+    </div>
+  </footer>
+
+  <script src="/assets/js/core.js" defer></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9434634079795273" crossorigin="anonymous"></script>
+</body>
+</html>
+
+```
+
+## Verification command
+
+After pasting the translated HTML into `frontend/fr/index.html`, run:
+
+```bash
+node tools/translate/build.js 2>&1 | grep -A 6 "FAIL fr/homepage$" || echo "PASS — page validates"
+```
+
+If it says PASS, run the lift-noindex command to mark this page as ready:
+
+```bash
+node tools/translate/quarantine.js --lift  # idempotent, only lifts pages that pass
+```
+
+Then commit:
+
+```bash
+git add frontend/fr/index.html
+git commit -m "Regenerate fr/homepage (passes validator)"
+```
+
+The pre-commit hook will re-run the validator before allowing the commit.

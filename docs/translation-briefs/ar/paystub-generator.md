@@ -1,0 +1,1044 @@
+# Translation Brief — paystub-generator → Arabic (ar)
+
+> **Status**: Currently quarantined (`<meta robots noindex>`) on the live site.
+> **Goal**: Produce a high-quality Arabic translation that passes the strict validator.
+> **After completion**: Save to `frontend/ar/paystub-generator/index.html`, then run verify.
+
+## Target page identity
+
+| Field | Value |
+|---|---|
+| Page key | `paystub-generator` |
+| Source language | English |
+| Source file | `frontend/paystub-generator/index.html` |
+| Target language | Arabic (العربية) — `ar` |
+| Target file | `frontend/ar/paystub-generator/index.html` |
+| Target canonical | `https://aawebtools.com/ar/paystub-generator/` |
+| Direction | RTL (right-to-left) |
+| English title | "Free Pay Stub Generator — No Signup, Instant PDF | AAWebTools" |
+| English word count | 3092 |
+| English section count | 7 |
+
+## Hard constraints (the validator will reject anything that violates these)
+
+The validator runs 14 strict checks in [tools/translate/lib/validator.js](../../tools/translate/lib/validator.js). Pay attention to these:
+
+1. **`<html lang="ar" dir="rtl">`** — must be set on the root element.
+2. **`<title>`** — must exist, ≤65 characters.
+3. **`<meta name="description">`** — must exist, 100–170 characters.
+4. **`<link rel="canonical" href="https://aawebtools.com/ar/paystub-generator/">`** — must exactly match.
+5. **Hreflang block** — must contain EXACTLY these alternates:
+  - hreflang="en" → https://aawebtools.com/paystub-generator/
+  - hreflang="fr" → https://aawebtools.com/fr/generateur-bulletin-de-paie/
+  - hreflang="es" → https://aawebtools.com/es/generador-recibo-nomina/
+  - hreflang="de" → https://aawebtools.com/de/gehaltsabrechnungs-generator/
+  - hreflang="pt" → https://aawebtools.com/pt/gerador-holerite/
+  - hreflang="ar" → https://aawebtools.com/ar/paystub-generator/
+  - hreflang="id" → https://aawebtools.com/id/pembuat-slip-gaji/
+  - hreflang="hi" → https://aawebtools.com/hi/paystub-generator/
+  - hreflang="x-default" → https://aawebtools.com/paystub-generator/
+6. **No phantom Japanese references** — no `ja_JP`, no `hreflang="ja"`, no `/ja/` URLs.
+7. **JSON-LD blocks must be valid JSON** — translate the textual fields, keep the structure.
+8. **`AAWebTools` brand name must appear in the body** (do not translate).
+9. **`<meta property="og:locale" content="ar_SA">`** — must be set.
+10. **No phantom `ja_JP` in og:locale:alternate** — only languages from the hreflang list above.
+12. **Word count**: target body must be ≥2165 words (≥70% of the 3092-word English source). Anything thinner is rejected.
+13. **Section count**: target must have ≥7 `<section>` tags inside `<main>`. Do not collapse, drop, or merge sections from the source.
+
+## Soft guidance (improves quality, not enforced by validator)
+
+- Translate naturally — do not literal-translate idioms.
+- Localize examples where appropriate (currencies, country references).
+- Keep technical terms in their commonly-used form for that language (e.g., German often keeps "Download" as a loanword).
+- For tool pages, the goal is "a native speaker would find this useful" not "this is a literal English translation."
+- Maintain the EXACT same JSON-LD schema structure — translate "name", "description", "headline" but never change "@type", "@context", or property keys.
+- For RTL languages (Arabic): the HTML automatically flips with `dir="rtl"`, you do not need to reorder content manually.
+
+## English source HTML (paste into your AI of choice)
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Pay Stub Generator — No Signup, Instant PDF | AAWebTools</title>
+  <meta name="description" content="Create professional pay stubs free online. Supports USA, Canada, UK, France, Germany, Australia. No login required. Instant PDF.">
+  <meta name="keywords" content="pay stub generator, payslip generator, free paystub maker, bulletin de paie, pay stub canada, uk payslip generator">
+  <link rel="canonical" href="https://aawebtools.com/paystub-generator/">
+  <link rel="alternate" hreflang="en" href="https://aawebtools.com/paystub-generator/">
+  <link rel="alternate" hreflang="fr" href="https://aawebtools.com/fr/generateur-bulletin-de-paie/">
+  <link rel="alternate" hreflang="x-default" href="https://aawebtools.com/paystub-generator/">
+  <meta property="og:title" content="Free Pay Stub Generator | AAWebTools">
+  <meta property="og:description" content="Create professional pay stubs free online. Instant PDF download.">
+  <meta property="og:image" content="https://aawebtools.com/assets/img/og-paystub-generator.png">
+  <meta property="og:url" content="https://aawebtools.com/paystub-generator/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="AAWebTools">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Free Pay Stub Generator | AAWebTools">
+  <meta name="twitter:description" content="Create professional pay stubs free. Instant PDF.">
+  <meta name="twitter:image" content="https://aawebtools.com/assets/img/og-paystub-generator.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/assets/css/fonts.css">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Free Pay Stub Generator","applicationCategory":"BusinessApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Create professional pay stubs free online. No signup required. Instant PDF download.","url":"https://aawebtools.com/paystub-generator/","inLanguage":["en","fr"],"dateModified":"2026-03-27"}
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type": "Question", "name": "What is a pay stub generator?", "acceptedAnswer": {"@type": "Answer", "text": "A pay stub generator creates professional payroll documents showing an employee's earnings, deductions, and net pay. Our tool supports 9 countries with country-specific deductions (FICA, CPP, NIC, etc.), multiple templates, and instant PDF download — all free, no signup."}},
+      {"@type": "Question", "name": "Does this support CPP and EI for Canada?", "acceptedAnswer": {"@type": "Answer", "text": "Yes! Select 'Canada' or 'Canada (Quebec)' and CPP/QPP, EI, and all provincial deductions are automatically added. Quebec includes QPP, QPP2, QPIP, and reduced EI rate. All rates are pre-filled and editable."}},
+      {"@type": "Question", "name": "Is there a French bulletin de paie generator for Quebec?", "acceptedAnswer": {"@type": "Answer", "text": "Yes! Click the FR toggle to switch all labels to French. Select 'Canada (Quebec)' for Quebec-specific deductions (RRQ, RQAP, RRQ2). The PDF output uses proper Canadian French terminology: Bulletin de paie, Retenues, Salaire net, etc."}},
+      {"@type": "Question", "name": "Can I create a UK payslip with NIC and pension?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Select 'UK' and the deductions automatically include Income Tax PAYE, National Insurance (NIC at 8%), Workplace Pension (5%), and optional Student Loan repayment. The UK template also shows Total Hours Worked as legally required."}},
+      {"@type": "Question", "name": "Is this free with no sign up required?", "acceptedAnswer": {"@type": "Answer", "text": "100% free, forever. No signup, no watermark, no limits. Your data stays in your browser — nothing is sent to any server. Works on all devices."}}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Create a Pay Stub",
+    "step": [
+      {"@type": "HowToStep", "position": 1, "name": "Select your country", "text": "Choose your country to auto-fill the correct deductions."},
+      {"@type": "HowToStep", "position": 2, "name": "Enter pay details", "text": "Fill in employer, employee, earnings and deductions."},
+      {"@type": "HowToStep", "position": 3, "name": "Download PDF", "text": "Click Download — your pay stub is ready instantly."}
+    ]
+  }
+  </script>
+  <script async defer src="https://analytics.aawebtools.com/script.js" data-website-id="836dfc88-b05f-49b2-9824-3a085e248896"></script>
+  <style>
+  .ps-country{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:var(--space-md)}
+  .ps-country button{padding:6px 14px;border:1.5px solid var(--tool-border);border-radius:var(--radius-full);background:#fff;font-family:var(--font-primary);font-size:12px;font-weight:500;color:var(--tool-text-secondary);cursor:pointer;transition:all var(--transition-fast)}
+  .ps-country button:hover{border-color:var(--accent-blue)}
+  .ps-country button.active{border-color:var(--accent-blue);background:rgba(79,127,255,0.08);color:var(--accent-blue);font-weight:600}
+  .ps-section{border:1px solid var(--tool-border);border-radius:var(--radius-md);margin-bottom:var(--space-md);overflow:hidden}
+  .ps-section__head{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;background:var(--tool-bg-secondary);cursor:pointer;font-weight:600;font-size:var(--text-sm);color:var(--tool-text)}
+  .ps-section__head::after{content:'+';font-size:16px;color:var(--accent-blue);transition:transform var(--transition-fast)}
+  .ps-section.open .ps-section__head::after{content:'\2212'}
+  .ps-section__body{display:none;padding:16px}
+  .ps-section.open .ps-section__body{display:block}
+  .ps-badge{display:inline-flex;align-items:center;gap:6px;padding:4px 12px;border-radius:var(--radius-full);background:rgba(79,127,255,0.06);color:var(--accent-blue);font-size:11px;font-weight:600;margin-bottom:var(--space-md)}
+  .ded-row{display:grid;grid-template-columns:2fr 80px 100px 32px;gap:8px;align-items:center;margin-bottom:8px}
+  .ded-row input{padding:8px 10px;font-size:13px}
+  .ded-label{font-size:13px;font-weight:500;color:var(--tool-text)}
+  .summary-box{background:var(--bg-secondary);border:1.5px solid var(--tool-border);border-radius:var(--radius-md);padding:var(--space-md);margin-top:var(--space-md)}
+  .summary-row{display:flex;justify-content:space-between;padding:6px 0;font-size:var(--text-sm)}
+  .summary-row--net{font-size:var(--text-lg);font-weight:700;color:var(--accent-blue);border-top:2px solid var(--tool-border);padding-top:12px;margin-top:8px}
+  .earn-row{display:grid;grid-template-columns:2fr 70px 90px 100px 32px;gap:8px;align-items:center;margin-bottom:8px}
+  .earn-row input{padding:8px 10px;font-size:13px}
+  .tpl-btn{background:#fff;border:2px solid var(--tool-border);border-radius:var(--radius-md);padding:8px;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:6px;transition:all var(--transition-fast);font-family:var(--font-primary);font-size:11px;font-weight:500;color:var(--tool-text-secondary);position:relative}
+  .tpl-btn:hover{border-color:var(--accent-blue)}
+  .tpl-btn.active{border-color:var(--accent-blue);box-shadow:0 0 0 2px var(--accent-blue-glow);color:var(--accent-blue)}
+  .tpl-btn.active::after{content:'✓';position:absolute;top:4px;right:4px;background:var(--accent-blue);color:#fff;width:16px;height:16px;border-radius:50%;font-size:10px;display:flex;align-items:center;justify-content:center}
+  @media(min-width:640px){.ded-row--fr{grid-template-columns:2fr 80px 100px 100px 32px}}
+  </style>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://aawebtools.com/"},{"@type":"ListItem","position":2,"name":"Pay Stub Generator","item":"https://aawebtools.com/paystub-generator/"}]}
+  </script>
+  <link rel="alternate" hreflang="es" href="https://aawebtools.com/es/generador-recibo-nomina/">
+  <link rel="alternate" hreflang="de" href="https://aawebtools.com/de/gehaltsabrechnungs-generator/">
+  <link rel="alternate" hreflang="pt" href="https://aawebtools.com/pt/gerador-holerite/">
+  <link rel="alternate" hreflang="ar" href="https://aawebtools.com/ar/paystub-generator/">
+  <link rel="alternate" hreflang="id" href="https://aawebtools.com/id/pembuat-slip-gaji/">
+  <link rel="alternate" hreflang="hi" href="https://aawebtools.com/hi/paystub-generator/">
+</head>
+<body>
+  <nav class="nav"><div class="nav__inner"><a href="/" class="nav__logo"><img src="/assets/img/logo-light.png" alt="AAWebTools" height="56"></a><div class="nav__links"><div class="nav__dropdown"><a href="#" class="nav__link">Downloaders</a><div class="nav__dropdown-menu"><a href="/tiktok-downloader/" class="nav__dropdown-item">TikTok Downloader</a><a href="/twitter-video-downloader/" class="nav__dropdown-item">Twitter Downloader</a></div></div><div class="nav__dropdown"><a href="#" class="nav__link nav__link--active">Generators</a><div class="nav__dropdown-menu"><a href="/invoice-generator/" class="nav__dropdown-item">Invoice Generator</a><a href="/paystub-generator/" class="nav__dropdown-item">Pay Stub Generator</a><a href="/image-toolkit/" class="nav__dropdown-item">Image Toolkit</a></div></div><div class="nav__dropdown"><a href="#" class="nav__link">AI Tools</a><div class="nav__dropdown-menu"><a href="/ai-detector/" class="nav__dropdown-item">AI Content Detector</a><a href="/ai-humanizer/" class="nav__dropdown-item">AI Text Humanizer</a></div></div><a href="/blog/" class="nav__link">Blog</a></div><div class="nav__right"><div class="lang-selector">
+          <button class="lang-selector__trigger" id="langToggle">🌐 EN ▾</button>
+          <div class="lang-selector__menu" id="langMenu">
+            <a href="/paystub-generator/" class="active">English</a>
+            <a href="/fr/generateur-bulletin-de-paie/">Français</a>
+            <a href="/es/generador-recibo-nomina/">Español</a>
+            <a href="/de/gehaltsabrechnungs-generator/">Deutsch</a>
+            <a href="/pt/gerador-holerite/">Português</a>
+            <a href="/ar/paystub-generator/">العربية</a>
+            <a href="/id/pembuat-slip-gaji/">Bahasa Indonesia</a>
+            <a href="/hi/paystub-generator/">हिन्दी</a>
+          </div>
+        </div><a href="/#tools" class="btn-primary btn-sm">All Tools</a><button class="nav__hamburger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button></div></div></nav>
+  <div class="nav__mobile" id="mobileNav">
+    <a href="/tiktok-downloader/" class="nav__mobile-link">TikTok Downloader</a>
+    <a href="/twitter-video-downloader/" class="nav__mobile-link">Twitter Downloader</a>
+    <a href="/invoice-generator/" class="nav__mobile-link">Invoice Generator</a>
+    <a href="/ai-detector/" class="nav__mobile-link">AI Content Detector</a>
+    <a href="/ai-humanizer/" class="nav__mobile-link">AI Text Humanizer</a>
+    <a href="/paystub-generator/" class="nav__mobile-link">Pay Stub Generator</a>
+    <a href="/image-toolkit/" class="nav__mobile-link">Image Toolkit</a>
+    <a href="/blog/" class="nav__mobile-link">Blog</a>
+  </div>
+
+  <main>
+    <section class="hero" style="min-height:auto;padding:140px 24px 60px;">
+      <div class="hero__content">
+        <span class="hero__label">PAY STUB GENERATOR</span>
+        <h1 class="hero__title">Free Pay Stub Generator — Instant PDF Download</h1>
+        <p class="hero__subtitle">Create professional pay stubs for any country. Free forever, no account needed.</p>
+        <p class="tool-updated">Last updated: March 2026</p>
+        <div class="hero__trust"><span>✓ No Watermark</span><span class="hero__trust-sep"></span><span>✓ Instant PDF</span><span class="hero__trust-sep"></span><span>✓ No Login</span><span class="hero__trust-sep"></span><span>✓ 9 Countries</span></div>
+      </div>
+    </section>
+
+    <div class="ad-unit ad-adsense-leaderboard" style="max-width:960px;margin:0 auto 24px;min-height:90px;">
+      <ins class="adsbygoogle" style="display:block;min-height:90px;max-height:250px;overflow:hidden" data-ad-client="ca-pub-9434634079795273" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    </div>
+
+    <section class="tool-section" style="padding-top:0;">
+      <div class="tool-interface" style="max-width:960px;" id="psTool">
+
+        <!-- Country Selector -->
+        <div class="tool-group">
+          <label class="tool-label">Select Country</label>
+          <div class="ps-country" id="countryPicker">
+            <button class="active" data-country="usa">🇺🇸 USA</button>
+            <button data-country="canada">🇨🇦 Canada</button>
+            <button data-country="quebec">🇨🇦 Quebec</button>
+            <button data-country="uk">🇬🇧 UK</button>
+            <button data-country="france">🇫🇷 France</button>
+            <button data-country="germany">🇩🇪 Germany</button>
+            <button data-country="australia">🇦🇺 Australia</button>
+            <button data-country="morocco">🇲🇦 Morocco</button>
+            <button data-country="custom">🌐 Custom</button>
+          </div>
+        </div>
+
+        <!-- Currency -->
+        <div class="tool-group" style="display:flex;gap:12px;align-items:end;">
+          <div style="flex:1;max-width:200px;">
+            <label class="tool-label">Currency</label>
+            <select class="tool-input" id="currency" aria-label="Currency">
+              <option value="$">$ USD</option>
+              <option value="CA$">CA$ CAD</option>
+              <option value="A$">A$ AUD</option>
+              <option value="£">£ GBP</option>
+              <option value="€">€ EUR</option>
+              <option value="MAD">MAD</option>
+              <option value="CHF">CHF</option>
+              <option value="__custom__">Custom</option>
+            </select>
+          </div>
+          <div id="customCurrencyWrap" style="display:none;flex:1;max-width:120px;">
+            <label class="tool-label">Symbol</label>
+            <input class="tool-input" id="customCurrency" placeholder="e.g. MAD" maxlength="5" style="text-align:center;">
+          </div>
+        </div>
+
+        <!-- Template Picker -->
+        <div class="ps-section open">
+          <div class="ps-section__head">Template</div>
+          <div class="ps-section__body" style="display:flex;gap:12px;flex-wrap:wrap;">
+            <button class="tpl-btn active" data-tpl="corporate"><svg width="60" height="80" viewBox="0 0 60 80" fill="none"><rect width="60" height="80" rx="3" fill="#fff" stroke="#e2e8f0"/><rect x="6" y="6" width="20" height="4" rx="1" fill="#0f172a"/><rect x="34" y="6" width="20" height="4" rx="1" fill="#94a3b8"/><rect x="6" y="14" width="48" height="3" rx="1" fill="#4f7fff"/><rect x="6" y="22" width="48" height="2" rx="1" fill="#f8fafc"/><rect x="6" y="27" width="48" height="2" rx="1" fill="#f1f5f9"/><rect x="6" y="32" width="48" height="2" rx="1" fill="#f1f5f9"/><rect x="6" y="40" width="48" height="1" fill="#e2e8f0"/><rect x="6" y="44" width="48" height="2" rx="1" fill="#f1f5f9"/><rect x="6" y="49" width="48" height="2" rx="1" fill="#f1f5f9"/><rect x="30" y="60" width="24" height="8" rx="2" fill="#f8fafc" stroke="#e2e8f0"/></svg><span>Corporate</span></button>
+            <button class="tpl-btn" data-tpl="european"><svg width="60" height="80" viewBox="0 0 60 80" fill="none"><rect width="60" height="80" rx="3" fill="#fff" stroke="#e2e8f0"/><rect x="4" y="4" width="16" height="3" rx="1" fill="#0f172a"/><rect x="4" y="10" width="52" height="2" rx="1" fill="#4f7fff"/><rect x="4" y="16" width="10" height="2" rx="1" fill="#94a3b8"/><rect x="16" y="16" width="8" height="2" rx="1" fill="#94a3b8"/><rect x="26" y="16" width="10" height="2" rx="1" fill="#94a3b8"/><rect x="38" y="16" width="8" height="2" rx="1" fill="#94a3b8"/><rect x="48" y="16" width="8" height="2" rx="1" fill="#94a3b8"/><rect x="4" y="22" width="52" height="1.5" rx="1" fill="#f1f5f9"/><rect x="4" y="26" width="52" height="1.5" rx="1" fill="#f1f5f9"/><rect x="4" y="30" width="52" height="1.5" rx="1" fill="#f1f5f9"/><rect x="4" y="34" width="52" height="1.5" rx="1" fill="#f1f5f9"/><rect x="4" y="38" width="52" height="1.5" rx="1" fill="#f1f5f9"/><rect x="4" y="42" width="52" height="1.5" rx="1" fill="#f1f5f9"/><rect x="4" y="46" width="52" height="1.5" rx="1" fill="#f1f5f9"/><rect x="30" y="58" width="26" height="3" rx="1" fill="#0f172a"/><rect x="30" y="64" width="26" height="3" rx="1" fill="#0f172a"/><rect x="30" y="70" width="26" height="4" rx="1" fill="#4f7fff"/></svg><span>European</span></button>
+            <button class="tpl-btn" data-tpl="minimal"><svg width="60" height="80" viewBox="0 0 60 80" fill="none"><rect width="60" height="80" rx="3" fill="#fff" stroke="#e2e8f0"/><rect x="20" y="8" width="20" height="6" rx="1" fill="#e2e8f0"/><rect x="10" y="16" width="40" height="1" fill="#4f7fff"/><rect x="16" y="22" width="28" height="3" rx="1" fill="#0f172a"/><rect x="6" y="32" width="30" height="1.5" rx="1" fill="#f1f5f9"/><rect x="40" y="32" width="14" height="1.5" rx="1" fill="#94a3b8"/><rect x="6" y="38" width="30" height="1.5" rx="1" fill="#f1f5f9"/><rect x="40" y="38" width="14" height="1.5" rx="1" fill="#94a3b8"/><rect x="6" y="44" width="30" height="1.5" rx="1" fill="#f1f5f9"/><rect x="40" y="44" width="14" height="1.5" rx="1" fill="#94a3b8"/><rect x="20" y="60" width="20" height="6" rx="2" fill="#4f7fff"/></svg><span>Minimal</span></button>
+          </div>
+        </div>
+
+        <!-- Employer -->
+        <div class="ps-section open" id="secEmployer">
+          <div class="ps-section__head">Employer</div>
+          <div class="ps-section__body">
+            <div class="invoice-grid">
+              <div><div class="tool-group"><input class="tool-input" id="empName" placeholder="Company name"></div><div class="tool-group"><input class="tool-input" id="empAddress" placeholder="Address"></div><div class="tool-group"><label class="tool-label" style="font-size:12px;color:var(--tool-text-secondary);" id="regLabel">EIN (optional)</label><input class="tool-input" id="empReg" placeholder="e.g. 12-3456789"></div></div>
+              <div class="tool-group logo-upload"><label class="tool-label">Company Logo (optional)</label><input type="file" id="logoUpload" accept="image/*" style="font-size:var(--text-sm);"><img id="logoPreview" class="logo-preview" style="display:none;" alt="Logo" width="120" height="60"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Employee -->
+        <div class="ps-section open" id="secEmployee">
+          <div class="ps-section__head">Employee</div>
+          <div class="ps-section__body">
+            <div class="invoice-grid">
+              <div><div class="tool-group"><input class="tool-input" id="eeName" placeholder="Full name"></div><div class="tool-group"><input class="tool-input" id="eeAddress" placeholder="Address"></div></div>
+              <div><div class="tool-group"><input class="tool-input" id="eeId" placeholder="Employee ID (optional)"></div><div class="tool-group"><label class="tool-label" style="font-size:12px;color:var(--tool-text-secondary);" id="idLabel">SSN last 4 (optional)</label><input class="tool-input" id="eeIdNum" placeholder="e.g. 1234" maxlength="10"></div><div class="tool-group" id="taxCodeWrap" style="display:none;"><label class="tool-label" style="font-size:12px;color:var(--tool-text-secondary);">Tax Code</label><input class="tool-input" id="eeTaxCode" placeholder="e.g. 1257L"></div><div class="tool-group" id="taxClassWrap" style="display:none;"><label class="tool-label" style="font-size:12px;color:var(--tool-text-secondary);">Steuerklasse</label><select class="tool-input" id="eeTaxClass"><option>I</option><option>II</option><option>III</option><option>IV</option><option>V</option><option>VI</option></select></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pay Period -->
+        <div class="ps-section open">
+          <div class="ps-section__head">Pay Period</div>
+          <div class="ps-section__body">
+            <div class="invoice-row">
+              <div class="tool-group"><label class="tool-label">Period Start</label><input class="tool-input" id="ppStart" type="date"></div>
+              <div class="tool-group"><label class="tool-label">Period End</label><input class="tool-input" id="ppEnd" type="date"></div>
+              <div class="tool-group"><label class="tool-label">Pay Date</label><input class="tool-input" id="ppDate" type="date"></div>
+            </div>
+            <div class="tool-group" style="max-width:200px;">
+              <label class="tool-label">Frequency</label>
+              <select class="tool-input" id="ppFreq"><option>Weekly</option><option>Bi-weekly</option><option selected>Semi-monthly</option><option>Monthly</option></select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Earnings -->
+        <div class="ps-section open">
+          <div class="ps-section__head">Earnings</div>
+          <div class="ps-section__body">
+            <div id="earningsRows">
+              <div class="earn-row"><span class="ded-label">Regular Pay</span><input class="tool-input earn-hrs" type="number" value="80" min="0" step="0.5" placeholder="Hrs" aria-label="Hours"><input class="tool-input earn-rate" type="number" value="25" min="0" step="0.01" placeholder="Rate" aria-label="Rate"><span class="ded-label earn-amt" style="text-align:right;font-weight:600;">2,000.00</span><span></span></div>
+              <div class="earn-row"><span class="ded-label">Overtime (1.5×)</span><input class="tool-input earn-hrs" type="number" value="0" min="0" step="0.5" placeholder="Hrs" aria-label="OT Hours"><input class="tool-input earn-rate" type="number" value="37.50" min="0" step="0.01" placeholder="Rate" aria-label="OT Rate"><span class="ded-label earn-amt" style="text-align:right;font-weight:600;">0.00</span><span></span></div>
+            </div>
+            <button class="btn-add-item" id="addEarning">+ Add Earning (bonus, tips...)</button>
+            <div style="text-align:right;margin-top:var(--space-md);font-size:var(--text-base);font-weight:700;color:var(--tool-text);"><span>Gross Pay:</span> <span id="grossPay">$ 2,000.00</span></div>
+            <div id="totalHoursWrap" style="display:none;text-align:right;margin-top:4px;font-size:var(--text-sm);color:var(--tool-text-secondary);">Total Hours Worked: <span id="totalHours">80</span> hrs</div>
+          </div>
+        </div>
+
+        <!-- Deductions -->
+        <div class="ps-section open">
+          <div class="ps-section__head">Deductions</div>
+          <div class="ps-section__body">
+            <div class="ps-badge" id="countryBadge">🇺🇸 USA</div>
+            <div id="deductionRows"></div>
+            <button class="btn-add-item" id="addDeduction">+ Add Deduction</button>
+          </div>
+        </div>
+
+        <!-- Summary -->
+        <div class="summary-box" id="summaryBox">
+          <div class="summary-row"><span>Gross Pay</span><span id="sumGross">$ 2,000.00</span></div>
+          <div class="summary-row"><span>Total Deductions</span><span id="sumDed">$ 0.00</span></div>
+          <div class="summary-row summary-row--net"><span>Net Pay</span><span id="sumNet">$ 2,000.00</span></div>
+        </div>
+
+        <!-- YTD (collapsed) -->
+        <div class="ps-section" id="secYtd">
+          <div class="ps-section__head">Year-to-Date Totals (optional)</div>
+          <div class="ps-section__body">
+            <p style="font-size:var(--text-xs);color:var(--tool-text-secondary);margin-bottom:12px;">For the first pay period, YTD equals current period. Edit for subsequent periods.</p>
+            <div class="invoice-grid">
+              <div class="tool-group"><label class="tool-label">YTD Gross</label><input class="tool-input" id="ytdGross" type="number" value="2000" min="0" step="0.01"></div>
+              <div class="tool-group"><label class="tool-label">YTD Net</label><input class="tool-input" id="ytdNet" type="number" value="2000" min="0" step="0.01"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Actions -->
+        <div class="btn-action-group">
+          <button class="btn-tool" id="downloadPdf" style="flex:2;">Download PDF</button>
+          <button class="btn-ghost" id="previewBtn" style="flex:1;padding:14px 24px;">Preview</button>
+          <button class="btn-ghost" id="resetBtn" style="flex:1;padding:14px 24px;color:var(--accent-red);border-color:var(--accent-red);">Reset</button>
+        </div>
+      </div>
+      <div class="ad-unit ad-adsense-leaderboard" style="max-width:960px;margin:24px auto 0;min-height:90px;">
+      <ins class="adsbygoogle" style="display:block;min-height:90px;max-height:250px;overflow:hidden" data-ad-client="ca-pub-9434634079795273" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    </div>
+    </section>
+
+    <!-- Preview Modal -->
+    <div class="modal-overlay" id="previewModal"><div class="modal"><button class="modal__close" id="closeModal">&times;</button><div id="previewContent"></div></div></div>
+
+    <!-- How to Use -->
+    <section class="section"><div class="container"><span class="section-label reveal">HOW IT WORKS</span><h2 class="reveal mb-xl">How to Create a Pay Stub</h2><div class="steps"><div class="step reveal"><div class="step__number">1</div><div class="step__text"><h3>Select your country</h3><p>Choose your country to auto-fill the correct deductions.</p></div></div><div class="step reveal"><div class="step__number">2</div><div class="step__text"><h3>Enter pay details</h3><p>Fill in employer, employee, earnings and deductions.</p></div></div><div class="step reveal"><div class="step__number">3</div><div class="step__text"><h3>Download PDF</h3><p>Click Download — your pay stub is ready instantly.</p></div></div></div></div></section>
+
+    <!-- FAQ -->
+    <section class="section" style="background:var(--bg-secondary);"><div class="container"><span class="section-label reveal">FAQ</span><h2 class="reveal mb-xl">Frequently Asked Questions</h2><div class="faq-list">
+      <details class="faq-item reveal"><summary>What is a pay stub generator?</summary><p>A pay stub generator creates professional payroll documents showing an employee's earnings, deductions, and net pay. Our tool supports 9 countries with country-specific deductions (FICA, CPP, NIC, etc.), multiple templates, and instant PDF download — all free, no signup. For US payroll tax details, see the <a href="https://www.irs.gov/businesses/small-businesses-self-employed/employment-taxes" target="_blank" rel="noopener">IRS employment tax guide</a>.</p></details>
+      <details class="faq-item reveal"><summary>Does this support CPP and EI for Canada?</summary><p>Yes! Select "Canada" or "Canada (Quebec)" and CPP/QPP, EI, and all provincial deductions are automatically added. Quebec includes QPP, QPP2, QPIP, and reduced EI rate. All rates are pre-filled and editable. See the <a href="https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/payroll.html" target="_blank" rel="noopener">CRA payroll page</a> for current rates.</p></details>
+      <details class="faq-item reveal"><summary>Is there a French bulletin de paie generator for Quebec?</summary><p>Yes! Click the FR toggle to switch all labels to French. Select "Canada (Quebec)" for Quebec-specific deductions (RRQ, RQAP, RRQ2). The PDF output uses proper Canadian French terminology: Bulletin de paie, Retenues, Salaire net, etc.</p></details>
+      <details class="faq-item reveal"><summary>Can I create a UK payslip with NIC and pension?</summary><p>Yes. Select "UK" and the deductions automatically include Income Tax PAYE, National Insurance (NIC at 8%), Workplace Pension (5%), and optional Student Loan repayment. The UK template also shows Total Hours Worked as legally required.</p></details>
+      <details class="faq-item reveal"><summary>Is this free with no sign up required?</summary><p>100% free, forever. No signup, no watermark, no limits. Your data stays in your browser — nothing is sent to any server. Works on all devices.</p></details>
+    </div></div></section>
+
+    <!-- SEO Content -->
+    <section class="section">
+      <div class="container" style="max-width:800px;">
+        <style>
+          .seo-content h2{font-size:1.5rem;font-weight:700;color:var(--text-primary);margin:48px 0 16px;line-height:1.3;}
+          .seo-content h2:first-child{margin-top:0;}
+          .seo-content h3{font-size:1.15rem;font-weight:600;color:var(--text-primary);margin:28px 0 12px;}
+          .seo-content p{font-size:16px;line-height:1.75;color:#475569;margin-bottom:16px;}
+          .seo-content ul,.seo-content ol{padding-left:24px;margin-bottom:20px;list-style:disc;}
+          .seo-content ol{list-style:decimal;}
+          .seo-content li{font-size:16px;line-height:1.75;color:#475569;margin-bottom:8px;}
+          .seo-content a{color:#4f7fff;text-decoration:underline;text-decoration-color:rgba(79,127,255,0.3);text-underline-offset:2px;transition:text-decoration-color 0.15s;}
+          .seo-content a:hover{text-decoration-color:#4f7fff;}
+          .seo-content strong{color:var(--text-primary);font-weight:600;}
+        </style>
+        <div class="seo-content">
+
+          <h2>How to Create a Pay Stub</h2>
+          <p>Generating a professional pay stub takes less than two minutes with the AAWebTools free pay stub generator. Whether you are an employer preparing payroll documents or a self-employed individual who needs proof of income, here is how to create a pay stub from start to finish.</p>
+          <ol>
+            <li><strong>Select your country.</strong> Choose from the supported countries at the top of the form: USA, Canada, Canada (Quebec), UK, France, Germany, Australia, India, or use the International option. The tool automatically loads the correct deduction categories for your selection. For example, choosing USA adds Federal Tax, State Tax, Social Security, and Medicare. Choosing Canada adds Federal Tax, Provincial Tax, CPP, and EI.</li>
+            <li><strong>Enter employer and employee information.</strong> Fill in the company name, address, and the employee name and address. These details appear in the header of the generated PDF and establish the employment relationship documented by the pay stub.</li>
+            <li><strong>Add earnings.</strong> Enter the pay period dates, pay frequency (weekly, bi-weekly, semi-monthly, or monthly), and add your earnings lines. You can include regular hours, overtime, bonuses, commissions, and any other compensation. Each earnings line lets you specify hours and rate, or enter a flat amount.</li>
+            <li><strong>Review and adjust deductions.</strong> The pre-filled deductions match your selected country. Review the rates and amounts, and adjust if needed. You can add custom deduction lines for items like health insurance premiums, retirement contributions, union dues, or garnishments.</li>
+            <li><strong>Choose a template and generate the PDF.</strong> Select from three professionally designed templates: Corporate, Clean, or Compact. Click "Download PDF" and your pay stub is generated instantly in your browser. The file downloads directly to your device with no data sent to any server.</li>
+          </ol>
+          <p>The summary section at the bottom of the form shows your calculated gross pay, total deductions, and net pay in real time as you fill in the fields. This lets you verify the numbers before generating the PDF.</p>
+
+          <h2>Pay Stub Requirements by Country</h2>
+          <p>Pay stub laws and requirements differ significantly between countries. Understanding what your jurisdiction requires helps ensure your pay stubs are compliant and useful. Here is a brief overview of the countries supported by this tool:</p>
+          <ul>
+            <li><strong><a href="/pay-stub-generator/usa/">United States</a></strong> — Federal law does not mandate pay stubs, but most states do. Common deductions include Federal Income Tax, State Tax, Social Security (6.2%), and Medicare (1.45%). Many states also require showing YTD (year-to-date) totals.</li>
+            <li><strong><a href="/pay-stub-generator/canada/">Canada</a></strong> — Most provinces require employers to provide a pay statement. Standard deductions include Federal Tax, Provincial Tax, CPP (or QPP in Quebec), and EI. Quebec has additional requirements including QPIP and QPP2.</li>
+            <li><strong><a href="/pay-stub-generator/uk/">United Kingdom</a></strong> — Employers must provide an itemized pay statement by law. Deductions include Income Tax (PAYE), National Insurance Contributions (NIC), Workplace Pension, and optional Student Loan repayments.</li>
+            <li><strong><a href="/pay-stub-generator/australia/">Australia</a></strong> — Pay slips are mandatory under the Fair Work Act and must be issued within one working day of payment. Standard deductions include PAYG Withholding Tax and Superannuation Guarantee (11.5%).</li>
+            <li><strong><a href="/pay-stub-generator/france/">France</a></strong> — The bulletin de paie is one of the most detailed payroll documents in the world. It must include CSG, CRDS, retirement contributions, complementary health insurance, and numerous social charges. Our tool pre-fills French deduction categories when you select France.</li>
+          </ul>
+          <p>Each country-specific page linked above provides detailed guidance on the deductions, rates, and legal requirements for that jurisdiction.</p>
+
+          <h2>Free Pay Stub Templates</h2>
+          <p>The pay stub generator includes three PDF templates, each designed for different use cases:</p>
+          <ul>
+            <li><strong>Corporate</strong> — A structured, formal layout with clear section dividers. This template works well for established businesses and employers who want their pay stubs to match a professional corporate identity. It includes a prominent company header, organized earnings and deduction tables, and a clear net pay summary.</li>
+            <li><strong>Clean</strong> — A modern, uncluttered design with generous spacing. Ideal for startups, small businesses, and freelancers who value readability. The clean template prioritizes scannability so employees can quickly find the numbers that matter.</li>
+            <li><strong>Compact</strong> — A space-efficient layout that fits more information on a single page. Best for businesses with many deduction lines (such as French bulletins de paie) or for situations where you need to minimize paper usage. Despite the smaller footprint, all essential information remains clearly legible.</li>
+          </ul>
+          <p>All three templates are included free and produce high-quality PDF output. Switch between them with a single click to find the layout that best suits your needs.</p>
+
+          <h2>Self-Employed Pay Stubs — Do You Need One?</h2>
+          <p>If you are a freelancer, independent contractor, or sole proprietor, you might assume pay stubs are only for traditional employees. In practice, self-employed pay stubs are essential documents for several important situations.</p>
+          <p><strong>Applying for a mortgage or loan.</strong> Lenders need proof of income. Unlike salaried employees who can provide employer-issued pay stubs, self-employed individuals must create their own. A professional pay stub showing consistent income, tax withholdings, and net pay can satisfy lender requirements alongside tax returns and bank statements.</p>
+          <p><strong>Renting an apartment.</strong> Landlords and property management companies frequently request recent pay stubs as part of rental applications. A well-formatted pay stub demonstrates reliable income and helps your application stand out.</p>
+          <p><strong>Visa and immigration applications.</strong> Many countries require proof of income and employment as part of visa applications. Self-generated pay stubs, when paired with tax filings and bank statements, help establish your financial standing.</p>
+          <p><strong>Personal financial tracking.</strong> Creating regular pay stubs for yourself helps you track income, estimate quarterly tax payments, and maintain organized financial records throughout the year.</p>
+          <p>For a comprehensive guide on creating self-employed pay stubs, including what tax deductions to include and how to calculate self-employment tax, read our detailed article: <a href="/blog/pay-stub-generator-self-employed/">Pay Stub Generator for Self-Employed: Complete Guide</a>.</p>
+
+          <h2>Frequently Asked Questions</h2>
+          <details class="faq-item reveal">
+            <summary>Is the pay stub generator free?</summary>
+            <p>Yes. The AAWebTools pay stub generator is completely free with no limits, no watermarks, and no signup required. You can generate as many pay stubs as you need. The tool is supported by non-intrusive advertising.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Is this pay stub legally valid?</summary>
+            <p>This tool generates professional payroll documents with accurate calculations. However, legal validity depends on your jurisdiction and specific use case. In most countries, pay stubs are considered valid when they accurately reflect actual compensation paid. For official payroll purposes, consult with an accountant or payroll professional to ensure compliance with your local employment laws.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Which countries are supported?</summary>
+            <p>The tool currently supports the USA, Canada, Canada (Quebec), United Kingdom, France, Germany, Australia, India, and an International option. Each country selection automatically loads the correct deduction categories, tax labels, and default rates for that jurisdiction.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Can self-employed people use this?</summary>
+            <p>Absolutely. Self-employed individuals, freelancers, and independent contractors frequently use pay stub generators to create proof of income documents for mortgage applications, rental agreements, visa applications, and personal bookkeeping. Enter your business as the employer and yourself as the employee, then include your self-employment tax deductions.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Are my pay stubs stored on your servers?</summary>
+            <p>No. The entire pay stub generation process runs locally in your browser. Your employer details, employee information, earnings, and deductions never leave your device. The PDF is generated client-side using JavaScript and downloaded directly to your computer. We do not store, transmit, or have access to any of your payroll data.</p>
+          </details>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background:var(--bg-secondary)">
+      <div class="container">
+        <h2>Related Articles</h2>
+        <ul style="list-style:none;padding:0;display:grid;gap:12px;">
+          <li><a href="/blog/pay-stub-generator-self-employed/" style="color:var(--accent-blue)">Pay Stub Generator for Self-Employed 2026</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Related Tools -->
+    <section class="section"><div class="container text-center"><span class="section-label reveal">MORE TOOLS</span><h2 class="reveal mb-lg">You might also need</h2><div class="related-tools">
+      <a href="/invoice-generator/" class="related-tool reveal"><div class="related-tool__icon"><svg viewBox="0 0 40 40" fill="none"><rect x="8" y="6" width="24" height="28" rx="2" stroke="currentColor" stroke-width="2"/><path d="M14 14h12M14 20h12M14 26h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div><div><div class="related-tool__name">Invoice Generator</div><div class="related-tool__desc">Create professional invoices — free PDF</div></div></a>
+      <a href="/ai-humanizer/" class="related-tool reveal"><div class="related-tool__icon"><svg viewBox="0 0 40 40" fill="none"><path d="M12 12h2v16h-2zM20 8l2 2-2 2M24 14l2 2-2 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M28 20c0 6-4 12-8 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div><div><div class="related-tool__name">AI Text Humanizer</div><div class="related-tool__desc">Make AI text sound natural</div></div></a>
+    </div></div></section>
+  </main>
+
+  <footer class="footer"><div class="footer__grid"><div><div class="footer__logo"><img src="/assets/img/logo-light.png" alt="AAWebTools" height="44"></div><p class="footer__tagline">Free tools for everyone, worldwide</p><p class="footer__copyright">&copy; 2026 AAWebTools. All rights reserved. Built by <a href="https://scopecove.com/" target="_blank" rel="noopener" class="footer__link" style="display:inline;">ScopeCove</a></p></div><div><h4 class="footer__heading">Tools</h4><a href="/tiktok-downloader/" class="footer__link">TikTok Downloader</a><a href="/twitter-video-downloader/" class="footer__link">Twitter Video Downloader</a><a href="/invoice-generator/" class="footer__link">Invoice Generator</a><a href="/ai-detector/" class="footer__link">AI Content Detector</a><a href="/ai-humanizer/" class="footer__link">AI Text Humanizer</a><a href="/paystub-generator/" class="footer__link">Pay Stub Generator</a><a href="/image-toolkit/" class="footer__link">Image Toolkit</a></div><div><h4 class="footer__heading">Legal</h4><a href="/privacy/" class="footer__link">Privacy Policy</a><a href="/terms/" class="footer__link">Terms of Service</a><a href="/about/" class="footer__link">About</a><a href="/contact/" class="footer__link">Contact</a><a href="/blog/" class="footer__link">Blog</a></div></div><div class="footer__bottom">Made with &#10084;&#65039; | Free forever | No signup required</div></footer>
+
+  <script src="/assets/js/core.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
+  <script>
+  (function(){
+  'use strict';
+  var lang='en',logoData=null,country='usa',tpl='corporate';
+  var COUNTRIES={
+    usa:{flag:'🇺🇸',name:'USA',cur:'USD',docTitle:{en:'Pay Stub',fr:'Bulletin de paie'},regLabel:'EIN',idLabel:'SSN last 4',fname:'paystub',
+      ded:[{l:'Federal Income Tax',r:''},{l:'State Income Tax',r:''},{l:'Social Security (FICA)',r:'6.2'},{l:'Medicare',r:'1.45'},{l:'Health Insurance',r:''},{l:'401(k)',r:''}]},
+    canada:{flag:'🇨🇦',name:'Canada',cur:'CAD',docTitle:{en:'Pay Stub',fr:'Bulletin de paie'},regLabel:'BN',idLabel:'SIN last 3',fname:'paystub',
+      ded:[{l:'Federal Income Tax',r:''},{l:'Provincial Income Tax',r:''},{l:'CPP',r:'5.95'},{l:'EI',r:'1.66'}]},
+    quebec:{flag:'🇨🇦',name:'Quebec',cur:'CAD',docTitle:{en:'Pay Stub',fr:'Bulletin de paie'},regLabel:'NEQ',idLabel:'NAS last 3',fname:'paystub',
+      ded:[{l:'Federal Income Tax',r:''},{l:'Provincial Income Tax (QC)',r:''},{l:'QPP',r:'4.95'},{l:'QPP2',r:'1.00'},{l:'EI',r:'1.31'},{l:'QPIP',r:'0.494'}]},
+    uk:{flag:'🇬🇧',name:'UK',cur:'GBP',docTitle:{en:'Payslip',fr:'Bulletin de salaire'},regLabel:'Company No.',idLabel:'NI Number',fname:'payslip',showHours:true,showTaxCode:true,
+      ded:[{l:'Income Tax PAYE',r:''},{l:'National Insurance (NIC)',r:'8'},{l:'Workplace Pension',r:'5'},{l:'Student Loan',r:''}]},
+    france:{flag:'🇫🇷',name:'France',cur:'EUR',docTitle:{en:'Bulletin de salaire',fr:'Bulletin de salaire'},regLabel:'SIRET',idLabel:'NIR last 4',fname:'bulletin',showEmployer:true,
+      ded:[{l:'Santé Sécurité Sociale',r:'',er:''},{l:'Accidents du travail',r:'0',er:''},{l:'Retraite plafonnée',r:'',er:''},{l:'Retraite déplafonnée',r:'',er:''},{l:'Famille',r:'0',er:''},{l:'Assurance chômage',r:'',er:''},{l:'AGIRC-ARRCO T1',r:'',er:''},{l:'CSG déductible',r:'6.8',er:'-'},{l:'CSG/CRDS non-déductible',r:'2.9',er:'-'},{l:'PAS — Impôt sur le revenu',r:'',er:'-'}],
+      summary3:true},
+    germany:{flag:'🇩🇪',name:'Germany',cur:'EUR',docTitle:{en:'Gehaltsabrechnung',fr:'Fiche de paie'},regLabel:'Steuernummer',idLabel:'Steuer-ID last 4',fname:'lohnabrechnung',showTaxClass:true,
+      ded:[{l:'Lohnsteuer',r:''},{l:'Solidaritätszuschlag',r:''},{l:'Kirchensteuer',r:''},{l:'Krankenversicherung',r:'7.3'},{l:'Rentenversicherung',r:'9.3'},{l:'Arbeitslosenversicherung',r:'1.3'},{l:'Pflegeversicherung',r:'1.7'}]},
+    australia:{flag:'🇦🇺',name:'Australia',cur:'AUD',docTitle:{en:'Pay Stub',fr:'Bulletin de paie'},regLabel:'ABN',idLabel:'TFN last 3',fname:'paystub',showSuper:true,
+      ded:[{l:'PAYG Withholding',r:''},{l:'Medicare Levy',r:'2'},{l:'HELP/HECS',r:''}],
+      superRate:'11.5'},
+    morocco:{flag:'🇲🇦',name:'Morocco',cur:'MAD',docTitle:{en:'Bulletin de paie',fr:'Bulletin de paie'},regLabel:'IF/RC',idLabel:'CIN last 4',fname:'bulletin',
+      ded:[{l:'IGR',r:''},{l:'CNSS',r:'4.48'},{l:'AMO',r:'2.26'},{l:'CIMR',r:''}]},
+    custom:{flag:'🌐',name:'Custom',cur:'USD',docTitle:{en:'Pay Stub',fr:'Bulletin de paie'},regLabel:'Reg. No.',idLabel:'ID last 4',fname:'paystub',ded:[]}
+  };
+
+  // === Section toggles ===
+  document.querySelectorAll('.ps-section__head').forEach(function(h){h.addEventListener('click',function(){h.parentElement.classList.toggle('open');});});
+
+  // === Template picker ===
+  document.querySelectorAll('.tpl-btn').forEach(function(b){b.addEventListener('click',function(){document.querySelectorAll('.tpl-btn').forEach(function(x){x.classList.remove('active');});b.classList.add('active');tpl=b.getAttribute('data-tpl');});});
+
+  // === Country picker ===
+  document.getElementById('countryPicker').querySelectorAll('button').forEach(function(b){
+    b.addEventListener('click',function(){
+      document.getElementById('countryPicker').querySelectorAll('button').forEach(function(x){x.classList.remove('active');});
+      b.classList.add('active');
+      country=b.getAttribute('data-country');
+      applyCountry();
+    });
+  });
+
+  // === Shared currency function ===
+  var currSel=document.getElementById('currency');
+  var custWrap=document.getElementById('customCurrencyWrap');
+  var custInput=document.getElementById('customCurrency');
+
+  function formatCurrency(amount){
+    var sym;
+    if(currSel.value==='__custom__'){sym=(custInput.value.trim()||'$');}
+    else{sym=currSel.value;}
+    return sym+' '+parseFloat(amount||0).toFixed(2);
+  }
+
+  currSel.addEventListener('change',function(){
+    custWrap.style.display=currSel.value==='__custom__'?'block':'none';
+    calcAll();
+  });
+  custInput.addEventListener('input',calcAll);
+
+  function setCurrency(code){
+    var map={'USD':'$','CAD':'CA$','AUD':'A$','GBP':'£','EUR':'€','MAD':'MAD','CHF':'CHF'};
+    var sym=map[code]||'$';
+    currSel.value=sym;
+    currSel.disabled=(country!=='custom');
+    custWrap.style.display='none';
+  }
+
+  function applyCountry(){
+    var c=COUNTRIES[country];
+    setCurrency(c.cur);
+    document.getElementById('regLabel').textContent=c.regLabel+' (optional)';
+    document.getElementById('idLabel').textContent=c.idLabel+' (optional)';
+    document.getElementById('countryBadge').textContent=c.flag+' '+c.name;
+    document.getElementById('taxCodeWrap').style.display=c.showTaxCode?'block':'none';
+    document.getElementById('taxClassWrap').style.display=c.showTaxClass?'block':'none';
+    document.getElementById('totalHoursWrap').style.display=c.showHours?'block':'none';
+    buildDeductions(c);
+    // Final recalc with correct currency + deductions
+    calcAll();
+  }
+
+  function buildDeductions(c){
+    var wrap=document.getElementById('deductionRows');wrap.innerHTML='';
+    var isFr=c.showEmployer;
+    c.ded.forEach(function(d){
+      var row=document.createElement('div');
+      row.className='ded-row'+(isFr?' ded-row--fr':'');
+      var h='<span class="ded-label">'+d.l+'</span>';
+      h+='<input class="tool-input ded-rate" type="number" value="'+(d.r||'')+'" min="0" max="100" step="0.01" placeholder="%" aria-label="Rate">';
+      h+='<input class="tool-input ded-amt" type="number" value="" min="0" step="0.01" placeholder="Amount" aria-label="Amount">';
+      if(isFr)h+='<input class="tool-input ded-er" type="number" value="'+(d.er||'')+'" min="0" step="0.01" placeholder="Employer" aria-label="Employer amount">';
+      h+='<button class="btn-remove" title="Remove">&times;</button>';
+      row.innerHTML=h;
+      wrap.appendChild(row);
+      bindDedRow(row);
+    });
+  }
+
+  function bindDedRow(row){
+    row.querySelector('.ded-rate').addEventListener('input',calcAll);
+    row.querySelector('.ded-amt').addEventListener('input',calcAll);
+    row.querySelector('.btn-remove').addEventListener('click',function(){row.remove();calcAll();});
+  }
+
+  document.getElementById('addDeduction').addEventListener('click',function(){
+    var c=COUNTRIES[country],isFr=c.showEmployer;
+    var row=document.createElement('div');row.className='ded-row'+(isFr?' ded-row--fr':'');
+    var h='<input class="tool-input" style="font-size:13px;" placeholder="Label" aria-label="Deduction label">';
+    h+='<input class="tool-input ded-rate" type="number" value="" placeholder="%" aria-label="Rate">';
+    h+='<input class="tool-input ded-amt" type="number" value="" placeholder="Amount" aria-label="Amount">';
+    if(isFr)h+='<input class="tool-input ded-er" type="number" value="" placeholder="Employer" aria-label="Employer">';
+    h+='<button class="btn-remove" title="Remove">&times;</button>';
+    row.innerHTML=h;
+    document.getElementById('deductionRows').appendChild(row);
+    bindDedRow(row);
+  });
+
+  // === Earnings ===
+  function calcAll(){
+    var gross=0,totalHrs=0;
+    document.querySelectorAll('.earn-row').forEach(function(r){
+      var hrs=parseFloat(r.querySelector('.earn-hrs')?.value)||0;
+      var rate=parseFloat(r.querySelector('.earn-rate')?.value)||0;
+      var amt=hrs*rate;
+      var amtEl=r.querySelector('.earn-amt');
+      if(amtEl)amtEl.textContent=formatCurrency(amt);
+      gross+=amt;totalHrs+=hrs;
+    });
+    document.getElementById('grossPay').textContent=formatCurrency(gross);
+    document.getElementById('totalHours').textContent=totalHrs.toFixed(1);
+
+    // Calc deductions
+    var totalDed=0;
+    document.querySelectorAll('.ded-row').forEach(function(r){
+      var rateEl=r.querySelector('.ded-rate'),amtEl=r.querySelector('.ded-amt');
+      if(!rateEl||!amtEl)return;
+      var rate=parseFloat(rateEl.value)||0;
+      var amt=parseFloat(amtEl.value);
+      if(isNaN(amt)&&rate>0){amt=gross*(rate/100);amtEl.placeholder=amt.toFixed(2);}
+      else if(!isNaN(amt)){/* user override */}
+      else{amt=0;}
+      totalDed+=(isNaN(parseFloat(amtEl.value))?(rate>0?gross*(rate/100):0):parseFloat(amtEl.value));
+    });
+
+    var net=gross-totalDed;
+    document.getElementById('sumGross').textContent=formatCurrency(gross);
+    document.getElementById('sumDed').textContent=formatCurrency(totalDed);
+    document.getElementById('sumNet').textContent=formatCurrency(net);
+    document.getElementById('ytdGross').value=gross.toFixed(2);
+    document.getElementById('ytdNet').value=net.toFixed(2);
+  }
+
+  document.querySelectorAll('.earn-hrs,.earn-rate').forEach(function(el){el.addEventListener('input',calcAll);});
+
+  document.getElementById('addEarning').addEventListener('click',function(){
+    var row=document.createElement('div');row.className='earn-row';
+    row.innerHTML='<input class="tool-input" style="font-size:13px;" placeholder="Description" aria-label="Earning description"><input class="tool-input earn-hrs" type="number" value="0" min="0" step="0.5" placeholder="Hrs" aria-label="Hours"><input class="tool-input earn-rate" type="number" value="0" min="0" step="0.01" placeholder="Rate" aria-label="Rate"><span class="ded-label earn-amt" style="text-align:right;font-weight:600;">'+formatCurrency(0)+'</span><button class="btn-remove" title="Remove">&times;</button>';
+    document.getElementById('earningsRows').appendChild(row);
+    row.querySelector('.earn-hrs').addEventListener('input',calcAll);
+    row.querySelector('.earn-rate').addEventListener('input',calcAll);
+    row.querySelector('.btn-remove').addEventListener('click',function(){row.remove();calcAll();});
+  });
+
+  // === Logo ===
+  document.getElementById('logoUpload').addEventListener('change',function(e){var f=e.target.files[0];if(!f)return;var r=new FileReader();r.onload=function(ev){logoData=ev.target.result;var p=document.getElementById('logoPreview');p.src=logoData;p.style.display='block';};r.readAsDataURL(f);});
+
+  // === Dates ===
+  var today=new Date().toISOString().split('T')[0];
+  document.getElementById('ppDate').value=today;
+  var d1=new Date();d1.setDate(1);document.getElementById('ppStart').value=d1.toISOString().split('T')[0];
+  var d2=new Date();d2.setDate(15);document.getElementById('ppEnd').value=d2.toISOString().split('T')[0];
+
+  // === Preview ===
+  document.getElementById('previewBtn').addEventListener('click',function(){document.getElementById('previewContent').innerHTML='<p style="text-align:center;padding:40px;color:var(--tool-text-secondary);">Preview uses the same layout as the PDF. Click Download PDF to generate.</p>';document.getElementById('previewModal').classList.add('is-open');});
+  document.getElementById('closeModal').addEventListener('click',function(){document.getElementById('previewModal').classList.remove('is-open');});
+  document.getElementById('previewModal').addEventListener('click',function(e){if(e.target===this)this.classList.remove('is-open');});
+
+  // === Reset ===
+  document.getElementById('resetBtn').addEventListener('click',function(){
+    document.querySelectorAll('#psTool input[type="text"],#psTool input[type="email"],#psTool input[type="number"]').forEach(function(i){if(i.id!=='currency')i.value='';});
+    document.getElementById('eeName').value='';document.getElementById('empName').value='';
+    logoData=null;document.getElementById('logoPreview').style.display='none';
+    applyCountry();
+  });
+
+  // === getData ===
+  function getData(){
+    var c=COUNTRIES[country];
+    var cur=currSel.value==='__custom__'?(custInput.value.trim()||'$')+' ':currSel.value+' ';
+    var earnings=[],deductions=[];
+    document.querySelectorAll('.earn-row').forEach(function(r){
+      var desc=r.querySelector('.ded-label')?.textContent||r.querySelector('input[placeholder="Description"]')?.value||'';
+      var hrs=r.querySelector('.earn-hrs')?.value||'0';
+      var rate=r.querySelector('.earn-rate')?.value||'0';
+      var amt=r.querySelector('.earn-amt')?.textContent||'0';
+      if(parseFloat(hrs)>0||parseFloat(rate)>0)earnings.push({desc:desc,hrs:hrs,rate:rate,amt:amt});
+    });
+    document.querySelectorAll('.ded-row').forEach(function(r){
+      var label=r.querySelector('.ded-label')?.textContent||r.querySelector('input[placeholder="Label"]')?.value||'';
+      var rate=r.querySelector('.ded-rate')?.value||'';
+      var amt=r.querySelector('.ded-amt');
+      var amtVal=parseFloat(amt?.value);
+      if(isNaN(amtVal)&&parseFloat(rate)>0)amtVal=parseFloat(document.getElementById('sumGross').textContent.replace(/[^0-9.-]/g,''))*(parseFloat(rate)/100);
+      else if(isNaN(amtVal))amtVal=0;
+      var er=r.querySelector('.ded-er')?.value||'';
+      if(label)deductions.push({label:label,rate:rate,amt:amtVal.toFixed(2),er:er});
+    });
+    return{
+      c:c,cur:cur,country:country,tpl:tpl,logo:logoData,
+      empName:document.getElementById('empName').value,empAddress:document.getElementById('empAddress').value,empReg:document.getElementById('empReg').value,
+      eeName:document.getElementById('eeName').value,eeAddress:document.getElementById('eeAddress').value,eeId:document.getElementById('eeId').value,eeIdNum:document.getElementById('eeIdNum').value,
+      eeTaxCode:document.getElementById('eeTaxCode').value,eeTaxClass:document.getElementById('eeTaxClass').value,
+      ppStart:document.getElementById('ppStart').value,ppEnd:document.getElementById('ppEnd').value,ppDate:document.getElementById('ppDate').value,ppFreq:document.getElementById('ppFreq').value,
+      earnings:earnings,deductions:deductions,
+      gross:document.getElementById('sumGross').textContent,totalDed:document.getElementById('sumDed').textContent,net:document.getElementById('sumNet').textContent,
+      ytdGross:document.getElementById('ytdGross').value,ytdNet:document.getElementById('ytdNet').value,
+      totalHrs:document.getElementById('totalHours').textContent,
+      docTitle:c.docTitle[lang]||c.docTitle.en,
+      showHours:c.showHours,showSuper:c.showSuper,superRate:c.superRate,showEmployer:c.showEmployer,summary3:c.summary3
+    };
+  }
+
+  // === PDF Templates ===
+  // === Helper: draw a ruled table row ===
+  function tRow(doc,cols,y,opts){
+    opts=opts||{};
+    var x=opts.x||20,w=opts.w||170;
+    if(opts.fill){doc.setFillColor(opts.fill[0],opts.fill[1],opts.fill[2]);doc.rect(x,y-3.5,w,opts.h||5.5,'F');}
+    if(opts.bold)doc.setFont('helvetica','bold');else doc.setFont('helvetica','normal');
+    if(opts.color)doc.setTextColor(opts.color[0],opts.color[1],opts.color[2]);
+    cols.forEach(function(c){
+      if(c.align==='right')doc.text(c.t||'',c.x,y,{align:'right'});
+      else doc.text(c.t||'',c.x,y);
+    });
+    if(opts.color)doc.setTextColor(0);
+    if(opts.bold)doc.setFont('helvetica','normal');
+  }
+
+  // ============================================================
+  // TEMPLATE 1 — Corporate Standard (polished)
+  // ============================================================
+  function renderCorporatePDF(d){
+    var doc=new(window.jspdf.jsPDF);
+    var pw=210,mg=15,cw=pw-mg*2,rX=mg+cw;
+
+    // --- Top border accent ---
+    doc.setFillColor(79,127,255);doc.rect(0,0,pw,3,'F');
+
+    // --- Header: employer left, employee right ---
+    var y=14;
+    if(d.logo)try{doc.addImage(d.logo,'PNG',mg,8,35,16);}catch(e){}
+    var lx=d.logo?mg+40:mg;
+    doc.setFontSize(11);doc.setFont('helvetica','bold');doc.text(d.empName||'',lx,y);y+=4.5;
+    doc.setFontSize(7.5);doc.setFont('helvetica','normal');doc.setTextColor(80);
+    if(d.empAddress){doc.text(d.empAddress,lx,y);y+=3.2;}
+    if(d.empReg){doc.text(d.c.regLabel+': '+d.empReg,lx,y);y+=3.2;}
+    doc.setTextColor(0);
+
+    // Employee — right column
+    doc.setFontSize(8);doc.setFont('helvetica','bold');doc.text(d.eeName||'',rX,14,{align:'right'});
+    doc.setFont('helvetica','normal');doc.setFontSize(7.5);doc.setTextColor(80);
+    var ey=18;
+    if(d.eeAddress){doc.text(d.eeAddress,rX,ey,{align:'right'});ey+=3.2;}
+    if(d.eeIdNum){doc.text((d.c.idLabel||'ID')+': ***'+d.eeIdNum,rX,ey,{align:'right'});ey+=3.2;}
+    if(d.eeId){doc.text('Employee ID: '+d.eeId,rX,ey,{align:'right'});ey+=3.2;}
+    doc.setTextColor(0);
+    y=Math.max(y,ey)+4;
+
+    // --- Separator + Title ---
+    doc.setDrawColor(226,232,240);doc.setLineWidth(0.3);doc.line(mg,y,rX,y);y+=6;
+    doc.setFontSize(13);doc.setFont('helvetica','bold');doc.setTextColor(79,127,255);
+    doc.text(d.docTitle.toUpperCase(),pw/2,y,{align:'center'});y+=5;
+    doc.setFontSize(7.5);doc.setFont('helvetica','normal');doc.setTextColor(100);
+    doc.text('Period: '+d.ppStart+' to '+d.ppEnd+'  |  Pay Date: '+d.ppDate+'  |  '+d.ppFreq,pw/2,y,{align:'center'});
+    doc.setTextColor(0);y+=7;
+
+    // --- Earnings Table ---
+    var colD=mg+2,colH=110,colR=140,colA=rX-2;
+    doc.setFillColor(241,245,249);doc.rect(mg,y-3.5,cw,6,'F');
+    doc.setDrawColor(203,213,225);doc.setLineWidth(0.2);doc.line(mg,y+2.5,rX,y+2.5);
+    doc.setFontSize(7.5);doc.setFont('helvetica','bold');doc.setTextColor(60);
+    doc.text('EARNINGS',colD,y);doc.text('HOURS',colH,y);doc.text('RATE',colR,y);doc.text('AMOUNT',colA,y,{align:'right'});
+    doc.setTextColor(0);y+=6;
+    doc.setFont('helvetica','normal');doc.setFontSize(8);
+    d.earnings.forEach(function(e,i){
+      if(i%2===0){doc.setFillColor(250,251,252);doc.rect(mg,y-3.2,cw,5,'F');}
+      doc.text(e.desc,colD,y);doc.text(e.hrs,colH,y);doc.text(d.cur+e.rate,colR,y);doc.text(e.amt,colA,y,{align:'right'});y+=5;
+    });
+    doc.setDrawColor(203,213,225);doc.line(mg,y-1,rX,y-1);
+    doc.setFont('helvetica','bold');doc.text('Gross Pay',colD,y+2);doc.text(d.gross,colA,y+2,{align:'right'});y+=6;
+    if(d.showHours){doc.setFont('helvetica','normal');doc.setFontSize(7);doc.setTextColor(100);doc.text('Total Hours Worked This Period: '+d.totalHrs+' hrs',colD,y);y+=4;doc.setTextColor(0);}
+    y+=5;
+
+    // --- Deductions Table ---
+    doc.setFillColor(241,245,249);doc.rect(mg,y-3.5,cw,6,'F');
+    doc.setDrawColor(203,213,225);doc.line(mg,y+2.5,rX,y+2.5);
+    doc.setFontSize(7.5);doc.setFont('helvetica','bold');doc.setTextColor(60);
+    doc.text('DEDUCTIONS',colD,y);doc.text('RATE',colR,y);doc.text('AMOUNT',colA,y,{align:'right'});
+    doc.setTextColor(0);y+=6;
+    doc.setFont('helvetica','normal');doc.setFontSize(8);
+    d.deductions.forEach(function(dd,i){
+      if(i%2===0){doc.setFillColor(250,251,252);doc.rect(mg,y-3.2,cw,5,'F');}
+      doc.text(dd.label,colD,y);if(dd.rate)doc.text(dd.rate+'%',colR,y);doc.text(d.cur+dd.amt,colA,y,{align:'right'});y+=5;
+      if(y>255){doc.addPage();y=20;}
+    });
+    doc.setDrawColor(203,213,225);doc.line(mg,y-1,rX,y-1);
+    doc.setFont('helvetica','bold');doc.text('Total Deductions',colD,y+2);doc.text(d.totalDed,colA,y+2,{align:'right'});y+=6;
+    if(d.showSuper){y+=2;doc.setFont('helvetica','normal');doc.setFontSize(7);doc.setTextColor(100);
+      var superAmt=d.cur+(parseFloat(d.gross.replace(/[^0-9.-]/g,''))*parseFloat(d.superRate)/100).toFixed(2);
+      doc.text('Employer Superannuation ('+d.superRate+'%): '+superAmt+' — not deducted from pay',colD,y);y+=4;doc.setTextColor(0);}
+    y+=6;
+
+    // --- Summary Box ---
+    var bx=rX-72,bw=72,bh=28;
+    doc.setFillColor(241,245,249);doc.roundedRect(bx,y-2,bw,bh,2,2,'F');
+    doc.setDrawColor(203,213,225);doc.roundedRect(bx,y-2,bw,bh,2,2,'S');
+    doc.setFontSize(8);doc.setFont('helvetica','normal');doc.setTextColor(80);
+    doc.text('Gross Pay',bx+4,y+4);doc.text(d.gross,bx+bw-4,y+4,{align:'right'});
+    doc.text('Deductions',bx+4,y+10);doc.text('- '+d.totalDed,bx+bw-4,y+10,{align:'right'});
+    doc.setDrawColor(79,127,255);doc.setLineWidth(0.4);doc.line(bx+4,y+14,bx+bw-4,y+14);
+    doc.setFont('helvetica','bold');doc.setFontSize(10);doc.setTextColor(79,127,255);
+    doc.text('Net Pay',bx+4,y+21);doc.text(d.net,bx+bw-4,y+21,{align:'right'});
+    doc.setTextColor(0);y+=bh+6;
+
+    // --- YTD ---
+    if(d.ytdGross){doc.setFontSize(6.5);doc.setTextColor(140);doc.text('Year-to-Date  |  Gross: '+d.cur+parseFloat(d.ytdGross).toFixed(2)+'  |  Net: '+d.cur+parseFloat(d.ytdNet).toFixed(2),mg,y);doc.setTextColor(0);}
+
+    // --- Footer line ---
+    doc.setDrawColor(79,127,255);doc.setLineWidth(0.4);doc.line(mg,285,rX,285);
+    doc.setFontSize(6);doc.setTextColor(160);doc.text('Generated by AAWebTools.com — Free Pay Stub Generator',pw/2,289,{align:'center'});
+    return doc;
+  }
+
+  // ============================================================
+  // TEMPLATE 2 — European Detailed (bordered grid, professional)
+  // ============================================================
+  function renderEuropeanPDF(d){
+    var doc=new(window.jspdf.jsPDF);
+    var mg=8,rX=202,cw=194,pw=210;
+    var hasFr=d.showEmployer;
+    var dc=doc.setDrawColor.bind(doc),fc=doc.setFillColor.bind(doc),lw=doc.setLineWidth.bind(doc);
+    var navy=[15,23,42],grey=[100,116,139],ltGrey=[241,245,249],blue=[79,127,255];
+
+    // --- Outer border ---
+    dc(navy[0],navy[1],navy[2]);lw(0.5);doc.rect(mg,mg,cw,280);
+
+    // --- Top header band ---
+    fc(navy[0],navy[1],navy[2]);doc.rect(mg,mg,cw,18,'F');
+    doc.setTextColor(255);doc.setFontSize(12);doc.setFont('helvetica','bold');
+    doc.text(d.docTitle.toUpperCase(),pw/2,16,{align:'center'});
+    doc.setFontSize(7);doc.setFont('helvetica','normal');
+    doc.text(d.ppFreq+'  |  '+d.ppStart+' \u2014 '+d.ppEnd+'  |  Pay Date: '+d.ppDate,pw/2,21,{align:'center'});
+    doc.setTextColor(0);
+
+    // --- Info grid: employer left | employee right ---
+    var iy=32;dc(226,232,240);lw(0.2);
+    doc.line(pw/2,26,pw/2,52);
+    doc.line(mg,52,rX,52);
+    // Employer
+    if(d.logo)try{doc.addImage(d.logo,'PNG',mg+3,28,22,10);}catch(e){}
+    var elx=d.logo?mg+28:mg+3;
+    doc.setFontSize(8.5);doc.setFont('helvetica','bold');doc.text(d.empName||'',elx,iy);iy+=3.5;
+    doc.setFont('helvetica','normal');doc.setFontSize(6.5);doc.setTextColor(grey[0],grey[1],grey[2]);
+    if(d.empAddress){doc.text(d.empAddress,elx,iy);iy+=2.8;}
+    if(d.empReg){doc.text(d.c.regLabel+': '+d.empReg,elx,iy);}
+    // Employee
+    doc.setTextColor(0);doc.setFontSize(8.5);doc.setFont('helvetica','bold');
+    doc.text(d.eeName||'',pw/2+4,32);
+    doc.setFont('helvetica','normal');doc.setFontSize(6.5);doc.setTextColor(grey[0],grey[1],grey[2]);
+    var eey=35.5;
+    if(d.eeAddress){doc.text(d.eeAddress,pw/2+4,eey);eey+=2.8;}
+    if(d.eeId){doc.text('ID: '+d.eeId,pw/2+4,eey);eey+=2.8;}
+    if(d.eeIdNum){doc.text((d.c.idLabel||'ID')+': ***'+d.eeIdNum,pw/2+4,eey);eey+=2.8;}
+    if(d.eeTaxCode){doc.text('Tax Code: '+d.eeTaxCode,pw/2+4,eey);eey+=2.8;}
+    if(d.eeTaxClass&&d.c.showTaxClass){doc.text('Steuerklasse: '+d.eeTaxClass,pw/2+4,eey);}
+    doc.setTextColor(0);
+
+    // --- Earnings Table (bordered grid) ---
+    var y=56;
+    var colW=[70,22,30,cw-70-22-30]; // desc, hrs, rate, amt
+    if(hasFr){colW=[60,20,26,40,48];}// desc, hrs, rate, ee amt, er amt
+    fc(ltGrey[0],ltGrey[1],ltGrey[2]);doc.rect(mg,y,cw,5,'F');
+    dc(navy[0],navy[1],navy[2]);lw(0.3);doc.line(mg,y,rX,y);doc.line(mg,y+5,rX,y+5);
+    doc.setFontSize(6);doc.setFont('helvetica','bold');doc.setTextColor(navy[0],navy[1],navy[2]);
+    doc.text('EARNINGS',mg+2,y+3.5);doc.text('HRS',mg+colW[0]+2,y+3.5);doc.text('RATE',mg+colW[0]+colW[1]+2,y+3.5);
+    doc.text('AMOUNT',rX-2,y+3.5,{align:'right'});
+    doc.setTextColor(0);y+=5;
+    lw(0.1);dc(226,232,240);
+    doc.setFont('helvetica','normal');doc.setFontSize(7);
+    var rh=4.2;
+    d.earnings.forEach(function(e,i){
+      if(i%2===0){fc(255,255,255);}else{fc(250,251,253);}
+      doc.rect(mg,y,cw,rh,'F');
+      doc.line(mg,y+rh,rX,y+rh);
+      doc.text(e.desc,mg+2,y+3);doc.text(e.hrs,mg+colW[0]+2,y+3);
+      doc.text(d.cur+e.rate,mg+colW[0]+colW[1]+2,y+3);doc.text(e.amt,rX-2,y+3,{align:'right'});
+      y+=rh;
+    });
+    fc(ltGrey[0],ltGrey[1],ltGrey[2]);doc.rect(mg,y,cw,5,'F');
+    dc(navy[0],navy[1],navy[2]);lw(0.3);doc.line(mg,y,rX,y);doc.line(mg,y+5,rX,y+5);
+    doc.setFont('helvetica','bold');doc.setFontSize(7);
+    doc.text('GROSS PAY',mg+2,y+3.5);doc.text(d.gross,rX-2,y+3.5,{align:'right'});
+    y+=5;
+    if(d.showHours){doc.setFont('helvetica','normal');doc.setFontSize(6);doc.setTextColor(grey[0],grey[1],grey[2]);doc.text('Total Hours: '+d.totalHrs+' hrs',mg+2,y+3);doc.setTextColor(0);y+=4;}
+    y+=3;
+
+    // --- Deductions Table (bordered grid) ---
+    fc(ltGrey[0],ltGrey[1],ltGrey[2]);doc.rect(mg,y,cw,5,'F');
+    dc(navy[0],navy[1],navy[2]);lw(0.3);doc.line(mg,y,rX,y);doc.line(mg,y+5,rX,y+5);
+    doc.setFontSize(6);doc.setFont('helvetica','bold');doc.setTextColor(navy[0],navy[1],navy[2]);
+    doc.text('DEDUCTIONS',mg+2,y+3.5);doc.text('RATE',mg+90,y+3.5);
+    doc.text('EMPLOYEE',mg+130,y+3.5,{align:'right'});
+    if(hasFr)doc.text('EMPLOYER',rX-2,y+3.5,{align:'right'});
+    doc.setTextColor(0);y+=5;
+    lw(0.1);dc(226,232,240);
+    doc.setFont('helvetica','normal');doc.setFontSize(6.5);
+    d.deductions.forEach(function(dd,i){
+      if(i%2===0){fc(255,255,255);}else{fc(250,251,253);}
+      doc.rect(mg,y,cw,rh,'F');
+      doc.line(mg,y+rh,rX,y+rh);
+      doc.text(dd.label,mg+2,y+3);
+      if(dd.rate)doc.text(dd.rate+'%',mg+92,y+3);
+      doc.text(d.cur+dd.amt,mg+130,y+3,{align:'right'});
+      if(hasFr&&dd.er&&dd.er!=='-')doc.text(d.cur+dd.er,rX-2,y+3,{align:'right'});
+      else if(hasFr&&dd.er==='-')doc.text('\u2014',rX-4,y+3);
+      y+=rh;
+      if(y>258){doc.addPage();y=12;dc(navy[0],navy[1],navy[2]);lw(0.5);doc.rect(mg,mg,cw,280);}
+    });
+    dc(navy[0],navy[1],navy[2]);lw(0.3);doc.line(mg,y,rX,y);
+    y+=4;
+
+    // --- Summary section ---
+    var sx=mg+cw/2+10,sw=cw/2-12;
+    fc(ltGrey[0],ltGrey[1],ltGrey[2]);doc.rect(sx,y,sw,d.summary3?28:18,'F');
+    dc(navy[0],navy[1],navy[2]);lw(0.2);doc.rect(sx,y,sw,d.summary3?28:18);
+    doc.setFontSize(7);doc.setFont('helvetica','normal');doc.setTextColor(navy[0],navy[1],navy[2]);
+    var sy=y+4;
+    if(d.summary3){
+      doc.text('Net avant imp\u00f4t',sx+3,sy);doc.text(d.cur+'\u2014',sx+sw-3,sy,{align:'right'});sy+=4;
+      doc.text('PAS (imp\u00f4t)',sx+3,sy);doc.text(d.cur+'\u2014',sx+sw-3,sy,{align:'right'});sy+=4;
+    }
+    doc.text('Total Deductions',sx+3,sy);doc.text(d.totalDed,sx+sw-3,sy,{align:'right'});sy+=2;
+    dc(blue[0],blue[1],blue[2]);lw(0.4);doc.line(sx+3,sy,sx+sw-3,sy);sy+=4;
+    doc.setFont('helvetica','bold');doc.setFontSize(9);doc.setTextColor(blue[0],blue[1],blue[2]);
+    doc.text(d.summary3?'NET \u00c0 PAYER':'NET PAY',sx+3,sy);doc.text(d.net,sx+sw-3,sy,{align:'right'});
+    doc.setTextColor(0);
+    y+=d.summary3?32:22;
+
+    // --- Employer contributions (Australia super / France employer totals) ---
+    if(d.showSuper){doc.setFontSize(6);doc.setTextColor(grey[0],grey[1],grey[2]);
+      var sa=d.cur+(parseFloat(d.gross.replace(/[^0-9.-]/g,''))*parseFloat(d.superRate)/100).toFixed(2);
+      doc.text('Employer Superannuation ('+d.superRate+'%): '+sa+' \u2014 not deducted',mg+2,y);y+=4;doc.setTextColor(0);}
+
+    // --- YTD ---
+    if(d.ytdGross){doc.setFontSize(6);doc.setTextColor(grey[0],grey[1],grey[2]);
+      doc.text('YTD Gross: '+d.cur+parseFloat(d.ytdGross).toFixed(2)+'  |  YTD Net: '+d.cur+parseFloat(d.ytdNet).toFixed(2),mg+2,y+2);doc.setTextColor(0);}
+
+    // --- Footer inside border ---
+    doc.setFontSize(5);doc.setTextColor(180);doc.text('Generated by AAWebTools.com',pw/2,285,{align:'center'});
+    return doc;
+  }
+
+  // ============================================================
+  // TEMPLATE 3 — Modern Minimal (polished)
+  // ============================================================
+  function renderMinimalPDF(d){
+    var doc=new(window.jspdf.jsPDF);
+    var pw=210,mg=30,rX=pw-mg;
+
+    // --- Logo centered ---
+    var y=22;
+    if(d.logo){try{doc.addImage(d.logo,'PNG',(pw-40)/2,14,40,18);}catch(e){}y=38;}
+
+    // --- Accent line ---
+    doc.setDrawColor(79,127,255);doc.setLineWidth(0.6);doc.line(mg,y,rX,y);y+=10;
+
+    // --- Employee name large ---
+    doc.setFontSize(18);doc.setFont('helvetica','bold');doc.setTextColor(15,23,42);
+    doc.text(d.eeName||'',pw/2,y,{align:'center'});y+=6;
+    doc.setFontSize(8);doc.setFont('helvetica','normal');doc.setTextColor(140);
+    doc.text(d.docTitle+'  \u2022  '+d.ppStart+' to '+d.ppEnd+'  \u2022  '+d.ppFreq,pw/2,y,{align:'center'});y+=3;
+    doc.text(d.empName||'',pw/2,y,{align:'center'});
+    if(d.empReg){y+=3;doc.text(d.c.regLabel+': '+d.empReg,pw/2,y,{align:'center'});}
+    doc.setTextColor(0);y+=10;
+
+    // --- Thin separator ---
+    doc.setDrawColor(226,232,240);doc.setLineWidth(0.15);doc.line(mg,y,rX,y);y+=6;
+
+    // --- Earnings (clean, no borders) ---
+    doc.setFontSize(6.5);doc.setFont('helvetica','bold');doc.setTextColor(140);
+    doc.text('EARNINGS',mg,y);doc.text('AMOUNT',rX,y,{align:'right'});y+=5;
+    doc.setFont('helvetica','normal');doc.setFontSize(8.5);doc.setTextColor(15,23,42);
+    d.earnings.forEach(function(e){
+      doc.text(e.desc,mg,y);doc.text(e.amt,rX,y,{align:'right'});y+=5.5;
+      doc.setDrawColor(241,245,249);doc.line(mg,y-1.5,rX,y-1.5);
+    });
+    doc.setFont('helvetica','bold');doc.text('Gross Pay',mg,y);doc.text(d.gross,rX,y,{align:'right'});
+    doc.setTextColor(0);y+=8;
+    if(d.showHours){doc.setFontSize(7);doc.setTextColor(140);doc.text('Total Hours: '+d.totalHrs+' hrs',mg,y);y+=5;doc.setTextColor(0);}
+
+    // --- Deductions (clean, no borders) ---
+    doc.setFontSize(6.5);doc.setFont('helvetica','bold');doc.setTextColor(140);
+    doc.text('DEDUCTIONS',mg,y);doc.text('AMOUNT',rX,y,{align:'right'});y+=5;
+    doc.setFont('helvetica','normal');doc.setFontSize(8.5);doc.setTextColor(80);
+    d.deductions.forEach(function(dd){
+      doc.text(dd.label,mg,y);doc.text('\u2013 '+d.cur+dd.amt,rX,y,{align:'right'});y+=5.5;
+      doc.setDrawColor(241,245,249);doc.line(mg,y-1.5,rX,y-1.5);
+      if(y>250){doc.addPage();y=20;}
+    });
+    doc.setFont('helvetica','bold');doc.setTextColor(80);
+    doc.text('Total Deductions',mg,y);doc.text(d.totalDed,rX,y,{align:'right'});
+    y+=10;
+
+    // --- Super (Australia) ---
+    if(d.showSuper){doc.setFont('helvetica','normal');doc.setFontSize(7);doc.setTextColor(140);
+      doc.text('Employer Super ('+d.superRate+'%): '+d.cur+(parseFloat(d.gross.replace(/[^0-9.-]/g,''))*parseFloat(d.superRate)/100).toFixed(2),pw/2,y,{align:'center'});y+=6;doc.setTextColor(0);}
+
+    // --- Net Pay — large centered ---
+    doc.setDrawColor(79,127,255);doc.setLineWidth(0.4);doc.line(mg+30,y,rX-30,y);y+=8;
+    doc.setFontSize(24);doc.setTextColor(79,127,255);doc.setFont('helvetica','bold');
+    doc.text(d.net,pw/2,y,{align:'center'});y+=7;
+    doc.setFontSize(9);doc.text('Net Pay',pw/2,y,{align:'center'});
+    doc.setTextColor(0);y+=10;
+
+    // --- YTD ---
+    if(d.ytdGross){doc.setFontSize(6.5);doc.setTextColor(160);doc.text('Year-to-Date  |  Gross: '+d.cur+parseFloat(d.ytdGross).toFixed(2)+'  |  Net: '+d.cur+parseFloat(d.ytdNet).toFixed(2),pw/2,y,{align:'center'});doc.setTextColor(0);}
+
+    // --- Footer ---
+    doc.setDrawColor(226,232,240);doc.setLineWidth(0.15);doc.line(mg,282,rX,282);
+    doc.setFontSize(5.5);doc.setTextColor(180);doc.text('Pay Date: '+d.ppDate,mg,286);
+    doc.text('AAWebTools.com',rX,286,{align:'right'});
+    return doc;
+  }
+
+  var renderers={corporate:renderCorporatePDF,european:renderEuropeanPDF,minimal:renderMinimalPDF};
+
+  document.getElementById('downloadPdf').addEventListener('click',function(){
+    var d=getData();
+    var doc=(renderers[d.tpl]||renderCorporatePDF)(d);
+    var name=(d.eeName||'employee').replace(/\s+/g,'-').toLowerCase();
+    var date=d.ppDate||today;
+    doc.save(d.c.fname+'-'+name+'-'+date+'.pdf');
+  });
+
+  // Init
+  applyCountry();
+  calcAll();
+  })();
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9434634079795273" crossorigin="anonymous"></script>
+  <script>try{(adsbygoogle=window.adsbygoogle||[]).push({});(adsbygoogle=window.adsbygoogle||[]).push({});}catch(e){}</script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type": "Question", "name": "Is the pay stub generator free?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The AAWebTools pay stub generator is completely free with no limits, no watermarks, and no signup required. You can generate as many pay stubs as you need."}},
+      {"@type": "Question", "name": "Is this pay stub legally valid?", "acceptedAnswer": {"@type": "Answer", "text": "This tool generates professional payroll documents with accurate calculations. Legal validity depends on your jurisdiction and specific use case. In most countries, pay stubs are considered valid when they accurately reflect actual compensation paid. Consult with a payroll professional for official compliance."}},
+      {"@type": "Question", "name": "Which countries are supported?", "acceptedAnswer": {"@type": "Answer", "text": "The tool supports the USA, Canada, Canada (Quebec), United Kingdom, France, Germany, Australia, India, and an International option. Each country selection automatically loads the correct deduction categories, tax labels, and default rates."}},
+      {"@type": "Question", "name": "Can self-employed people use this?", "acceptedAnswer": {"@type": "Answer", "text": "Absolutely. Self-employed individuals, freelancers, and independent contractors frequently use pay stub generators to create proof of income documents for mortgage applications, rental agreements, visa applications, and personal bookkeeping."}},
+      {"@type": "Question", "name": "Are my pay stubs stored on your servers?", "acceptedAnswer": {"@type": "Answer", "text": "No. The entire pay stub generation process runs locally in your browser. Your employer details, employee information, earnings, and deductions never leave your device. The PDF is generated client-side and downloaded directly to your computer."}}
+    ]
+  }
+  </script>
+</body>
+</html>
+
+```
+
+## Verification command
+
+After pasting the translated HTML into `frontend/ar/paystub-generator/index.html`, run:
+
+```bash
+node tools/translate/build.js 2>&1 | grep -A 6 "FAIL ar/paystub-generator$" || echo "PASS — page validates"
+```
+
+If it says PASS, run the lift-noindex command to mark this page as ready:
+
+```bash
+node tools/translate/quarantine.js --lift  # idempotent, only lifts pages that pass
+```
+
+Then commit:
+
+```bash
+git add frontend/ar/paystub-generator/index.html
+git commit -m "Regenerate ar/paystub-generator (passes validator)"
+```
+
+The pre-commit hook will re-run the validator before allowing the commit.

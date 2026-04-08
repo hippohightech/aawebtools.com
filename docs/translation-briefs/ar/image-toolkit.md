@@ -1,0 +1,1776 @@
+# Translation Brief — image-toolkit → Arabic (ar)
+
+> **Status**: Currently quarantined (`<meta robots noindex>`) on the live site.
+> **Goal**: Produce a high-quality Arabic translation that passes the strict validator.
+> **After completion**: Save to `frontend/ar/image-toolkit/index.html`, then run verify.
+
+## Target page identity
+
+| Field | Value |
+|---|---|
+| Page key | `image-toolkit` |
+| Source language | English |
+| Source file | `frontend/image-toolkit/index.html` |
+| Target language | Arabic (العربية) — `ar` |
+| Target file | `frontend/ar/image-toolkit/index.html` |
+| Target canonical | `https://aawebtools.com/ar/image-toolkit/` |
+| Direction | RTL (right-to-left) |
+| English title | "Free Image Compressor, Converter & Resizer — No Upload, No Signup | AAWebTools" |
+| English word count | 5514 |
+| English section count | 11 |
+
+## Hard constraints (the validator will reject anything that violates these)
+
+The validator runs 14 strict checks in [tools/translate/lib/validator.js](../../tools/translate/lib/validator.js). Pay attention to these:
+
+1. **`<html lang="ar" dir="rtl">`** — must be set on the root element.
+2. **`<title>`** — must exist, ≤65 characters.
+3. **`<meta name="description">`** — must exist, 100–170 characters.
+4. **`<link rel="canonical" href="https://aawebtools.com/ar/image-toolkit/">`** — must exactly match.
+5. **Hreflang block** — must contain EXACTLY these alternates:
+  - hreflang="en" → https://aawebtools.com/image-toolkit/
+  - hreflang="fr" → https://aawebtools.com/fr/boite-a-outils-images/
+  - hreflang="es" → https://aawebtools.com/es/herramientas-imagenes/
+  - hreflang="de" → https://aawebtools.com/de/bild-werkzeuge/
+  - hreflang="pt" → https://aawebtools.com/pt/ferramentas-imagem/
+  - hreflang="ar" → https://aawebtools.com/ar/image-toolkit/
+  - hreflang="id" → https://aawebtools.com/id/peralatan-gambar/
+  - hreflang="hi" → https://aawebtools.com/hi/image-toolkit/
+  - hreflang="x-default" → https://aawebtools.com/image-toolkit/
+6. **No phantom Japanese references** — no `ja_JP`, no `hreflang="ja"`, no `/ja/` URLs.
+7. **JSON-LD blocks must be valid JSON** — translate the textual fields, keep the structure.
+8. **`AAWebTools` brand name must appear in the body** (do not translate).
+9. **`<meta property="og:locale" content="ar_SA">`** — must be set.
+10. **No phantom `ja_JP` in og:locale:alternate** — only languages from the hreflang list above.
+12. **Word count**: target body must be ≥3860 words (≥70% of the 5514-word English source). Anything thinner is rejected.
+13. **Section count**: target must have ≥11 `<section>` tags inside `<main>`. Do not collapse, drop, or merge sections from the source.
+
+## Soft guidance (improves quality, not enforced by validator)
+
+- Translate naturally — do not literal-translate idioms.
+- Localize examples where appropriate (currencies, country references).
+- Keep technical terms in their commonly-used form for that language (e.g., German often keeps "Download" as a loanword).
+- For tool pages, the goal is "a native speaker would find this useful" not "this is a literal English translation."
+- Maintain the EXACT same JSON-LD schema structure — translate "name", "description", "headline" but never change "@type", "@context", or property keys.
+- For RTL languages (Arabic): the HTML automatically flips with `dir="rtl"`, you do not need to reorder content manually.
+
+## English source HTML (paste into your AI of choice)
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Image Compressor, Converter &amp; Resizer — No Upload, No Signup | AAWebTools</title>
+  <meta name="description" content="Compress JPEG, PNG, WebP images free. Convert to WebP or AVIF. Resize for Instagram, Twitter, Facebook. Your images never leave your browser. No signup, no limits.">
+  <meta name="keywords" content="image compressor, compress jpeg online, convert png to webp, resize image for instagram, bulk image compressor, free image toolkit">
+  <link rel="canonical" href="https://aawebtools.com/image-toolkit/">
+  <link rel="alternate" hreflang="en" href="https://aawebtools.com/image-toolkit/">
+  <link rel="alternate" hreflang="fr" href="https://aawebtools.com/fr/boite-a-outils-images/">
+  <link rel="alternate" hreflang="x-default" href="https://aawebtools.com/image-toolkit/">
+  <meta property="og:title" content="Free Image Toolkit — Compress, Convert &amp; Resize | AAWebTools">
+  <meta property="og:description" content="Compress, convert, resize and watermark images free. Everything runs in your browser — no uploads, no signup.">
+  <meta property="og:image" content="https://aawebtools.com/assets/img/og-image-toolkit.png">
+  <meta property="og:url" content="https://aawebtools.com/image-toolkit/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="AAWebTools">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Free Image Toolkit — Compress, Convert &amp; Resize | AAWebTools">
+  <meta name="twitter:description" content="Compress, convert, resize and watermark images free in your browser. No uploads, no signup.">
+  <meta name="twitter:image" content="https://aawebtools.com/assets/img/og-image-toolkit.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/assets/css/fonts.css">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Free Image Toolkit — Compress, Convert & Resize","applicationCategory":"MultimediaApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Compress JPEG, PNG, WebP images free. Convert to WebP or AVIF. Resize for Instagram, Twitter, Facebook. Your images never leave your browser.","url":"https://aawebtools.com/image-toolkit/","dateModified":"2026-03-28"}
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type": "Question", "name": "Does my image get uploaded to a server?", "acceptedAnswer": {"@type": "Answer", "text": "No. Every operation — compression, conversion, resizing and watermarking — runs entirely inside your browser using the Canvas API and Web Workers. Your files never leave your device, and nothing is sent to any server."}},
+      {"@type": "Question", "name": "How many images can I compress at once?", "acceptedAnswer": {"@type": "Answer", "text": "There is no hard limit. You can drop as many images as you like and they will be processed one at a time. Each individual file can be up to 15 MB. For very large batches, processing time depends on your device speed."}},
+      {"@type": "Question", "name": "How do I compress an image to a specific size like 100 KB?", "acceptedAnswer": {"@type": "Answer", "text": "Switch on the Target Size toggle in the Compress tab, then enter your desired file size in kilobytes (e.g. 100). The tool will iteratively adjust quality until the output is at or below your target."}},
+      {"@type": "Question", "name": "What is the best format for web images in 2026?", "acceptedAnswer": {"@type": "Answer", "text": "WebP offers the best balance of quality, compression and browser support. AVIF delivers even smaller files but encoding is slower and support is still catching up. For maximum compatibility, use WebP with a JPEG fallback."}},
+      {"@type": "Question", "name": "Comment compresser une image gratuitement ?", "acceptedAnswer": {"@type": "Answer", "text": "Ouvrez l'outil Image Toolkit, glissez-deposez vos images dans la zone, choisissez un niveau de qualite et cliquez sur Telecharger. Tout le traitement se fait dans votre navigateur, sans inscription ni envoi de fichier."}},
+      {"@type": "Question", "name": "How do I compress an image to under 100KB?", "acceptedAnswer": {"@type": "Answer", "text": "Open the Compress tab, enable the Target Size toggle, and type 100 in the kilobyte field. Drop your image into the tool and click Process All. The compressor will iteratively lower the quality until the output is at or below 100 KB. This works for JPEG, PNG and WebP files and is ideal for passport, visa and government form uploads that enforce strict file-size limits."}},
+      {"@type": "Question", "name": "What image formats are supported?", "acceptedAnswer": {"@type": "Answer", "text": "You can upload JPEG, PNG, WebP, SVG and GIF files up to 15 MB each. The toolkit can output JPEG, PNG, WebP and AVIF (where your browser supports it). SVG and GIF inputs are rasterized during processing, so the output will be a bitmap format."}},
+      {"@type": "Question", "name": "Can I resize multiple images at once?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Drop as many images as you need into the tool, choose your target dimensions or select a social-media preset, and click Process All. Every image in the queue will be resized to the same specifications. You can then download them individually or grab everything as a single ZIP file."}},
+      {"@type": "Question", "name": "Is my image data stored on your servers?", "acceptedAnswer": {"@type": "Answer", "text": "No. Every operation — compression, conversion, resizing and watermarking — runs entirely inside your browser using the Canvas API and Web Workers. Your files never leave your device, nothing is sent to any server, and no image data is logged or stored. You can verify this by disconnecting from the internet after loading the page; the tool will continue to work."}},
+      {"@type": "Question", "name": "What's the maximum file size I can upload?", "acceptedAnswer": {"@type": "Answer", "text": "Each individual file can be up to 15 MB. There is no limit on how many files you can process in a single session. For very large batches, processing time will depend on your device's speed and available memory. If you need to compress files larger than 15 MB, consider resizing them first to reduce pixel dimensions before compressing."}}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Use the Image Toolkit",
+    "step": [
+      {"@type": "HowToStep", "position": 1, "name": "Drop your images", "text": "Drag and drop or click to upload JPEG, PNG, WebP, SVG or GIF files up to 15 MB each."},
+      {"@type": "HowToStep", "position": 2, "name": "Choose your settings", "text": "Select a tab (Compress, Convert, Resize or Watermark), then adjust quality, format, dimensions or watermark options."},
+      {"@type": "HowToStep", "position": 3, "name": "Download results", "text": "Download individual files or grab everything as a ZIP. All processing happens in your browser."}
+    ]
+  }
+  </script>
+  <style>
+    /* ===== Image Toolkit — tool-specific styles ===== */
+
+    /* Tab bar — pill segmented control */
+    .itk-tabs { display: flex; background: var(--tool-bg-secondary); border-radius: var(--radius-full); padding: 4px; gap: 4px; margin-bottom: var(--space-lg); }
+    .itk-tab { flex: 1; background: none; border: none; border-radius: var(--radius-full); padding: 10px 8px; font-family: var(--font-primary); font-size: var(--text-sm); font-weight: 500; color: var(--tool-text-secondary); cursor: pointer; transition: all var(--transition-fast); text-align: center; line-height: 1.2; }
+    .itk-tab:hover { color: var(--tool-text); }
+    .itk-tab--active { background: #fff; color: var(--accent-blue); font-weight: 600; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+    .itk-panel { display: none; }
+    .itk-panel--active { display: block; }
+
+    /* Drop zone */
+    .itk-dropzone { position: relative; min-height: 280px; border: 2px dashed #e2e8f0; border-radius: 16px; background: #f8fafc; display: flex; flex-direction: column; align-items: center; justify-content: center; cursor: pointer; transition: all var(--transition-base); overflow: hidden; margin-bottom: var(--space-lg); }
+    .itk-dropzone::before { content: ''; position: absolute; inset: 0; background-image: radial-gradient(circle, #cbd5e1 1px, transparent 1px); background-size: 20px 20px; opacity: 0.4; pointer-events: none; }
+    .itk-dropzone:hover, .itk-dropzone--dragover { border-color: var(--accent-blue); background: rgba(79,127,255,0.04); }
+    .itk-dropzone--dragover { border-color: var(--accent-blue); box-shadow: 0 0 0 4px var(--accent-blue-glow); }
+    .itk-dropzone--dragover .itk-dropzone__icon svg { transform: scale(1.12); }
+    .itk-dropzone__icon { position: relative; z-index: 1; margin-bottom: var(--space-md); }
+    .itk-dropzone__icon svg { width: 48px; height: 48px; color: var(--accent-blue); transition: transform var(--transition-base); }
+    .itk-dropzone__text { position: relative; z-index: 1; font-size: var(--text-base); font-weight: 600; color: var(--tool-text); margin-bottom: var(--space-xs); }
+    .itk-dropzone__hint { position: relative; z-index: 1; font-size: var(--text-sm); color: var(--tool-text-secondary); }
+    .itk-dropzone__formats { position: relative; z-index: 1; font-size: var(--text-xs); color: var(--text-tertiary); margin-top: var(--space-sm); }
+    .itk-dropzone input[type="file"] { position: absolute; inset: 0; opacity: 0; cursor: pointer; z-index: 2; }
+    .itk-dropzone--has-files { min-height: 120px; }
+
+    /* Controls layout */
+    .itk-controls { display: flex; flex-wrap: wrap; gap: var(--space-md); margin-bottom: var(--space-lg); align-items: flex-end; }
+    .itk-control { display: flex; flex-direction: column; gap: var(--space-xs); }
+    .itk-control--full { width: 100%; }
+    .itk-control__label { font-size: var(--text-xs); font-weight: 600; color: var(--tool-text-secondary); text-transform: uppercase; letter-spacing: 0.05em; }
+
+    /* Pill selector (format pills, mode toggle) */
+    .itk-pills { display: flex; flex-wrap: wrap; gap: 6px; }
+    .itk-pill { background: var(--tool-bg-secondary); border: 1.5px solid var(--tool-border); border-radius: var(--radius-full); padding: 6px 14px; font-family: var(--font-primary); font-size: var(--text-xs); font-weight: 600; color: var(--tool-text-secondary); cursor: pointer; transition: all var(--transition-fast); }
+    .itk-pill:hover { border-color: var(--accent-blue); color: var(--accent-blue); }
+    .itk-pill--active { background: var(--accent-blue); border-color: var(--accent-blue); color: #fff; }
+    .itk-pill--active:hover { color: #fff; }
+
+    /* Slider */
+    .itk-slider-wrap { display: flex; align-items: center; gap: var(--space-sm); width: 100%; }
+    .itk-slider { flex: 1; -webkit-appearance: none; appearance: none; height: 6px; background: var(--tool-border); border-radius: 3px; outline: none; }
+    .itk-slider::-webkit-slider-thumb { -webkit-appearance: none; width: 18px; height: 18px; border-radius: 50%; background: var(--accent-blue); cursor: pointer; border: 2px solid #fff; box-shadow: 0 1px 4px rgba(0,0,0,0.15); }
+    .itk-slider::-moz-range-thumb { width: 18px; height: 18px; border-radius: 50%; background: var(--accent-blue); cursor: pointer; border: 2px solid #fff; box-shadow: 0 1px 4px rgba(0,0,0,0.15); }
+    .itk-slider-val { min-width: 36px; text-align: center; font-size: var(--text-sm); font-weight: 600; color: var(--tool-text); }
+
+    /* Toggle switch */
+    .itk-toggle { position: relative; display: inline-flex; align-items: center; gap: var(--space-sm); cursor: pointer; font-size: var(--text-sm); color: var(--tool-text); user-select: none; }
+    .itk-toggle input { position: absolute; opacity: 0; width: 0; height: 0; }
+    .itk-toggle__track { width: 40px; height: 22px; background: var(--tool-border); border-radius: 11px; position: relative; transition: background var(--transition-fast); flex-shrink: 0; }
+    .itk-toggle__track::after { content: ''; position: absolute; top: 3px; left: 3px; width: 16px; height: 16px; background: #fff; border-radius: 50%; transition: transform var(--transition-fast); box-shadow: 0 1px 3px rgba(0,0,0,0.12); }
+    .itk-toggle input:checked + .itk-toggle__track { background: var(--accent-blue); }
+    .itk-toggle input:checked + .itk-toggle__track::after { transform: translateX(18px); }
+
+    /* Checkbox */
+    .itk-check { display: flex; align-items: center; gap: var(--space-sm); cursor: pointer; font-size: var(--text-sm); color: var(--tool-text); user-select: none; }
+    .itk-check input { width: 16px; height: 16px; accent-color: var(--accent-blue); cursor: pointer; }
+
+    /* Target size input */
+    .itk-target-input { display: flex; align-items: center; gap: var(--space-sm); }
+    .itk-target-input input { width: 80px; text-align: center; }
+    .itk-target-input span { font-size: var(--text-sm); font-weight: 600; color: var(--tool-text-secondary); }
+
+    /* File tiles / queue */
+    .itk-queue { display: grid; gap: var(--space-sm); margin-bottom: var(--space-md); }
+    .itk-file { display: flex; align-items: center; gap: var(--space-md); background: var(--tool-bg); border: 1px solid var(--tool-border); border-radius: var(--radius-md); padding: 10px 14px; transition: border-color var(--transition-fast); }
+    .itk-file:hover { border-color: var(--accent-blue); }
+    .itk-file__thumb { width: 48px; height: 48px; border-radius: var(--radius-sm); object-fit: cover; background: var(--tool-bg-secondary); flex-shrink: 0; }
+    .itk-file__info { flex: 1; min-width: 0; }
+    .itk-file__name { font-size: var(--text-sm); font-weight: 600; color: var(--tool-text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .itk-file__sizes { font-size: var(--text-xs); color: var(--tool-text-secondary); margin-top: 2px; display: flex; align-items: center; gap: var(--space-sm); flex-wrap: wrap; }
+    .itk-file__arrow { color: var(--text-tertiary); }
+    .itk-file__saved { display: inline-block; background: rgba(16,185,129,0.1); color: var(--accent-green); border-radius: var(--radius-full); padding: 1px 8px; font-size: 11px; font-weight: 600; }
+    .itk-file__saved--up { background: rgba(239,68,68,0.1); color: var(--accent-red); }
+    .itk-file__actions { display: flex; gap: var(--space-sm); flex-shrink: 0; }
+    .itk-file__btn { background: none; border: 1px solid var(--tool-border); border-radius: var(--radius-sm); padding: 6px 12px; font-family: var(--font-primary); font-size: var(--text-xs); font-weight: 600; color: var(--accent-blue); cursor: pointer; transition: all var(--transition-fast); display: inline-flex; align-items: center; gap: 4px; }
+    .itk-file__btn:hover { background: var(--accent-blue); color: #fff; border-color: var(--accent-blue); }
+    .itk-file__btn svg { width: 14px; height: 14px; }
+    .itk-file__remove { background: none; border: none; color: var(--text-tertiary); cursor: pointer; padding: 4px; font-size: var(--text-lg); line-height: 1; transition: color var(--transition-fast); }
+    .itk-file__remove:hover { color: var(--accent-red); }
+    .itk-file--processing { opacity: 0.6; }
+    .itk-file--processing .itk-file__btn { pointer-events: none; }
+
+    /* Progress bar */
+    .itk-progress { width: 100%; height: 4px; background: var(--tool-border); border-radius: 2px; overflow: hidden; margin-bottom: var(--space-sm); }
+    .itk-progress__bar { height: 100%; background: var(--accent-blue); border-radius: 2px; width: 0%; transition: width var(--transition-base); }
+    .itk-progress-text { font-size: var(--text-xs); color: var(--tool-text-secondary); text-align: center; margin-bottom: var(--space-md); }
+
+    /* Bulk actions */
+    .itk-bulk { display: flex; gap: var(--space-sm); flex-wrap: wrap; margin-top: var(--space-md); }
+    .itk-bulk .btn-tool { width: auto; flex: 1; min-width: 160px; margin-top: 0; }
+
+    /* Conversion cards grid */
+    .itk-conv-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-sm); margin-bottom: var(--space-lg); }
+    @media (min-width: 640px) { .itk-conv-grid { grid-template-columns: repeat(4, 1fr); } }
+    .itk-conv-card { display: flex; flex-direction: column; align-items: center; justify-content: center; background: var(--tool-bg); border: 1.5px solid var(--tool-border); border-radius: var(--radius-md); padding: var(--space-md) var(--space-sm); cursor: pointer; transition: all var(--transition-fast); text-align: center; gap: 4px; }
+    .itk-conv-card:hover, .itk-conv-card--active { border-color: var(--accent-blue); background: rgba(79,127,255,0.04); }
+    .itk-conv-card--active { box-shadow: 0 0 0 3px var(--accent-blue-glow); }
+    .itk-conv-card__from { font-size: var(--text-sm); font-weight: 700; color: var(--tool-text); }
+    .itk-conv-card__arrow { font-size: var(--text-xs); color: var(--text-tertiary); }
+    .itk-conv-card__to { font-size: var(--text-sm); font-weight: 700; color: var(--accent-blue); }
+
+    /* AVIF support indicator */
+    .itk-avif-badge { display: inline-flex; align-items: center; gap: 4px; font-size: var(--text-xs); font-weight: 600; padding: 3px 10px; border-radius: var(--radius-full); margin-bottom: var(--space-md); }
+    .itk-avif-badge--supported { background: rgba(16,185,129,0.1); color: var(--accent-green); }
+    .itk-avif-badge--unsupported { background: rgba(245,158,11,0.1); color: var(--accent-yellow); }
+    .itk-avif-dot { width: 8px; height: 8px; border-radius: 50%; }
+    .itk-avif-badge--supported .itk-avif-dot { background: var(--accent-green); }
+    .itk-avif-badge--unsupported .itk-avif-dot { background: var(--accent-yellow); }
+
+    /* Social presets grid */
+    .itk-presets { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-sm); margin-bottom: var(--space-lg); }
+    @media (min-width: 640px) { .itk-presets { grid-template-columns: repeat(3, 1fr); } }
+    .itk-preset { display: flex; align-items: center; gap: var(--space-sm); background: var(--tool-bg); border: 1.5px solid var(--tool-border); border-radius: var(--radius-md); padding: 10px 12px; cursor: pointer; transition: all var(--transition-fast); }
+    .itk-preset:hover, .itk-preset--active { border-color: var(--accent-blue); }
+    .itk-preset--active { background: rgba(79,127,255,0.04); box-shadow: 0 0 0 3px var(--accent-blue-glow); }
+    .itk-preset__icon { font-size: 18px; flex-shrink: 0; width: 24px; text-align: center; }
+    .itk-preset__info { min-width: 0; }
+    .itk-preset__name { font-size: var(--text-xs); font-weight: 600; color: var(--tool-text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .itk-preset__dims { font-size: 11px; color: var(--tool-text-secondary); }
+
+    /* Custom size inputs */
+    .itk-size-inputs { display: flex; align-items: center; gap: var(--space-sm); flex-wrap: wrap; }
+    .itk-size-inputs input { width: 90px; text-align: center; }
+    .itk-size-inputs .itk-lock { background: none; border: 1px solid var(--tool-border); border-radius: var(--radius-sm); padding: 6px 8px; cursor: pointer; color: var(--accent-blue); transition: all var(--transition-fast); }
+    .itk-size-inputs .itk-lock:hover { border-color: var(--accent-blue); }
+    .itk-size-inputs .itk-lock svg { width: 16px; height: 16px; }
+
+    /* Watermark position grid */
+    .itk-pos-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; width: 96px; }
+    .itk-pos-cell { width: 28px; height: 28px; border: 1.5px solid var(--tool-border); border-radius: 4px; background: var(--tool-bg); cursor: pointer; transition: all var(--transition-fast); display: flex; align-items: center; justify-content: center; }
+    .itk-pos-cell:hover { border-color: var(--accent-blue); }
+    .itk-pos-cell--active { background: var(--accent-blue); border-color: var(--accent-blue); }
+    .itk-pos-cell--active::after { content: ''; width: 8px; height: 8px; border-radius: 50%; background: #fff; }
+
+    /* Watermark preview canvas */
+    .itk-wm-preview { width: 100%; max-width: 400px; aspect-ratio: 16/9; border: 1.5px solid var(--tool-border); border-radius: var(--radius-md); background: var(--tool-bg-secondary); margin: var(--space-md) auto; display: block; }
+
+    /* Color picker inline */
+    .itk-color { display: flex; align-items: center; gap: var(--space-sm); }
+    .itk-color input[type="color"] { width: 32px; height: 32px; border: 1.5px solid var(--tool-border); border-radius: var(--radius-sm); padding: 2px; cursor: pointer; background: none; }
+
+    /* Responsive tweaks */
+    @media (max-width: 639px) {
+      .itk-tabs { flex-wrap: wrap; }
+      .itk-tab { min-width: 0; padding: 8px 6px; font-size: var(--text-xs); }
+      .itk-file { flex-wrap: wrap; }
+      .itk-file__actions { width: 100%; justify-content: flex-end; }
+    }
+  </style>
+  <script async defer src="https://analytics.aawebtools.com/script.js" data-website-id="836dfc88-b05f-49b2-9824-3a085e248896"></script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://aawebtools.com/"},{"@type":"ListItem","position":2,"name":"Image Toolkit","item":"https://aawebtools.com/image-toolkit/"}]}
+  </script>
+  <link rel="alternate" hreflang="es" href="https://aawebtools.com/es/herramientas-imagenes/">
+  <link rel="alternate" hreflang="de" href="https://aawebtools.com/de/bild-werkzeuge/">
+  <link rel="alternate" hreflang="pt" href="https://aawebtools.com/pt/ferramentas-imagem/">
+  <link rel="alternate" hreflang="ar" href="https://aawebtools.com/ar/image-toolkit/">
+  <link rel="alternate" hreflang="id" href="https://aawebtools.com/id/peralatan-gambar/">
+  <link rel="alternate" hreflang="hi" href="https://aawebtools.com/hi/image-toolkit/">
+</head>
+<body>
+  <nav class="nav"><div class="nav__inner"><a href="/" class="nav__logo"><img src="/assets/img/logo-light.png" alt="AAWebTools" height="56"></a><div class="nav__links"><div class="nav__dropdown"><a href="#" class="nav__link">Downloaders</a><div class="nav__dropdown-menu"><a href="/tiktok-downloader/" class="nav__dropdown-item">TikTok Downloader</a><a href="/twitter-video-downloader/" class="nav__dropdown-item">Twitter Downloader</a></div></div><div class="nav__dropdown"><a href="#" class="nav__link">Generators</a><div class="nav__dropdown-menu"><a href="/invoice-generator/" class="nav__dropdown-item">Invoice Generator</a><a href="/paystub-generator/" class="nav__dropdown-item">Pay Stub Generator</a><a href="/image-toolkit/" class="nav__dropdown-item">Image Toolkit</a></div></div><div class="nav__dropdown"><a href="#" class="nav__link">AI Tools</a><div class="nav__dropdown-menu"><a href="/ai-detector/" class="nav__dropdown-item">AI Content Detector</a><a href="/ai-humanizer/" class="nav__dropdown-item">AI Text Humanizer</a></div></div><a href="/blog/" class="nav__link">Blog</a></div><div class="nav__right"><div class="lang-selector">
+          <button class="lang-selector__trigger" id="langToggle">🌐 EN ▾</button>
+          <div class="lang-selector__menu" id="langMenu">
+            <a href="/image-toolkit/" class="active">English</a>
+            <a href="/fr/boite-a-outils-images/">Français</a>
+            <a href="/es/herramientas-imagenes/">Español</a>
+            <a href="/de/bild-werkzeuge/">Deutsch</a>
+            <a href="/pt/ferramentas-imagem/">Português</a>
+            <a href="/ar/image-toolkit/">العربية</a>
+            <a href="/id/peralatan-gambar/">Bahasa Indonesia</a>
+            <a href="/hi/image-toolkit/">हिन्दी</a>
+          </div>
+        </div><a href="/#tools" class="btn-primary btn-sm">All Tools</a><button class="nav__hamburger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button></div></div></nav>
+
+  <div class="nav__mobile" id="mobileNav">
+    <a href="/tiktok-downloader/" class="nav__mobile-link">TikTok Downloader</a>
+    <a href="/twitter-video-downloader/" class="nav__mobile-link">Twitter Downloader</a>
+    <a href="/invoice-generator/" class="nav__mobile-link">Invoice Generator</a>
+    <a href="/paystub-generator/" class="nav__mobile-link">Pay Stub Generator</a>
+    <a href="/image-toolkit/" class="nav__mobile-link">Image Toolkit</a>
+    <a href="/ai-detector/" class="nav__mobile-link">AI Content Detector</a>
+    <a href="/ai-humanizer/" class="nav__mobile-link">AI Text Humanizer</a>
+    <a href="/image-toolkit/" class="nav__mobile-link">Image Toolkit</a>
+    <a href="/blog/" class="nav__mobile-link">Blog</a>
+  </div>
+
+  <main>
+    <section class="hero" style="min-height:auto;padding:140px 24px 60px;">
+      <div class="hero__content">
+        <span class="hero__label">IMAGE TOOLKIT</span>
+        <h1 class="hero__title">Free Image Toolkit — Compress, Convert &amp; Resize</h1>
+        <p class="hero__subtitle">Compress, convert, resize and watermark your images right inside the browser. No uploads, no signup, no limits.</p>
+        <p class="tool-updated">Last updated: March 2026</p>
+      </div>
+    </section>
+
+    <div class="ad-unit ad-adsense-leaderboard" style="max-width:800px;margin:0 auto 24px;min-height:90px;">
+      <ins class="adsbygoogle" style="display:block;min-height:90px;max-height:250px;overflow:hidden" data-ad-client="ca-pub-9434634079795273" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    </div>
+
+    <section class="tool-section" style="padding-top:0;">
+      <div class="tool-interface" style="max-width:900px;">
+
+        <!-- Tab bar -->
+        <div class="itk-tabs" role="tablist">
+          <button class="itk-tab itk-tab--active" role="tab" aria-selected="true" aria-controls="panelCompress" id="tabCompress">Compress</button>
+          <button class="itk-tab" role="tab" aria-selected="false" aria-controls="panelConvert" id="tabConvert">Convert</button>
+          <button class="itk-tab" role="tab" aria-selected="false" aria-controls="panelResize" id="tabResize">Resize</button>
+          <button class="itk-tab" role="tab" aria-selected="false" aria-controls="panelWatermark" id="tabWatermark">Watermark</button>
+        </div>
+
+        <!-- Drop zone (shared across all tabs) -->
+        <div class="itk-dropzone" id="itkDropzone" role="button" tabindex="0" aria-label="Drop images here or click to browse">
+          <input type="file" id="itkFileInput" multiple accept="image/jpeg,image/png,image/webp,image/svg+xml,image/gif" aria-hidden="true">
+          <div class="itk-dropzone__icon">
+            <svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M14 32V30C14 26.6863 16.6863 24 20 24H28C31.3137 24 34 26.6863 34 30V32" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M24 8V22M24 8L18 14M24 8L30 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><rect x="6" y="6" width="36" height="36" rx="4" stroke="currentColor" stroke-width="2"/></svg>
+          </div>
+          <div class="itk-dropzone__text">Drop your images here</div>
+          <div class="itk-dropzone__hint">or click to browse</div>
+          <div class="itk-dropzone__formats">JPEG, PNG, WebP, SVG, GIF — max 15 MB per file</div>
+        </div>
+
+        <!-- ===== COMPRESS PANEL ===== -->
+        <div class="itk-panel itk-panel--active" id="panelCompress" role="tabpanel" aria-labelledby="tabCompress">
+          <div class="itk-controls">
+            <div class="itk-control">
+              <div class="itk-control__label">Output Format</div>
+              <div class="itk-pills" id="compressFormatPills">
+                <button class="itk-pill itk-pill--active" data-value="original">Keep Original</button>
+                <button class="itk-pill" data-value="jpeg">JPEG</button>
+                <button class="itk-pill" data-value="png">PNG</button>
+                <button class="itk-pill" data-value="webp">WebP</button>
+              </div>
+            </div>
+          </div>
+          <div class="itk-controls" id="compressQualityRow">
+            <div class="itk-control" style="flex:1;min-width:200px;">
+              <div class="itk-control__label"><span>Quality</span>: <span id="compressQualityVal">80</span></div>
+              <div class="itk-slider-wrap">
+                <input type="range" class="itk-slider" id="compressQuality" min="1" max="100" value="80" aria-label="Quality">
+                <span class="itk-slider-val" id="compressQualityDisplay">80</span>
+              </div>
+            </div>
+            <div class="itk-control">
+              <label class="itk-check"><input type="checkbox" id="compressStripExif" checked><span>Strip EXIF metadata</span></label>
+            </div>
+          </div>
+          <div class="itk-controls">
+            <div class="itk-control">
+              <label class="itk-toggle">
+                <input type="checkbox" id="compressTargetToggle">
+                <span class="itk-toggle__track"></span>
+                <span>Target file size</span>
+              </label>
+            </div>
+            <div class="itk-control" id="compressTargetGroup" style="display:none;">
+              <div class="itk-target-input">
+                <input type="number" class="tool-input" id="compressTargetKB" value="100" min="1" max="10000" style="width:80px;text-align:center;padding:8px;" aria-label="Target size in KB">
+                <span>KB</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== CONVERT PANEL ===== -->
+        <div class="itk-panel" id="panelConvert" role="tabpanel" aria-labelledby="tabConvert">
+          <div id="avifBadge" class="itk-avif-badge"></div>
+          <div class="itk-conv-grid" id="convGrid">
+            <div class="itk-conv-card itk-conv-card--active" data-from="jpeg" data-to="webp">
+              <span class="itk-conv-card__from">JPEG</span>
+              <span class="itk-conv-card__arrow">&#8594;</span>
+              <span class="itk-conv-card__to">WebP</span>
+            </div>
+            <div class="itk-conv-card" data-from="png" data-to="webp">
+              <span class="itk-conv-card__from">PNG</span>
+              <span class="itk-conv-card__arrow">&#8594;</span>
+              <span class="itk-conv-card__to">WebP</span>
+            </div>
+            <div class="itk-conv-card" data-from="gif" data-to="webp">
+              <span class="itk-conv-card__from">GIF</span>
+              <span class="itk-conv-card__arrow">&#8594;</span>
+              <span class="itk-conv-card__to">WebP</span>
+            </div>
+            <div class="itk-conv-card" data-from="webp" data-to="jpeg">
+              <span class="itk-conv-card__from">WebP</span>
+              <span class="itk-conv-card__arrow">&#8594;</span>
+              <span class="itk-conv-card__to">JPEG</span>
+            </div>
+            <div class="itk-conv-card" data-from="webp" data-to="png">
+              <span class="itk-conv-card__from">WebP</span>
+              <span class="itk-conv-card__arrow">&#8594;</span>
+              <span class="itk-conv-card__to">PNG</span>
+            </div>
+            <div class="itk-conv-card" data-from="png" data-to="jpeg">
+              <span class="itk-conv-card__from">PNG</span>
+              <span class="itk-conv-card__arrow">&#8594;</span>
+              <span class="itk-conv-card__to">JPEG</span>
+            </div>
+            <div class="itk-conv-card" data-from="jpeg" data-to="png">
+              <span class="itk-conv-card__from">JPEG</span>
+              <span class="itk-conv-card__arrow">&#8594;</span>
+              <span class="itk-conv-card__to">PNG</span>
+            </div>
+            <div class="itk-conv-card" data-from="any" data-to="avif">
+              <span class="itk-conv-card__from">Any</span>
+              <span class="itk-conv-card__arrow">&#8594;</span>
+              <span class="itk-conv-card__to">AVIF</span>
+            </div>
+          </div>
+          <div class="itk-controls" id="convQualityRow">
+            <div class="itk-control" style="flex:1;min-width:200px;">
+              <div class="itk-control__label"><span>Quality</span>: <span id="convQualityVal">80</span></div>
+              <div class="itk-slider-wrap">
+                <input type="range" class="itk-slider" id="convQuality" min="1" max="100" value="80" aria-label="Quality">
+                <span class="itk-slider-val" id="convQualityDisplay">80</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== RESIZE PANEL ===== -->
+        <div class="itk-panel" id="panelResize" role="tabpanel" aria-labelledby="tabResize">
+          <div class="itk-controls">
+            <div class="itk-control">
+              <div class="itk-control__label">Mode</div>
+              <div class="itk-pills" id="resizeModePills">
+                <button class="itk-pill itk-pill--active" data-value="custom">Custom Size</button>
+                <button class="itk-pill" data-value="presets">Social Presets</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Custom size sub-panel -->
+          <div id="resizeCustom">
+            <div class="itk-controls">
+              <div class="itk-control">
+                <div class="itk-control__label">Dimensions</div>
+                <div class="itk-size-inputs">
+                  <input type="number" class="tool-input" id="resizeW" placeholder="Width" min="1" max="10000" style="padding:8px;" aria-label="Width in pixels">
+                  <button class="itk-lock" id="resizeLock" title="Lock aspect ratio" aria-label="Lock aspect ratio" aria-pressed="true">
+                    <svg viewBox="0 0 16 16" fill="none"><rect x="3" y="7" width="10" height="7" rx="1.5" stroke="currentColor" stroke-width="1.5"/><path d="M5 7V5a3 3 0 016 0v2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                  </button>
+                  <input type="number" class="tool-input" id="resizeH" placeholder="Height" min="1" max="10000" style="padding:8px;" aria-label="Height in pixels">
+                  <span style="font-size:var(--text-xs);color:var(--tool-text-secondary);">px</span>
+                </div>
+              </div>
+              <div class="itk-control">
+                <div class="itk-control__label">Output Format</div>
+                <select class="tool-input" id="resizeFormat" style="padding:8px 32px 8px 10px;min-width:100px;">
+                  <option value="original">Keep Original</option>
+                  <option value="jpeg">JPEG</option>
+                  <option value="png">PNG</option>
+                  <option value="webp">WebP</option>
+                </select>
+              </div>
+            </div>
+            <div class="itk-controls">
+              <div class="itk-control">
+                <div class="itk-control__label">Fit Mode</div>
+                <div class="itk-pills" id="resizeFitPills">
+                  <button class="itk-pill itk-pill--active" data-value="crop">Crop</button>
+                  <button class="itk-pill" data-value="pad">Pad</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social presets sub-panel -->
+          <div id="resizePresets" style="display:none;">
+            <div class="itk-presets" id="presetGrid"></div>
+            <div class="itk-controls">
+              <div class="itk-control">
+                <div class="itk-control__label">Fit Mode</div>
+                <div class="itk-pills" id="resizeFitPillsPreset">
+                  <button class="itk-pill itk-pill--active" data-value="crop">Crop</button>
+                  <button class="itk-pill" data-value="pad">Pad</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== WATERMARK PANEL ===== -->
+        <div class="itk-panel" id="panelWatermark" role="tabpanel" aria-labelledby="tabWatermark">
+          <div class="itk-controls">
+            <div class="itk-control">
+              <div class="itk-control__label">Watermark Type</div>
+              <div class="itk-pills" id="wmTypePills">
+                <button class="itk-pill itk-pill--active" data-value="text">Text</button>
+                <button class="itk-pill" data-value="image">Image</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Text watermark controls -->
+          <div id="wmTextControls">
+            <div class="itk-controls">
+              <div class="itk-control" style="flex:1;min-width:200px;">
+                <div class="itk-control__label">Watermark Text</div>
+                <input type="text" class="tool-input" id="wmText" value="AAWebTools" style="padding:10px 14px;" placeholder="Enter watermark text">
+              </div>
+            </div>
+            <div class="itk-controls">
+              <div class="itk-control" style="flex:1;min-width:160px;">
+                <div class="itk-control__label"><span>Font Size</span>: <span id="wmFontSizeVal">32</span>px</div>
+                <div class="itk-slider-wrap">
+                  <input type="range" class="itk-slider" id="wmFontSize" min="8" max="120" value="32" aria-label="Font size">
+                  <span class="itk-slider-val" id="wmFontSizeDisplay">32</span>
+                </div>
+              </div>
+              <div class="itk-control">
+                <div class="itk-control__label">Color</div>
+                <div class="itk-color">
+                  <input type="color" id="wmColor" value="#ffffff" aria-label="Watermark color">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Image watermark controls -->
+          <div id="wmImageControls" style="display:none;">
+            <div class="itk-controls">
+              <div class="itk-control" style="flex:1;">
+                <div class="itk-control__label">Watermark Image</div>
+                <div style="display:flex;align-items:center;gap:var(--space-sm);">
+                  <button class="itk-pill" id="wmImageBtn">Choose Image</button>
+                  <input type="file" id="wmImageInput" accept="image/*" style="display:none;" aria-label="Upload watermark image">
+                  <span id="wmImageName" style="font-size:var(--text-xs);color:var(--tool-text-secondary);"></span>
+                </div>
+              </div>
+              <div class="itk-control" style="flex:1;min-width:160px;">
+                <div class="itk-control__label"><span>Scale</span>: <span id="wmScaleVal">20</span>%</div>
+                <div class="itk-slider-wrap">
+                  <input type="range" class="itk-slider" id="wmScale" min="5" max="80" value="20" aria-label="Watermark scale">
+                  <span class="itk-slider-val" id="wmScaleDisplay">20</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Shared watermark controls -->
+          <div class="itk-controls">
+            <div class="itk-control" style="flex:1;min-width:160px;">
+              <div class="itk-control__label"><span>Opacity</span>: <span id="wmOpacityVal">50</span>%</div>
+              <div class="itk-slider-wrap">
+                <input type="range" class="itk-slider" id="wmOpacity" min="5" max="100" value="50" aria-label="Opacity">
+                <span class="itk-slider-val" id="wmOpacityDisplay">50</span>
+              </div>
+            </div>
+            <div class="itk-control">
+              <div class="itk-control__label">Position</div>
+              <div class="itk-pos-grid" id="wmPosGrid">
+                <button class="itk-pos-cell" data-pos="top-left" aria-label="Top left"></button>
+                <button class="itk-pos-cell" data-pos="top-center" aria-label="Top center"></button>
+                <button class="itk-pos-cell" data-pos="top-right" aria-label="Top right"></button>
+                <button class="itk-pos-cell" data-pos="middle-left" aria-label="Middle left"></button>
+                <button class="itk-pos-cell itk-pos-cell--active" data-pos="middle-center" aria-label="Middle center"></button>
+                <button class="itk-pos-cell" data-pos="middle-right" aria-label="Middle right"></button>
+                <button class="itk-pos-cell" data-pos="bottom-left" aria-label="Bottom left"></button>
+                <button class="itk-pos-cell" data-pos="bottom-center" aria-label="Bottom center"></button>
+                <button class="itk-pos-cell" data-pos="bottom-right" aria-label="Bottom right"></button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Live preview -->
+          <canvas class="itk-wm-preview" id="wmPreview" width="640" height="360"></canvas>
+        </div>
+
+        <!-- ===== Progress + File Queue (shared) ===== -->
+        <div id="itkProgressArea" style="display:none;">
+          <div class="itk-progress"><div class="itk-progress__bar" id="itkProgressBar"></div></div>
+          <div class="itk-progress-text" id="itkProgressText">Processing...</div>
+        </div>
+        <div class="itk-queue" id="itkQueue"></div>
+        <div class="itk-bulk" id="itkBulk" style="display:none;">
+          <button class="btn-tool" id="itkProcessBtn">Process All</button>
+          <button class="btn-tool" id="itkDownloadAllBtn" style="background:var(--accent-green);display:none;">Download All as ZIP</button>
+          <button class="btn-tool" id="itkClearBtn" style="background:transparent;color:var(--accent-red);border:1.5px solid var(--accent-red);">Clear All</button>
+        </div>
+
+      </div>
+
+      <div class="ad-unit ad-adsense-leaderboard" style="max-width:800px;margin:24px auto 0;min-height:90px;">
+        <ins class="adsbygoogle" style="display:block;min-height:90px;max-height:250px;overflow:hidden" data-ad-client="ca-pub-9434634079795273" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+      </div>
+    </section>
+
+    <!-- HOW TO USE -->
+    <section class="section">
+      <div class="container">
+        <span class="section-label reveal">HOW TO USE</span>
+        <h2 class="reveal mb-xl">Three Simple Steps</h2>
+        <div class="steps">
+          <div class="step reveal">
+            <div class="step__number">1</div>
+            <div class="step__text">
+              <h3>Drop your images</h3>
+              <p>Drag and drop or click to upload JPEG, PNG, WebP, SVG or GIF files up to 15 MB each.</p>
+            </div>
+          </div>
+          <div class="step reveal">
+            <div class="step__number">2</div>
+            <div class="step__text">
+              <h3>Choose your settings</h3>
+              <p>Pick a tab — Compress, Convert, Resize or Watermark — then adjust quality, format, dimensions or watermark options.</p>
+            </div>
+          </div>
+          <div class="step reveal">
+            <div class="step__number">3</div>
+            <div class="step__text">
+              <h3>Download results</h3>
+              <p>Download each file individually or grab everything as a single ZIP. All processing happens in your browser — nothing is uploaded.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" style="background:var(--bg-secondary);">
+      <div class="container">
+        <span class="section-label reveal">FAQ</span>
+        <h2 class="reveal mb-xl">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <details class="faq-item reveal">
+            <summary>Does my image get uploaded to a server?</summary>
+            <p>No. Every operation — compression, conversion, resizing and watermarking — runs entirely inside your browser using the Canvas API. Your files never leave your device, and nothing is sent to any server. You can even disconnect from the internet after loading this page and the tool will still work.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>How many images can I compress at once?</summary>
+            <p>There is no hard limit. You can drop as many images as you like and they will be processed one at a time. Each individual file can be up to 15 MB. For very large batches, processing time depends on your device speed.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>How do I compress an image to a specific size like 100 KB?</summary>
+            <p>Switch on the Target Size toggle in the Compress tab, then enter your desired file size in kilobytes (for example, 100). The tool will iteratively adjust the quality until the output file is at or below your target size.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>What is the best format for web images in 2026?</summary>
+            <p>WebP offers the best balance of quality, compression and browser support. AVIF delivers even smaller files but encoding is slower and browser support is still catching up. For maximum compatibility, use WebP with a JPEG fallback. Our Convert tab makes it easy to batch-convert your images to either format.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Comment compresser une image gratuitement ?</summary>
+            <p>Open the Image Toolkit, drag-and-drop your images into the drop zone, choose a quality level and click Download. All processing runs in your browser, free, with no signup and no file uploads.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEO CONTENT -->
+    <section class="section">
+      <div class="container">
+        <h2 class="reveal mb-lg">Free Image Compression &mdash; Reduce File Size Without Losing Quality</h2>
+        <div class="reveal">
+          <p>Image compression is the process of reducing a file's size while preserving as much visual quality as possible. There are two main approaches: <strong>lossy</strong> and <strong>lossless</strong> compression. Lossy compression discards data the human eye is unlikely to notice, producing dramatically smaller files at the cost of a slight reduction in detail. JPEG and WebP both support lossy encoding, and in most cases you can drop quality to 70&ndash;80&percnt; on the slider without any visible difference on screen. Lossless compression, on the other hand, rearranges and encodes data more efficiently without removing anything. PNG is the most common lossless format, making it ideal for graphics, screenshots and images that require pixel-perfect accuracy.</p>
+          <p>Our Image Toolkit lets you drag in JPEG, PNG and WebP files and adjust a quality slider from 1 to 100. Lower values yield smaller files; higher values preserve more detail. You can also enable the <strong>Target Size</strong> toggle and enter a specific kilobyte limit&mdash;for example, 100&nbsp;KB. The tool will iteratively compress the image until it meets your target, which is especially useful for <strong>passport and visa photo requirements</strong> that cap uploads at 100&nbsp;KB or 200&nbsp;KB. Government portals in India, Canada, France and the United States commonly enforce strict file-size limits for ID photo submissions.</p>
+          <p>Because all processing runs inside your browser using the Canvas API, your images are never uploaded to a server. That means faster results, complete privacy, and no daily usage caps. Whether you are optimizing a batch of product photos for an e-commerce store or shrinking a single passport image for an online visa application, the compressor handles it in seconds. For a detailed walkthrough on hitting exact file-size targets, read our guide on <a href="/blog/compress-image-to-100kb-free/">how to compress an image to 100&nbsp;KB for free</a>.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background:var(--bg-secondary);">
+      <div class="container">
+        <h2 class="reveal mb-lg">Image Format Conversion &mdash; JPEG, PNG, WebP &amp; More</h2>
+        <div class="reveal">
+          <p>Choosing the right image format can cut load times in half and improve your search rankings. <strong>JPEG</strong> is best for photographs and complex scenes with millions of colors; it compresses well but does not support transparency. <strong>PNG</strong> is the go-to choice when you need a transparent background&mdash;logos, icons, UI elements and product cutouts all benefit from PNG's lossless encoding. <strong>WebP</strong>, developed by Google, combines the best of both worlds: it supports transparency like PNG, compresses as efficiently as JPEG, and produces files that are 25&ndash;35&percnt; smaller on average. For cutting-edge performance, <strong>AVIF</strong> pushes compression even further, though browser support is still expanding.</p>
+          <p>The Convert tab in our toolkit lets you switch between these formats in a single click. Select a conversion card&mdash;such as PNG to WebP or WebP to JPEG&mdash;adjust the quality slider, drop your files, and download the results. Batch conversion is fully supported, so you can process an entire folder of images at once. Every conversion happens locally in your browser, keeping your files private and your workflow fast.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="reveal mb-lg">Resize Images for Social Media &amp; Web</h2>
+        <div class="reveal">
+          <p>Every social platform enforces its own image dimensions, and uploading the wrong size leads to awkward cropping or blurry previews. Here are the most common sizes you need to know: <strong>Instagram posts</strong> use 1080&times;1080 pixels (square), <strong>Instagram Stories and Reels</strong> require 1080&times;1920 (vertical), <strong>Facebook cover photos</strong> are 820&times;312, <strong>Twitter/X headers</strong> are 1500&times;500, and <strong>YouTube thumbnails</strong> are 1280&times;720. For official documents, passport photos follow the 2&times;2 inch (600&times;600 pixel) standard in the United States and 35&times;45&nbsp;mm in most European and Asian countries.</p>
+          <p>Our Resize tab offers two modes. <strong>Social Presets</strong> gives you one-click sizing for 15 popular platforms&mdash;just pick the card that matches your needs. <strong>Custom Size</strong> lets you enter exact pixel dimensions. The aspect-ratio lock is enabled by default, so when you change the width the height adjusts automatically to prevent distortion. You can also choose between Crop and Pad fit modes: Crop fills the entire canvas by trimming edges, while Pad adds letterboxing so nothing is cut off. Output format is selectable too&mdash;keep the original, or convert to JPEG, PNG or WebP on the fly.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background:var(--bg-secondary);">
+      <div class="container">
+        <h2 class="reveal mb-lg">Add Watermarks to Protect Your Images</h2>
+        <div class="reveal">
+          <p>Watermarking is the simplest way to claim ownership of your visual work before sharing it online. Our Watermark tab supports two modes: <strong>text watermarks</strong> and <strong>image watermarks</strong>. With text mode you type your brand name, adjust the font size from 8 to 120 pixels, pick a color, and set opacity anywhere from 5&percnt; to 100&percnt;. Image mode lets you upload a logo or badge as the watermark, then scale it relative to the host image. Both modes use a nine-point position grid so you can place the mark in any corner, along any edge, or dead center.</p>
+          <p>Photographers use watermarks to deter unauthorized reuse of portfolio images. Graphic designers add them to client proofs so final files are only delivered after payment. Content creators watermark thumbnails and infographics before posting to social media, ensuring credit travels with the image even when it is reshared without attribution. Like every other feature in this toolkit, watermarking runs entirely in the browser&mdash;your images stay on your device from start to finish.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <span class="section-label reveal">FAQ</span>
+        <h2 class="reveal mb-xl">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <details class="faq-item reveal">
+            <summary>How do I compress an image to under 100KB?</summary>
+            <p>Open the Compress tab, enable the <strong>Target Size</strong> toggle, and type <strong>100</strong> in the kilobyte field. Drop your image into the tool and click <em>Process All</em>. The compressor will iteratively lower the quality until the output is at or below 100&nbsp;KB. This works for JPEG, PNG and WebP files and is ideal for passport, visa and government form uploads that enforce strict file-size limits.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>What image formats are supported?</summary>
+            <p>You can upload <strong>JPEG, PNG, WebP, SVG and GIF</strong> files up to 15&nbsp;MB each. The toolkit can output JPEG, PNG, WebP and AVIF (where your browser supports it). SVG and GIF inputs are rasterized during processing, so the output will be a bitmap format.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Can I resize multiple images at once?</summary>
+            <p>Yes. Drop as many images as you need into the tool, choose your target dimensions or select a social-media preset, and click <em>Process All</em>. Every image in the queue will be resized to the same specifications. You can then download them individually or grab everything as a single ZIP file.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Is my image data stored on your servers?</summary>
+            <p>No. Every operation&mdash;compression, conversion, resizing and watermarking&mdash;runs entirely inside your browser using the Canvas API and Web Workers. Your files never leave your device, nothing is sent to any server, and no image data is logged or stored. You can verify this by disconnecting from the internet after loading the page; the tool will continue to work.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>What is the maximum file size I can upload?</summary>
+            <p>Each individual file can be up to <strong>15&nbsp;MB</strong>. There is no limit on how many files you can process in a single session. For very large batches, processing time will depend on your device's speed and available memory. If you need to compress files larger than 15&nbsp;MB, consider resizing them first to reduce pixel dimensions before compressing.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background:var(--bg-secondary)">
+      <div class="container">
+        <h2>Related Articles</h2>
+        <ul style="list-style:none;padding:0;display:grid;gap:12px;">
+          <li><a href="/blog/compress-image-to-100kb-free/" style="color:var(--accent-blue)">Compress Image to 100KB Free — Passport & Visa Guide</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- RELATED TOOLS -->
+    <section class="section" style="background:var(--bg-secondary);">
+      <div class="container text-center">
+        <span class="section-label reveal">MORE TOOLS</span>
+        <h2 class="reveal mb-lg">You might also need</h2>
+        <div class="related-tools">
+          <a href="/ai-detector/" class="related-tool reveal">
+            <div class="related-tool__icon"><svg viewBox="0 0 40 40" fill="none"><circle cx="18" cy="18" r="10" stroke="currentColor" stroke-width="2"/><path d="M26 26l6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="18" cy="15" r="2" fill="currentColor"/><path d="M14 22c1-2 3-3 4-3s3 1 4 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+            <div>
+              <div class="related-tool__name">AI Content Detector</div>
+              <div class="related-tool__desc">Check if text was written by AI</div>
+            </div>
+          </a>
+          <a href="/invoice-generator/" class="related-tool reveal">
+            <div class="related-tool__icon"><svg viewBox="0 0 40 40" fill="none"><rect x="8" y="6" width="24" height="28" rx="2" stroke="currentColor" stroke-width="2"/><path d="M14 14h12M14 20h12M14 26h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+            <div>
+              <div class="related-tool__name">Invoice Generator</div>
+              <div class="related-tool__desc">Create professional invoices — free PDF</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="footer__grid"><div><div class="footer__logo"><img src="/assets/img/logo-light.png" alt="AAWebTools" height="44"></div><p class="footer__tagline">Free tools for everyone, worldwide</p><p class="footer__copyright">&copy; 2026 AAWebTools. All rights reserved. Built by <a href="https://scopecove.com/" target="_blank" rel="noopener" class="footer__link" style="display:inline;">ScopeCove</a></p></div><div><h4 class="footer__heading">Tools</h4><a href="/tiktok-downloader/" class="footer__link">TikTok Downloader</a><a href="/twitter-video-downloader/" class="footer__link">Twitter Video Downloader</a><a href="/invoice-generator/" class="footer__link">Invoice Generator</a><a href="/ai-detector/" class="footer__link">AI Content Detector</a><a href="/ai-humanizer/" class="footer__link">AI Text Humanizer</a><a href="/paystub-generator/" class="footer__link">Pay Stub Generator</a><a href="/image-toolkit/" class="footer__link">Image Toolkit</a></div><div><h4 class="footer__heading">Legal</h4><a href="/privacy/" class="footer__link">Privacy Policy</a><a href="/terms/" class="footer__link">Terms of Service</a><a href="/about/" class="footer__link">About</a><a href="/contact/" class="footer__link">Contact</a><a href="/blog/" class="footer__link">Blog</a></div></div><div class="footer__bottom">Made with &#10084;&#65039; | Free forever | No signup required</div></footer>
+
+  <script src="/assets/js/core.js" defer></script>
+  <script>
+  (function(){
+    'use strict';
+
+    /* ===========================================================
+       CONSTANTS & STATE
+       =========================================================== */
+    var MAX_FILE_SIZE = 15 * 1024 * 1024; // 15 MB
+    var ACCEPTED_TYPES = ['image/jpeg','image/png','image/webp','image/svg+xml','image/gif'];
+    var activeTab = 'compress';
+    var fileQueue = []; // { id, file, name, originalSize, thumbUrl, result: {blob,url,name,size} }
+    var processing = false;
+    var avifSupported = false;
+    var wmImageObj = null; // Image element for watermark image mode
+    var aspectLocked = true;
+    var originalAspect = 1;
+    var browserImageCompressionLoaded = false;
+
+    /* Social presets data */
+    var SOCIAL_PRESETS = [
+      { platform: 'Instagram', icon: '\uD83D\uDCF7', name: 'Post (Square)', w: 1080, h: 1080 },
+      { platform: 'Instagram', icon: '\uD83D\uDCF7', name: 'Story / Reel', w: 1080, h: 1920 },
+      { platform: 'Instagram', icon: '\uD83D\uDCF7', name: 'Landscape', w: 1080, h: 566 },
+      { platform: 'Instagram', icon: '\uD83D\uDCF7', name: 'Portrait', w: 1080, h: 1350 },
+      { platform: 'Twitter', icon: '\uD83D\uDC26', name: 'Post Image', w: 1200, h: 675 },
+      { platform: 'Twitter', icon: '\uD83D\uDC26', name: 'Header', w: 1500, h: 500 },
+      { platform: 'Twitter', icon: '\uD83D\uDC26', name: 'Profile', w: 400, h: 400 },
+      { platform: 'Facebook', icon: '\uD83D\uDCF1', name: 'Post Image', w: 1200, h: 630 },
+      { platform: 'Facebook', icon: '\uD83D\uDCF1', name: 'Cover Photo', w: 820, h: 312 },
+      { platform: 'Facebook', icon: '\uD83D\uDCF1', name: 'Profile', w: 170, h: 170 },
+      { platform: 'LinkedIn', icon: '\uD83D\uDCBC', name: 'Post Image', w: 1200, h: 627 },
+      { platform: 'LinkedIn', icon: '\uD83D\uDCBC', name: 'Banner', w: 1584, h: 396 },
+      { platform: 'YouTube', icon: '\u25B6\uFE0F', name: 'Thumbnail', w: 1280, h: 720 },
+      { platform: 'YouTube', icon: '\u25B6\uFE0F', name: 'Channel Art', w: 2560, h: 1440 },
+      { platform: 'WhatsApp', icon: '\uD83D\uDCAC', name: 'Profile', w: 500, h: 500 }
+    ];
+    var selectedPreset = null;
+
+    /* ===========================================================
+       DOM REFERENCES
+       =========================================================== */
+    var dropzone = document.getElementById('itkDropzone');
+    var fileInput = document.getElementById('itkFileInput');
+    var queue = document.getElementById('itkQueue');
+    var bulkArea = document.getElementById('itkBulk');
+    var processBtn = document.getElementById('itkProcessBtn');
+    var downloadAllBtn = document.getElementById('itkDownloadAllBtn');
+    var clearBtn = document.getElementById('itkClearBtn');
+    var progressArea = document.getElementById('itkProgressArea');
+    var progressBar = document.getElementById('itkProgressBar');
+    var progressText = document.getElementById('itkProgressText');
+
+    /* Compress */
+    var compressQuality = document.getElementById('compressQuality');
+    var compressQualityVal = document.getElementById('compressQualityVal');
+    var compressQualityDisplay = document.getElementById('compressQualityDisplay');
+    var compressTargetToggle = document.getElementById('compressTargetToggle');
+    var compressTargetGroup = document.getElementById('compressTargetGroup');
+    var compressQualityRow = document.getElementById('compressQualityRow');
+    var compressTargetKB = document.getElementById('compressTargetKB');
+    var compressStripExif = document.getElementById('compressStripExif');
+
+    /* Convert */
+    var convQuality = document.getElementById('convQuality');
+    var convQualityVal = document.getElementById('convQualityVal');
+    var convQualityDisplay = document.getElementById('convQualityDisplay');
+
+    /* Resize */
+    var resizeW = document.getElementById('resizeW');
+    var resizeH = document.getElementById('resizeH');
+    var resizeLock = document.getElementById('resizeLock');
+    var presetGrid = document.getElementById('presetGrid');
+
+    /* Watermark */
+    var wmText = document.getElementById('wmText');
+    var wmFontSize = document.getElementById('wmFontSize');
+    var wmFontSizeVal = document.getElementById('wmFontSizeVal');
+    var wmFontSizeDisplay = document.getElementById('wmFontSizeDisplay');
+    var wmColor = document.getElementById('wmColor');
+    var wmScale = document.getElementById('wmScale');
+    var wmScaleVal = document.getElementById('wmScaleVal');
+    var wmScaleDisplay = document.getElementById('wmScaleDisplay');
+    var wmOpacity = document.getElementById('wmOpacity');
+    var wmOpacityVal = document.getElementById('wmOpacityVal');
+    var wmOpacityDisplay = document.getElementById('wmOpacityDisplay');
+    var wmPreview = document.getElementById('wmPreview');
+    var wmImageInput = document.getElementById('wmImageInput');
+    var wmImageBtn = document.getElementById('wmImageBtn');
+    var wmImageName = document.getElementById('wmImageName');
+
+    /* ===========================================================
+       UTILITY
+       =========================================================== */
+    function uid() { return Math.random().toString(36).substr(2, 9); }
+
+    function formatBytes(bytes) {
+      if (bytes < 1024) return bytes + ' B';
+      if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(1) + ' KB';
+      return (bytes / (1024 * 1024)).toFixed(2) + ' MB';
+    }
+
+    function getExtension(filename) {
+      var parts = filename.split('.');
+      return parts.length > 1 ? parts.pop().toLowerCase() : '';
+    }
+
+    function getBaseName(filename) {
+      var parts = filename.split('.');
+      if (parts.length > 1) parts.pop();
+      return parts.join('.');
+    }
+
+    function mimeForFormat(fmt) {
+      var map = { jpeg: 'image/jpeg', jpg: 'image/jpeg', png: 'image/png', webp: 'image/webp', avif: 'image/avif', gif: 'image/gif', svg: 'image/svg+xml' };
+      return map[fmt] || 'image/png';
+    }
+
+    function extForMime(mime) {
+      var map = { 'image/jpeg': 'jpg', 'image/png': 'png', 'image/webp': 'webp', 'image/avif': 'avif', 'image/gif': 'gif', 'image/svg+xml': 'svg' };
+      return map[mime] || 'png';
+    }
+
+    function loadImage(file) {
+      return new Promise(function(resolve, reject) {
+        var img = new Image();
+        img.onload = function() { resolve(img); };
+        img.onerror = function() { reject(new Error('Failed to load image')); };
+        img.src = URL.createObjectURL(file);
+      });
+    }
+
+    function canvasToBlob(canvas, mime, quality) {
+      return new Promise(function(resolve) {
+        canvas.toBlob(function(blob) { resolve(blob); }, mime, quality);
+      });
+    }
+
+    /* ===========================================================
+       AVIF SUPPORT DETECTION
+       =========================================================== */
+    function detectAvif() {
+      var badge = document.getElementById('avifBadge');
+      var testImg = new Image();
+      testImg.onload = function() {
+        avifSupported = testImg.width === 1;
+        if (avifSupported) {
+          badge.className = 'itk-avif-badge itk-avif-badge--supported';
+          badge.innerHTML = '<span class="itk-avif-dot"></span> AVIF supported in this browser';
+        } else {
+          showAvifUnsupported(badge);
+        }
+      };
+      testImg.onerror = function() {
+        avifSupported = false;
+        showAvifUnsupported(badge);
+      };
+      testImg.src = 'data:image/avif;base64,AAAAIGZ0eXBhdmlmAAAAAGF2aWZtaWYxbWlhZk1BMUEAAADybWV0YQAAAAAAAAAoaGRscgAAAAAAAAAAcGljdAAAAAAAAAAAAAAAAGxpYmF2aWYAAAAADnBpdG0AAAAAAAEAAAAeaWxvYwAAAABEAAABAAEAAAABAAABGgAAABkAAAAoaWluZgAAAAAAAQAAABppbmZlAgAAAAABAABhdjAxQ29sb3IAAAAAamlwcnAAAABLaXBjbwAAABRpc3BlAAAAAAAAAAEAAAABAAAAEHBpeGkAAAAAAwgICAAAAAxhdjFDgQAMAAAAABNjb2xybmNseAACAAIABoAAAAAXaXBtYQAAAAAAAAABAAEEAQKDBAAAACFtZGF0EgAKBzgADlAgIGkyCR/wAABAAACvcA==';
+    }
+    function showAvifUnsupported(badge) {
+      badge.className = 'itk-avif-badge itk-avif-badge--unsupported';
+      badge.innerHTML = '<span class="itk-avif-dot"></span> AVIF not supported in this browser';
+    }
+
+    /* ===========================================================
+       LAZY LOAD: browser-image-compression
+       =========================================================== */
+    function loadBrowserImageCompression() {
+      return new Promise(function(resolve, reject) {
+        if (browserImageCompressionLoaded && window.imageCompression) { resolve(); return; }
+        var s = document.createElement('script');
+        s.src = 'https://unpkg.com/browser-image-compression@2.0.2/dist/browser-image-compression.js';
+        s.onload = function() { browserImageCompressionLoaded = true; resolve(); };
+        s.onerror = function() { reject(new Error('Failed to load browser-image-compression')); };
+        document.head.appendChild(s);
+      });
+    }
+
+    /* ===========================================================
+       LAZY LOAD: JSZip
+       =========================================================== */
+    function loadJSZip() {
+      return new Promise(function(resolve, reject) {
+        if (window.JSZip) { resolve(); return; }
+        var s = document.createElement('script');
+        s.src = 'https://unpkg.com/jszip@3.10.1/dist/jszip.min.js';
+        s.onload = function() { resolve(); };
+        s.onerror = function() { reject(new Error('Failed to load JSZip')); };
+        document.head.appendChild(s);
+      });
+    }
+
+    /* ===========================================================
+       TAB SWITCHING
+       =========================================================== */
+    var tabBtns = document.querySelectorAll('.itk-tab');
+    var panels = document.querySelectorAll('.itk-panel');
+    var tabMap = { tabCompress: 'panelCompress', tabConvert: 'panelConvert', tabResize: 'panelResize', tabWatermark: 'panelWatermark' };
+    var tabKeys = { tabCompress: 'compress', tabConvert: 'convert', tabResize: 'resize', tabWatermark: 'watermark' };
+
+    tabBtns.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        tabBtns.forEach(function(b) { b.classList.remove('itk-tab--active'); b.setAttribute('aria-selected', 'false'); });
+        panels.forEach(function(p) { p.classList.remove('itk-panel--active'); });
+        btn.classList.add('itk-tab--active');
+        btn.setAttribute('aria-selected', 'true');
+        var panelId = tabMap[btn.id];
+        if (panelId) document.getElementById(panelId).classList.add('itk-panel--active');
+        activeTab = tabKeys[btn.id] || 'compress';
+        clearResults();
+        updateBulkVisibility();
+      });
+    });
+
+    /* ===========================================================
+       PILL SELECTORS (generic)
+       =========================================================== */
+    function initPills(containerId, callback) {
+      var container = document.getElementById(containerId);
+      if (!container) return;
+      container.querySelectorAll('.itk-pill').forEach(function(pill) {
+        pill.addEventListener('click', function() {
+          container.querySelectorAll('.itk-pill').forEach(function(p) { p.classList.remove('itk-pill--active'); });
+          pill.classList.add('itk-pill--active');
+          if (callback) callback(pill.getAttribute('data-value'));
+        });
+      });
+    }
+    function getActivePill(containerId) {
+      var el = document.querySelector('#' + containerId + ' .itk-pill--active');
+      return el ? el.getAttribute('data-value') : null;
+    }
+
+    initPills('compressFormatPills');
+    initPills('resizeModePills', function(mode) {
+      document.getElementById('resizeCustom').style.display = mode === 'custom' ? '' : 'none';
+      document.getElementById('resizePresets').style.display = mode === 'presets' ? '' : 'none';
+    });
+    initPills('resizeFitPills');
+    initPills('resizeFitPillsPreset');
+    initPills('wmTypePills', function(type) {
+      document.getElementById('wmTextControls').style.display = type === 'text' ? '' : 'none';
+      document.getElementById('wmImageControls').style.display = type === 'image' ? '' : 'none';
+      updateWmPreview();
+    });
+
+    /* Conversion cards */
+    var convCards = document.querySelectorAll('.itk-conv-card');
+    convCards.forEach(function(card) {
+      card.addEventListener('click', function() {
+        convCards.forEach(function(c) { c.classList.remove('itk-conv-card--active'); });
+        card.classList.add('itk-conv-card--active');
+        var toFmt = card.getAttribute('data-to');
+        var qualityRow = document.getElementById('convQualityRow');
+        qualityRow.style.display = (toFmt === 'png') ? 'none' : '';
+      });
+    });
+
+    /* ===========================================================
+       SLIDERS
+       =========================================================== */
+    function bindSlider(slider, valEl, displayEl) {
+      function update() {
+        valEl.textContent = slider.value;
+        displayEl.textContent = slider.value;
+      }
+      slider.addEventListener('input', update);
+      update();
+    }
+    bindSlider(compressQuality, compressQualityVal, compressQualityDisplay);
+    bindSlider(convQuality, convQualityVal, convQualityDisplay);
+    bindSlider(wmFontSize, wmFontSizeVal, wmFontSizeDisplay);
+    bindSlider(wmScale, wmScaleVal, wmScaleDisplay);
+    bindSlider(wmOpacity, wmOpacityVal, wmOpacityDisplay);
+
+    /* Watermark sliders trigger preview update */
+    [wmFontSize, wmColor, wmOpacity, wmText, wmScale].forEach(function(el) {
+      el.addEventListener('input', updateWmPreview);
+    });
+
+    /* ===========================================================
+       COMPRESS: TARGET SIZE TOGGLE
+       =========================================================== */
+    compressTargetToggle.addEventListener('change', function() {
+      var on = compressTargetToggle.checked;
+      compressTargetGroup.style.display = on ? '' : 'none';
+      compressQualityRow.style.display = on ? 'none' : '';
+    });
+
+    /* ===========================================================
+       RESIZE: ASPECT LOCK
+       =========================================================== */
+    resizeLock.addEventListener('click', function() {
+      aspectLocked = !aspectLocked;
+      resizeLock.setAttribute('aria-pressed', aspectLocked);
+      resizeLock.style.color = aspectLocked ? 'var(--accent-blue)' : 'var(--text-tertiary)';
+      if (aspectLocked) {
+        resizeLock.innerHTML = '<svg viewBox="0 0 16 16" fill="none"><rect x="3" y="7" width="10" height="7" rx="1.5" stroke="currentColor" stroke-width="1.5"/><path d="M5 7V5a3 3 0 016 0v2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>';
+      } else {
+        resizeLock.innerHTML = '<svg viewBox="0 0 16 16" fill="none"><rect x="3" y="7" width="10" height="7" rx="1.5" stroke="currentColor" stroke-width="1.5"/><path d="M5 7V5a3 3 0 016 0v0" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>';
+      }
+    });
+    resizeW.addEventListener('input', function() {
+      if (aspectLocked && originalAspect && resizeW.value) {
+        resizeH.value = Math.round(parseInt(resizeW.value) / originalAspect);
+      }
+    });
+    resizeH.addEventListener('input', function() {
+      if (aspectLocked && originalAspect && resizeH.value) {
+        resizeW.value = Math.round(parseInt(resizeH.value) * originalAspect);
+      }
+    });
+
+    /* ===========================================================
+       RESIZE: SOCIAL PRESETS
+       =========================================================== */
+    function buildPresetGrid() {
+      var html = '';
+      SOCIAL_PRESETS.forEach(function(p, i) {
+        html += '<div class="itk-preset" data-idx="' + i + '">' +
+          '<span class="itk-preset__icon">' + p.icon + '</span>' +
+          '<div class="itk-preset__info">' +
+            '<div class="itk-preset__name">' + p.platform + ' ' + p.name + '</div>' +
+            '<div class="itk-preset__dims">' + p.w + ' x ' + p.h + '</div>' +
+          '</div></div>';
+      });
+      presetGrid.innerHTML = html;
+      presetGrid.querySelectorAll('.itk-preset').forEach(function(el) {
+        el.addEventListener('click', function() {
+          presetGrid.querySelectorAll('.itk-preset').forEach(function(e) { e.classList.remove('itk-preset--active'); });
+          el.classList.add('itk-preset--active');
+          selectedPreset = SOCIAL_PRESETS[parseInt(el.getAttribute('data-idx'))];
+        });
+      });
+    }
+    buildPresetGrid();
+
+    /* ===========================================================
+       WATERMARK: POSITION GRID
+       =========================================================== */
+    var posGrid = document.getElementById('wmPosGrid');
+    var posCells = posGrid.querySelectorAll('.itk-pos-cell');
+    posCells.forEach(function(cell) {
+      cell.addEventListener('click', function() {
+        posCells.forEach(function(c) { c.classList.remove('itk-pos-cell--active'); });
+        cell.classList.add('itk-pos-cell--active');
+        updateWmPreview();
+      });
+    });
+    function getWmPosition() {
+      var active = posGrid.querySelector('.itk-pos-cell--active');
+      return active ? active.getAttribute('data-pos') : 'middle-center';
+    }
+
+    /* ===========================================================
+       WATERMARK: IMAGE UPLOAD
+       =========================================================== */
+    wmImageBtn.addEventListener('click', function() { wmImageInput.click(); });
+    wmImageInput.addEventListener('change', function() {
+      var f = wmImageInput.files[0];
+      if (!f) return;
+      wmImageName.textContent = f.name;
+      var img = new Image();
+      img.onload = function() { wmImageObj = img; updateWmPreview(); };
+      img.src = URL.createObjectURL(f);
+    });
+
+    /* ===========================================================
+       WATERMARK: LIVE PREVIEW
+       =========================================================== */
+    function updateWmPreview() {
+      var ctx = wmPreview.getContext('2d');
+      var cw = wmPreview.width;
+      var ch = wmPreview.height;
+      ctx.clearRect(0, 0, cw, ch);
+
+      /* Background placeholder pattern */
+      ctx.fillStyle = '#e2e8f0';
+      ctx.fillRect(0, 0, cw, ch);
+      ctx.fillStyle = '#f1f5f9';
+      for (var gx = 0; gx < cw; gx += 20) {
+        for (var gy = 0; gy < ch; gy += 20) {
+          if ((gx / 20 + gy / 20) % 2 === 0) ctx.fillRect(gx, gy, 20, 20);
+        }
+      }
+
+      /* Draw sample content */
+      ctx.fillStyle = '#94a3b8';
+      ctx.fillRect(cw * 0.15, ch * 0.2, cw * 0.7, ch * 0.6);
+      ctx.fillStyle = '#cbd5e1';
+      ctx.font = '14px Inter, sans-serif';
+      ctx.textAlign = 'center';
+      ctx.fillText('Sample Image', cw / 2, ch / 2 + 5);
+
+      /* Watermark */
+      var opacity = parseInt(wmOpacity.value) / 100;
+      ctx.globalAlpha = opacity;
+      var pos = getWmPosition();
+      var parts = pos.split('-');
+      var vy = parts[0]; // top/middle/bottom
+      var hx = parts[1]; // left/center/right
+      var margin = 16;
+
+      var wmType = getActivePill('wmTypePills');
+      if (wmType === 'text') {
+        var fontSize = parseInt(wmFontSize.value);
+        var scaledSize = Math.round(fontSize * (cw / 800));
+        ctx.font = scaledSize + 'px Inter, sans-serif';
+        ctx.fillStyle = wmColor.value;
+        var text = wmText.value || 'Watermark';
+        var tw = ctx.measureText(text).width;
+
+        var tx, ty;
+        if (hx === 'left') { ctx.textAlign = 'left'; tx = margin; }
+        else if (hx === 'right') { ctx.textAlign = 'right'; tx = cw - margin; }
+        else { ctx.textAlign = 'center'; tx = cw / 2; }
+
+        if (vy === 'top') ty = margin + scaledSize;
+        else if (vy === 'bottom') ty = ch - margin;
+        else ty = ch / 2 + scaledSize / 3;
+
+        ctx.fillText(text, tx, ty);
+      } else if (wmType === 'image' && wmImageObj) {
+        var scale = parseInt(wmScale.value) / 100;
+        var iw = wmImageObj.width * scale * (cw / 800);
+        var ih = wmImageObj.height * scale * (cw / 800);
+
+        var ix, iy;
+        if (hx === 'left') ix = margin;
+        else if (hx === 'right') ix = cw - iw - margin;
+        else ix = (cw - iw) / 2;
+
+        if (vy === 'top') iy = margin;
+        else if (vy === 'bottom') iy = ch - ih - margin;
+        else iy = (ch - ih) / 2;
+
+        ctx.drawImage(wmImageObj, ix, iy, iw, ih);
+      }
+
+      ctx.globalAlpha = 1;
+      ctx.textAlign = 'start';
+    }
+    updateWmPreview();
+
+    /* ===========================================================
+       DRAG & DROP / FILE INPUT
+       =========================================================== */
+    dropzone.addEventListener('dragover', function(e) {
+      e.preventDefault();
+      dropzone.classList.add('itk-dropzone--dragover');
+    });
+    dropzone.addEventListener('dragleave', function(e) {
+      e.preventDefault();
+      dropzone.classList.remove('itk-dropzone--dragover');
+    });
+    dropzone.addEventListener('drop', function(e) {
+      e.preventDefault();
+      dropzone.classList.remove('itk-dropzone--dragover');
+      handleFiles(e.dataTransfer.files);
+    });
+    fileInput.addEventListener('change', function() {
+      handleFiles(fileInput.files);
+      fileInput.value = '';
+    });
+    dropzone.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); fileInput.click(); }
+    });
+
+    function handleFiles(fileList) {
+      var added = false;
+      for (var i = 0; i < fileList.length; i++) {
+        var f = fileList[i];
+        if (ACCEPTED_TYPES.indexOf(f.type) === -1) continue;
+        if (f.size > MAX_FILE_SIZE) continue;
+        fileQueue.push({
+          id: uid(),
+          file: f,
+          name: f.name,
+          originalSize: f.size,
+          thumbUrl: URL.createObjectURL(f),
+          result: null
+        });
+        added = true;
+      }
+      if (added) {
+        dropzone.classList.add('itk-dropzone--has-files');
+        /* Set originalAspect from first image for resize lock */
+        if (fileQueue.length > 0 && !resizeW.value) {
+          var first = fileQueue[0];
+          var tempImg = new Image();
+          tempImg.onload = function() {
+            originalAspect = tempImg.width / tempImg.height;
+            resizeW.value = tempImg.width;
+            resizeH.value = tempImg.height;
+          };
+          tempImg.src = first.thumbUrl;
+        }
+        renderQueue();
+        updateBulkVisibility();
+      }
+    }
+
+    /* ===========================================================
+       FILE QUEUE RENDERING
+       =========================================================== */
+    function renderQueue() {
+      var html = '';
+      var dlSvg = '<svg viewBox="0 0 14 14" fill="none"><path d="M7 1v9m0 0L3.5 6.5M7 10l3.5-3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M1 12h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>';
+      fileQueue.forEach(function(item) {
+        var sizeInfo = formatBytes(item.originalSize);
+        var resultHtml = '';
+        if (item.result) {
+          var savings = Math.round((1 - item.result.size / item.originalSize) * 100);
+          var savingsClass = savings >= 0 ? '' : ' itk-file__saved--up';
+          var savingsLabel = savings >= 0 ? ('-' + savings + '%') : ('+' + Math.abs(savings) + '%');
+          sizeInfo = formatBytes(item.originalSize) + ' <span class="itk-file__arrow">&rarr;</span> ' + formatBytes(item.result.size);
+          resultHtml = ' <span class="itk-file__saved' + savingsClass + '">' + savingsLabel + '</span>';
+        }
+        var actionsHtml = '';
+        if (item.result) {
+          actionsHtml = '<button class="itk-file__btn" data-dl="' + item.id + '">' + dlSvg + ' <span>Download</span></button>';
+        }
+        html += '<div class="itk-file' + (item.processing ? ' itk-file--processing' : '') + '" data-id="' + item.id + '">' +
+          '<img class="itk-file__thumb" src="' + item.thumbUrl + '" alt="" loading="lazy">' +
+          '<div class="itk-file__info">' +
+            '<div class="itk-file__name">' + escapeHtml(item.name) + '</div>' +
+            '<div class="itk-file__sizes">' + sizeInfo + resultHtml + '</div>' +
+          '</div>' +
+          '<div class="itk-file__actions">' + actionsHtml +
+            '<button class="itk-file__remove" data-rm="' + item.id + '" title="Remove" aria-label="Remove">&times;</button>' +
+          '</div></div>';
+      });
+      queue.innerHTML = html;
+
+      /* Bind download buttons */
+      queue.querySelectorAll('[data-dl]').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          var item = findItem(btn.getAttribute('data-dl'));
+          if (item && item.result) downloadBlob(item.result.blob, item.result.name);
+        });
+      });
+
+      /* Bind remove buttons */
+      queue.querySelectorAll('[data-rm]').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          removeItem(btn.getAttribute('data-rm'));
+        });
+      });
+
+      /* Re-apply language */
+      if (typeof applyLang === 'function') applyLang(localStorage.getItem('lang') || 'en');
+    }
+
+    function findItem(id) {
+      for (var i = 0; i < fileQueue.length; i++) { if (fileQueue[i].id === id) return fileQueue[i]; }
+      return null;
+    }
+
+    function removeItem(id) {
+      for (var i = 0; i < fileQueue.length; i++) {
+        if (fileQueue[i].id === id) {
+          if (fileQueue[i].thumbUrl) URL.revokeObjectURL(fileQueue[i].thumbUrl);
+          if (fileQueue[i].result && fileQueue[i].result.url) URL.revokeObjectURL(fileQueue[i].result.url);
+          fileQueue.splice(i, 1);
+          break;
+        }
+      }
+      renderQueue();
+      updateBulkVisibility();
+      if (fileQueue.length === 0) dropzone.classList.remove('itk-dropzone--has-files');
+    }
+
+    function clearResults() {
+      fileQueue.forEach(function(item) {
+        if (item.result && item.result.url) URL.revokeObjectURL(item.result.url);
+        item.result = null;
+      });
+      downloadAllBtn.style.display = 'none';
+      renderQueue();
+    }
+
+    function updateBulkVisibility() {
+      bulkArea.style.display = fileQueue.length > 0 ? 'flex' : 'none';
+    }
+
+    function escapeHtml(str) {
+      var d = document.createElement('div');
+      d.textContent = str;
+      return d.innerHTML;
+    }
+
+    /* ===========================================================
+       DOWNLOAD HELPERS
+       =========================================================== */
+    function downloadBlob(blob, filename) {
+      var url = URL.createObjectURL(blob);
+      var a = document.createElement('a');
+      a.href = url;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      setTimeout(function() { URL.revokeObjectURL(url); }, 1000);
+    }
+
+    /* ===========================================================
+       PROCESS ALL
+       =========================================================== */
+    processBtn.addEventListener('click', function() {
+      if (processing || fileQueue.length === 0) return;
+      processAll();
+    });
+
+    async function processAll() {
+      processing = true;
+      processBtn.disabled = true;
+      processBtn.style.opacity = '0.6';
+      progressArea.style.display = 'block';
+      downloadAllBtn.style.display = 'none';
+
+      var total = fileQueue.length;
+      for (var i = 0; i < total; i++) {
+        var item = fileQueue[i];
+        if (item.result) continue; // already processed
+        item.processing = true;
+        renderQueue();
+
+        var pct = Math.round((i / total) * 100);
+        progressBar.style.width = pct + '%';
+        var lang = localStorage.getItem('lang') || 'en';
+        progressText.textContent = lang === 'fr'
+          ? 'Traitement de ' + (i + 1) + ' sur ' + total + ' images...'
+          : 'Processing ' + (i + 1) + ' of ' + total + ' images...';
+
+        try {
+          var result = await processFile(item);
+          item.result = result;
+        } catch (err) {
+          console.error('Processing error:', err);
+        }
+        item.processing = false;
+        renderQueue();
+      }
+
+      progressBar.style.width = '100%';
+      progressText.textContent = lang === 'fr' ? 'Termine !' : 'Done!';
+      processing = false;
+      processBtn.disabled = false;
+      processBtn.style.opacity = '1';
+      downloadAllBtn.style.display = '';
+      setTimeout(function() { progressArea.style.display = 'none'; }, 2000);
+    }
+
+    /* ===========================================================
+       PROCESS SINGLE FILE (dispatcher by tab)
+       =========================================================== */
+    async function processFile(item) {
+      switch (activeTab) {
+        case 'compress': return await processCompress(item);
+        case 'convert': return await processConvert(item);
+        case 'resize': return await processResize(item);
+        case 'watermark': return await processWatermark(item);
+        default: return await processCompress(item);
+      }
+    }
+
+    /* ===========================================================
+       COMPRESS
+       =========================================================== */
+    async function processCompress(item) {
+      var outputFormat = getActivePill('compressFormatPills') || 'original';
+      var targetMode = compressTargetToggle.checked;
+      var quality = parseInt(compressQuality.value) / 100;
+      var stripExif = compressStripExif.checked;
+
+      /* SVG: DOMParser cleaning */
+      if (item.file.type === 'image/svg+xml') {
+        var svgText = await item.file.text();
+        var parser = new DOMParser();
+        var doc = parser.parseFromString(svgText, 'image/svg+xml');
+        /* Remove comments, metadata, scripts */
+        var remove = doc.querySelectorAll('script, metadata');
+        remove.forEach(function(el) { el.parentNode.removeChild(el); });
+        var cleaned = new XMLSerializer().serializeToString(doc.documentElement);
+        var blob = new Blob([cleaned], { type: 'image/svg+xml' });
+        return { blob: blob, url: URL.createObjectURL(blob), name: getBaseName(item.name) + '-compressed.svg', size: blob.size };
+      }
+
+      /* Target size mode: use browser-image-compression */
+      if (targetMode) {
+        await loadBrowserImageCompression();
+        var targetKB = parseInt(compressTargetKB.value) || 100;
+        var targetMB = targetKB / 1024;
+        var options = {
+          maxSizeMB: targetMB,
+          maxWidthOrHeight: 4096,
+          useWebWorker: true,
+          fileType: outputFormat === 'original' ? item.file.type : mimeForFormat(outputFormat)
+        };
+        if (stripExif) options.exifOrientation = -1;
+        var compressed = await window.imageCompression(item.file, options);
+        var ext = extForMime(compressed.type);
+        return { blob: compressed, url: URL.createObjectURL(compressed), name: getBaseName(item.name) + '-compressed.' + ext, size: compressed.size };
+      }
+
+      /* Quality mode: Canvas API */
+      var img = await loadImage(item.file);
+      var canvas = document.createElement('canvas');
+      canvas.width = img.width;
+      canvas.height = img.height;
+      var ctx = canvas.getContext('2d');
+      ctx.drawImage(img, 0, 0);
+      URL.revokeObjectURL(img.src);
+
+      var mime;
+      if (outputFormat === 'original') {
+        mime = item.file.type === 'image/gif' ? 'image/png' : item.file.type;
+      } else {
+        mime = mimeForFormat(outputFormat);
+      }
+
+      /* PNG is lossless, no quality param */
+      var blob;
+      if (mime === 'image/png') {
+        blob = await canvasToBlob(canvas, mime);
+      } else {
+        blob = await canvasToBlob(canvas, mime, quality);
+      }
+
+      var ext = extForMime(mime);
+      return { blob: blob, url: URL.createObjectURL(blob), name: getBaseName(item.name) + '-compressed.' + ext, size: blob.size };
+    }
+
+    /* ===========================================================
+       CONVERT
+       =========================================================== */
+    async function processConvert(item) {
+      var activeCard = document.querySelector('.itk-conv-card--active');
+      var toFmt = activeCard ? activeCard.getAttribute('data-to') : 'webp';
+      var quality = parseInt(convQuality.value) / 100;
+
+      var img = await loadImage(item.file);
+      var canvas = document.createElement('canvas');
+      canvas.width = img.width;
+      canvas.height = img.height;
+      var ctx = canvas.getContext('2d');
+
+      /* For JPEG output, fill white background (no alpha) */
+      if (toFmt === 'jpeg' || toFmt === 'jpg') {
+        ctx.fillStyle = '#ffffff';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+      }
+
+      ctx.drawImage(img, 0, 0);
+      URL.revokeObjectURL(img.src);
+
+      var mime = mimeForFormat(toFmt);
+      var blob;
+      if (mime === 'image/png') {
+        blob = await canvasToBlob(canvas, mime);
+      } else {
+        blob = await canvasToBlob(canvas, mime, quality);
+      }
+
+      if (!blob) {
+        /* Fallback if AVIF not supported natively */
+        blob = await canvasToBlob(canvas, 'image/webp', quality);
+        toFmt = 'webp';
+      }
+
+      return { blob: blob, url: URL.createObjectURL(blob), name: getBaseName(item.name) + '.' + toFmt, size: blob.size };
+    }
+
+    /* ===========================================================
+       RESIZE
+       =========================================================== */
+    async function processResize(item) {
+      var mode = getActivePill('resizeModePills') || 'custom';
+      var fitMode, targetW, targetH, outputFormat;
+
+      if (mode === 'presets' && selectedPreset) {
+        targetW = selectedPreset.w;
+        targetH = selectedPreset.h;
+        fitMode = getActivePill('resizeFitPillsPreset') || 'crop';
+        outputFormat = 'original';
+      } else {
+        targetW = parseInt(resizeW.value) || 0;
+        targetH = parseInt(resizeH.value) || 0;
+        fitMode = getActivePill('resizeFitPills') || 'crop';
+        outputFormat = document.getElementById('resizeFormat').value;
+      }
+
+      if (!targetW || !targetH) {
+        /* No dimensions: return original */
+        return { blob: item.file, url: URL.createObjectURL(item.file), name: item.name, size: item.file.size };
+      }
+
+      var img = await loadImage(item.file);
+      var canvas = document.createElement('canvas');
+      canvas.width = targetW;
+      canvas.height = targetH;
+      var ctx = canvas.getContext('2d');
+
+      if (fitMode === 'pad') {
+        /* Letterbox / pillarbox with white padding */
+        ctx.fillStyle = '#ffffff';
+        ctx.fillRect(0, 0, targetW, targetH);
+        var scale = Math.min(targetW / img.width, targetH / img.height);
+        var sw = img.width * scale;
+        var sh = img.height * scale;
+        ctx.drawImage(img, (targetW - sw) / 2, (targetH - sh) / 2, sw, sh);
+      } else {
+        /* Crop (cover) */
+        var scale = Math.max(targetW / img.width, targetH / img.height);
+        var sw = img.width * scale;
+        var sh = img.height * scale;
+        ctx.drawImage(img, (targetW - sw) / 2, (targetH - sh) / 2, sw, sh);
+      }
+      URL.revokeObjectURL(img.src);
+
+      var mime;
+      if (outputFormat === 'original') {
+        mime = (item.file.type === 'image/gif' || item.file.type === 'image/svg+xml') ? 'image/png' : item.file.type;
+      } else {
+        mime = mimeForFormat(outputFormat);
+      }
+
+      if (mime === 'image/jpeg') {
+        /* Redraw with white bg for JPEG */
+        var c2 = document.createElement('canvas');
+        c2.width = targetW; c2.height = targetH;
+        var ctx2 = c2.getContext('2d');
+        ctx2.fillStyle = '#ffffff';
+        ctx2.fillRect(0, 0, targetW, targetH);
+        ctx2.drawImage(canvas, 0, 0);
+        canvas = c2;
+      }
+
+      var blob;
+      if (mime === 'image/png') {
+        blob = await canvasToBlob(canvas, mime);
+      } else {
+        blob = await canvasToBlob(canvas, mime, 0.9);
+      }
+
+      var ext = extForMime(mime);
+      return { blob: blob, url: URL.createObjectURL(blob), name: getBaseName(item.name) + '-' + targetW + 'x' + targetH + '.' + ext, size: blob.size };
+    }
+
+    /* ===========================================================
+       WATERMARK
+       =========================================================== */
+    async function processWatermark(item) {
+      var img = await loadImage(item.file);
+      var canvas = document.createElement('canvas');
+      canvas.width = img.width;
+      canvas.height = img.height;
+      var ctx = canvas.getContext('2d');
+      ctx.drawImage(img, 0, 0);
+      URL.revokeObjectURL(img.src);
+
+      var opacity = parseInt(wmOpacity.value) / 100;
+      ctx.globalAlpha = opacity;
+
+      var pos = getWmPosition();
+      var parts = pos.split('-');
+      var vy = parts[0];
+      var hx = parts[1];
+      var margin = Math.max(img.width, img.height) * 0.02;
+
+      var wmType = getActivePill('wmTypePills');
+
+      if (wmType === 'text') {
+        var fontSize = parseInt(wmFontSize.value);
+        var scaledSize = Math.round(fontSize * (img.width / 800));
+        ctx.font = 'bold ' + scaledSize + 'px Inter, Arial, sans-serif';
+        ctx.fillStyle = wmColor.value;
+        var text = wmText.value || 'Watermark';
+
+        var tx, ty;
+        if (hx === 'left') { ctx.textAlign = 'left'; tx = margin; }
+        else if (hx === 'right') { ctx.textAlign = 'right'; tx = img.width - margin; }
+        else { ctx.textAlign = 'center'; tx = img.width / 2; }
+
+        if (vy === 'top') ty = margin + scaledSize;
+        else if (vy === 'bottom') ty = img.height - margin;
+        else ty = img.height / 2 + scaledSize / 3;
+
+        ctx.fillText(text, tx, ty);
+      } else if (wmType === 'image' && wmImageObj) {
+        var scale = parseInt(wmScale.value) / 100;
+        var iw = wmImageObj.width * scale * (img.width / 800);
+        var ih = wmImageObj.height * scale * (img.width / 800);
+
+        var ix, iy;
+        if (hx === 'left') ix = margin;
+        else if (hx === 'right') ix = img.width - iw - margin;
+        else ix = (img.width - iw) / 2;
+
+        if (vy === 'top') iy = margin;
+        else if (vy === 'bottom') iy = img.height - ih - margin;
+        else iy = (img.height - ih) / 2;
+
+        ctx.drawImage(wmImageObj, ix, iy, iw, ih);
+      }
+
+      ctx.globalAlpha = 1;
+      ctx.textAlign = 'start';
+
+      var mime = (item.file.type === 'image/gif' || item.file.type === 'image/svg+xml') ? 'image/png' : item.file.type;
+      var blob;
+      if (mime === 'image/png') {
+        blob = await canvasToBlob(canvas, mime);
+      } else {
+        blob = await canvasToBlob(canvas, mime, 0.92);
+      }
+
+      var ext = extForMime(mime);
+      return { blob: blob, url: URL.createObjectURL(blob), name: getBaseName(item.name) + '-watermarked.' + ext, size: blob.size };
+    }
+
+    /* ===========================================================
+       DOWNLOAD ALL AS ZIP
+       =========================================================== */
+    downloadAllBtn.addEventListener('click', async function() {
+      var results = fileQueue.filter(function(item) { return item.result; });
+      if (results.length === 0) return;
+      downloadAllBtn.disabled = true;
+      downloadAllBtn.style.opacity = '0.6';
+
+      try {
+        await loadJSZip();
+        var zip = new JSZip();
+        results.forEach(function(item) {
+          zip.file(item.result.name, item.result.blob);
+        });
+        var content = await zip.generateAsync({ type: 'blob' });
+        var d = new Date();
+        var dateStr = d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+        downloadBlob(content, 'aawebtools-images-' + dateStr + '.zip');
+      } catch (err) {
+        console.error('ZIP error:', err);
+      }
+
+      downloadAllBtn.disabled = false;
+      downloadAllBtn.style.opacity = '1';
+    });
+
+    /* ===========================================================
+       CLEAR ALL
+       =========================================================== */
+    clearBtn.addEventListener('click', function() {
+      fileQueue.forEach(function(item) {
+        if (item.thumbUrl) URL.revokeObjectURL(item.thumbUrl);
+        if (item.result && item.result.url) URL.revokeObjectURL(item.result.url);
+      });
+      fileQueue = [];
+      dropzone.classList.remove('itk-dropzone--has-files');
+      downloadAllBtn.style.display = 'none';
+      progressArea.style.display = 'none';
+      renderQueue();
+      updateBulkVisibility();
+    });
+
+    /* ===========================================================
+       INIT
+       =========================================================== */
+    detectAvif();
+  })();
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9434634079795273" crossorigin="anonymous"></script>
+  <script>try{(adsbygoogle=window.adsbygoogle||[]).push({});(adsbygoogle=window.adsbygoogle||[]).push({});}catch(e){}</script>
+</body>
+</html>
+
+```
+
+## Verification command
+
+After pasting the translated HTML into `frontend/ar/image-toolkit/index.html`, run:
+
+```bash
+node tools/translate/build.js 2>&1 | grep -A 6 "FAIL ar/image-toolkit$" || echo "PASS — page validates"
+```
+
+If it says PASS, run the lift-noindex command to mark this page as ready:
+
+```bash
+node tools/translate/quarantine.js --lift  # idempotent, only lifts pages that pass
+```
+
+Then commit:
+
+```bash
+git add frontend/ar/image-toolkit/index.html
+git commit -m "Regenerate ar/image-toolkit (passes validator)"
+```
+
+The pre-commit hook will re-run the validator before allowing the commit.
