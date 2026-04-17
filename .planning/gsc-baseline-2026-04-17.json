@@ -1,0 +1,501 @@
+{
+  "captured_at": "2026-04-17",
+  "site": "sc-domain:aawebtools.com",
+  "range": {
+    "start": "2026-03-17",
+    "end": "2026-04-14"
+  },
+  "url_inspections": {
+    "https://aawebtools.com/": {
+      "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:aawebtools.com&id=E6DlJE8UhNi97crCi_RoPA&utm_medium=link&utm_source=api",
+      "indexStatusResult": {
+        "verdict": "PASS",
+        "coverageState": "Submitted and indexed",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "lastCrawlTime": "2026-04-12T00:01:09Z",
+        "pageFetchState": "SUCCESSFUL",
+        "googleCanonical": "https://aawebtools.com/",
+        "userCanonical": "https://aawebtools.com/",
+        "referringUrls": [
+          "https://best-backlink-provider.com.in/pge-61b697209250cf2fb0dc937edd0a8077.html",
+          "http://aawebtools.com/"
+        ],
+        "crawledAs": "MOBILE"
+      },
+      "mobileUsabilityResult": {
+        "verdict": "VERDICT_UNSPECIFIED"
+      }
+    },
+    "https://aawebtools.com/fr/": {
+      "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:aawebtools.com&id=YcxEjdGQs57LCE_ny3ncuw&utm_medium=link&utm_source=api",
+      "indexStatusResult": {
+        "verdict": "PASS",
+        "coverageState": "Submitted and indexed",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "lastCrawlTime": "2026-04-12T00:52:09Z",
+        "pageFetchState": "SUCCESSFUL",
+        "googleCanonical": "https://aawebtools.com/fr/",
+        "userCanonical": "https://aawebtools.com/fr/",
+        "crawledAs": "MOBILE"
+      },
+      "mobileUsabilityResult": {
+        "verdict": "VERDICT_UNSPECIFIED"
+      }
+    },
+    "https://aawebtools.com/es/": {
+      "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:aawebtools.com&id=z0QJLLN3SgzLEAaDnRZVNg&utm_medium=link&utm_source=api",
+      "indexStatusResult": {
+        "verdict": "PASS",
+        "coverageState": "Submitted and indexed",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "lastCrawlTime": "2026-04-08T07:32:54Z",
+        "pageFetchState": "SUCCESSFUL",
+        "googleCanonical": "https://aawebtools.com/es/",
+        "userCanonical": "https://aawebtools.com/es/",
+        "crawledAs": "MOBILE"
+      },
+      "mobileUsabilityResult": {
+        "verdict": "VERDICT_UNSPECIFIED"
+      }
+    },
+    "https://aawebtools.com/de/": {
+      "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:aawebtools.com&id=GbWH1Up5MjzcxwaLuv1Kbg&utm_medium=link&utm_source=api",
+      "indexStatusResult": {
+        "verdict": "PASS",
+        "coverageState": "Submitted and indexed",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "lastCrawlTime": "2026-04-12T01:41:09Z",
+        "pageFetchState": "SUCCESSFUL",
+        "googleCanonical": "https://aawebtools.com/de/",
+        "userCanonical": "https://aawebtools.com/de/",
+        "crawledAs": "MOBILE"
+      },
+      "mobileUsabilityResult": {
+        "verdict": "VERDICT_UNSPECIFIED"
+      }
+    },
+    "https://aawebtools.com/pt/": {
+      "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:aawebtools.com&id=_SbimTwlV5sBpnnSIBOEAA&utm_medium=link&utm_source=api",
+      "indexStatusResult": {
+        "verdict": "PASS",
+        "coverageState": "Submitted and indexed",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "lastCrawlTime": "2026-04-08T07:32:55Z",
+        "pageFetchState": "SUCCESSFUL",
+        "googleCanonical": "https://aawebtools.com/pt/",
+        "userCanonical": "https://aawebtools.com/pt/",
+        "crawledAs": "MOBILE"
+      },
+      "mobileUsabilityResult": {
+        "verdict": "VERDICT_UNSPECIFIED"
+      }
+    },
+    "https://aawebtools.com/ar/": {
+      "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:aawebtools.com&id=aHmdUKT1hGLqTMUdNggqXg&utm_medium=link&utm_source=api",
+      "indexStatusResult": {
+        "verdict": "NEUTRAL",
+        "coverageState": "Crawled - currently not indexed",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "lastCrawlTime": "2026-04-12T18:53:19Z",
+        "pageFetchState": "SUCCESSFUL",
+        "googleCanonical": "https://aawebtools.com/ar/",
+        "userCanonical": "https://aawebtools.com/ar/",
+        "crawledAs": "MOBILE"
+      },
+      "mobileUsabilityResult": {
+        "verdict": "VERDICT_UNSPECIFIED"
+      }
+    },
+    "https://aawebtools.com/id/": {
+      "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:aawebtools.com&id=mnGaRvobMFCj56o4jFSLBQ&utm_medium=link&utm_source=api",
+      "indexStatusResult": {
+        "verdict": "NEUTRAL",
+        "coverageState": "Crawled - currently not indexed",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "lastCrawlTime": "2026-04-13T01:21:21Z",
+        "pageFetchState": "SUCCESSFUL",
+        "googleCanonical": "https://aawebtools.com/id/",
+        "userCanonical": "https://aawebtools.com/id/",
+        "crawledAs": "MOBILE"
+      },
+      "mobileUsabilityResult": {
+        "verdict": "VERDICT_UNSPECIFIED"
+      }
+    },
+    "https://aawebtools.com/hi/": {
+      "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:aawebtools.com&id=A8M_6liI8d2noeNwk_hgXQ&utm_medium=link&utm_source=api",
+      "indexStatusResult": {
+        "verdict": "NEUTRAL",
+        "coverageState": "Crawled - currently not indexed",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "lastCrawlTime": "2026-04-13T00:43:51Z",
+        "pageFetchState": "SUCCESSFUL",
+        "googleCanonical": "https://aawebtools.com/hi/",
+        "userCanonical": "https://aawebtools.com/hi/",
+        "crawledAs": "MOBILE"
+      },
+      "mobileUsabilityResult": {
+        "verdict": "VERDICT_UNSPECIFIED"
+      }
+    },
+    "https://aawebtools.com/ai-detector/": {
+      "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:aawebtools.com&id=DwA4OOL5esfJtWkdmpM0jQ&utm_medium=link&utm_source=api",
+      "indexStatusResult": {
+        "verdict": "NEUTRAL",
+        "coverageState": "Crawled - currently not indexed",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "lastCrawlTime": "2026-04-04T20:58:45Z",
+        "pageFetchState": "SUCCESSFUL",
+        "googleCanonical": "https://aawebtools.com/ai-detector/",
+        "userCanonical": "https://aawebtools.com/ai-detector/",
+        "crawledAs": "MOBILE"
+      },
+      "mobileUsabilityResult": {
+        "verdict": "VERDICT_UNSPECIFIED"
+      }
+    },
+    "https://aawebtools.com/ai-humanizer/": {
+      "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:aawebtools.com&id=XQvsXfEOW466HRmp-22f3g&utm_medium=link&utm_source=api",
+      "indexStatusResult": {
+        "verdict": "NEUTRAL",
+        "coverageState": "Crawled - currently not indexed",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "lastCrawlTime": "2026-04-04T20:58:45Z",
+        "pageFetchState": "SUCCESSFUL",
+        "googleCanonical": "https://aawebtools.com/ai-humanizer/",
+        "userCanonical": "https://aawebtools.com/ai-humanizer/",
+        "crawledAs": "MOBILE"
+      },
+      "mobileUsabilityResult": {
+        "verdict": "VERDICT_UNSPECIFIED"
+      }
+    },
+    "https://aawebtools.com/invoice-generator/": {
+      "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:aawebtools.com&id=RffztruX4Qy00KVYyoYIgQ&utm_medium=link&utm_source=api",
+      "indexStatusResult": {
+        "verdict": "NEUTRAL",
+        "coverageState": "Crawled - currently not indexed",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "lastCrawlTime": "2026-04-04T21:00:45Z",
+        "pageFetchState": "SUCCESSFUL",
+        "googleCanonical": "https://aawebtools.com/invoice-generator/",
+        "userCanonical": "https://aawebtools.com/invoice-generator/",
+        "crawledAs": "MOBILE"
+      },
+      "mobileUsabilityResult": {
+        "verdict": "VERDICT_UNSPECIFIED"
+      }
+    },
+    "https://aawebtools.com/paystub-generator/": {
+      "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:aawebtools.com&id=ikq4m4IX-WHTpVLUJrm14w&utm_medium=link&utm_source=api",
+      "indexStatusResult": {
+        "verdict": "NEUTRAL",
+        "coverageState": "Crawled - currently not indexed",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "lastCrawlTime": "2026-04-04T21:02:47Z",
+        "pageFetchState": "SUCCESSFUL",
+        "googleCanonical": "https://aawebtools.com/paystub-generator/",
+        "userCanonical": "https://aawebtools.com/paystub-generator/",
+        "crawledAs": "MOBILE"
+      },
+      "mobileUsabilityResult": {
+        "verdict": "VERDICT_UNSPECIFIED"
+      }
+    },
+    "https://aawebtools.com/image-toolkit/": {
+      "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=sc-domain:aawebtools.com&id=uyI5RnwIdUOcL3yNyrayqQ&utm_medium=link&utm_source=api",
+      "indexStatusResult": {
+        "verdict": "NEUTRAL",
+        "coverageState": "Crawled - currently not indexed",
+        "robotsTxtState": "ALLOWED",
+        "indexingState": "INDEXING_ALLOWED",
+        "lastCrawlTime": "2026-04-04T21:00:45Z",
+        "pageFetchState": "SUCCESSFUL",
+        "googleCanonical": "https://aawebtools.com/image-toolkit/",
+        "userCanonical": "https://aawebtools.com/image-toolkit/",
+        "crawledAs": "MOBILE"
+      },
+      "mobileUsabilityResult": {
+        "verdict": "VERDICT_UNSPECIFIED"
+      }
+    }
+  },
+  "analytics": {
+    "totals": [
+      {
+        "clicks": 1,
+        "impressions": 4,
+        "ctr": 0.25,
+        "position": 2
+      }
+    ],
+    "by_page": [
+      {
+        "keys": [
+          "https://aawebtools.com/"
+        ],
+        "clicks": 1,
+        "impressions": 4,
+        "ctr": 0.25,
+        "position": 2
+      },
+      {
+        "keys": [
+          "https://aawebtools.com/de/"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 5
+      },
+      {
+        "keys": [
+          "https://aawebtools.com/es/"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 4
+      },
+      {
+        "keys": [
+          "https://aawebtools.com/fr/"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 2
+      },
+      {
+        "keys": [
+          "https://aawebtools.com/pt/"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 3
+      }
+    ],
+    "by_query": [],
+    "by_country": [
+      {
+        "keys": [
+          "can"
+        ],
+        "clicks": 1,
+        "impressions": 1,
+        "ctr": 1,
+        "position": 1
+      },
+      {
+        "keys": [
+          "gbr"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "keys": [
+          "phl"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 5
+      },
+      {
+        "keys": [
+          "usa"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      }
+    ],
+    "by_device": [
+      {
+        "keys": [
+          "MOBILE"
+        ],
+        "clicks": 1,
+        "impressions": 2,
+        "ctr": 0.5,
+        "position": 3
+      },
+      {
+        "keys": [
+          "DESKTOP"
+        ],
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": 0,
+        "position": 1
+      }
+    ],
+    "by_page_country": [],
+    "by_country_query": [],
+    "by_page_query": []
+  },
+  "sitemaps": [
+    {
+      "path": "https://aawebtools.com/sitemap-en.xml",
+      "lastSubmitted": "2026-04-08T16:33:24.080Z",
+      "isPending": false,
+      "isSitemapsIndex": false,
+      "type": "sitemap",
+      "lastDownloaded": "2026-04-08T16:33:24.957Z",
+      "warnings": "0",
+      "errors": "0",
+      "contents": [
+        {
+          "type": "web",
+          "submitted": "19",
+          "indexed": "0"
+        }
+      ]
+    },
+    {
+      "path": "https://aawebtools.com/sitemap.xml",
+      "lastSubmitted": "2026-04-08T07:30:27.509Z",
+      "isPending": false,
+      "isSitemapsIndex": true,
+      "lastDownloaded": "2026-04-08T07:30:28.062Z",
+      "warnings": "0",
+      "errors": "0"
+    },
+    {
+      "path": "https://aawebtools.com/sitemap-id.xml",
+      "lastSubmitted": "2026-04-04T20:42:10.665Z",
+      "isPending": false,
+      "isSitemapsIndex": false,
+      "type": "sitemap",
+      "lastDownloaded": "2026-04-04T20:42:11.373Z",
+      "warnings": "0",
+      "errors": "0",
+      "contents": [
+        {
+          "type": "web",
+          "submitted": "19",
+          "indexed": "0"
+        }
+      ]
+    },
+    {
+      "path": "https://aawebtools.com/sitemap-hi.xml",
+      "lastSubmitted": "2026-04-04T20:41:48.021Z",
+      "isPending": false,
+      "isSitemapsIndex": false,
+      "type": "sitemap",
+      "lastDownloaded": "2026-04-04T20:41:48.780Z",
+      "warnings": "0",
+      "errors": "0",
+      "contents": [
+        {
+          "type": "web",
+          "submitted": "17",
+          "indexed": "0"
+        }
+      ]
+    },
+    {
+      "path": "https://aawebtools.com/sitemap-ar.xml",
+      "lastSubmitted": "2026-04-04T20:41:36.134Z",
+      "isPending": false,
+      "isSitemapsIndex": false,
+      "type": "sitemap",
+      "lastDownloaded": "2026-04-04T20:41:36.650Z",
+      "warnings": "0",
+      "errors": "0",
+      "contents": [
+        {
+          "type": "web",
+          "submitted": "19",
+          "indexed": "0"
+        }
+      ]
+    },
+    {
+      "path": "https://aawebtools.com/sitemap-pt.xml",
+      "lastSubmitted": "2026-04-04T20:41:25.977Z",
+      "isPending": false,
+      "isSitemapsIndex": false,
+      "type": "sitemap",
+      "lastDownloaded": "2026-04-04T20:41:26.822Z",
+      "warnings": "0",
+      "errors": "0",
+      "contents": [
+        {
+          "type": "web",
+          "submitted": "17",
+          "indexed": "0"
+        }
+      ]
+    },
+    {
+      "path": "https://aawebtools.com/sitemap-de.xml",
+      "lastSubmitted": "2026-04-04T20:41:11.089Z",
+      "isPending": false,
+      "isSitemapsIndex": false,
+      "type": "sitemap",
+      "lastDownloaded": "2026-04-04T20:41:11.738Z",
+      "warnings": "0",
+      "errors": "0",
+      "contents": [
+        {
+          "type": "web",
+          "submitted": "19",
+          "indexed": "0"
+        }
+      ]
+    },
+    {
+      "path": "https://aawebtools.com/sitemap-es.xml",
+      "lastSubmitted": "2026-04-04T20:40:56.713Z",
+      "isPending": false,
+      "isSitemapsIndex": false,
+      "type": "sitemap",
+      "lastDownloaded": "2026-04-04T20:40:57.403Z",
+      "warnings": "0",
+      "errors": "0",
+      "contents": [
+        {
+          "type": "web",
+          "submitted": "19",
+          "indexed": "0"
+        }
+      ]
+    },
+    {
+      "path": "https://aawebtools.com/sitemap-fr.xml",
+      "lastSubmitted": "2026-04-04T20:40:45.765Z",
+      "isPending": false,
+      "isSitemapsIndex": false,
+      "type": "sitemap",
+      "lastDownloaded": "2026-04-04T20:40:46.226Z",
+      "warnings": "0",
+      "errors": "0",
+      "contents": [
+        {
+          "type": "web",
+          "submitted": "18",
+          "indexed": "0"
+        }
+      ]
+    }
+  ]
+}

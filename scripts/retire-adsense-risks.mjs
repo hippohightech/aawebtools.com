@@ -20,6 +20,7 @@ import { resolve } from 'path';
 const ROOT = resolve(process.cwd(), 'frontend');
 
 const RETIRED = new Set([
+  // Downloaders (retired 2026-04-16)
   '/tiktok-downloader/',
   '/twitter-video-downloader/',
   '/fr/telechargeur-tiktok/',
@@ -36,11 +37,21 @@ const RETIRED = new Set([
   '/id/unduh-twitter/',
   '/hi/tiktok-downloader/',
   '/hi/twitter-video-downloader/',
+  // Country paystubs (retired 2026-04-16)
   '/pay-stub-generator/usa/',
   '/pay-stub-generator/canada/',
   '/pay-stub-generator/uk/',
   '/pay-stub-generator/france/',
   '/pay-stub-generator/australia/',
+  // Image-toolkit (retired 2026-04-17 per product-manager panel — commodity)
+  '/image-toolkit/',
+  '/fr/boite-a-outils-images/',
+  '/es/herramientas-imagenes/',
+  '/de/bild-werkzeuge/',
+  '/pt/ferramentas-imagem/',
+  '/ar/image-toolkit/',
+  '/id/peralatan-gambar/',
+  '/hi/image-toolkit/',
 ]);
 
 function isRetired(href) {

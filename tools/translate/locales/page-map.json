@@ -51,16 +51,6 @@
       "id": "/id/pembuat-slip-gaji/",
       "hi": "/hi/paystub-generator/"
     },
-    "image-toolkit": {
-      "en": "/image-toolkit/",
-      "fr": "/fr/boite-a-outils-images/",
-      "es": "/es/herramientas-imagenes/",
-      "de": "/de/bild-werkzeuge/",
-      "pt": "/pt/ferramentas-imagem/",
-      "ar": "/ar/image-toolkit/",
-      "id": "/id/peralatan-gambar/",
-      "hi": "/hi/image-toolkit/"
-    },
     "about": {
       "en": "/about/",
       "fr": "/fr/a-propos/",
