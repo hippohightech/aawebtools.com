@@ -135,11 +135,15 @@ export function generateAllSitemaps(frontendDir) {
 }
 
 function getPriority(pageKey) {
+  // Tuned per technical-seo-engineer panel audit 2026-04-17: a flat 0.9
+  // across all tools is a wasted signal — Google ignores identical
+  // priorities. Differentiate to convey relative importance.
   if (pageKey === 'homepage') return '1.0';
-  if (pageKey.startsWith('blog/') || pageKey === 'blog-index') return '0.7';
-  if (pageKey.startsWith('pay-stub-generator/')) return '0.7';
-  if (['about', 'contact', 'privacy', 'terms'].includes(pageKey)) return '0.4';
-  return '0.9'; // Tool pages
+  if (pageKey === 'blog-index') return '0.6';
+  if (pageKey.startsWith('blog/')) return '0.7';
+  if (['about', 'contact'].includes(pageKey)) return '0.4';
+  if (['privacy', 'terms'].includes(pageKey)) return '0.3';
+  return '0.8'; // Tool pages (down from flat 0.9 — homepage stays authoritative)
 }
 
 function getChangefreq(pageKey) {

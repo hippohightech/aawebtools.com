@@ -78,46 +78,56 @@
   <main>
     <div class="legal">
       <h1>Privacy Policy</h1>
-      <p class="legal-date">Last updated: March 27, 2026</p>
+      <p class="legal-date">Last updated: April 17, 2026</p>
 
-      <p>AAWebTools ("we", "us", "our") operates <a href="https://aawebtools.com">aawebtools.com</a>. This Privacy Policy explains how we collect, use, and protect your information when you use our free online tools.</p>
+      <p>AAWebTools ("we", "us", "our") is operated by ScopeCove, based in Edmonton, Alberta, Canada. This Privacy Policy explains how we collect, use, and protect your information when you use <a href="https://aawebtools.com">aawebtools.com</a>. It is written to meet the substantive requirements of Canada's PIPEDA, the EU GDPR (Article 13 notice), the UK GDPR, and the CCPA.</p>
 
       <h2>1. Information We Collect</h2>
-      <p><strong>Data you provide:</strong> When you use our tools, you may enter URLs (for downloaders), text (for AI tools), or business/payment information (for invoice and pay stub generators). This data is processed to deliver the tool's functionality and is not stored on our servers unless explicitly stated below.</p>
-      <p><strong>Automatically collected data:</strong> We use Umami Analytics (a privacy-focused, cookie-free analytics platform) to collect anonymous usage statistics including:</p>
-      <ul>
-        <li>Pages visited and time spent</li>
-        <li>Browser type and screen size</li>
-        <li>Country (from anonymized IP)</li>
-        <li>Referral source</li>
-      </ul>
-      <p>We do not collect names, email addresses, or personal identifiers through analytics.</p>
+      <p><strong>Data you provide:</strong> When you use our tools, you may enter text (for AI tools) or business/payment information (for invoice and pay stub generators). With the single exception noted in Section 2 (AI Humanizer → Google Gemini), this data is processed entirely in your browser and is never transmitted to our servers.</p>
+      <p><strong>Automatically collected data:</strong> We use Umami Analytics (privacy-focused, cookie-free) to collect anonymous usage statistics including pages visited, time on page, browser type, screen size, country (from anonymized IP), and referral source. We do not collect names, email addresses, or personal identifiers through analytics.</p>
+      <p><strong>Server logs:</strong> Our web server retains standard access logs (IP address, request path, user agent, timestamp) for up to 30 days for security monitoring and abuse prevention. These logs are automatically purged after that window.</p>
 
       <h2>2. How Each Tool Handles Your Data</h2>
-      <p><strong>TikTok Downloader &amp; Twitter Downloader:</strong> URLs you submit are sent to our server to fetch the media. We do not log or store the URLs or downloaded content.</p>
-      <p><strong>Invoice Generator &amp; Pay Stub Generator:</strong> All data stays in your browser. PDFs are generated client-side using jsPDF. No business details, financial information, or employee data is ever sent to our servers.</p>
+      <p><strong>Invoice Generator &amp; Pay Stub Generator:</strong> All data stays in your browser. PDFs are generated client-side using jsPDF. No business details, financial information, or employee data is ever sent to our servers. Clearing your browser's local storage removes any saved drafts.</p>
       <p><strong>AI Content Detector:</strong> Text analysis runs entirely in your browser. No text is sent to any server.</p>
-      <p><strong>AI Text Humanizer:</strong> Text you submit is sent to a third-party AI API (Google Gemini) for rewriting. We do not store the input or output text. Google's privacy policy applies to their processing of this data.</p>
+      <p><strong>AI Text Humanizer — Third-party AI processing:</strong> Text you submit to the Humanizer is transmitted over HTTPS to Google's <strong>Gemini API</strong> (operated by Google LLC, United States) for the sole purpose of generating rewritten text, which is returned to your browser and discarded on our side — we do not log or persist the input, the output, or the association between the two.</p>
+      <ul>
+        <li><strong>Legal basis (GDPR Art. 6(1)(b)/(f)):</strong> performance of your requested service and our legitimate interest in delivering the tool.</li>
+        <li><strong>Data transferred:</strong> the plain text you enter (up to 1,000 characters per request), plus a system prompt from us.</li>
+        <li><strong>Recipient:</strong> Google LLC (Gemini API). Google's processing is governed by <a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">Google's Gemini API Additional Terms</a> and <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</li>
+        <li><strong>International transfer:</strong> data may be processed in the United States. For EU/UK users, this transfer relies on the EU-U.S. Data Privacy Framework and Standard Contractual Clauses as applicable.</li>
+        <li><strong>Retention on our side:</strong> none. The text is not written to our database or disk.</li>
+        <li><strong>Right to decline:</strong> if you do not wish your text to be processed by Google, do not use the AI Text Humanizer tool. The other tools on AAWebTools do not send data to any third party.</li>
+      </ul>
 
       <h2>3. Cookies</h2>
-      <p>AAWebTools does not use cookies for tracking. Our analytics platform (Umami) is cookie-free and GDPR-compliant by design. Third-party advertising partners (PropellerAds, Google AdSense) may set cookies on downloader and tool pages to serve relevant ads. You can manage cookie preferences through your browser settings.</p>
+      <p>AAWebTools itself does not set tracking cookies. Our analytics platform (Umami) is cookie-free. Google AdSense, when an ad is served, may set advertising cookies for ad personalization and measurement. You can opt out of personalized advertising via <a href="https://adssettings.google.com/" target="_blank" rel="noopener">Google's Ad Settings</a> or via your browser's cookie controls.</p>
 
       <h2>4. Third-Party Services</h2>
       <p>We use the following third-party services:</p>
       <ul>
-        <li><strong>Umami Analytics</strong> — privacy-focused, anonymous usage statistics</li>
-        <li><strong>Google Gemini API</strong> — powers the AI Text Humanizer</li>
-        <li><strong>PropellerAds</strong> — advertising on downloader pages</li>
-        <li><strong>Google AdSense</strong> — advertising on generator and AI tool pages</li>
-        <li><strong>Google Fonts</strong> — web font delivery (Inter)</li>
+        <li><strong>Umami Analytics</strong> — cookie-free, anonymized usage statistics (self-hosted).</li>
+        <li><strong>Google Gemini API</strong> — powers the AI Text Humanizer only. See Section 2 for the full disclosure.</li>
+        <li><strong>Google AdSense</strong> — advertising on tool and blog pages.</li>
+        <li><strong>Cloudflare</strong> — DNS, CDN, and DDoS protection.</li>
+        <li><strong>Google Fonts</strong> — web font delivery.</li>
       </ul>
-      <p>Each service has its own privacy policy governing data they collect.</p>
+      <p>Each service operates under its own privacy policy governing the data it processes on its infrastructure.</p>
 
       <h2>5. Data Retention</h2>
       <p>We do not store personal data. Analytics data is aggregated and anonymous. Server logs (IP addresses, request paths) are retained for up to 30 days for security monitoring and automatically deleted.</p>
 
       <h2>6. Your Rights</h2>
-      <p>Since we do not collect personal data or require accounts, there is no personal data to access, modify, or delete. If you believe we hold any of your data, contact us and we will address your request promptly.</p>
+      <p>Since we do not create user accounts and do not retain the content you enter into our tools, there is typically no personal data for us to access, modify, or delete. Regardless, under PIPEDA, GDPR, UK GDPR, and CCPA you have the right to:</p>
+      <ul>
+        <li><strong>Access</strong> — request a copy of any personal data we hold about you.</li>
+        <li><strong>Correction / Rectification</strong> — request correction of inaccurate data.</li>
+        <li><strong>Erasure</strong> — request deletion of any personal data we hold.</li>
+        <li><strong>Objection / Opt-out</strong> — object to processing or opt out of sale/sharing (we do not sell or share personal data).</li>
+        <li><strong>Data portability</strong> — receive a copy of your data in a portable format.</li>
+        <li><strong>Complaint</strong> — lodge a complaint with your local data-protection authority (in Canada, the Office of the Privacy Commissioner; in the EU, your national DPA; in the UK, the ICO).</li>
+      </ul>
+      <p>To exercise any of these rights, contact us via the <a href="/contact/">contact page</a> or <a href="https://scopecove.com/" target="_blank" rel="noopener">scopecove.com</a>. We will respond within 30 days.</p>
 
       <h2>7. Children's Privacy</h2>
       <p>Our tools are not directed at children under 13. We do not knowingly collect information from children.</p>

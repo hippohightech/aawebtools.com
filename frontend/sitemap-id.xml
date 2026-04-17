@@ -17,17 +17,6 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://aawebtools.com/"/>
   </url>
   <url>
-    <loc>https://aawebtools.com/id/tentang/</loc>
-    <lastmod>2026-04-17</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.4</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aawebtools.com/about/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://aawebtools.com/fr/a-propos/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://aawebtools.com/ar/about/"/>
-    <xhtml:link rel="alternate" hreflang="id" href="https://aawebtools.com/id/tentang/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://aawebtools.com/about/"/>
-  </url>
-  <url>
     <loc>https://aawebtools.com/id/kontak/</loc>
     <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
@@ -39,21 +28,10 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://aawebtools.com/contact/"/>
   </url>
   <url>
-    <loc>https://aawebtools.com/id/privasi/</loc>
-    <lastmod>2026-04-17</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.4</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aawebtools.com/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://aawebtools.com/fr/confidentialite/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://aawebtools.com/ar/privacy/"/>
-    <xhtml:link rel="alternate" hreflang="id" href="https://aawebtools.com/id/privasi/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://aawebtools.com/privacy/"/>
-  </url>
-  <url>
     <loc>https://aawebtools.com/id/blog/</loc>
     <lastmod>2026-04-17</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://aawebtools.com/blog/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://aawebtools.com/fr/blog/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://aawebtools.com/de/blog/"/>
