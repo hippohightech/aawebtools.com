@@ -1,0 +1,142 @@
+{
+  "captured_at": "2026-04-17",
+  "urls": {
+    "https://aawebtools.com/invoice-generator/": {
+      "verdict": "NEUTRAL",
+      "coverageState": "Crawled - currently not indexed",
+      "robotsTxtState": "ALLOWED",
+      "indexingState": "INDEXING_ALLOWED",
+      "lastCrawlTime": "2026-04-04T21:00:45Z",
+      "pageFetchState": "SUCCESSFUL",
+      "googleCanonical": "https://aawebtools.com/invoice-generator/",
+      "userCanonical": "https://aawebtools.com/invoice-generator/",
+      "crawledAs": "MOBILE"
+    },
+    "https://aawebtools.com/paystub-generator/": {
+      "verdict": "NEUTRAL",
+      "coverageState": "Crawled - currently not indexed",
+      "robotsTxtState": "ALLOWED",
+      "indexingState": "INDEXING_ALLOWED",
+      "lastCrawlTime": "2026-04-04T21:02:47Z",
+      "pageFetchState": "SUCCESSFUL",
+      "googleCanonical": "https://aawebtools.com/paystub-generator/",
+      "userCanonical": "https://aawebtools.com/paystub-generator/",
+      "crawledAs": "MOBILE"
+    },
+    "https://aawebtools.com/ai-detector/": {
+      "verdict": "NEUTRAL",
+      "coverageState": "Crawled - currently not indexed",
+      "robotsTxtState": "ALLOWED",
+      "indexingState": "INDEXING_ALLOWED",
+      "lastCrawlTime": "2026-04-04T20:58:45Z",
+      "pageFetchState": "SUCCESSFUL",
+      "googleCanonical": "https://aawebtools.com/ai-detector/",
+      "userCanonical": "https://aawebtools.com/ai-detector/",
+      "crawledAs": "MOBILE"
+    },
+    "https://aawebtools.com/ai-humanizer/": {
+      "verdict": "NEUTRAL",
+      "coverageState": "Crawled - currently not indexed",
+      "robotsTxtState": "ALLOWED",
+      "indexingState": "INDEXING_ALLOWED",
+      "lastCrawlTime": "2026-04-04T20:58:45Z",
+      "pageFetchState": "SUCCESSFUL",
+      "googleCanonical": "https://aawebtools.com/ai-humanizer/",
+      "userCanonical": "https://aawebtools.com/ai-humanizer/",
+      "crawledAs": "MOBILE"
+    },
+    "https://aawebtools.com/": {
+      "verdict": "PASS",
+      "coverageState": "Submitted and indexed",
+      "robotsTxtState": "ALLOWED",
+      "indexingState": "INDEXING_ALLOWED",
+      "lastCrawlTime": "2026-04-12T00:01:09Z",
+      "pageFetchState": "SUCCESSFUL",
+      "googleCanonical": "https://aawebtools.com/",
+      "userCanonical": "https://aawebtools.com/",
+      "referringUrls": [
+        "https://best-backlink-provider.com.in/pge-61b697209250cf2fb0dc937edd0a8077.html",
+        "http://aawebtools.com/"
+      ],
+      "crawledAs": "MOBILE"
+    },
+    "https://aawebtools.com/fr/": {
+      "verdict": "PASS",
+      "coverageState": "Submitted and indexed",
+      "robotsTxtState": "ALLOWED",
+      "indexingState": "INDEXING_ALLOWED",
+      "lastCrawlTime": "2026-04-12T00:52:09Z",
+      "pageFetchState": "SUCCESSFUL",
+      "googleCanonical": "https://aawebtools.com/fr/",
+      "userCanonical": "https://aawebtools.com/fr/",
+      "crawledAs": "MOBILE"
+    },
+    "https://aawebtools.com/es/": {
+      "verdict": "PASS",
+      "coverageState": "Submitted and indexed",
+      "robotsTxtState": "ALLOWED",
+      "indexingState": "INDEXING_ALLOWED",
+      "lastCrawlTime": "2026-04-08T07:32:54Z",
+      "pageFetchState": "SUCCESSFUL",
+      "googleCanonical": "https://aawebtools.com/es/",
+      "userCanonical": "https://aawebtools.com/es/",
+      "crawledAs": "MOBILE"
+    },
+    "https://aawebtools.com/de/": {
+      "verdict": "PASS",
+      "coverageState": "Submitted and indexed",
+      "robotsTxtState": "ALLOWED",
+      "indexingState": "INDEXING_ALLOWED",
+      "lastCrawlTime": "2026-04-12T01:41:09Z",
+      "pageFetchState": "SUCCESSFUL",
+      "googleCanonical": "https://aawebtools.com/de/",
+      "userCanonical": "https://aawebtools.com/de/",
+      "crawledAs": "MOBILE"
+    },
+    "https://aawebtools.com/pt/": {
+      "verdict": "PASS",
+      "coverageState": "Submitted and indexed",
+      "robotsTxtState": "ALLOWED",
+      "indexingState": "INDEXING_ALLOWED",
+      "lastCrawlTime": "2026-04-08T07:32:55Z",
+      "pageFetchState": "SUCCESSFUL",
+      "googleCanonical": "https://aawebtools.com/pt/",
+      "userCanonical": "https://aawebtools.com/pt/",
+      "crawledAs": "MOBILE"
+    },
+    "https://aawebtools.com/ar/": {
+      "verdict": "NEUTRAL",
+      "coverageState": "Crawled - currently not indexed",
+      "robotsTxtState": "ALLOWED",
+      "indexingState": "INDEXING_ALLOWED",
+      "lastCrawlTime": "2026-04-12T18:53:19Z",
+      "pageFetchState": "SUCCESSFUL",
+      "googleCanonical": "https://aawebtools.com/ar/",
+      "userCanonical": "https://aawebtools.com/ar/",
+      "crawledAs": "MOBILE"
+    },
+    "https://aawebtools.com/id/": {
+      "verdict": "NEUTRAL",
+      "coverageState": "Crawled - currently not indexed",
+      "robotsTxtState": "ALLOWED",
+      "indexingState": "INDEXING_ALLOWED",
+      "lastCrawlTime": "2026-04-13T01:21:21Z",
+      "pageFetchState": "SUCCESSFUL",
+      "googleCanonical": "https://aawebtools.com/id/",
+      "userCanonical": "https://aawebtools.com/id/",
+      "crawledAs": "MOBILE"
+    },
+    "https://aawebtools.com/hi/": {
+      "verdict": "NEUTRAL",
+      "coverageState": "Crawled - currently not indexed",
+      "robotsTxtState": "ALLOWED",
+      "indexingState": "INDEXING_ALLOWED",
+      "lastCrawlTime": "2026-04-13T00:43:51Z",
+      "pageFetchState": "SUCCESSFUL",
+      "googleCanonical": "https://aawebtools.com/hi/",
+      "userCanonical": "https://aawebtools.com/hi/",
+      "crawledAs": "MOBILE"
+    }
+  },
+  "analytics_since_baseline": []
+}
