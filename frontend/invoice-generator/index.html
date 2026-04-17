@@ -32,10 +32,20 @@
     "applicationCategory": "BusinessApplication",
     "operatingSystem": "Web",
     "offers": {"@type":"Offer","price":"0","priceCurrency":"USD"},
-    "description": "Create professional invoices free online. No signup required. Instant PDF download.",
+    "description": "Free, browser-first invoice generator. Creates PDF invoices client-side with bilingual EN/FR, multi-currency, and flexible tax support. No account, no upload.",
     "url": "https://aawebtools.com/invoice-generator/",
     "inLanguage": ["en","fr"],
-    "dateModified": "2026-03-27"
+    "dateModified": "2026-04-17",
+    "author": {
+      "@type": "Organization",
+      "name": "ScopeCove",
+      "url": "https://scopecove.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "ScopeCove",
+      "url": "https://aawebtools.com/"
+    }
   }
   </script>
   <script type="application/ld+json">
@@ -43,11 +53,12 @@
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
-      {"@type": "Question", "name": "How do I create a free invoice online?", "acceptedAnswer": {"@type": "Answer", "text": "Simply fill in your business details, client info, and line items in the form above. Click 'Download PDF' to generate and download your professional invoice instantly. No signup, no watermark, completely free."}},
-      {"@type": "Question", "name": "Can I create an invoice without signing up?", "acceptedAnswer": {"@type": "Answer", "text": "Yes! Our free invoice generator requires no sign up, no account, and no email. Just fill in the form and download. Your data stays in your browser — nothing is sent to any server. This is the simplest free invoice generator with no sign up required."}},
-      {"@type": "Question", "name": "Is there a French invoice generator?", "acceptedAnswer": {"@type": "Answer", "text": "Yes! Click the FR toggle at the top of the invoice form. All labels, placeholders, and the PDF output will switch to French. Currency defaults to € in French mode. This is perfect for Canadian French and European French invoicing."}},
-      {"@type": "Question", "name": "Can I add my logo to the invoice?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Click the 'Business Logo' upload field and select your logo image (PNG, JPG, or SVG). It will appear in the top-right corner of your PDF invoice. The logo is processed entirely in your browser — never uploaded to any server."}},
-      {"@type": "Question", "name": "How do I download the invoice as PDF?", "acceptedAnswer": {"@type": "Answer", "text": "Click the blue 'Download PDF' button at the bottom of the form. The PDF generates instantly in your browser using jsPDF — no server processing. The file saves with the filename invoice-[your-invoice-number].pdf."}}
+      {"@type": "Question", "name": "Is the Invoice Generator completely free — no watermark or hidden limit?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. There is no watermark, no signup, no email collection, and no cap on how many invoices you can generate. The tool is free forever and is supported by non-intrusive advertising on the page."}},
+      {"@type": "Question", "name": "Will the invoice be accepted by my clients and by tax authorities?", "acceptedAnswer": {"@type": "Answer", "text": "The generated PDF contains every field a standard commercial invoice requires (invoice number, date, billing/supplier details, line items, tax, total, payment terms). Formal legal validity depends on your jurisdiction — for example, Canada's CRA and the UK's HMRC have specific VAT/GST-registration-number requirements if you are registered. Enter those numbers in the appropriate fields and the invoice will meet the mandatory-content rules in most countries. For complex VAT situations or EU B2B e-invoicing under the Peppol mandate, use a compliance-certified service."}},
+      {"@type": "Question", "name": "Which currencies and tax formats are supported?", "acceptedAnswer": {"@type": "Answer", "text": "Currency is a free-text field — you can enter any symbol ($, €, £, ¥, ₹) or ISO code. EN mode defaults to $, FR mode defaults to €. Tax lines are also free-text and support multiple lines per invoice — common labels GST, HST, PST, TPS, TVQ, TVA, VAT are pre-populated, but you can enter any label and any percentage. This works for Canadian provincial variants (including Quebec TVQ), EU VAT (rates 17-27%), UK VAT (20%), Australian GST (10%), US state sales tax, or any custom jurisdiction."}},
+      {"@type": "Question", "name": "Can I save an invoice and edit it later?", "acceptedAnswer": {"@type": "Answer", "text": "No — this tool is deliberately stateless. Once you close or refresh the tab, the data is gone. This is a privacy trade-off: because nothing is stored on our servers, there is also nothing to re-open. If you need persistent invoice management, recurring billing, or a client database, use Zoho Invoice or Wave. For one-off or occasional invoicing, this tool is faster."}},
+      {"@type": "Question", "name": "Can I add my company logo to the invoice?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Use the Business Logo upload field to attach any PNG, JPG, or SVG image. The logo is read into your browser, embedded as a base64 data URL in the PDF, and never transmitted to any server. It appears in the top-right of the generated invoice."}},
+      {"@type": "Question", "name": "What data does this tool collect about me?", "acceptedAnswer": {"@type": "Answer", "text": "None of the invoice data reaches our servers. The PDF is generated client-side using jsPDF — there is no POST endpoint that would receive your business information, client details, or line items. We collect anonymous, cookie-free page-view analytics via Umami (browser, country, referrer) for traffic measurement only. See our Privacy Policy for full details."}}
     ]
   }
   </script>
@@ -387,43 +398,13 @@
       </div>
     </section>
 
-    <!-- FAQ -->
-    <section class="section" style="background:var(--bg-secondary);">
-      <div class="container">
-        <span class="section-label reveal">FAQ</span>
-        <h2 class="reveal mb-xl">Frequently Asked Questions</h2>
-        <div class="faq-list">
-          <details class="faq-item reveal">
-            <summary>How do I create a free invoice online?</summary>
-            <p>Simply fill in your business details, client info, and line items in the form above. Click "Download PDF" to generate and download your professional invoice instantly. No signup, no watermark, completely free. For US tax requirements, see the <a href="https://www.irs.gov/businesses/small-businesses-self-employed" target="_blank" rel="noopener">IRS small business guide</a>.</p>
-          </details>
-          <details class="faq-item reveal">
-            <summary>Can I create an invoice without signing up?</summary>
-            <p>Yes! Our free invoice generator requires no sign up, no account, and no email. Just fill in the form and download. Your data stays in your browser — nothing is sent to any server. This is the simplest free invoice generator with no sign up required.</p>
-          </details>
-          <details class="faq-item reveal">
-            <summary>Is there a French invoice generator?</summary>
-            <p>Yes! Click the FR toggle at the top of the invoice form. All labels, placeholders, and the PDF output will switch to French. Currency defaults to € in French mode. This is perfect for Canadian French and European French invoicing. See the <a href="https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/keeping-records.html" target="_blank" rel="noopener">Canada Revenue Agency invoicing guidelines</a> for more details.</p>
-          </details>
-          <details class="faq-item reveal">
-            <summary>Can I add my logo to the invoice?</summary>
-            <p>Yes. Click the "Business Logo" upload field and select your logo image (PNG, JPG, or SVG). It will appear in the top-right corner of your PDF invoice. The logo is processed entirely in your browser — never uploaded to any server.</p>
-          </details>
-          <details class="faq-item reveal">
-            <summary>How do I download the invoice as PDF?</summary>
-            <p>Click the blue "Download PDF" button at the bottom of the form. The PDF generates instantly in your browser using jsPDF — no server processing. The file saves with the filename invoice-[your-invoice-number].pdf.</p>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <!-- SEO Content -->
+    <!-- Editorial content — SEO + E-E-A-T -->
     <section class="section">
       <div class="container" style="max-width:800px;">
         <style>
           .seo-content h2{font-size:1.5rem;font-weight:700;color:var(--text-primary);margin:48px 0 16px;line-height:1.3;}
           .seo-content h2:first-child{margin-top:0;}
-          .seo-content h3{font-size:1.15rem;font-weight:600;color:var(--text-primary);margin:28px 0 12px;}
+          .seo-content h3{font-size:1.1rem;font-weight:600;color:var(--text-primary);margin:28px 0 12px;}
           .seo-content p{font-size:16px;line-height:1.75;color:#475569;margin-bottom:16px;}
           .seo-content ul,.seo-content ol{padding-left:24px;margin-bottom:20px;list-style:disc;}
           .seo-content ol{list-style:decimal;}
@@ -431,81 +412,137 @@
           .seo-content a{color:#4f7fff;text-decoration:underline;text-decoration-color:rgba(79,127,255,0.3);text-underline-offset:2px;transition:text-decoration-color 0.15s;}
           .seo-content a:hover{text-decoration-color:#4f7fff;}
           .seo-content strong{color:var(--text-primary);font-weight:600;}
+          .byline{font-size:14px;color:var(--text-tertiary);margin-bottom:24px;}
+          .byline a{color:var(--text-tertiary);text-decoration:underline;}
+          .cmp-table{width:100%;border-collapse:collapse;font-size:14px;margin:16px 0 24px;}
+          .cmp-table th,.cmp-table td{border:1px solid #e2e8f0;padding:10px 12px;text-align:left;vertical-align:top;}
+          .cmp-table th{background:#f8fafc;font-weight:600;color:var(--text-primary);}
+          .cmp-table td.y{color:#0d7c55;}
+          .cmp-table td.n{color:#b22e2e;}
+          .cmp-table td.m{color:#7a5a1e;}
+          .cmp-table tr.lose td{background:#fdf7ee;}
+          .cross-sell{border:1px solid #e2e8f0;border-radius:8px;padding:20px 24px;margin:32px 0;background:#fafbff;}
+          .cross-sell h3{margin-top:0;}
         </style>
         <div class="seo-content">
 
-          <h2>How to Create a Professional Invoice</h2>
-          <p>Creating a professional invoice does not have to involve expensive software or complicated accounting tools. With the AAWebTools free invoice generator, you can produce a polished, ready-to-send invoice in under two minutes. Here is exactly how to do it, step by step.</p>
-          <ol>
-            <li><strong>Add your business information.</strong> Start by entering your company name, address, email, and phone number. If you have a business logo, upload it using the logo field and it will appear in the header of your PDF. This branding instantly makes your invoice look more professional and trustworthy.</li>
-            <li><strong>Enter your client details.</strong> Fill in the client or company name and their billing address. Accurate client information ensures there is no confusion about who the invoice is addressed to and helps your client process payment faster.</li>
-            <li><strong>Add line items.</strong> Describe each product or service you provided, specify the quantity and unit price, and the tool will calculate the line total automatically. You can add as many line items as you need. For recurring services, you can keep your browser tab open and reuse the same form.</li>
-            <li><strong>Configure tax, currency, and dates.</strong> Set the invoice date, due date, and payment terms. Choose your currency from the dropdown, which supports USD, CAD, EUR, GBP, AUD, and more. Add one or multiple tax lines such as GST, HST, VAT, or any custom tax rate your jurisdiction requires.</li>
-            <li><strong>Choose a template and download.</strong> Select from five professionally designed invoice templates: Classic, Modern, Minimal, Executive, and Bold. Each template arranges the same information in a different visual style. Click "Download PDF" and your invoice is generated instantly in your browser. No data ever leaves your device.</li>
-          </ol>
-          <p>The entire process runs locally in your browser using client-side JavaScript. Nothing is uploaded to a server, making this one of the most private invoice tools available online. If you also need to generate <a href="/paystub-generator/">pay stubs</a> or track self-employment income, pair this tool with our <a href="/blog/pay-stub-generator-self-employed/">self-employed pay stub guide</a>.</p>
+          <p class="byline">By the <a href="/about/">ScopeCove team</a> · Last reviewed April 17, 2026 · <a href="/about/#editorial-policy">Editorial policy</a></p>
 
-          <h2>What to Include on an Invoice</h2>
-          <p>A complete invoice serves as both a payment request and a legal record of a transaction. Whether you are a freelancer billing a single client or a small business managing dozens of accounts, every invoice should contain these essential elements:</p>
+          <h2>How this Invoice Generator actually works</h2>
+          <p>This is a <strong>browser-first</strong> tool, not a SaaS. When you fill in the form and click Download PDF, the entire invoice is assembled, rendered, and saved on your own device using <a href="https://github.com/parallax/jsPDF" target="_blank" rel="noopener">jsPDF</a>. There is no POST request to our server that carries your business information — you can verify this in your browser's network tab.</p>
+          <p>That architecture drives three consequences worth knowing before you rely on the tool:</p>
           <ul>
-            <li><strong>Invoice number</strong> — A unique identifier for tracking and bookkeeping. Use sequential numbering (INV-001, INV-002) or a date-based system (2026-04-001) to keep records organized.</li>
-            <li><strong>Invoice date</strong> — The date the invoice was issued. This establishes the billing period and is critical for accounting purposes.</li>
-            <li><strong>Due date</strong> — When payment is expected. Common terms include Net 15, Net 30, or Due on Receipt. Clear due dates reduce late payments.</li>
-            <li><strong>Business details</strong> — Your company name, address, email, phone number, and optionally your tax registration number (GST/HST number, VAT ID, EIN, etc.).</li>
-            <li><strong>Client details</strong> — The full name or business name and billing address of the person or company you are invoicing.</li>
-            <li><strong>Line items</strong> — A detailed breakdown of each product or service provided, including description, quantity, unit price, and line total.</li>
-            <li><strong>Tax</strong> — The applicable tax rate(s) and calculated tax amount. In many jurisdictions, showing the tax breakdown is a legal requirement.</li>
-            <li><strong>Total amount due</strong> — The final amount the client owes, clearly displayed. This should include the subtotal, all taxes, and any discounts applied.</li>
-            <li><strong>Payment terms and instructions</strong> — How the client can pay (bank transfer, PayPal, cheque, etc.) and any late payment policies.</li>
+            <li><strong>Privacy by design.</strong> Your client list, line items, and totals are never transmitted, logged, or readable by us. The trade-off: we cannot help you recover a lost invoice, because we never had it.</li>
+            <li><strong>Works offline after first load.</strong> Once the page is loaded, you can disconnect your internet and the tool still functions. The PDF still downloads.</li>
+            <li><strong>No server-side state.</strong> Closing the tab discards everything. For recurring billing or a persistent client database, use <a href="https://www.zoho.com/us/invoice/" target="_blank" rel="noopener">Zoho Invoice</a> or <a href="https://www.waveapps.com/invoicing" target="_blank" rel="noopener">Wave</a> instead — see the comparison below.</li>
           </ul>
-          <p>Missing any of these elements can delay payment or cause disputes. Our invoice generator includes fields for every one of these items, ensuring your invoices are complete and professional every time.</p>
 
-          <h2>Invoice Templates for Every Business</h2>
-          <p>Different businesses have different branding needs. That is why the AAWebTools invoice generator offers five distinct PDF templates, all included free:</p>
+          <h2>When this tool is the right fit — and when it isn't</h2>
+          <p>The most useful thing we can tell you up front is where this tool is weak, so you can pick the right one for your need.</p>
+          <h3>Use AAWebTools Invoice Generator when you…</h3>
           <ul>
-            <li><strong>Classic</strong> — A clean, traditional layout with a structured grid. Ideal for freelancers, consultants, and small businesses that want a straightforward, no-frills invoice.</li>
-            <li><strong>Modern</strong> — A contemporary design with a colored header band and refined typography. Well suited for creative agencies, design studios, and tech companies.</li>
-            <li><strong>Minimal</strong> — A stripped-down layout with maximum whitespace. Perfect for solopreneurs and professionals who prefer an understated, elegant look.</li>
-            <li><strong>Executive</strong> — A premium-feeling template with subtle accents and formal structure. Best for law firms, financial consultants, and corporate service providers.</li>
-            <li><strong>Bold</strong> — A high-contrast design with strong visual hierarchy. Great for contractors, trades professionals, and businesses that want their invoices to stand out.</li>
+            <li>Are a freelancer, sole proprietor, or contractor issuing one-off or occasional invoices.</li>
+            <li>Bill in multiple currencies or in bilingual (EN/FR) contexts — for example, a Canadian freelancer with both US and Quebec clients.</li>
+            <li>Care about data privacy and prefer a tool that never sees your clients' names.</li>
+            <li>Need a printable PDF today, not an account to sign up for.</li>
           </ul>
-          <p>Every template includes the same complete set of fields: logo placement, line items, multi-tax support, notes, and payment terms. Switch between templates with a single click to find the one that matches your brand.</p>
+          <h3>Use a different tool when you…</h3>
+          <ul>
+            <li><strong>Need recurring or subscription billing.</strong> Use <a href="https://www.zoho.com/us/invoice/" target="_blank" rel="noopener">Zoho Invoice</a> or <a href="https://stripe.com/invoicing" target="_blank" rel="noopener">Stripe Invoicing</a>.</li>
+            <li><strong>Want a client portal</strong> where customers log in to view and pay.</li>
+            <li><strong>Must collect payment through the invoice itself</strong> (card, ACH). Use <a href="https://www.waveapps.com/invoicing" target="_blank" rel="noopener">Wave</a> or Stripe.</li>
+            <li><strong>Are subject to EU B2B e-invoicing under the Peppol mandate</strong> (<a href="https://peppol.eu/" target="_blank" rel="noopener">eInvoicing Directive 2014/55/EU</a>). You need a certified Peppol access point, not a PDF tool.</li>
+            <li><strong>Need team access or multi-user workflows.</strong></li>
+          </ul>
 
-          <h2>Multi-Currency and Tax Support</h2>
-          <p>The invoice generator supports a wide range of currencies including USD, CAD, EUR, GBP, AUD, INR, and many more. The currency symbol is automatically applied throughout your invoice and PDF output. For international businesses, this means you can issue invoices in the currency your client expects without any manual formatting.</p>
-          <p>Tax handling is equally flexible. You can add multiple tax lines to a single invoice, each with a custom label and rate. This covers common scenarios like Canadian HST (13%), GST (5%), or provincial PST, European VAT (ranging from 19% to 27% depending on the country), UK VAT (20%), and Australian GST (10%). If your jurisdiction uses a compound tax system or you need to show multiple tax components separately, simply add additional tax rows. Each tax line calculates independently against the subtotal, and the final total reflects all applied taxes.</p>
+          <h2>What professional invoices must include — by jurisdiction</h2>
+          <p>Mandatory invoice content varies by country. Here is the core of what the main English-speaking tax authorities require as of 2026. All of these fields are supported by the form above.</p>
+          <ul>
+            <li><strong>Canada (CRA).</strong> If you are GST/HST-registered, your invoice must show your 9-digit Business Number, the date, the buyer's name, a description of the goods/services, and the amount of GST/HST charged separately. Full rules: <a href="https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/gst-hst-businesses/invoice-requirements.html" target="_blank" rel="noopener">CRA invoice requirements</a>. Quebec has additional TVQ number requirements (<a href="https://www.revenuquebec.ca/en/businesses/" target="_blank" rel="noopener">Revenu Québec</a>).</li>
+            <li><strong>United Kingdom (HMRC).</strong> VAT-registered businesses must show: invoice number (sequential), date of supply, supplier VAT number, customer name and address, description and quantity of goods/services, rate of VAT applied, and amount in pounds. Full rules: <a href="https://www.gov.uk/vat-record-keeping/vat-invoices" target="_blank" rel="noopener">gov.uk VAT invoices</a>.</li>
+            <li><strong>European Union.</strong> VAT invoices must include supplier VAT ID, customer VAT ID for B2B, the nature of the supply, the tax rate, and the amount payable — with specific rules per Member State. B2B e-invoicing is increasingly mandatory under the <a href="https://ec.europa.eu/digital-building-blocks/wikis/display/DIGITAL/eInvoicing" target="_blank" rel="noopener">Peppol framework</a>.</li>
+            <li><strong>United States.</strong> No federal invoice-content rule applies to non-VAT businesses, but all invoices should include a unique number, date, seller and buyer identification, a clear description, and any applicable state or local sales tax. If you receive 1099-NEC or 1099-MISC income, retain invoices for IRS audit purposes (<a href="https://www.irs.gov/publications/p583" target="_blank" rel="noopener">Publication 583</a>).</li>
+            <li><strong>Australia (ATO).</strong> Tax invoices for sales over A$82.50 must show supplier identity, ABN, GST amount, and a clear "Tax Invoice" label.</li>
+          </ul>
+          <p>Common mistakes we see: forgetting to show the VAT/GST registration number when registered, using non-sequential invoice numbering (a red flag for auditors), and omitting the due date.</p>
 
-          <h2>Frequently Asked Questions</h2>
-          <details class="faq-item reveal">
-            <summary>Is the invoice generator completely free?</summary>
-            <p>Yes. The AAWebTools invoice generator is 100% free with no hidden costs, no watermarks, and no limits on the number of invoices you can create. There is no signup or account required. The tool is supported by non-intrusive advertising.</p>
-          </details>
-          <details class="faq-item reveal">
-            <summary>Can I add my company logo to the invoice?</summary>
-            <p>Yes. Upload any PNG, JPG, or SVG file using the logo upload field. Your logo will appear in the header area of the generated PDF. The image is processed entirely in your browser and is never uploaded to any server.</p>
-          </details>
-          <details class="faq-item reveal">
-            <summary>What tax rates are supported?</summary>
-            <p>Any tax rate you need. You can add multiple tax lines with custom labels (GST, HST, VAT, PST, state tax, etc.) and set the percentage for each. The tool calculates each tax line independently against the subtotal, so it works for any country or jurisdiction.</p>
-          </details>
-          <details class="faq-item reveal">
-            <summary>Can I create invoices in French?</summary>
-            <p>Yes. Click the language toggle to switch to French. All form labels, placeholders, and the PDF output will render in French with proper terminology (Facture, Montant HT, TVA, Total TTC, etc.). The currency defaults to EUR in French mode. This works for both Canadian French and European French invoicing needs.</p>
-          </details>
-          <details class="faq-item reveal">
-            <summary>Are my invoices stored on your servers?</summary>
-            <p>No. The entire invoice generation process runs locally in your browser. Your business details, client information, and line items never leave your device. The PDF is generated client-side using JavaScript and downloaded directly to your computer. We do not store, transmit, or have access to any of your invoice data.</p>
-          </details>
+          <h2>AAWebTools Invoice Generator vs. alternatives</h2>
+          <p>Honest comparison against the four most common free-tier invoicing tools in 2026. If another tool is the better fit for your use case, we say so.</p>
+          <table class="cmp-table">
+            <thead>
+              <tr>
+                <th>&nbsp;</th>
+                <th>AAWebTools</th>
+                <th><a href="https://www.zoho.com/us/invoice/" target="_blank" rel="noopener">Zoho&nbsp;Invoice</a></th>
+                <th><a href="https://www.waveapps.com/invoicing" target="_blank" rel="noopener">Wave</a></th>
+                <th><a href="https://invoice-generator.com/" target="_blank" rel="noopener">invoice-generator.com</a></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>Free tier</strong></td><td class="y">Unlimited, no watermark</td><td class="y">Unlimited (up to 5 customers on free)</td><td class="y">Unlimited invoicing</td><td class="y">Unlimited</td></tr>
+              <tr><td><strong>Signup required</strong></td><td class="y">No</td><td class="n">Yes</td><td class="n">Yes</td><td class="y">No</td></tr>
+              <tr><td><strong>Data stays client-side</strong></td><td class="y">Yes (verifiable)</td><td class="n">No (cloud)</td><td class="n">No (cloud)</td><td class="m">Email-only delivery</td></tr>
+              <tr><td><strong>Recurring billing</strong></td><td class="n">No</td><td class="y">Yes</td><td class="y">Yes</td><td class="n">No</td></tr>
+              <tr><td><strong>Client database</strong></td><td class="n">No</td><td class="y">Yes</td><td class="y">Yes</td><td class="n">No</td></tr>
+              <tr><td><strong>Online payment collection</strong></td><td class="n">No</td><td class="y">Yes (Stripe/PayPal)</td><td class="y">Yes (built-in)</td><td class="n">No</td></tr>
+              <tr><td><strong>Multi-currency</strong></td><td class="y">Any symbol/ISO code</td><td class="y">Yes</td><td class="m">Limited</td><td class="y">Yes</td></tr>
+              <tr><td><strong>Bilingual EN/FR PDF</strong></td><td class="y">Yes (built-in toggle)</td><td class="m">Partial (interface only)</td><td class="n">English only</td><td class="n">English only</td></tr>
+              <tr><td><strong>Mobile apps</strong></td><td class="n">Web only</td><td class="y">iOS / Android</td><td class="y">iOS / Android</td><td class="n">Web only</td></tr>
+              <tr class="lose"><td><strong>When AAWebTools is the wrong choice</strong></td><td colspan="4">If you need client records, recurring invoicing, or to take payment through the invoice — pick <strong>Zoho Invoice</strong> (client/recurring focus) or <strong>Wave</strong> (payment-collection focus). AAWebTools is deliberately stateless.</td></tr>
+            </tbody>
+          </table>
+          <p>Last table review: April 17, 2026. Free-tier terms on third-party tools change frequently — check each provider's current pricing page for authoritative information.</p>
+
+          <div class="cross-sell">
+            <h3>Freelancing from Canada?</h3>
+            <p style="margin-bottom:0;">If you are invoicing clients from Canada on a work permit, or considering moving to Canada as a self-employed worker, <a href="https://topnation.ca/" target="_blank" rel="noopener">topnation.ca</a> offers free immigration consultations specifically for freelancers, contractors, and self-employed professionals. It is the sister-company of ScopeCove, and the consultation is genuinely free — no obligation.</p>
+          </div>
 
         </div>
       </div>
     </section>
 
+    <!-- FAQ — single consolidated section -->
+    <section class="section" style="background:var(--bg-secondary);">
+      <div class="container" style="max-width:800px;">
+        <span class="section-label reveal">FAQ</span>
+        <h2 class="reveal mb-xl">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <details class="faq-item reveal">
+            <summary>Is the Invoice Generator completely free — no watermark or hidden limit?</summary>
+            <p>Yes. There is no watermark, no signup, no email collection, and no cap on how many invoices you can generate. The tool is free forever and is supported by non-intrusive advertising on the page.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Will the invoice be accepted by my clients and by tax authorities?</summary>
+            <p>The generated PDF contains every field a standard commercial invoice requires (invoice number, date, billing/supplier details, line items, tax, total, payment terms). Formal legal validity depends on your jurisdiction — for example, Canada's <a href="https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/gst-hst-businesses/invoice-requirements.html" target="_blank" rel="noopener">CRA</a> and the UK's <a href="https://www.gov.uk/vat-record-keeping/vat-invoices" target="_blank" rel="noopener">HMRC</a> have specific VAT/GST-registration-number requirements if you are registered. Enter those numbers in the appropriate fields and the invoice will meet the mandatory-content rules in most countries. For complex VAT situations or <a href="https://ec.europa.eu/digital-building-blocks/wikis/display/DIGITAL/eInvoicing" target="_blank" rel="noopener">EU B2B e-invoicing under the Peppol mandate</a>, use a compliance-certified service.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Which currencies and tax formats are supported?</summary>
+            <p>Currency is a free-text field — you can enter any symbol ($, €, £, ¥, ₹) or ISO code. EN mode defaults to $, FR mode defaults to €. Tax lines are also free-text and support multiple lines per invoice — common labels GST, HST, PST, TPS, TVQ, TVA, VAT are pre-populated, but you can enter any label and any percentage. This works for Canadian provincial variants (including Quebec TVQ), EU VAT (rates 17–27%), UK VAT (20%), Australian GST (10%), US state sales tax, or any custom jurisdiction.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Can I save an invoice and edit it later?</summary>
+            <p>No — this tool is deliberately stateless. Once you close or refresh the tab, the data is gone. This is a privacy trade-off: because nothing is stored on our servers, there is also nothing to re-open. If you need persistent invoice management, recurring billing, or a client database, use <a href="https://www.zoho.com/us/invoice/" target="_blank" rel="noopener">Zoho Invoice</a> or <a href="https://www.waveapps.com/invoicing" target="_blank" rel="noopener">Wave</a>. For one-off or occasional invoicing, this tool is faster.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Can I add my company logo to the invoice?</summary>
+            <p>Yes. Use the Business Logo upload field to attach any PNG, JPG, or SVG image. The logo is read into your browser, embedded as a base64 data URL in the PDF, and never transmitted to any server. It appears in the top-right of the generated invoice.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>What data does this tool collect about me?</summary>
+            <p>None of the invoice data reaches our servers. The PDF is generated client-side using jsPDF — there is no POST endpoint that would receive your business information, client details, or line items. We collect anonymous, cookie-free page-view analytics via Umami (browser, country, referrer) for traffic measurement only. See our <a href="/privacy/">Privacy Policy</a> for full details.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
     <section class="section" style="background:var(--bg-secondary)">
-      <div class="container">
-        <h2>Related Articles</h2>
+      <div class="container" style="max-width:800px;">
+        <h2>Further reading</h2>
         <ul style="list-style:none;padding:0;display:grid;gap:12px;">
-          <li><a href="/blog/pay-stub-generator-self-employed/" style="color:var(--accent-blue)">Pay Stub Generator for Self-Employed 2026</a></li>
+          <li>→ <a href="/blog/pay-stub-generator-self-employed/" style="color:var(--accent-blue)">How self-employed workers use pay stubs for bookkeeping (and when not to)</a></li>
+          <li>→ <a href="/paystub-generator/" style="color:var(--accent-blue)">Pay Stub Generator — AAWebTools's companion tool</a></li>
+          <li>→ <a href="https://topnation.ca/" target="_blank" rel="noopener" style="color:var(--accent-blue)">Canadian work permits for freelancers — topnation.ca</a></li>
         </ul>
       </div>
     </section>
@@ -932,19 +969,6 @@
   </script>
   <script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9434634079795273" crossorigin="anonymous"></script>
   <script>try{(adsbygoogle=window.adsbygoogle||[]).push({});(adsbygoogle=window.adsbygoogle||[]).push({});}catch(e){}</script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {"@type": "Question", "name": "Is the invoice generator completely free?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The AAWebTools invoice generator is 100% free with no hidden costs, no watermarks, and no limits on the number of invoices you can create. There is no signup or account required."}},
-      {"@type": "Question", "name": "Can I add my company logo to the invoice?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Upload any PNG, JPG, or SVG file using the logo upload field. Your logo will appear in the header of the generated PDF. The image is processed entirely in your browser and never uploaded to any server."}},
-      {"@type": "Question", "name": "What tax rates are supported?", "acceptedAnswer": {"@type": "Answer", "text": "Any tax rate you need. Add multiple tax lines with custom labels (GST, HST, VAT, PST, state tax) and set the percentage for each. The tool calculates each tax line independently against the subtotal, so it works for any country or jurisdiction."}},
-      {"@type": "Question", "name": "Can I create invoices in French?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Click the language toggle to switch to French. All form labels, placeholders, and the PDF output will render in French with proper terminology. The currency defaults to EUR in French mode, supporting both Canadian French and European French invoicing."}},
-      {"@type": "Question", "name": "Are my invoices stored on your servers?", "acceptedAnswer": {"@type": "Answer", "text": "No. The entire invoice generation process runs locally in your browser. Your business details, client information, and line items never leave your device. The PDF is generated client-side and downloaded directly to your computer."}}
-    ]
-  }
-  </script>
 
 
 </body></html>
