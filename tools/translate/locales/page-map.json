@@ -11,26 +11,6 @@
       "id": "/id/",
       "hi": "/hi/"
     },
-    "tiktok-downloader": {
-      "en": "/tiktok-downloader/",
-      "fr": "/fr/telechargeur-tiktok/",
-      "es": "/es/descargador-tiktok/",
-      "de": "/de/tiktok-herunterladen/",
-      "pt": "/pt/baixar-tiktok/",
-      "ar": "/ar/tiktok-downloader/",
-      "id": "/id/unduh-tiktok/",
-      "hi": "/hi/tiktok-downloader/"
-    },
-    "twitter-video-downloader": {
-      "en": "/twitter-video-downloader/",
-      "fr": "/fr/telechargeur-twitter/",
-      "es": "/es/descargador-twitter/",
-      "de": "/de/twitter-video-herunterladen/",
-      "pt": "/pt/baixar-twitter/",
-      "ar": "/ar/twitter-video-downloader/",
-      "id": "/id/unduh-twitter/",
-      "hi": "/hi/twitter-video-downloader/"
-    },
     "invoice-generator": {
       "en": "/invoice-generator/",
       "fr": "/fr/generateur-facture/",

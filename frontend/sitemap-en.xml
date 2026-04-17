@@ -3,7 +3,7 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://aawebtools.com/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://aawebtools.com/"/>
@@ -17,24 +17,8 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://aawebtools.com/"/>
   </url>
   <url>
-    <loc>https://aawebtools.com/tiktok-downloader/</loc>
-    <lastmod>2026-04-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aawebtools.com/tiktok-downloader/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://aawebtools.com/tiktok-downloader/"/>
-  </url>
-  <url>
-    <loc>https://aawebtools.com/twitter-video-downloader/</loc>
-    <lastmod>2026-04-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://aawebtools.com/twitter-video-downloader/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://aawebtools.com/twitter-video-downloader/"/>
-  </url>
-  <url>
     <loc>https://aawebtools.com/invoice-generator/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://aawebtools.com/invoice-generator/"/>
@@ -42,7 +26,7 @@
   </url>
   <url>
     <loc>https://aawebtools.com/ai-detector/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://aawebtools.com/ai-detector/"/>
@@ -50,7 +34,7 @@
   </url>
   <url>
     <loc>https://aawebtools.com/ai-humanizer/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://aawebtools.com/ai-humanizer/"/>
@@ -58,7 +42,7 @@
   </url>
   <url>
     <loc>https://aawebtools.com/paystub-generator/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://aawebtools.com/paystub-generator/"/>
@@ -66,7 +50,7 @@
   </url>
   <url>
     <loc>https://aawebtools.com/image-toolkit/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://aawebtools.com/image-toolkit/"/>
@@ -74,7 +58,7 @@
   </url>
   <url>
     <loc>https://aawebtools.com/about/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://aawebtools.com/about/"/>
@@ -85,7 +69,7 @@
   </url>
   <url>
     <loc>https://aawebtools.com/contact/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://aawebtools.com/contact/"/>
@@ -96,7 +80,7 @@
   </url>
   <url>
     <loc>https://aawebtools.com/privacy/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://aawebtools.com/privacy/"/>
@@ -107,18 +91,16 @@
   </url>
   <url>
     <loc>https://aawebtools.com/terms/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://aawebtools.com/terms/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://aawebtools.com/fr/conditions/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://aawebtools.com/ar/terms/"/>
-    <xhtml:link rel="alternate" hreflang="id" href="https://aawebtools.com/id/syarat/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://aawebtools.com/terms/"/>
   </url>
   <url>
     <loc>https://aawebtools.com/blog/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://aawebtools.com/blog/"/>
@@ -132,7 +114,7 @@
   </url>
   <url>
     <loc>https://aawebtools.com/blog/best-free-ai-content-detectors-2026/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://aawebtools.com/blog/best-free-ai-content-detectors-2026/"/>
@@ -140,7 +122,7 @@
   </url>
   <url>
     <loc>https://aawebtools.com/blog/compress-image-to-100kb-free/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://aawebtools.com/blog/compress-image-to-100kb-free/"/>
@@ -148,7 +130,7 @@
   </url>
   <url>
     <loc>https://aawebtools.com/blog/ai-humanizers-vs-turnitin-2026/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://aawebtools.com/blog/ai-humanizers-vs-turnitin-2026/"/>
@@ -158,7 +140,7 @@
   </url>
   <url>
     <loc>https://aawebtools.com/blog/can-teachers-detect-chatgpt-2026/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://aawebtools.com/blog/can-teachers-detect-chatgpt-2026/"/>
@@ -166,7 +148,7 @@
   </url>
   <url>
     <loc>https://aawebtools.com/blog/download-tiktok-slideshows-2026/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://aawebtools.com/blog/download-tiktok-slideshows-2026/"/>
@@ -177,7 +159,7 @@
   </url>
   <url>
     <loc>https://aawebtools.com/blog/pay-stub-generator-self-employed/</loc>
-    <lastmod>2026-04-08</lastmod>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://aawebtools.com/blog/pay-stub-generator-self-employed/"/>

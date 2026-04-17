@@ -218,3 +218,41 @@ node tools/translate/quarantine.js             # dry-run quarantine status
 node tools/indexnow.js --dry-run               # what would be submitted
 dig +short NS aawebtools.com                   # confirm Cloudflare not dns-parking
 ```
+
+---
+
+## AdSense Rejection — Remediation (2026-04-16)
+
+**Trigger:** Google AdSense rejected aawebtools.com for "Low value content" policy violation on 2026-04-16.
+
+**6-expert panel audit findings** (content-SEO, seo-director, product-manager, risk-manager, legal-advisor, business-analyst) — all six converged: the proposal to thicken tool pages and immediately request review was solving the wrong problem. See conversation log for full reports.
+
+**Decider call:** Withdraw from AdSense review. Address structural risks that are independent of monetization. Revisit monetization after SEO recovery with alternatives (affiliate, lead-gen to topnation.ca) ranked above AdSense.
+
+**Executed 2026-04-16 (same session):**
+- [x] Retired 2 EN downloader tools + 14 localized downloader variants (account-level demonetization risk)
+- [x] Retired 5 orphaned country paystub pages (`/pay-stub-generator/{usa,canada,uk,france,australia}/`) — thin/duplicate/orphaned, almost certainly part of what the AdSense reviewer saw
+- [x] Removed 1,342 zombie link references across 158 HTML files via `scripts/retire-adsense-risks.mjs`
+- [x] Removed the 2 downloader entries from `tools/translate/locales/page-map.json`
+- [x] Removed downloader entries from `frontend/sitemap-en.xml`
+- [x] Added `nginx/production.conf` 410-Gone rules for all 21 retired URLs (tells crawlers permanent removal, faster deindexing than 404)
+- [x] Hardened `/terms/` — removed downloader clause, added explicit no-fraud / no-academic-dishonesty prohibitions, Canadian governing law, strengthened indemnification
+- [x] Hardened `/paystub-generator/` — visible "informational/novelty only" disclaimer above tool; rewrote FAQ on "proof of income" (was actively inviting fraud use cases)
+- [x] Hardened `/ai-humanizer/` — visible "not for academic submission" disclaimer above tool
+
+**Still owner-action — deferred, not blocked:**
+- [ ] Business entity: incorporate (or register a sole-proprietorship under commercial name with liability carve-out) before resuming monetization. Legal-advisor flagged unlimited personal liability on every tool as standing problem regardless of AdSense.
+- [ ] DMCA agent registration ($6 with US Copyright Office) — deferred because the two downloaders are now gone, but re-enable if they're ever restored.
+- [ ] Cookie-consent / CCPA opt-out CMP (IAB TCF v2.2 compliant) — required for EU personalized ads under Google's EU User Consent Policy. Must be in place before any ad network resubmission.
+- [ ] Gemini privacy disclosure in `/privacy/` — PIPEDA (Canada) + GDPR Art. 13 notice for user text/images sent to Google AI.
+- [ ] DO NOT click "Request review" in AdSense. Let the rejection sit. Revisit only after SEO recovery milestones land.
+
+**Revisit-monetization trigger (not a hard deadline):**
+When GSC shows 30+ indexed pages AND 500+ daily impressions AND 30+ days of stable crawl behavior — re-evaluate. Leading alternatives per business-analyst panel seat:
+- Affiliate inside tools (invoice → bookkeeping SaaS; AI detector → academic-integrity SaaS) — 100× AdSense CPM
+- Lead funnel to topnation.ca (immigration LTV $3k–15k per converted lead vs. $0.50–3 RPM for AdSense)
+
+If AdSense is still the chosen route at that point: submit from a **new publisher account**, not `ca-pub-9434634079795273` (contagion risk to other properties per risk-manager).
+
+**Interaction with SEO recovery:**
+Removals (not additions) during soak are net-positive for crawl-budget focus on the 7 language homepages — the Soak-Plus-Two rule forbids *adding* pages, not *retiring* them. Zero new URLs were created in this remediation; the 410 responses actively help Google deindex the weak pages. Day-7 gate outcome is unaffected.
